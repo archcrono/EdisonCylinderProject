@@ -1,0 +1,92 @@
+@media only screen and (max-width: 999em) {
+
+// /////////
+// Active/Inactive Classes
+// /////////
+.active{
+  z-index: -1;
+}
+.inactive{
+  top: 100%;
+  display: none;
+  z-index: 1;
+}
+// ////////
+// All
+// ////////
+#container{
+  width: 100%;
+}
+
+// /////////
+// Sections
+// /////////
+section{
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+
+  header{
+    height: 50px;
+    width: 100%;
+    background: black;
+    color: white;
+    ul{
+      padding-top: 10px;
+      li{
+        i{
+          position: absolute;
+          left: 50%;
+        }//End of I
+      }//End of LI
+    }//End of UL
+  }//End of Header
+
+  main{
+    position: absolute;
+    overflow: scroll;
+  }
+
+}//End of Sections
+
+
+
+// ///////
+// Footer
+// ////////
+#footerButtonContainer{
+  i{
+    position: absolute;
+    color: white;
+    z-index: 10;
+    
+    &:nth-child(1){
+      left: 10%;
+    }
+    &:nth-child(2){
+      left: 35%;
+    }
+    &:nth-child(3){
+      left: 65%;
+    }
+    &:nth-child(4){
+      left: 85%;
+    }
+
+  }//End of icons
+}//End of Footer Button Container
+footer{
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  color: white;
+
+}//End of Footer
+
+// /////////
+// End Of Phone
+// /////////
+}

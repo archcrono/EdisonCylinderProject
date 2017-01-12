@@ -1,0 +1,53 @@
+@media only screen and (max-width: 999em) {
+  .active {
+    z-index: -1; }
+
+  .inactive {
+    top: 100%;
+    display: none;
+    z-index: 1; }
+
+  #container {
+    width: 100%; }
+
+  section {
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    top: 0; }
+    section header {
+      height: 50px;
+      width: 100%;
+      background: black;
+      color: white; }
+      section header ul {
+        padding-top: 10px; }
+        section header ul li i {
+          position: absolute;
+          left: 50%; }
+    section main {
+      position: absolute;
+      overflow: scroll; }
+
+  #footerButtonContainer i {
+    position: absolute;
+    color: white;
+    z-index: 10; }
+    #footerButtonContainer i:nth-child(1) {
+      left: 10%; }
+    #footerButtonContainer i:nth-child(2) {
+      left: 35%; }
+    #footerButtonContainer i:nth-child(3) {
+      left: 65%; }
+    #footerButtonContainer i:nth-child(4) {
+      left: 85%; }
+
+  footer {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0px;
+    color: white; } }
+
+/*# sourceMappingURL=phone.css.map */
