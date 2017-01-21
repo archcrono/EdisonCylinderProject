@@ -3,10 +3,12 @@ var screenHeight = $(window).height();
 
 $('section').height(screenHeight - 50);
 $('section main').height(screenHeight - 100);
-$('#footerButtonContainer i').css('top', screenHeight - 35 + 'px');
+$('.footerButtonContainers i').css('top', screenHeight - 35 + 'px');
 
 // Get selected section
 $('.navButton').click(function(){
+
+  console.log('Clicked!');
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -60,6 +62,7 @@ $('.navButton').click(function(){
     },500);
 
 
+
   })
 
   // Move Navigation Button
@@ -70,7 +73,6 @@ $('.navButton').click(function(){
 
   });
 
-  // $('footer').css('background-color','blue');
 
 
 })//End of get selected sections

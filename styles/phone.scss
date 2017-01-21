@@ -55,12 +55,12 @@ section{
 // ///////
 // Footer
 // ////////
-#footerButtonContainer{
+.footerButtonContainers{
   i{
     position: absolute;
     color: white;
     z-index: 10;
-    
+
     &:nth-child(1){
       left: 10%;
     }
@@ -76,6 +76,16 @@ section{
 
   }//End of icons
 }//End of Footer Button Container
+
+#tempFooter{
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-color: black;
+  z-index: 1;
+}
+
 footer{
   height: 50px;
   width: 100%;
