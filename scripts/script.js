@@ -9,8 +9,6 @@ $('.footerButtonContainers i').css('top', '15px');
 // Get selected section
 $('.navButton').click(function(){
 
-  console.log('Clicked!');
-
   // Create blank variable for selected section and get icon position
   var selectedSection;
   var iconPosition = $(this).position().left;
@@ -92,9 +90,9 @@ $('.navButton').click(function(){
 
 
 
-})//End of get selected sections
+});//End of get selected sections
 
-// Function For Changing footer
+// Function For Changing Footer Buttons
 var changeActiveFooter = function(){
   $('.tempActive').animate({
     opacity: 0
@@ -103,9 +101,9 @@ var changeActiveFooter = function(){
     $('.tempActive').removeClass('tempActive');
   })
 
-
+  // Increase Active Footer's opacity
   $('.activeFooter').css('display','block');
   $('.activeFooter').animate({
     opacity: 1
   }, 500)
-}
+};
