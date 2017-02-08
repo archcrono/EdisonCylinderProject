@@ -3,7 +3,8 @@ var screenHeight = $(window).height();
 
 $('section').height(screenHeight - 50);
 $('section main').height(screenHeight - 100);
-$('#footerButtonContainer i').css('top', screenHeight - 35 + 'px');
+// $('.footerButtonContainers i').css('top', screenHeight - 35 + 'px');
+$('.footerButtonContainers i').css('top', '15px');
 
 // Get selected section
 $('.navButton').click(function(){
@@ -16,15 +17,31 @@ $('.navButton').click(function(){
   switch ($(this).attr('id')) {
     case 'homeButton':
         selectedSection = '#homeSection';
+        $('.activeFooter').addClass('tempActive');
+        $('.activeFooter').removeClass('activeFooter');
+        $('#homeButtonContainer').addClass('activeFooter');
+        changeActiveFooter();
       break;
     case 'libraryButton':
         selectedSection = '#librarySection';
+        $('.activeFooter').addClass('tempActive');
+        $('.activeFooter').removeClass('activeFooter');
+        $('#libraryButtonContainer').addClass('activeFooter');
+        changeActiveFooter();
       break;
     case 'informationButton':
         selectedSection = '#informationSection';
+        $('.activeFooter').addClass('tempActive');
+        $('.activeFooter').removeClass('activeFooter');
+        $('#informationButtonContainer').addClass('activeFooter');
+        changeActiveFooter();
       break;
     case 'contactButton':
         selectedSection = '#contactSection';
+        $('.activeFooter').addClass('tempActive');
+        $('.activeFooter').removeClass('activeFooter');
+        $('#contactButtonContainer').addClass('activeFooter');
+        changeActiveFooter();
       break;
   }
 
@@ -60,17 +77,33 @@ $('.navButton').click(function(){
     },500);
 
 
+
   })
 
   // Move Navigation Button
-  $(this).animate({
-    top: 10
-  },500,function(){
-    $(this).css('display','none');
-
-  });
-
-  // $('footer').css('background-color','blue');
+  // $(this).animate({
+  //   top: 10
+  // },500,function(){
+  //   $(this).css('display','none');
+  //
+  // });
 
 
-})//End of get selected sections
+
+});//End of get selected sections
+
+// Function For Changing Footer Buttons
+var changeActiveFooter = function(){
+  $('.tempActive').animate({
+    opacity: 0
+  }, 500, function(){
+    $('.tempActive').css('display','none');
+    $('.tempActive').removeClass('tempActive');
+  })
+
+  // Increase Active Footer's opacity
+  $('.activeFooter').css('display','block');
+  $('.activeFooter').animate({
+    opacity: 1
+  }, 500)
+};
