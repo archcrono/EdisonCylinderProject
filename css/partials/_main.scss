@@ -1,0 +1,121 @@
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Hammersmith One', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+p{
+   font-family: 'Quattrocento Sans', sans-serif;
+   padding-bottom: 3px;
+   color: $white;
+}
+h2{
+  font-size: 35px;
+}
+
+body{
+  background-color: $webGreen;
+}
+
+
+.navbar{
+  background-color: $primary;
+  color: $white;
+  width: 100%;
+  line-height: 45px;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.navbar a {
+  color: $white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.navbar a:hover{
+  color: teal;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.conColor{
+  color: $webGreen;
+}
+
+.blackText{
+  color: $black;
+}
+
+.jumbotron {
+  background-image: url(http://www.tinfoil.com/edset-b.jpg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: $quad;
+  font-size: 48px;  
+  font-weight: bold;
+  text-shadow: 3px 3px $black;
+}
+
+.jumbotron p {
+  font-size: 30px;
+  color: $white;
+  text-shadow: 2px 2px $black;
+}
+
+.pics{
+  background-color: $webGreen;
+  border-bottom: 1px solid $webGrey;
+}
+
+.pics p{
+  margin-bottom: 13px;
+  font-size: 15px;
+}
+
+.pics h2{
+  font-size: 24px;
+}
+
+.thinCol{
+  width: 370px;
+  float: left;
+  margin: 5px;
+}
+
+.info {
+  background-color: $webGrey;
+}
+
+.info h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.info a {
+  color: $pent;
+}
+
+form{
+  max-width: 300px;
+}
+
+#footer {
+  clear: both;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  color: $white;
+  background: $primary;
+}

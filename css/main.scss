@@ -1,0 +1,9 @@
+// Main SCSS, there should be no CSS in this page!
+
+
+// Global Specificity
+@import 'partials/reset';
+@import 'partials/variables';
+
+// Page Specificity
+@import 'partials/main';
