@@ -1,15 +1,25 @@
 // Get Screen Sizes
 var screenHeight = $(window).height();
+var screenWidth = $(window).width();
 
-$('section').height(screenHeight - 50);
-$('section main').height(screenHeight - 100);
-// $('.footerButtonContainers i').css('top', screenHeight - 35 + 'px');
-$('.footerButtonContainers i').css('top', '15px');
+$(document).ready(function(){
+  if(screenWidth <= 650){
+    $('section').height(screenHeight - 50);
+    $('section main').height(screenHeight - 100);
+    $('.footerButtonContainers i').css('top', '15px');
+  }else{
+    $('section').height(screenHeight);//Leave in temporarily until filled in with content;
+    $('section').width(screenWidth - 50);
+    $('secetion main').width(screenWidth - 50);
+  }
+});
+
+
 
 // Get selected section
 $('.navButton').click(function(){
 
-  console.log('Clicked!');
+  // console.log('Clicked!');
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -47,6 +57,8 @@ $('.navButton').click(function(){
       break;
   }
 
+  // Will need to put in logic that determines how wide the screen is
+
   // Add styles to container so it remains stationary
   $('#container').height(screenHeight - 50);
   $('#container').css('position','absolute');
@@ -69,7 +81,7 @@ $('.navButton').click(function(){
     // Remove container restrictions
     $('#container').removeAttr('style');
 
-    // Reset Section Height;
+    // Reset Section Height
     $('section').height(screenHeight - 50);
     $('section main').height(screenHeight - 100);
 
@@ -78,21 +90,9 @@ $('.navButton').click(function(){
       left: '50%'
     },500);
 
+  });
 
-
-  })
-
-  // Move Navigation Button
-  // $(this).animate({
-  //   top: 10
-  // },500,function(){
-  //   $(this).css('display','none');
-  //
-  // });
-
-
-
-})//End of get selected sections
+});//End of get selected sections
 
 // Function For Changing footer
 var changeActiveFooter = function(){
