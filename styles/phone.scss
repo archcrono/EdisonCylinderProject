@@ -1,5 +1,12 @@
 @media only screen and (max-width: 999em) {
 
+// //////////
+// Variables
+// //////////
+$header-font: 'Roboto', sans-serif;
+$body-font: 'Nunito Sans', sans-serif;
+$alternative-font: 'Rubik', sans-serif;
+
 // /////////
 // Active/Inactive Classes
 // /////////
@@ -19,7 +26,7 @@
 }
 
 // /////////
-// Sections
+// Sections (Pages)
 // /////////
 section{
   width: 100%;
@@ -103,6 +110,25 @@ footer{
   z-index: -10;
 
 }//End of Footer
+
+// /////////////
+// Library Section
+// /////////////
+
+#librarySection{
+
+  main{
+
+    h2{
+      font-family: $header-font;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    h3{
+      font-family: $alternative-font;
+    }
+  }//End of Main
+}//End of Library Section
 
 // /////////
 // End Of Phone
