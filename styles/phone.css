@@ -27,7 +27,8 @@
           left: 50%; }
     section main {
       position: absolute;
-      overflow: scroll; }
+      overflow: scroll;
+      width: 100%; }
 
   .footerButtonContainers {
     height: 50px;

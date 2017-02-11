@@ -12,14 +12,16 @@
       <link href="styles/tablet.css" rel="stylesheet" type="text/css" >
     <!-- Desktop -->
       <link href="styles/desktop.css" rel="stylesheet" type="text/css" >
+    <!-- Angular -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" type="text/javascript"></script>
     <!-- Font Awesome -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- jQuery -->
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   </head>
-  <body>
+  <body ng-app="cylinderApp">
 
-    <div id="container">
+    <div id="container" ng-controller="cylinderAppCtrl">
 
       <!-- Home Section/Landing Page -->
 
@@ -33,7 +35,9 @@
         </header>
         <main>
 
+
           <!-- Place your HTML here -->
+
 
         </main>
       </section>
@@ -51,6 +55,13 @@
         <main style="background-color: blue;">
 
             <!-- Place your HTML here -->
+            <div ng-repeat="item in returnedCylinderData">
+              <h2 style="font-weight: bold; font-size: 1.2em;">{{ item.title }}</h2>
+              <h3>{{ item.artist }}</h3>
+              <audio controls>
+                <source src="{{item.url}}" type="audio/ogg">
+              </audio>
+            </div>
 
         </main>
       </section>

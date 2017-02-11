@@ -108,4 +108,31 @@ var changeActiveFooter = function(){
   $('.activeFooter').animate({
     opacity: 1
   }, 500)
-}
+};
+
+// ////////
+// Angular
+// ////////
+var cylinderApp = angular.module('cylinderApp', []);
+
+// Services for HTTP Requests
+cylinderApp.service('cylinderData', ['$http', function($http){
+  this.getCylinderData = function(){
+    return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json')
+  }
+}])
+
+// Controller for App
+cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($scope, cylinderData){
+
+  // Variables
+  $scope.returnedCylinderData;
+
+  cylinderData.getCylinderData().then(function(data){
+    $scope.returnedCylinderData = data.data;
+
+    console.log($scope.returnedCylinderData);
+  });
+
+
+}]);//End Of controller
