@@ -58,7 +58,7 @@
             <div ng-repeat="item in returnedCylinderData">
               <h2 style="font-weight: bold; font-size: 1.2em;">{{ item.title }}</h2>
               <h3>{{ item.artist }}</h3>
-              <audio controls>
+              <audio controls="controls" preload="none">
                 <source src="{{item.url}}" type="audio/ogg">
               </audio>
             </div>
