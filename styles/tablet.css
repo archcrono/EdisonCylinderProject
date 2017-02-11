@@ -6,6 +6,11 @@
       top: 0;
       width: 50px;
       height: 100%; }
+      section header ul {
+        padding-top: 10px; }
+        section header ul li i {
+          left: 35%;
+          top: 50%; }
 
   .footerButtonContainers {
     position: absolute;
@@ -13,6 +18,20 @@
     width: 50px;
     height: 100%;
     right: 0; }
+    .footerButtonContainers i {
+      position: absolute; }
+      .footerButtonContainers i:nth-child(1) {
+        top: 10%;
+        left: 35%; }
+      .footerButtonContainers i:nth-child(2) {
+        top: 35%;
+        left: 35%; }
+      .footerButtonContainers i:nth-child(3) {
+        top: 65%;
+        left: 35%; }
+      .footerButtonContainers i:nth-child(4) {
+        top: 85%;
+        left: 35%; }
 
   footer {
     position: absolute;
