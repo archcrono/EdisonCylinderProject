@@ -4,10 +4,9 @@ var screenWidth = $(window).width();
 var screenSizeChange = 650;//The pixel size when the styling changes
 var screenSize = null; //False indicates mobile, True indicates tablet and larger
 
-$(window).resize(function(){
-  screenHeight = $(window).height();
-  screenWidth = $(window).width();
 
+// Fit screen type
+var fitScreen = function(){
   // Makes the elements fit appropriate depending upon screensize
   if(screenWidth <= screenSizeChange){
     $('section').height(screenHeight - 50);
@@ -24,6 +23,14 @@ $(window).resize(function(){
     $('.footerButtonContainers i').removeAttr('style');
     screenSize = true;
   }
+};
+fitScreen();
+
+
+$(window).resize(function(){
+  screenHeight = $(window).height();
+  screenWidth = $(window).width();
+  fitScreen();
 });
 
 
