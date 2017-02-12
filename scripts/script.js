@@ -1,21 +1,28 @@
 // Get Screen Sizes
 var screenHeight = $(window).height();
 var screenWidth = $(window).width();
+var screenSizeChange = 650;//The pixel size when the styling changes
+var screenSize = null; //False indicates mobile, True indicates tablet and larger
 
 $(window).resize(function(){
   screenHeight = $(window).height();
   screenWidth = $(window).width();
 
-  if(screenWidth <= 650){
+  // Makes the elements fit appropriate depending upon screensize
+  if(screenWidth <= screenSizeChange){
     $('section').height(screenHeight - 50);
     $('section main').height(screenHeight - 100);
     $('section').width(screenWidth);
+    $('section main').css('width','100%');
     $('.footerButtonContainers i').css('top', '15px');
+    screenSize = false;
   }else{
-    $('section').height(screenHeight);//Leave in temporarily until filled in with content;
+    $('section').height(screenHeight);
+    $('section main').height(screenHeight);
     $('section').width(screenWidth - 50);
+    $('section main').width(screenWidth - 100);
     $('.footerButtonContainers i').removeAttr('style');
-    console.log(screenWidth);
+    screenSize = true;
   }
 });
 
@@ -62,42 +69,51 @@ $('.navButton').click(function(){
       break;
   }
 
-  // Will need to put in logic that determines how wide the screen is
+  // Determin if screen is in Mobile or Tablet/Desktop View
+  if(!screenSize){
+    // Mobile view
 
-  // Add styles to container so it remains stationary
-  // This is not handled by CSS because the broswer cannot handle two levels of hidden overflow
-  // It also locks the container in place so that scrolling down can not occur while screen changes.
-  $('#container').height(screenHeight - 50);
-  $('#container').css('position','absolute');
-  $('#container').css('overflow','hidden');
+    // Add styles to container so it remains stationary
+    // This is not handled by CSS because the broswer cannot handle two levels of hidden overflow
+    // It also locks the container in place so that scrolling down can not occur while screen changes.
+    $('#container').height(screenHeight - 50);
+    $('#container').css('position','absolute');
+    $('#container').css('overflow','hidden');
 
-  // Animate selected section
-  $(selectedSection).css('display','block');
-  $(selectedSection + ' header i').css('left', iconPosition);
-  $(selectedSection).animate({
-    top: 0
-  },500,function(){
+    // Animate selected section
+    $(selectedSection).css('display','block');
+    $(selectedSection + ' header i').css('left', iconPosition);
+    $(selectedSection).animate({
+      top: 0
+    },500,function(){
 
-    // Remove and add active and inactive classes
-    $('.active').addClass('inactive');
-    $('.active').removeAttr('style');
-    $('.active').removeClass('active');
-    $(selectedSection).removeClass('inactive');
-    $(selectedSection).addClass('active');
+      // Remove and add active and inactive classes
+      $('.active').addClass('inactive');
+      $('.active').removeAttr('style');
+      $('.active').removeClass('active');
+      $(selectedSection).removeClass('inactive');
+      $(selectedSection).addClass('active');
 
-    // Remove container restrictions
-    $('#container').removeAttr('style');
+      // Remove container restrictions
+      $('#container').height(screenHeight);
+      $('#container').removeAttr('style');
 
-    // Reset Section Height
-    $('section').height(screenHeight - 50);
-    $('section main').height(screenHeight - 100);
+      // Reset Section Height
+      $('section').height(screenHeight - 50);
+      $('section main').height(screenHeight - 100);
 
-    // Move selected section icon to the center
-    $(selectedSection + ' header i').animate({
-      left: '50%'
-    },500);
+      // Move selected section icon to the center
+      $(selectedSection + ' header i').animate({
+        left: '50%'
+      },500);
 
-  });
+    });
+  }
+  else if (screenSize){
+    // Tablet/Desktop view
+  }
+
+
 
 });//End of get selected sections
 

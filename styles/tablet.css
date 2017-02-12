@@ -11,6 +11,8 @@
         section header ul li i {
           left: 35%;
           top: 50%; }
+    section main {
+      margin-left: 50px; }
 
   .footerButtonContainers {
     position: absolute;
