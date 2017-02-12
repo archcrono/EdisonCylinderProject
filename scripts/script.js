@@ -2,15 +2,20 @@
 var screenHeight = $(window).height();
 var screenWidth = $(window).width();
 
-$(document).ready(function(){
+$(window).resize(function(){
+  screenHeight = $(window).height();
+  screenWidth = $(window).width();
+
   if(screenWidth <= 650){
     $('section').height(screenHeight - 50);
     $('section main').height(screenHeight - 100);
+    $('section').width(screenWidth);
     $('.footerButtonContainers i').css('top', '15px');
   }else{
     $('section').height(screenHeight);//Leave in temporarily until filled in with content;
     $('section').width(screenWidth - 50);
-    $('secetion main').width(screenWidth - 50);
+    $('.footerButtonContainers i').removeAttr('style');
+    console.log(screenWidth);
   }
 });
 
@@ -60,6 +65,8 @@ $('.navButton').click(function(){
   // Will need to put in logic that determines how wide the screen is
 
   // Add styles to container so it remains stationary
+  // This is not handled by CSS because the broswer cannot handle two levels of hidden overflow
+  // It also locks the container in place so that scrolling down can not occur while screen changes.
   $('#container').height(screenHeight - 50);
   $('#container').css('position','absolute');
   $('#container').css('overflow','hidden');
