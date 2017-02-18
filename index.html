@@ -54,22 +54,28 @@
             </li>
           </ul>
         </header>
-        <main style="background-color: blue;">
+        <main style="background-color: white;">
 
             <!-- Place your HTML here -->
 
             <!-- Search bar HTML is needed -->
 
-            <div ng-repeat="item in returnedCylinderData">
-              <div class="">
+          <div class="top">
+            <div class="bannerGrid">
+              <img src="img/banner.png" width="100%">
+            </div>
+          </div>
 
-              </div>
+          <div class="libGrid">
+            <div ng-repeat="item in returnedCylinderData">
+              <img src="img/temp.jpg" width="300">
               <h2>{{ item.title }}</h2>
               <h3>{{ item.artist }}</h3>
               <audio controls="controls" preload="none">
                 <source src="{{item.url}}" type="audio/ogg">
               </audio>
             </div>
+          </div>
 
         </main>
       </section>
