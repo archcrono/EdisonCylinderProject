@@ -65,6 +65,24 @@
     font-size: 1.2em;
     font-weight: bold; }
   #librarySection main h3 {
-    font-family: "Rubik", sans-serif; } }
+    font-family: "Rubik", sans-serif; }
+  #librarySection main .ng-scope {
+    display: inline-block;
+    width: 300px;
+    height: 80px;
+    margin: 5px;
+    padding: 5px; }
+    #librarySection main .ng-scope h2, #librarySection main .ng-scope h3 {
+      padding: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  #librarySection main .top {
+    background-color: #275D38;
+    width: 100%; }
+    #librarySection main .top .bannerGrid {
+      display: inline-block;
+      width: 330px;
+      padding-right: 3px; } }
 
 /*# sourceMappingURL=phone.css.map */
