@@ -42,7 +42,6 @@ $('.navButton').click(function(){
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
-  var iconPosition = $(this).position().left;
 
   // Determine which button is selected and assign the matching section
   switch ($(this).attr('id')) {
@@ -79,6 +78,8 @@ $('.navButton').click(function(){
   // Determin if screen is in Mobile or Tablet/Desktop View
   if(!screenSize){
     // Mobile view
+
+    var iconPosition = $(this).position().left;
 
     // Add styles to container so it remains stationary
     // This is not handled by CSS because the broswer cannot handle two levels of hidden overflow
@@ -118,6 +119,18 @@ $('.navButton').click(function(){
   }
   else if (screenSize){
     // Tablet/Desktop view
+
+    var iconPosition = $(this).position().top;
+
+    $(selectedSection).css('display','block');
+    $(selectedSection).width(screenWidth);
+    $(selectedSection).css('top','0');
+    $(selectedSection).css('left', screenWidth);
+
+    $(selectedSection).animate({
+      left: 0
+    }, 500);
+
   }
 
 
