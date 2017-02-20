@@ -68,12 +68,14 @@
 
           <div class="libGrid">
             <div ng-repeat="item in returnedCylinderData">
-              <img src="img/temp.jpg" width="300">
+            <div class="square">
+              <img src="img/temp.jpg" width="100%">
+              <div class="overlay"></div>
+            </div>
+            <div class="shadeBack">
               <h2>{{ item.title }}</h2>
               <h3>{{ item.artist }}</h3>
-              <audio controls="controls" preload="none">
-                <source src="{{item.url}}" type="audio/ogg">
-              </audio>
+            </div>  
             </div>
           </div>
 
