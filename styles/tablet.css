@@ -40,6 +40,11 @@
     top: 0;
     width: 50px;
     height: 100%;
-    right: 0; } }
+    right: 0; }
+
+  #librarySection main .ng-scope {
+    width: 150px; }
+  #librarySection main .top .bannerGrid {
+    width: 50%; } }
 
 /*# sourceMappingURL=tablet.css.map */

@@ -40,9 +40,6 @@ $alternative-font: 'Rubik', sans-serif;
       $pan6: #a7a8aa; // Cool Grey
       $pan2: #d0d0ce; // Coolest Grey
 
-// library grid width
-$libwidth: 150px;
-
 
 // /////////
 // Active/Inactive Classes
@@ -157,9 +154,14 @@ footer{
     }
 
         // styling the library grid
+
+    .libGrid{
+      text-align: center;
+    }
+        
     .ng-scope {
       display: inline-block;
-      width: $libwidth;
+      width: 44%;
       height: 80px;
       margin: 5px;
       padding: 5px;
@@ -180,7 +182,7 @@ footer{
 
       .bannerGrid{
       display: inline-block;
-      width: 340px;
+      width: 100%;
       padding-right: 3px;
       }
     }
@@ -194,7 +196,7 @@ footer{
     right:0;
     top:0;
     z-index: 1;
-    width: $libwidth;
+
 }
 .square{position:relative;}
 
