@@ -66,9 +66,11 @@
     font-weight: bold; }
   #librarySection main h3 {
     font-family: "Rubik", sans-serif; }
+  #librarySection main .libGrid {
+    text-align: center; }
   #librarySection main .ng-scope {
     display: inline-block;
-    width: 150px;
+    width: 44%;
     height: 80px;
     margin: 5px;
     padding: 5px; }
@@ -83,7 +85,7 @@
     width: 100%; }
     #librarySection main .top .bannerGrid {
       display: inline-block;
-      width: 340px;
+      width: 100%;
       padding-right: 3px; }
   #librarySection main .overlay {
     background-color: #8e8c89;
@@ -93,8 +95,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 1;
-    width: 150px; }
+    z-index: 1; }
   #librarySection main .square {
     position: relative; }
   #librarySection main .shadeBack {
