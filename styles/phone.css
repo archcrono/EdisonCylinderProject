@@ -23,7 +23,8 @@
         padding-top: 10px; }
         section header ul li i {
           position: absolute;
-          left: 50%; }
+          left: 50%;
+          font-size: 1.2em !important; }
     section main {
       position: absolute;
       overflow: scroll;
@@ -76,7 +77,23 @@
       #homeSection #homeContainer #cylinderOfTheDay {
         width: 100%;
         height: 70px;
-        background-color: grey; }
+        background-color: grey;
+        color: white;
+        font-family: Helvetica;
+        display: flex;
+        justify-content: space-between; }
+        #homeSection #homeContainer #cylinderOfTheDay img {
+          margin: 5px 0 0 20px;
+          width: 60px;
+          height: 60px;
+          background-color: red; }
+        #homeSection #homeContainer #cylinderOfTheDay i {
+          font-size: 3em;
+          position: relative;
+          text-align: center;
+          margin: 10px 0 0 30px; }
+        #homeSection #homeContainer #cylinderOfTheDay h2 {
+          margin: 25px 20px 0 0; }
       #homeSection #homeContainer #homeSlider {
         width: 100%;
         position: absolute;
@@ -85,7 +102,8 @@
         #homeSection #homeContainer #homeSlider div {
           width: 100%;
           background-repeat: no-repeat;
-          background-size: 110%; }
+          background-size: 110%;
+          background-position: bottom; }
           #homeSection #homeContainer #homeSlider div h2 {
             font-size: 1.2em;
             font-family: Arial;

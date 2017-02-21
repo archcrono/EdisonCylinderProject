@@ -166,7 +166,8 @@ var changeActiveFooter = function(){
 $(document).ready(function(){
   $('#homeSlider').slick({
     arrows: false,
-    infinite: false
+    infinite: false,
+    // dots: true
   })
 });
 

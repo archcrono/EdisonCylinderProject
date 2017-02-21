@@ -80,6 +80,7 @@ section{
         i{
           position: absolute;
           left: 50%;
+          font-size: 1.2em !important;
         }//End of I
       }//End of LI
     }//End of UL
@@ -164,6 +165,26 @@ footer{
       width: 100%;
       height: 70px;
       background-color: grey;
+      color: white;
+      font-family: $standard-font;
+      display: flex;
+      justify-content: space-between;
+
+      img{
+        margin: 5px 0 0 20px;
+        width: 60px;
+        height: 60px;
+        background-color: red;
+      }
+      i{
+        font-size: 3em;
+        position: relative;
+        text-align: center;
+        margin: 10px 0 0 30px;
+      }
+      h2{
+        margin: 25px 20px 0 0;
+      }
     }
 
     #homeSlider{
@@ -177,6 +198,7 @@ footer{
         width: 100%;
         background-repeat: no-repeat;
         background-size: 110%;
+        background-position: bottom;
         h2{
           font-size: 1.2em;
           font-family: $header-font;
