@@ -153,6 +153,17 @@ var changeActiveFooter = function(){
   }, 500)
 };
 
+// ///////////
+// Slick Slider
+// ///////////
+
+$(document).ready(function(){
+  $('#homeSlider').slick({
+    arrows: false
+  })
+});
+
+
 // ////////
 // Angular
 // ////////

@@ -12,7 +12,6 @@
 
   section {
     width: 100%;
-    background-color: red;
     position: absolute;
     top: 0; }
     section header {
@@ -60,46 +59,68 @@
     color: white;
     z-index: -10; }
 
-  #librarySection main h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2em;
-    font-weight: bold; }
-  #librarySection main h3 {
-    font-family: "Rubik", sans-serif; }
-  #librarySection main .libGrid {
-    text-align: center; }
-  #librarySection main .ng-scope {
-    display: inline-block;
-    width: 40%;
-    height: 80px;
-    margin: 5px;
-    padding: 5px; }
-    #librarySection main .ng-scope h2, #librarySection main .ng-scope h3 {
-      padding: 3px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: white; }
-  #librarySection main .top {
-    background-color: #275D38;
-    width: 100%; }
-    #librarySection main .top .bannerGrid {
+  #homeSection {
+    background-color: white; }
+    #homeSection #homeContainer {
+      width: 100%; }
+      #homeSection #homeContainer #homeBanner {
+        width: 100%;
+        height: 80px;
+        background-color: #00843d; }
+      #homeSection #homeContainer #cylinderOfTheDay {
+        width: 100%;
+        height: 60px;
+        background-color: grey; }
+      #homeSection #homeContainer #homeSlider {
+        width: 100%;
+        position: absolute;
+        bottom: 0; }
+        #homeSection #homeContainer #homeSlider div {
+          width: 100%;
+          height: 300px; }
+
+  #librarySection {
+    background-color: white; }
+    #librarySection main h2 {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.2em;
+      font-weight: bold; }
+    #librarySection main h3 {
+      font-family: "Rubik", sans-serif; }
+    #librarySection main .libGrid {
+      text-align: center; }
+    #librarySection main .ng-scope {
       display: inline-block;
-      width: 100%;
-      padding-right: 3px; }
-  #librarySection main .overlay {
-    background-color: #8e8c89;
-    bottom: 0;
-    left: 0;
-    opacity: 0.5;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1; }
-  #librarySection main .square {
-    position: relative; }
-  #librarySection main .shadeBack {
-    background-color: black;
-    opacity: 0.7; } }
+      width: 40%;
+      height: 80px;
+      margin: 5px;
+      padding: 5px; }
+      #librarySection main .ng-scope h2, #librarySection main .ng-scope h3 {
+        padding: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white; }
+    #librarySection main .top {
+      background-color: #275D38;
+      width: 100%; }
+      #librarySection main .top .bannerGrid {
+        display: inline-block;
+        width: 100%;
+        padding-right: 3px; }
+    #librarySection main .overlay {
+      background-color: #8e8c89;
+      bottom: 0;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1; }
+    #librarySection main .square {
+      position: relative; }
+    #librarySection main .shadeBack {
+      background-color: black;
+      opacity: 0.7; } }
 
 /*# sourceMappingURL=phone.css.map */

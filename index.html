@@ -20,6 +20,9 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Rubik" rel="stylesheet">
     <!-- jQuery -->
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
   </head>
   <body ng-app="cylinderApp">
 
@@ -39,6 +42,38 @@
 
 
           <!-- Place your HTML here -->
+          <div id="homeContainer">
+            <!-- Banner -->
+            <div id="homeBanner">
+              <h1>UVU</h1>
+              <h3>Cylinder Libray</h3>
+            </div>
+            <!-- Cylinder Of The Day -->
+            <div id="cylinderOfTheDay">
+
+            </div>
+            <!-- Main Content -->
+            <div id="homeSlider">
+              <div id="libraryLink" style="background-color: red;">
+                <h2>Search Library</h2>
+                <p>You can search our extensive library of many cylinders.</p>
+                <p>Feel free to search by artist, title, or even year!</p>
+              </div>
+
+              <div id="historyLink" style="background-color: yellow;">
+                <h2>Today In History</h2>
+                <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
+              </div>
+
+              <div id="randomLink" style="background-color: green;">
+                <h2>Random</h2>
+                <p>Can't think of something to look for? Try one at random!</p>
+              </div>
+
+            </div>
+
+
+          </div>
 
 
         </main>
@@ -54,7 +89,7 @@
             </li>
           </ul>
         </header>
-        <main style="background-color: white;">
+        <main>
 
             <!-- Place your HTML here -->
 
@@ -75,7 +110,7 @@
             <div class="shadeBack">
               <h2>{{ item.title }}</h2>
               <h3>{{ item.artist }}</h3>
-            </div>  
+            </div>
             </div>
           </div>
 

@@ -64,7 +64,6 @@ $alternative-font: 'Rubik', sans-serif;
 // /////////
 section{
   width: 100%;
-  background-color: red;
   position: absolute;
   top: 0;
 
@@ -136,11 +135,50 @@ footer{
 
 }//End of Footer
 
+// //////////////
+// Home Page/Landing Page Section
+// //////////////
+#homeSection{
+  background-color: white;
+
+  #homeContainer{
+    width: 100%;
+
+    #homeBanner{
+      width: 100%;
+      height: 80px;
+      background-color: $pan348;
+    }
+
+    #cylinderOfTheDay{
+      width: 100%;
+      height: 60px;
+      background-color: grey;
+    }
+
+    #homeSlider{
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      div{
+        width: 100%;
+        height: 300px;
+      }
+
+      #libraryLink{
+
+      }
+    }
+
+  }//End of Home Container
+}//End of Home Section
+
 // /////////////
 // Library Section
 // /////////////
 
 #librarySection{
+  background-color: white;
 
   main{
 
