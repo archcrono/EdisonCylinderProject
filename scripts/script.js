@@ -15,6 +15,11 @@ var fitScreen = function(){
     $('section main').css('width','100%');
     $('.footerButtonContainers i').css('top', '15px');
     screenSize = false;
+
+    // Home Page Slider Height
+    $('#homeSlider').height(screenHeight - 260);
+    $('#homeSlider div').height(screenHeight - 260);
+
   }else{
     $('section').height(screenHeight);
     $('section main').height(screenHeight);

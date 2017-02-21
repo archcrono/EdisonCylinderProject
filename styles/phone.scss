@@ -3,9 +3,11 @@
 // //////////
 // Variables
 // //////////
-$header-font: 'Roboto', sans-serif;
+// $header-font: 'Roboto', sans-serif;
 $body-font: 'Nunito Sans', sans-serif;
 $alternative-font: 'Rubik', sans-serif;
+$header-font: Arial;
+$standard-font: Helvetica;
 
   // UVU Color Palette Variables     https://www.uvu.edu/marketing/docs/branding_guides/uvu_web_style_guide_logos.pdf page 7
   $uvuPrime: #275D38; // UVU Green
@@ -148,27 +150,39 @@ footer{
       width: 100%;
       height: 80px;
       background-color: $pan348;
+      padding: 10px 0 0 10px;
+      font-family: $standard-font;
+      color: white;
+      img{
+        width: 90px;
+      }
+      h3{
+        margin-top: 5px;
+      }
     }
 
     #cylinderOfTheDay{
       width: 100%;
-      height: 60px;
+      height: 70px;
       background-color: grey;
     }
 
     #homeSlider{
       width: 100%;
       position: absolute;
-      bottom: 0;
+      background-color: blue;
+      font-family: $standard-font;
+      color: white;
+
+      // Main Content (Slider)
       div{
         width: 100%;
-        height: 300px;
-      }
-
-      #libraryLink{
-
-      }
-    }
+        h2{
+          font-size: 1.2em;
+          font-family: $header-font;
+        }
+      }//End of Divs in Slider
+    }//End of Home Slider
 
   }//End of Home Container
 }//End of Home Section

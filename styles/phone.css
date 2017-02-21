@@ -66,23 +66,34 @@
       #homeSection #homeContainer #homeBanner {
         width: 100%;
         height: 80px;
-        background-color: #00843d; }
+        background-color: #00843d;
+        padding: 10px 0 0 10px;
+        font-family: Helvetica;
+        color: white; }
+        #homeSection #homeContainer #homeBanner img {
+          width: 90px; }
+        #homeSection #homeContainer #homeBanner h3 {
+          margin-top: 5px; }
       #homeSection #homeContainer #cylinderOfTheDay {
         width: 100%;
-        height: 60px;
+        height: 70px;
         background-color: grey; }
       #homeSection #homeContainer #homeSlider {
         width: 100%;
         position: absolute;
-        bottom: 0; }
+        background-color: blue;
+        font-family: Helvetica;
+        color: white; }
         #homeSection #homeContainer #homeSlider div {
-          width: 100%;
-          height: 300px; }
+          width: 100%; }
+          #homeSection #homeContainer #homeSlider div h2 {
+            font-size: 1.2em;
+            font-family: Arial; }
 
   #librarySection {
     background-color: white; }
     #librarySection main h2 {
-      font-family: "Roboto", sans-serif;
+      font-family: Arial;
       font-size: 1.2em;
       font-weight: bold; }
     #librarySection main h3 {
