@@ -147,7 +147,6 @@ footer{
     width: 100%;
 
     #homeBanner{
-      width: 100%;
       height: 80px;
       background-color: $pan348;
       padding: 10px 0 0 10px;
@@ -180,8 +179,46 @@ footer{
         h2{
           font-size: 1.2em;
           font-family: $header-font;
+          font-weight: bold;
+          margin: 10px 0 15px 0;
+        }
+        p{
+          margin: 5px;
         }
       }//End of Divs in Slider
+
+      // Sliders
+      #libraryLink{
+        background-image: url('../img/cover1.png');
+        background-repeat: no-repeat;
+        background-size: 110%;
+        h2,p{
+          position: relative;
+          z-index: 1;
+        }
+        .backColor{
+          background: -webkit-linear-gradient(top, rgba(255,0,0,1) 0%,rgba(255,255,255,0) 100%);
+          max-width: 100%;
+          position: absolute;
+          top: 0;
+        }
+      }//End of Library Link
+      #historyLink{
+        background-image: url('../img/cover2.png');
+        background-repeat: no-repeat;
+        background-size: 110%;
+        h2,p{
+          position: relative;
+          z-index: 1;
+        }
+        .backColor{
+          background: -webkit-linear-gradient(top, rgba(0,25,255,1) 0%,rgba(255,255,255,0) 100%);
+          width: 100%;
+          position: absolute;
+          top: 0;
+        }
+      }
+
     }//End of Home Slider
 
   }//End of Home Container
