@@ -16,9 +16,10 @@ var fitScreen = function(){
     $('.footerButtonContainers i').css('top', '15px');
     screenSize = false;
 
-    // Home Page Slider Height
+    // Home Page Slider Height and Width
     $('#homeSlider').height(screenHeight - 260);
     $('#homeSlider div').height(screenHeight - 260);
+    $('.backColor').width(screenWidth);
 
   }else{
     $('section').height(screenHeight);
@@ -164,7 +165,8 @@ var changeActiveFooter = function(){
 
 $(document).ready(function(){
   $('#homeSlider').slick({
-    arrows: false
+    arrows: false,
+    infinite: false
   })
 });
 

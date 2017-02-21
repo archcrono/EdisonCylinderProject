@@ -169,13 +169,14 @@ footer{
     #homeSlider{
       width: 100%;
       position: absolute;
-      background-color: blue;
       font-family: $standard-font;
       color: white;
 
       // Main Content (Slider)
       div{
         width: 100%;
+        background-repeat: no-repeat;
+        background-size: 110%;
         h2{
           font-size: 1.2em;
           font-family: $header-font;
@@ -185,37 +186,34 @@ footer{
         p{
           margin: 5px;
         }
+        h2,p{
+          position: relative;
+          z-index: 1;
+        }
+        .backColor{
+          max-width: 100%;
+          position: absolute;
+          top: 0;
+        }
       }//End of Divs in Slider
 
       // Sliders
       #libraryLink{
         background-image: url('../img/cover1.png');
-        background-repeat: no-repeat;
-        background-size: 110%;
-        h2,p{
-          position: relative;
-          z-index: 1;
-        }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(255,0,0,1) 0%,rgba(255,255,255,0) 100%);
-          max-width: 100%;
-          position: absolute;
-          top: 0;
         }
       }//End of Library Link
       #historyLink{
         background-image: url('../img/cover2.png');
-        background-repeat: no-repeat;
-        background-size: 110%;
-        h2,p{
-          position: relative;
-          z-index: 1;
-        }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(0,25,255,1) 0%,rgba(255,255,255,0) 100%);
-          width: 100%;
-          position: absolute;
-          top: 0;
+        }
+      }
+      #randomLink{
+        background-image: url('../img/cover3.png');
+        .backColor{
+          background: -webkit-linear-gradient(top, rgba(40,120,0,1) 0%,rgba(255,255,255,0) 100%);
         }
       }
 
