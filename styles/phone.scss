@@ -249,7 +249,6 @@ footer{
 // /////////////
 
 #librarySection{
-  background-color: white;
 
   main{
 
@@ -268,21 +267,18 @@ footer{
       text-align: center;
     }
 
+    .overPlay{
+       width: 300px;
+       padding: 10px;
+       float: left;
+     }
+        
     .ng-scope {
       display: inline-block;
-      width: 40%;
+      width: 44%;
       height: 80px;
       margin: 5px;
       padding: 5px;
-
-        h2, h3 {
-          padding: 3px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: white;
-        }
-
     }
 
     .top{
@@ -312,12 +308,19 @@ footer{
 .shadeBack{
   background-color: black;
   opacity: 0.7;
+          h2, h3 {
+          padding: 3px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: white;
+        }
 }
-
 
 
   }//End of Main
 }//End of Library Section
+
 
 // /////////
 // End Of Phone
