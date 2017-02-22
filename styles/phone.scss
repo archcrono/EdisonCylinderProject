@@ -155,9 +155,22 @@ footer{
       color: white;
       img{
         width: 90px;
+        position: relative;
+        z-index: 1;
       }
       h3{
         margin-top: 5px;
+        position: relative;
+        z-index: 1;
+      }
+      svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .8
+      }
+      .bannerBar{
+        margin-left: 160px;
       }
     }
 
