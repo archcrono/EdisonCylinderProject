@@ -119,7 +119,21 @@
             <div class="bannerGrid">
               <img src="img/banner.png" width="100%">
             </div>
+            <div class="bannerGrid seachBar">
+              <input type="text" name="search" placeholder="Search">
+            </div>
           </div>
+
+            <div class="overPlay">
+              <img src="img/temp.jpg" width="300px">
+            <div class="shadeBack">
+              <h2>Town Topics of Pumpkin Center</h2>
+              <h3>Cal Stewart</h3>
+            </div>
+              <audio controls="controls" preload="none">
+                <source src="http://dgm4410.tropht.com/cylinderAudioFiles/c101.ogg" type="audio/ogg">
+              </audio>
+            </div>
 
           <div class="libGrid">
             <div ng-repeat="item in returnedCylinderData">
@@ -130,12 +144,16 @@
             <div class="shadeBack">
               <h2>{{ item.title }}</h2>
               <h3>{{ item.artist }}</h3>
-            </div>
-            </div>
-          </div>
+         <!-- <audio controls="controls" preload="none">
+                <source src="{{item.url}}" type="audio/ogg">
+              </audio> -->
+            </div> 
+            </div> <!-- ng-repeat -->
+          </div> <!-- libgrid -->
 
         </main>
       </section>
+
 
       <!-- Information Section/About Page -->
 
