@@ -149,7 +149,9 @@ footer{
 
     #homeBanner{
       height: 80px;
-      background-color: $pan348;
+      background-image: url('../img/bannerImage.png');
+      background-position: right;
+      background-repeat: no-repeat;
       padding: 10px 0 0 10px;
       font-family: $standard-font;
       color: white;
@@ -167,10 +169,16 @@ footer{
         position: absolute;
         top: 0;
         left: 0;
-        opacity: .8
+        opacity: .6
       }
-      .bannerBar{
+      .bannerBar:nth-of-type(2){
         margin-left: 160px;
+      }
+      .bannerBar:nth-of-type(3){
+        margin-left: 190px;
+      }
+      .bannerBar:nth-of-type(4){
+        margin-left: 220px;
       }
     }
 
@@ -182,6 +190,7 @@ footer{
       font-family: $standard-font;
       display: flex;
       justify-content: space-between;
+      margin: 5px 0;
 
       img{
         margin: 5px 0 0 20px;
@@ -286,7 +295,7 @@ footer{
        padding: 10px;
        float: left;
      }
-        
+
     .ng-scope {
       display: inline-block;
       width: 44%;

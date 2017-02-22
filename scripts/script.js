@@ -17,8 +17,8 @@ var fitScreen = function(){
     screenSize = false;
 
     // Home Page Slider Height and Width
-    $('#homeSlider').height(screenHeight - 260);
-    $('#homeSlider div').height(screenHeight - 260);
+    $('#homeSlider').height(screenHeight - 270);
+    $('#homeSlider div').height(screenHeight - 270);
     $('.backColor').width(screenWidth);
 
   }else{
