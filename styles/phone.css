@@ -1,15 +1,12 @@
 @media only screen and (max-width: 999em) {
   .active {
     z-index: -1; }
-
   .inactive {
     top: 100%;
     display: none;
     z-index: 1; }
-
   #container {
     width: 100%; }
-
   section {
     width: 100%;
     position: absolute;
@@ -29,7 +26,6 @@
       position: absolute;
       overflow: scroll;
       width: 100%; }
-
   .footerButtonContainers {
     height: 50px;
     width: 100%;
@@ -50,7 +46,6 @@
         left: 65%; }
       .footerButtonContainers i:nth-child(4) {
         left: 85%; }
-
   footer {
     height: 50px;
     width: 100%;
@@ -59,7 +54,6 @@
     bottom: 0px;
     color: white;
     z-index: -10; }
-
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
@@ -84,7 +78,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          opacity: 0.6; }
+          opacity: .6; }
         #homeSection #homeContainer #homeBanner .bannerBar:nth-of-type(2) {
           margin-left: 160px; }
         #homeSection #homeContainer #homeBanner .bannerBar:nth-of-type(3) {
@@ -154,7 +148,6 @@
         #homeSection #homeContainer #homeSlider .slick-dots {
           position: absolute;
           bottom: 10px; }
-
   #librarySection {
     background-color: white; }
     #librarySection main h2 {
@@ -201,6 +194,39 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: white; } }
-
-/*# sourceMappingURL=phone.css.map */
+        color: white; }
+  #informationSection {
+    background: white; }
+    #informationSection .header__banner {
+      width: 100%;
+      height: auto; }
+      #informationSection .header__banner img {
+        width: 100%;
+        height: auto; }
+    #informationSection .header__search {
+      display: none; }
+    #informationSection h1 {
+      font-size: 35px;
+      padding: 0;
+      padding-left: 15px;
+      margin-top: 30px;
+      margin-bottom: 50px; }
+    #informationSection iframe {
+      width: 100%;
+      height: 350px !important;
+      display: block; }
+    #informationSection p {
+      line-height: 1.3em;
+      margin: 50px 0;
+      padding-left: 15px;
+      padding-right: 15px; }
+    #informationSection .row .row__img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px; }
+      #informationSection .row .row__img img {
+        display: block;
+        width: 100%;
+        height: auto; }
+    #informationSection .row:last-child .row__img:last-child {
+      margin-bottom: 0; } }
