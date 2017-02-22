@@ -13,7 +13,6 @@
           top: 50%; }
     section main {
       margin-left: 50px; }
-
   .footerButtonContainers {
     position: absolute;
     top: 0;
@@ -34,17 +33,68 @@
       .footerButtonContainers i:nth-child(4) {
         top: 85%;
         left: 35%; }
-
   footer {
     position: absolute;
     top: 0;
     width: 50px;
     height: 100%;
     right: 0; }
-
   #librarySection main .ng-scope {
     width: 150px; }
   #librarySection main .top .bannerGrid {
-    width: 47%; } }
-
-/*# sourceMappingURL=tablet.css.map */
+    width: 47%; }
+  #informationSection {
+    background: white; }
+    #informationSection .header {
+      display: flex;
+      justify-content: space-between; }
+      #informationSection .header__banner {
+        width: 60%;
+        height: auto; }
+        #informationSection .header__banner img {
+          width: 100%;
+          height: auto; }
+      #informationSection .header__search {
+        display: block;
+        width: 35%;
+        background: #3E693F;
+        position: relative; }
+        #informationSection .header__search input {
+          font-size: 1.3em;
+          border: none;
+          border-bottom: 2px solid white;
+          background: none;
+          padding-bottom: 5px;
+          position: absolute;
+          left: 25%;
+          bottom: 40%;
+          width: 55%; }
+    #informationSection h1 {
+      font-size: 35px;
+      padding: 0 40px;
+      margin-top: 30px;
+      margin-bottom: 50px; }
+    #informationSection iframe {
+      width: 80%;
+      height: 350px !important;
+      display: block;
+      margin: 0 auto; }
+    #informationSection p {
+      line-height: 1.3em;
+      margin: 50px 0;
+      padding: 0 40px; }
+    #informationSection .row {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto; }
+      #informationSection .row .row__img {
+        margin-bottom: 20px;
+        width: 30%;
+        height: auto; }
+        #informationSection .row .row__img img {
+          width: 100%;
+          height: auto;
+          display: block; }
+    #informationSection .row:last-child .row__img {
+      margin-bottom: 0px; } }
