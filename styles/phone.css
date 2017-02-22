@@ -68,16 +68,18 @@
     font-family: "Rubik", sans-serif; }
   #librarySection main .libGrid {
     text-align: center; }
-  #librarySection main .overPlay {
-    width: 300px;
-    padding: 10px;
-    float: left; }
   #librarySection main .ng-scope {
     display: inline-block;
     width: 44%;
     height: 80px;
     margin: 5px;
     padding: 5px; }
+    #librarySection main .ng-scope h2, #librarySection main .ng-scope h3 {
+      padding: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: white; }
   #librarySection main .top {
     background-color: #275D38;
     width: 100%; }
@@ -98,12 +100,6 @@
     position: relative; }
   #librarySection main .shadeBack {
     background-color: black;
-    opacity: 0.7; }
-    #librarySection main .shadeBack h2, #librarySection main .shadeBack h3 {
-      padding: 3px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: white; } }
+    opacity: 0.7; } }
 
 /*# sourceMappingURL=phone.css.map */

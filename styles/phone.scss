@@ -158,12 +158,6 @@ footer{
     .libGrid{
       text-align: center;
     }
-
-    .overPlay{
-       width: 300px;
-       padding: 10px;
-       float: left;
-     }
         
     .ng-scope {
       display: inline-block;
@@ -171,6 +165,15 @@ footer{
       height: 80px;
       margin: 5px;
       padding: 5px;
+
+        h2, h3 {
+          padding: 3px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: white;
+        }
+
     }
 
     .top{
@@ -200,13 +203,6 @@ footer{
 .shadeBack{
   background-color: black;
   opacity: 0.7;
-          h2, h3 {
-          padding: 3px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: white;
-        }
 }
 
 
