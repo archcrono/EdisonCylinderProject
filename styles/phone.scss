@@ -214,6 +214,7 @@ footer{
       position: absolute;
       font-family: $standard-font;
       color: white;
+      margin-bottom: 0;
 
       // Main Content (Slider)
       div{
@@ -222,13 +223,15 @@ footer{
         background-size: 110%;
         background-position: bottom;
         h2{
-          font-size: 1.2em;
-          font-family: $header-font;
+          font-size: 1.6em;
+          font-family: Helvetica;
           font-weight: bold;
-          margin: 10px 0 15px 0;
+          margin: 20px 0 20px 0;
+          padding: 0 10px;
         }
         p{
-          margin: 5px;
+          padding: 0 10px;
+          margin-bottom: 10px;
         }
         h2,p{
           position: relative;
@@ -259,6 +262,13 @@ footer{
         .backColor{
           background: -webkit-linear-gradient(top, rgba(40,120,0,1) 0%,rgba(255,255,255,0) 100%);
         }
+      }
+
+      // Slick Carousel Dots
+      .slick-dots{
+        position: absolute;
+        bottom: 10px;
+        
       }
 
     }//End of Home Slider

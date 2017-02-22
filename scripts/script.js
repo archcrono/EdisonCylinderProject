@@ -167,7 +167,7 @@ $(document).ready(function(){
   $('#homeSlider').slick({
     arrows: false,
     infinite: false,
-    // dots: true
+    dots: true
   })
 });
 

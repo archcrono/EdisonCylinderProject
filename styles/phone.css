@@ -116,19 +116,22 @@
         width: 100%;
         position: absolute;
         font-family: Helvetica;
-        color: white; }
+        color: white;
+        margin-bottom: 0; }
         #homeSection #homeContainer #homeSlider div {
           width: 100%;
           background-repeat: no-repeat;
           background-size: 110%;
           background-position: bottom; }
           #homeSection #homeContainer #homeSlider div h2 {
-            font-size: 1.2em;
-            font-family: Arial;
+            font-size: 1.6em;
+            font-family: Helvetica;
             font-weight: bold;
-            margin: 10px 0 15px 0; }
+            margin: 20px 0 20px 0;
+            padding: 0 10px; }
           #homeSection #homeContainer #homeSlider div p {
-            margin: 5px; }
+            padding: 0 10px;
+            margin-bottom: 10px; }
           #homeSection #homeContainer #homeSlider div h2, #homeSection #homeContainer #homeSlider div p {
             position: relative;
             z-index: 1; }
@@ -148,6 +151,9 @@
           background-image: url("../img/cover3.png"); }
           #homeSection #homeContainer #homeSlider #randomLink .backColor {
             background: -webkit-linear-gradient(top, #287800 0%, rgba(255, 255, 255, 0) 100%); }
+        #homeSection #homeContainer #homeSlider .slick-dots {
+          position: absolute;
+          bottom: 10px; }
 
   #librarySection {
     background-color: white; }
