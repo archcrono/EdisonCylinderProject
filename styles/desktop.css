@@ -1,8 +1,13 @@
 @media only screen and (min-width: 1100px) {
   #librarySection main .ng-scope {
     width: 150px; }
-  #librarySection main .top .bannerGrid {
+  #librarySection main .top .banner {
     width: 35%; }
+  #librarySection main .top .search {
+    width: 20%; }
+    #librarySection main .top .search input {
+      font-size: 2em; }
+
   #informationSection {
     background: white; }
     #informationSection .header {
@@ -42,3 +47,5 @@
           width: 100%;
           height: auto;
           display: block; } }
+
+/*# sourceMappingURL=desktop.css.map */

@@ -12,9 +12,17 @@
       width: 150px;
     }    
 
-    .top .bannerGrid{
-      width: 35%;
-    }
+    .top{
+	    .banner{
+	      width: 35%;
+	    }
+	    .search{
+	      width: 20%;
+	      input{
+	      	font-size: 2em;
+	      }
+	    }
+	  }
 
   }//End of Main
 }//End of Library Section

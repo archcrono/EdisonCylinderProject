@@ -80,9 +80,21 @@ footer{
       width: 150px;
     }    
 
-    .top .bannerGrid{
+  .top{
+    display: flex;
+    justify-content: space-between;
+    .banner{
       width: 47%;
+      height: auto;
+      img{
+        width: 100%;
+        height: auto;
+      }
     }
+    .search{
+      display: block;
+    }
+  }
 
   }//End of Main
 }//End of Library Section
