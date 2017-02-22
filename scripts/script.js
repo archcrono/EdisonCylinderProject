@@ -15,6 +15,12 @@ var fitScreen = function(){
     $('section main').css('width','100%');
     $('.footerButtonContainers i').css('top', '15px');
     screenSize = false;
+
+    // Home Page Slider Height and Width
+    $('#homeSlider').height(screenHeight - 260);
+    $('#homeSlider div').height(screenHeight - 260);
+    $('.backColor').width(screenWidth);
+
   }else{
     $('section').height(screenHeight);
     $('section main').height(screenHeight);
@@ -152,6 +158,19 @@ var changeActiveFooter = function(){
     opacity: 1
   }, 500)
 };
+
+// ///////////
+// Slick Slider
+// ///////////
+
+$(document).ready(function(){
+  $('#homeSlider').slick({
+    arrows: false,
+    infinite: false,
+    // dots: true
+  })
+});
+
 
 // ////////
 // Angular

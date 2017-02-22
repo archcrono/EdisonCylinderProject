@@ -12,7 +12,6 @@
 
   section {
     width: 100%;
-    background-color: red;
     position: absolute;
     top: 0; }
     section header {
@@ -24,7 +23,8 @@
         padding-top: 10px; }
         section header ul li i {
           position: absolute;
-          left: 50%; }
+          left: 50%;
+          font-size: 1.2em !important; }
     section main {
       position: absolute;
       overflow: scroll;
@@ -60,46 +60,119 @@
     color: white;
     z-index: -10; }
 
-  #librarySection main h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2em;
-    font-weight: bold; }
-  #librarySection main h3 {
-    font-family: "Rubik", sans-serif; }
-  #librarySection main .libGrid {
-    text-align: center; }
-  #librarySection main .ng-scope {
-    display: inline-block;
-    width: 44%;
-    height: 80px;
-    margin: 5px;
-    padding: 5px; }
-    #librarySection main .ng-scope h2, #librarySection main .ng-scope h3 {
-      padding: 3px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: white; }
-  #librarySection main .top {
-    background-color: #275D38;
-    width: 100%; }
-    #librarySection main .top .bannerGrid {
+  #homeSection {
+    background-color: white; }
+    #homeSection #homeContainer {
+      width: 100%; }
+      #homeSection #homeContainer #homeBanner {
+        height: 80px;
+        background-color: #00843d;
+        padding: 10px 0 0 10px;
+        font-family: Helvetica;
+        color: white; }
+        #homeSection #homeContainer #homeBanner img {
+          width: 90px; }
+        #homeSection #homeContainer #homeBanner h3 {
+          margin-top: 5px; }
+      #homeSection #homeContainer #cylinderOfTheDay {
+        width: 100%;
+        height: 70px;
+        background-color: grey;
+        color: white;
+        font-family: Helvetica;
+        display: flex;
+        justify-content: space-between; }
+        #homeSection #homeContainer #cylinderOfTheDay img {
+          margin: 5px 0 0 20px;
+          width: 60px;
+          height: 60px;
+          background-color: red; }
+        #homeSection #homeContainer #cylinderOfTheDay i {
+          font-size: 3em;
+          position: relative;
+          text-align: center;
+          margin: 10px 0 0 30px; }
+        #homeSection #homeContainer #cylinderOfTheDay h2 {
+          margin: 25px 20px 0 0; }
+      #homeSection #homeContainer #homeSlider {
+        width: 100%;
+        position: absolute;
+        font-family: Helvetica;
+        color: white; }
+        #homeSection #homeContainer #homeSlider div {
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: 110%;
+          background-position: bottom; }
+          #homeSection #homeContainer #homeSlider div h2 {
+            font-size: 1.2em;
+            font-family: Arial;
+            font-weight: bold;
+            margin: 10px 0 15px 0; }
+          #homeSection #homeContainer #homeSlider div p {
+            margin: 5px; }
+          #homeSection #homeContainer #homeSlider div h2, #homeSection #homeContainer #homeSlider div p {
+            position: relative;
+            z-index: 1; }
+          #homeSection #homeContainer #homeSlider div .backColor {
+            max-width: 100%;
+            position: absolute;
+            top: 0; }
+        #homeSection #homeContainer #homeSlider #libraryLink {
+          background-image: url("../img/cover1.png"); }
+          #homeSection #homeContainer #homeSlider #libraryLink .backColor {
+            background: -webkit-linear-gradient(top, red 0%, rgba(255, 255, 255, 0) 100%); }
+        #homeSection #homeContainer #homeSlider #historyLink {
+          background-image: url("../img/cover2.png"); }
+          #homeSection #homeContainer #homeSlider #historyLink .backColor {
+            background: -webkit-linear-gradient(top, #0019ff 0%, rgba(255, 255, 255, 0) 100%); }
+        #homeSection #homeContainer #homeSlider #randomLink {
+          background-image: url("../img/cover3.png"); }
+          #homeSection #homeContainer #homeSlider #randomLink .backColor {
+            background: -webkit-linear-gradient(top, #287800 0%, rgba(255, 255, 255, 0) 100%); }
+
+  #librarySection {
+    background-color: white; }
+    #librarySection main h2 {
+      font-family: Arial;
+      font-size: 1.2em;
+      font-weight: bold; }
+    #librarySection main h3 {
+      font-family: "Rubik", sans-serif; }
+    #librarySection main .libGrid {
+      text-align: center; }
+    #librarySection main .ng-scope {
       display: inline-block;
-      width: 100%;
-      padding-right: 3px; }
-  #librarySection main .overlay {
-    background-color: #8e8c89;
-    bottom: 0;
-    left: 0;
-    opacity: 0.5;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1; }
-  #librarySection main .square {
-    position: relative; }
-  #librarySection main .shadeBack {
-    background-color: black;
-    opacity: 0.7; } }
+      width: 40%;
+      height: 80px;
+      margin: 5px;
+      padding: 5px; }
+      #librarySection main .ng-scope h2, #librarySection main .ng-scope h3 {
+        padding: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white; }
+    #librarySection main .top {
+      background-color: #275D38;
+      width: 100%; }
+      #librarySection main .top .bannerGrid {
+        display: inline-block;
+        width: 100%;
+        padding-right: 3px; }
+    #librarySection main .overlay {
+      background-color: #8e8c89;
+      bottom: 0;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1; }
+    #librarySection main .square {
+      position: relative; }
+    #librarySection main .shadeBack {
+      background-color: black;
+      opacity: 0.7; } }
 
 /*# sourceMappingURL=phone.css.map */
