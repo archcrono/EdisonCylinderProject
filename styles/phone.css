@@ -1,12 +1,15 @@
 @media only screen and (max-width: 999em) {
   .active {
     z-index: -1; }
+
   .inactive {
     top: 100%;
     display: none;
     z-index: 1; }
+
   #container {
     width: 100%; }
+
   section {
     width: 100%;
     position: absolute;
@@ -26,6 +29,7 @@
       position: absolute;
       overflow: scroll;
       width: 100%; }
+
   .footerButtonContainers {
     height: 50px;
     width: 100%;
@@ -46,6 +50,7 @@
         left: 65%; }
       .footerButtonContainers i:nth-child(4) {
         left: 85%; }
+
   footer {
     height: 50px;
     width: 100%;
@@ -54,6 +59,7 @@
     bottom: 0px;
     color: white;
     z-index: -10; }
+
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
@@ -78,7 +84,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          opacity: .6; }
+          opacity: 0.6; }
         #homeSection #homeContainer #homeBanner .bannerBar:nth-of-type(2) {
           margin-left: 160px; }
         #homeSection #homeContainer #homeBanner .bannerBar:nth-of-type(3) {
@@ -148,6 +154,7 @@
         #homeSection #homeContainer #homeSlider .slick-dots {
           position: absolute;
           bottom: 10px; }
+
   #librarySection {
     background-color: white; }
     #librarySection main h2 {
@@ -164,17 +171,31 @@
       float: left; }
     #librarySection main .ng-scope {
       display: inline-block;
-      width: 44%;
+      width: 40%;
       height: 80px;
-      margin: 5px;
-      padding: 5px; }
-    #librarySection main .top {
-      background-color: #275D38;
-      width: 100%; }
-      #librarySection main .top .bannerGrid {
-        display: inline-block;
+      margin: 3px;
+      padding: 2px; }
+    #librarySection main .top .banner {
+      width: 100%;
+      height: auto; }
+      #librarySection main .top .banner img {
         width: 100%;
-        padding-right: 3px; }
+        height: auto; }
+    #librarySection main .top .search {
+      display: none;
+      width: 35%;
+      position: relative;
+      background: #275D38; }
+      #librarySection main .top .search input {
+        font-size: 1.3em;
+        border: none;
+        border-bottom: 2px solid white;
+        background: none;
+        padding-bottom: 5px;
+        position: absolute;
+        left: 25%;
+        bottom: 40%;
+        width: 55%; }
     #librarySection main .overlay {
       background-color: #8e8c89;
       bottom: 0;
@@ -195,6 +216,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         color: white; }
+
   #informationSection {
     background: white; }
     #informationSection .header__banner {
@@ -230,3 +252,5 @@
         height: auto; }
     #informationSection .row:last-child .row__img:last-child {
       margin-bottom: 0; } }
+
+/*# sourceMappingURL=phone.css.map */
