@@ -4,8 +4,8 @@
   #librarySection main .top .banner {
     width: 35%; }
   #librarySection main .top .search {
-    width: 20%; }
-    #librarySection main .top .search input {
+    width: 30%; }
+    #librarySection main .top .search p {
       font-size: 2em; }
 
   #informationSection {

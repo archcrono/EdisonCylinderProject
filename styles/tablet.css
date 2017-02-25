@@ -54,7 +54,7 @@
         width: 100%;
         height: auto; }
     #librarySection main .top .search {
-      display: block; }
+      display: inline-block; }
 
   #informationSection {
     background: white; }
