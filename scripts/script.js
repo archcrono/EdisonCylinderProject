@@ -94,7 +94,7 @@ $('.navButton').click(function(){
     $('#container').css('position','absolute');
     $('#container').css('overflow','hidden');
 
-    // Animate selected section
+    // Prep/Animate selected section
     $(selectedSection).css('display','block');
     $(selectedSection + ' header i').css('left', iconPosition);
     $(selectedSection).animate({
@@ -128,6 +128,7 @@ $('.navButton').click(function(){
 
     var iconPosition = $(this).position().top;
 
+    // Assign Height and width to the selected section
     $(selectedSection).css('display','block');
     $(selectedSection).height(screenHeight);
     $(selectedSection).width(screenWidth - 50);
@@ -135,9 +136,7 @@ $('.navButton').click(function(){
     $(selectedSection).css('left', screenWidth);
 
 
-
-
-
+    $(selectedSection + ' header i').css('top', iconPosition);
 
     $(selectedSection).animate({
       left: 0
@@ -149,6 +148,11 @@ $('.navButton').click(function(){
       $('.active').removeClass('active');
       $(selectedSection).removeClass('inactive');
       $(selectedSection).addClass('active');
+
+      // Move Selected Icon to center
+      $(selectedSection + ' header i').animate({
+        top: '50%'
+      },500);
 
     });
 
