@@ -129,13 +129,28 @@ $('.navButton').click(function(){
     var iconPosition = $(this).position().top;
 
     $(selectedSection).css('display','block');
-    $(selectedSection).width(screenWidth);
+    $(selectedSection).height(screenHeight);
+    $(selectedSection).width(screenWidth - 50);
     $(selectedSection).css('top','0');
     $(selectedSection).css('left', screenWidth);
 
+
+
+
+
+
     $(selectedSection).animate({
       left: 0
-    }, 500);
+    }, 500, function(){
+
+      // Remove and add active and inactive classes
+      $('.active').addClass('inactive');
+      $('.active').removeAttr('style');
+      $('.active').removeClass('active');
+      $(selectedSection).removeClass('inactive');
+      $(selectedSection).addClass('active');
+
+    });
 
   }
 

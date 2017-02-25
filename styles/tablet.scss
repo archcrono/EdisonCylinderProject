@@ -1,4 +1,15 @@
 @media only screen and (min-width: 651px) and (max-width: 999em){
+// /////////
+// Active/Inactive Classes
+// /////////
+.active{
+  z-index: -1;
+}
+.inactive{
+  top: 0;
+  display: none;
+  z-index: 1;
+}
 
 // ///////////
 // Section
@@ -78,7 +89,7 @@ footer{
 
     .ng-scope{
       width: 150px;
-    }    
+    }
 
   .top{
     display: flex;
