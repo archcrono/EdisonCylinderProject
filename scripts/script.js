@@ -42,9 +42,11 @@ $(window).resize(function(){
 
 
 // Get selected section
-$('.navButton').click(function(){
+$('.navButton').on('click', function(){
 
   // console.log('Clicked!');
+  // $('.navButton').off('click');
+  // $('.tempButton').removeClass('navButton');
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -158,7 +160,7 @@ $('.navButton').click(function(){
 
   }
 
-
+$('.navButton').on('click');
 
 });//End of get selected sections
 
