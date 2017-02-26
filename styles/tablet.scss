@@ -107,15 +107,23 @@ footer{
     }
     .search{
       display: inline-block;
-      input{
+      span{
         position: absolute;
         left: 13%;
         top: 42%;
-        background: none;
-        border: none;
-        border-bottom: 2px solid white;
-        width: 75%;
+        i{
+          position: absolute;
+          left: 20px;
+        }
+        input{
+
+          background: none;
+          border: none;
+          border-bottom: 2px solid white;
+          width: 75%;
+        }
       }
+
       #advancedSearch{
         position: absolute;
         width: 100%;
@@ -128,6 +136,14 @@ footer{
           display: inline-block;
         }
       }
+    }
+  }
+
+
+  // Grid
+  .libGrid{
+    .shadeBack{
+      width: 150px;
     }
   }
 

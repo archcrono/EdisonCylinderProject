@@ -65,14 +65,18 @@
         height: auto; }
     #librarySection main .top .search {
       display: inline-block; }
-      #librarySection main .top .search input {
+      #librarySection main .top .search span {
         position: absolute;
         left: 13%;
-        top: 42%;
-        background: none;
-        border: none;
-        border-bottom: 2px solid white;
-        width: 75%; }
+        top: 42%; }
+        #librarySection main .top .search span i {
+          position: absolute;
+          left: 20px; }
+        #librarySection main .top .search span input {
+          background: none;
+          border: none;
+          border-bottom: 2px solid white;
+          width: 75%; }
       #librarySection main .top .search #advancedSearch {
         position: absolute;
         width: 100%;
@@ -83,6 +87,8 @@
         #librarySection main .top .search #advancedSearch select {
           width: 50%;
           display: inline-block; }
+  #librarySection main .libGrid .shadeBack {
+    width: 150px; }
 
   #informationSection {
     background: white; }

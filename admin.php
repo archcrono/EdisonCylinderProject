@@ -13,9 +13,8 @@
         $.ajax({
           type: "GET",
           url: "php/get.php",
-          dataType: "html",
+          dataType: "json",
           success: function(response){
-            console.log("connection successful");
 
             console.log(response);
           }
