@@ -219,3 +219,8 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
 
 }]);//End Of controller
+
+
+$("#showAdvancedSearch").click(function(){
+  $("#advancedSearch").toggle();
+})

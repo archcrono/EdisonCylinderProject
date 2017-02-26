@@ -102,10 +102,32 @@ footer{
       img{
         width: 100%;
         height: auto;
+
       }
     }
     .search{
       display: inline-block;
+      input{
+        position: absolute;
+        left: 13%;
+        top: 42%;
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        width: 75%;
+      }
+      #advancedSearch{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 120px;
+        background-color: red;
+        z-index: 10;
+        select{
+          width: 50%;
+          display: inline-block;
+        }
+      }
     }
   }
 

@@ -65,6 +65,24 @@
         height: auto; }
     #librarySection main .top .search {
       display: inline-block; }
+      #librarySection main .top .search input {
+        position: absolute;
+        left: 13%;
+        top: 42%;
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        width: 75%; }
+      #librarySection main .top .search #advancedSearch {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 120px;
+        background-color: red;
+        z-index: 10; }
+        #librarySection main .top .search #advancedSearch select {
+          width: 50%;
+          display: inline-block; }
 
   #informationSection {
     background: white; }
