@@ -107,20 +107,13 @@ footer{
     }
     .search{
       display: inline-block;
+      width: 35%;
       span{
-        position: absolute;
-        left: 13%;
-        top: 42%;
-        i{
-          position: absolute;
-          left: 20px;
-        }
+        position: relative;
+        top: 10%;
         input{
-
-          background: none;
-          border: none;
-          border-bottom: 2px solid white;
-          width: 75%;
+          width: 60%;
+          margin-bottom: 0px;
         }
       }
 
@@ -128,16 +121,16 @@ footer{
         position: absolute;
         width: 100%;
         left: 0;
-        top: 120px;
-        background-color: red;
+        background-color: #c5e86c;
         z-index: 10;
         select{
           width: 50%;
           display: inline-block;
         }
       }
-    }
-  }
+
+    } // search
+  } // top
 
 
   // Grid

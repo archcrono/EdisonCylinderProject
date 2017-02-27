@@ -64,25 +64,19 @@
         width: 100%;
         height: auto; }
     #librarySection main .top .search {
-      display: inline-block; }
+      display: inline-block;
+      width: 35%; }
       #librarySection main .top .search span {
-        position: absolute;
-        left: 13%;
-        top: 42%; }
-        #librarySection main .top .search span i {
-          position: absolute;
-          left: 20px; }
+        position: relative;
+        top: 10%; }
         #librarySection main .top .search span input {
-          background: none;
-          border: none;
-          border-bottom: 2px solid white;
-          width: 75%; }
+          width: 60%;
+          margin-bottom: 0px; }
       #librarySection main .top .search #advancedSearch {
         position: absolute;
         width: 100%;
         left: 0;
-        top: 120px;
-        background-color: red;
+        background-color: #c5e86c;
         z-index: 10; }
         #librarySection main .top .search #advancedSearch select {
           width: 50%;

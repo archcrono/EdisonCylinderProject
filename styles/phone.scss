@@ -325,8 +325,8 @@ footer{
     }
 
     .search{
-      display: none;
-      width: 35%;
+      display: inline-block;
+      width: 100%;
       position: relative;
       background: $uvuPrime;
       text-align: center;
@@ -342,6 +342,21 @@ footer{
         // left: 25%;
         // bottom: 40%;
         // width: 55%;
+      }
+      span{
+        input{
+          background: none;
+          border: none;
+          border-bottom: 2px solid white;
+          width: 35%;
+          color: white;
+          padding-top: 8px;
+          margin-top: 8px;
+          margin-bottom: 16px;
+        }
+        select{
+          margin-bottom: 8px;
+        }
       }
     }
 
