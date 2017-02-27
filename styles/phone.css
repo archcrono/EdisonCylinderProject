@@ -182,8 +182,8 @@
         width: 100%;
         height: auto; }
     #librarySection main .top .search {
-      display: none;
-      width: 35%;
+      display: inline-block;
+      width: 100%;
       position: relative;
       background: #275D38;
       text-align: center; }
@@ -195,6 +195,17 @@
         background: none;
         padding-bottom: 5px;
         padding-top: 25%; }
+      #librarySection main .top .search span input {
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        width: 35%;
+        color: white;
+        padding-top: 8px;
+        margin-top: 8px;
+        margin-bottom: 16px; }
+      #librarySection main .top .search span select {
+        margin-bottom: 8px; }
     #librarySection main .top .menu-item {
       position: relative;
       display: inline-block; }
