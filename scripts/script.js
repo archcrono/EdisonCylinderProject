@@ -192,6 +192,12 @@ $(document).ready(function(){
   })
 });
 
+// /////////////
+// Advanced Search
+// /////////////
+$("#showAdvancedSearch").click(function(){
+  $("#advancedSearch").toggle();
+})
 
 // ////////
 // Angular
@@ -221,8 +227,3 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
 
 }]);//End Of controller
-
-
-$("#showAdvancedSearch").click(function(){
-  $("#advancedSearch").toggle();
-})
