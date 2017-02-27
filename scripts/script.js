@@ -201,9 +201,11 @@ var cylinderApp = angular.module('cylinderApp', []);
 // Services for HTTP Requests
 cylinderApp.service('cylinderData', ['$http', function($http){
   this.getCylinderData = function(){
-    return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json')
+    return $http.get('php/get.php')
   }
-}])
+}]);
+
+
 
 // Controller for App
 cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($scope, cylinderData){
@@ -211,10 +213,10 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   // Variables
   $scope.returnedCylinderData;
 
+  // Get data
   cylinderData.getCylinderData().then(function(data){
     $scope.returnedCylinderData = data.data;
 
-    console.log($scope.returnedCylinderData);
   });
 
 
