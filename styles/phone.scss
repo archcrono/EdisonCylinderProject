@@ -61,6 +61,41 @@ $standard-font: Helvetica;
   width: 100%;
 }
 
+.banner{
+  height: 80px;
+  background-image: url('../img/bannerImage.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 10px 0 0 10px;
+  font-family: $standard-font;
+  color: white;
+  img{
+    width: 90px;
+    position: relative;
+    z-index: 1;
+  }
+  h3{
+    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+  }
+  svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6
+  }
+  .bannerBar:nth-of-type(2){
+    margin-left: 160px;
+  }
+  .bannerBar:nth-of-type(3){
+    margin-left: 190px;
+  }
+  .bannerBar:nth-of-type(4){
+    margin-left: 220px;
+  }
+}
+
 // /////////
 // Sections (Pages)
 // /////////
@@ -147,41 +182,6 @@ footer{
   #homeContainer{
     width: 100%;
 
-    #homeBanner{
-      height: 80px;
-      background-image: url('../img/bannerImage.png');
-      background-position: right;
-      background-repeat: no-repeat;
-      padding: 10px 0 0 10px;
-      font-family: $standard-font;
-      color: white;
-      img{
-        width: 90px;
-        position: relative;
-        z-index: 1;
-      }
-      h3{
-        margin-top: 5px;
-        position: relative;
-        z-index: 1;
-      }
-      svg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: .6
-      }
-      .bannerBar:nth-of-type(2){
-        margin-left: 160px;
-      }
-      .bannerBar:nth-of-type(3){
-        margin-left: 190px;
-      }
-      .bannerBar:nth-of-type(4){
-        margin-left: 220px;
-      }
-    }
-
     #cylinderOfTheDay{
       width: 100%;
       height: 70px;
@@ -208,6 +208,26 @@ footer{
         margin: 25px 20px 0 0;
       }
     }
+
+    #indicators{
+      position: absolute;
+      top: 50%;
+      color: white;
+      // width: 100%;
+      i{
+        position: absolute;
+        z-index: 10;
+        font-size: 1.3em;
+        &:nth-child(1){
+          left: 10px;
+
+        }
+        &:nth-child(2){
+          // right: 10px;
+        }
+      }
+
+    }//End of indicators
 
     #homeSlider{
       width: 100%;
@@ -315,14 +335,14 @@ footer{
     }
 
   .top{
-    .banner{
-      width: 100%;
-      height: auto;
-      img{
-        width: 100%;
-        height: auto;
-      }
-    }
+    // .banner{
+    //   width: 100%;
+    //   height: auto;
+    //   img{
+    //     width: 100%;
+    //     height: auto;
+    //   }
+    // } Will delete after aproval
 
     .search{
       display: inline-block;
@@ -330,6 +350,7 @@ footer{
       position: relative;
       background: $uvuPrime;
       text-align: center;
+      margin-top: 5px;
       p{
         font-size: 1.3em;
         border: none;

@@ -207,7 +207,7 @@ var cylinderApp = angular.module('cylinderApp', []);
 // Services for HTTP Requests
 cylinderApp.service('cylinderData', ['$http', function($http){
   this.getCylinderData = function(){
-    return $http.get('php/get.php')
+    return $http.get('php/get.php');
   }
 }]);
 

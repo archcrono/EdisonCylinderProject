@@ -41,6 +41,8 @@
           }
         });
       });
+
+      console.log("Hello");
     </script>
     <?php
       // $link = mysql_connect("tropht.com:3306","trophtco_Brake","StrongPassword1");
