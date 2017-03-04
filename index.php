@@ -17,7 +17,7 @@
     <!-- Font Awesome -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Rubik" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Rubik|Arsenal" rel="stylesheet">
     <!-- jQuery -->
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- Slick Slider -->
@@ -31,13 +31,13 @@
 
       <!-- Home Section/Landing Page -->
 
-      <section id="homeSection" class="active">
+      <section id="homeSection" class="inactive">
         <?php include 'homeSection.php'; ?>
       </section>
 
       <!-- Library Section/Cylinder Library -->
 
-      <section id="librarySection" class="inactive">
+      <section id="librarySection" class="active">
         <?php include 'librarySection.php'; ?>
       </section>
 

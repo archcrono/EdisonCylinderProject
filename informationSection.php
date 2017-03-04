@@ -7,12 +7,14 @@
 </header>
 <main>
   <div class="header">
-    <div class="header__banner">
+    <!-- <div class="header__banner">
       <img src="img/banner.png">
     </div>
     <div class="header__search">
       <input type="text" placeholder="Search...">
-    </div>
+    </div> -->
+
+    <?php include 'banner.php'; ?>
   </div>
 
 

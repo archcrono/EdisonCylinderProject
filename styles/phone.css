@@ -16,7 +16,7 @@
     background-position: right;
     background-repeat: no-repeat;
     padding: 10px 0 0 10px;
-    font-family: Helvetica;
+    font-family: "Rubik", sans-serif;
     color: white; }
     .banner img {
       width: 90px;
@@ -97,7 +97,7 @@
         height: 70px;
         background-color: grey;
         color: white;
-        font-family: Helvetica;
+        font-family: "Rubik", sans-serif;
         display: flex;
         justify-content: space-between;
         margin: 5px 0; }
@@ -126,7 +126,7 @@
       #homeSection #homeContainer #homeSlider {
         width: 100%;
         position: absolute;
-        font-family: Helvetica;
+        font-family: "Rubik", sans-serif;
         color: white;
         margin-bottom: 0; }
         #homeSection #homeContainer #homeSlider div {
@@ -169,7 +169,7 @@
   #librarySection {
     background-color: white; }
     #librarySection main h2 {
-      font-family: Arial;
+      font-family: "Arsenal", sans-serif;
       font-size: 1.2em;
       font-weight: bold; }
     #librarySection main h3 {
