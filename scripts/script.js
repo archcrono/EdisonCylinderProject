@@ -197,7 +197,26 @@ $(document).ready(function(){
 // /////////////
 $("#showAdvancedSearch").click(function(){
   $("#advancedSearch").toggle();
-})
+});
+
+// //////////////
+// Select banner
+// //////////////
+
+var imgArray = ['banner1.png', 'banner2.png', 'banner3.png', 'banner4.png'];//Potential banner img URLs
+var bannerImgPath = "img/";
+
+// function to create random image path
+var randomBannerImg = function(){
+  return bannerImgPath + imgArray[Math.round(Math.random() * (imgArray.length - 1))];
+}
+
+// Assign random image to each banner
+for(var i = 0; i < $('.banner').length; i++){
+  $('.banner').eq(i).append(
+    "<img class='bannerRotate' src='" + randomBannerImg() + "' alt='Banner Image'>"
+  )
+}
 
 // ////////
 // Angular

@@ -13,4 +13,5 @@
   <svg class="bannerBar" height="90" width="75">
     <polygon points="50,0 60,0 10,90 0,90" style="fill:green;"/>
   </svg>
+  <!-- <img src="img/banner1.png" alt=""> -->
 </div>
