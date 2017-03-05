@@ -40,16 +40,16 @@
     </div> <!-- search -->
   </div><!-- top -->
 
-    <!-- <div class="overPlay">
+    <div class="overPlay">
       <img src="img/temp.jpg" width="300px">
-    <div class="shadeBack">
-      <h2>Town Topics of Pumpkin Center</h2>
-      <h3>Cal Stewart</h3>
-    </div>
+      <div class="shadeBackBig">
+        <h2>Town Topics of Pumpkin Center</h2>
+        <h3>Cal Stewart</h3>
+      </div>
       <audio controls="controls" preload="none">
         <source src="http://dgm4410.tropht.com/cylinderAudioFiles/c101.ogg" type="audio/ogg">
       </audio>
-    </div> -->
+    </div>
 
   <div class="libGrid">
     <div ng-repeat="item in returnedCylinderData">

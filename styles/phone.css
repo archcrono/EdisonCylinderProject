@@ -204,13 +204,13 @@
     #librarySection main .libGrid {
       text-align: center; }
     #librarySection main .overPlay {
-      width: 300px;
+      width: 290px;
       padding: 10px;
       float: left; }
     #librarySection main .ng-scope {
       display: inline-block;
-      width: 40%;
-      height: 80px;
+      width: 45%;
+      height: 85px;
       margin: 3px;
       padding: 2px; }
     #librarySection main .top .search {
@@ -271,9 +271,22 @@
       margin-top: -47px;
       background-color: black;
       opacity: 0.7;
-      width: 40%;
+      width: 45%;
       z-index: 10; }
       #librarySection main .shadeBack h2, #librarySection main .shadeBack h3 {
+        padding: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white; }
+    #librarySection main .shadeBackBig {
+      position: absolute;
+      margin-top: -47px;
+      background-color: black;
+      opacity: 0.7;
+      width: 300px;
+      z-index: 10; }
+      #librarySection main .shadeBackBig h2, #librarySection main .shadeBackBig h3 {
         padding: 3px;
         white-space: nowrap;
         overflow: hidden;
