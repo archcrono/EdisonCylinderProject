@@ -200,6 +200,22 @@ $("#showAdvancedSearch").click(function(){
 });
 
 // //////////////
+// SeachBar Lock
+// //////////////
+var searchBar = $('searchBar');
+
+$('#librarySection main').scroll(function(){
+  console.log(searchBar.position());
+
+	if($('#librarySection main').scrollTop() > 100 ){
+		searchBar.addClass("lockBar");
+	}
+	else{
+		// searchBar.removeClass("lockBar");
+	}
+});
+
+// //////////////
 // Select banner
 // //////////////
 
@@ -223,7 +239,7 @@ for(var i = 0; i < $('.banner').length; i++){
 // ///////////////////////
 var randomCylinderImage = function(){
   var cylinderImagePath = 'img/libraryCover/cylinder';
-  return cylinderImagePath + (Math.round(Math.random() * 28) + 1) + '.jpg';
+  return cylinderImagePath + (Math.round(Math.random() * 27) + 1) + '.jpg';
 }
 
 

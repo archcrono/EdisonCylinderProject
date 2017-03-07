@@ -55,6 +55,10 @@ $standard-font: 'Rubik', sans-serif;
   display: none;
   z-index: 1;
 }
+.lockBar{
+  position: fixed;
+  background-color: red;
+}
 // ////////
 // All
 // ////////
@@ -361,14 +365,15 @@ footer{
       display: inline-block;
       width: 100%;
       position: relative;
-      background: $uvuPrime;
+      // background: $uvuPrime;
       text-align: center;
       margin-top: 5px;
+      height: 60px;
       p{
         font-size: 1.3em;
         border: none;
         border-bottom: 2px solid white;
-        color: white;
+        // color: white;
         background: none;
         padding-bottom: 5px;
         padding-top: 25%;
@@ -381,15 +386,23 @@ footer{
         input{
           background: none;
           border: none;
-          border-bottom: 2px solid white;
-          width: 35%;
-          color: white;
+          border-bottom: 2px solid grey;
+          width: 85%;
+          color: grey;
           padding-top: 8px;
-          margin-top: 8px;
-          margin-bottom: 16px;
+          margin-top: 5px;
+          font-size: 1.5em;
+          &:focus{
+            outline: none;
+          }
         }
-        select{
-          margin-bottom: 8px;
+        i{
+          position: absolute;
+          margin-right: 15px;
+          color: grey;
+          font-size: 1.5em;
+          top: 10px;
+          right: 15px;
         }
       }
     }
@@ -433,6 +446,7 @@ footer{
 .square{position:relative;}
 
 .shadeBack{
+  text-align: left;
   position: absolute;
   margin-top: -47px;
   background-color: black;
