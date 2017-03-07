@@ -52,9 +52,9 @@
     </div>
 
   <div class="libGrid">
-    <div ng-repeat="item in returnedCylinderData">
+    <div class="cylinderSquare" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData">
     <div class="square">
-      <img src="img/temp.jpg" width="100%">
+      <img ng-src="{{ item.imageURL }}" width="100%">
       <div class="overlay"></div>
     </div>
     <div class="shadeBack">
@@ -63,6 +63,7 @@
  <!-- <audio controls="controls" preload="none">
         <source src="{{item.url}}" type="audio/ogg">
       </audio> -->
+
     </div>
     </div> <!-- ng-repeat -->
   </div> <!-- libgrid -->

@@ -218,6 +218,15 @@ for(var i = 0; i < $('.banner').length; i++){
   )
 }
 
+// ///////////////////////
+// Select Cylinder BG Image
+// ///////////////////////
+var randomCylinderImage = function(){
+  var cylinderImagePath = 'img/libraryCover/cylinder';
+  return cylinderImagePath + (Math.round(Math.random() * 28) + 1) + '.jpg';
+}
+
+
 // ////////
 // Angular
 // ////////
@@ -244,7 +253,19 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   cylinderData.getCylinderData().then(function(data){
     $scope.returnedCylinderData = data.data;
 
+    for(var i = 0; i < $scope.returnedCylinderData.length; i++){
+
+      $scope.returnedCylinderData[i].imageURL = randomCylinderImage();
+
+    }
+
+
   });
 
+
+
+  // $scope.cylinderSquare.forEach(function(){
+  //   console.log("hello");
+  // })
 
 }]);//End Of controller
