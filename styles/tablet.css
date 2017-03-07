@@ -58,11 +58,10 @@
     display: flex;
     justify-content: space-between; }
     #librarySection main .top .banner {
-      width: 47%;
-      height: auto; }
-      #librarySection main .top .banner img {
-        width: 100%;
-        height: auto; }
+      height: 90px;
+      width: 400px; }
+      #librarySection main .top .banner .bannerRotate {
+        right: inherit; }
     #librarySection main .top .search {
       display: inline-block;
       width: 35%; }

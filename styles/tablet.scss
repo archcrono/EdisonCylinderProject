@@ -97,13 +97,12 @@ footer{
     display: flex;
     justify-content: space-between;
     .banner{
-      width: 47%;
-      height: auto;
-      img{
-        width: 100%;
-        height: auto;
-
+      height: 90px;
+      width: 400px;
+      .bannerRotate{
+        right: inherit;
       }
+
     }
     .search{
       display: inline-block;
