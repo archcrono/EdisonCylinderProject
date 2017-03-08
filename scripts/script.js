@@ -258,7 +258,33 @@ cylinderApp.service('cylinderData', ['$http', function($http){
   }
 }]);
 
+// //////////////////////
+// Filter / Search Feature
+// //////////////////////
+cylinderApp.filter('searchForCylinder', function(){
 
+
+  return function(arr, searchCylinder){
+
+    if(!searchCylinder){
+      return arr;
+    }
+
+    var result = [];
+
+    searchCylinder = searchCylinder.toLowerCase();
+
+
+    angular.forEach(arr, function(item){
+
+      if(item.title.toLowerCase().indexOf(searchCylinder) !== -1){
+        result.push(item);
+      }
+    });
+
+    return result;
+  }
+});
 
 // Controller for App
 cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($scope, cylinderData){

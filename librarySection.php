@@ -11,7 +11,7 @@
   <div id="searchBar" class="search">
   <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 
-      <input type="text" name="" placeholder="Search...">
+      <input type="text" name="" ng-model="searchCylinder" placeholder="Search...">
       <i class="fa fa-search" aria-hidden="true"></i>
 
   </div>
@@ -47,7 +47,7 @@
     </div> -->
 
   <div class="libGrid">
-    <div class="cylinderSquare" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData">
+    <div class="cylinderSquare" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
     <div class="square">
       <img ng-src="{{ item.imageURL }}" width="100%">
       <div class="overlay"></div>
