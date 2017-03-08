@@ -207,7 +207,8 @@
       top: 90px;
       height: 60px;
       z-index: 10;
-      background-color: white; }
+      background-color: white;
+      text-align: center; }
       #librarySection main #searchBar input {
         background: none;
         border: none;
