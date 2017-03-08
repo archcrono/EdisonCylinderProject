@@ -202,16 +202,17 @@ $("#showAdvancedSearch").click(function(){
 // //////////////
 // SeachBar Lock
 // //////////////
-var searchBar = $('searchBar');
+var searchBar = $('#searchBar');
 
 $('#librarySection main').scroll(function(){
-  console.log(searchBar.position());
+  // console.log(searchBar.position().top);
 
-	if($('#librarySection main').scrollTop() > 100 ){
+	if($('#librarySection main').scrollTop() > 90 ){
+    // console.log("Hello");
 		searchBar.addClass("lockBar");
 	}
 	else{
-		// searchBar.removeClass("lockBar");
+		searchBar.removeClass("lockBar");
 	}
 });
 

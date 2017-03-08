@@ -5,7 +5,16 @@
     </li>
   </ul>
 </header>
+
 <main>
+
+  <div id="searchBar" class="search">
+  <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+
+      <input type="text" name="" placeholder="Search...">
+      <i class="fa fa-search" aria-hidden="true"></i>
+
+  </div>
 
     <!-- Place your HTML here -->
 
@@ -16,14 +25,14 @@
     </div> -->
     <?php include 'banner.php'; ?>
 
-    <div id="searchBar" class="search">
-    <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+    <!-- <div id="searchBar" class="search">
       <span>
         <input type="text" name="" placeholder="Search...">
         <i class="fa fa-search" aria-hidden="true"></i>
       </span>
 
-    </div> <!-- search -->
+    </div>  -->
+    <!-- search -->
   </div><!-- top -->
 
     <!-- <div class="overPlay">

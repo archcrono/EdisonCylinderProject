@@ -8,8 +8,10 @@
     z-index: 1; }
 
   .lockBar {
-    position: fixed;
-    background-color: red; }
+    position: fixed !important;
+    top: 50px !important;
+    z-index: 20 !important;
+    background-color: white; }
 
   #container {
     width: 100%; }
@@ -199,6 +201,32 @@
 
   #librarySection {
     background-color: white; }
+    #librarySection main #searchBar {
+      width: 100%;
+      position: absolute;
+      top: 90px;
+      height: 60px;
+      z-index: 10;
+      background-color: white; }
+      #librarySection main #searchBar input {
+        background: none;
+        border: none;
+        border-bottom: 2px solid grey;
+        width: 85%;
+        margin: auto;
+        color: grey;
+        padding-top: 8px;
+        margin-top: 5px;
+        font-size: 1.5em; }
+        #librarySection main #searchBar input:focus {
+          outline: none; }
+      #librarySection main #searchBar i {
+        position: absolute;
+        margin-right: 15px;
+        color: grey;
+        font-size: 1.5em;
+        top: 10px;
+        right: 15px; }
     #librarySection main h2 {
       font-family: "Arsenal", sans-serif;
       font-size: 1.2em;
@@ -206,7 +234,8 @@
     #librarySection main h3 {
       font-family: "Rubik", sans-serif; }
     #librarySection main .libGrid {
-      text-align: center; }
+      text-align: center;
+      margin-top: 70px; }
     #librarySection main .overPlay {
       width: 290px;
       padding: 10px;
@@ -231,24 +260,6 @@
         background: none;
         padding-bottom: 5px;
         padding-top: 25%; }
-      #librarySection main .top .search span input {
-        background: none;
-        border: none;
-        border-bottom: 2px solid grey;
-        width: 85%;
-        color: grey;
-        padding-top: 8px;
-        margin-top: 5px;
-        font-size: 1.5em; }
-        #librarySection main .top .search span input:focus {
-          outline: none; }
-      #librarySection main .top .search span i {
-        position: absolute;
-        margin-right: 15px;
-        color: grey;
-        font-size: 1.5em;
-        top: 10px;
-        right: 15px; }
     #librarySection main .top .menu-item {
       position: relative;
       display: inline-block; }
@@ -338,6 +349,79 @@
         width: 100%;
         height: auto; }
     #informationSection .row:last-child .row__img:last-child {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+
+  .container {
+    max-width: 510px;
+    min-width: 324px;
+    margin: 50px auto 0px;
+    background-color: white;
+    border: 1px solid #838383;
+    border-bottom: 3px solid grey; }
+
+  .row {
+    width: 100%;
+    margin: 0 0 1em 0;
+    padding: 0 2.5em; }
+    .row.header {
+      padding: 1.5em 2.5em;
+      border-bottom: 1px solid grey;
+      background: url(https://ibb.co/n1RfWF) left -80px;
+      color: white; }
+    .row.body {
+      padding: .5em 2.5em 1em; }
+
+  .pull-right {
+    float: right; }
+
+  form {
+    max-width: 100%;
+    display: block; }
+    form ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      form ul li {
+        margin: 0 0 0.25em 0;
+        clear: both;
+        display: inline-block;
+        width: 100%; }
+        form ul li:last-child {
+          margin: 0; }
+        form ul li p {
+          margin: 0;
+          padding: 0;
+          float: left; }
+          form ul li p.right {
+            float: right; }
+        form ul li .divider {
+          margin: 0.5em 0 0.5em 0;
+          border: 0;
+          height: 1px;
+          width: 100%;
+          display: block;
+          background-color: blue;
+          background-image: linear-gradient(to right, pink, blue); }
+        form ul li .req {
+          color: pink; }
+    form label {
+      display: block;
+      margin: 0 0 0.5em 0;
+      color: blue;
+      font-size: pxtoem(16, 16); }
+    form input {
+      margin: 0 0 0.5em 0;
+      border: 1px solid grey;
+      padding: 6px 10px;
+      color: grey;
+      font-size: pxtoem(16, 16); }
+    form textarea {
+      border: 1px solid grey;
+      padding: 6px 10px;
+      width: 100%;
+      color: grey; }
+    form small {
+      color: blue;
+      margin: 0 0 0 0.5em; } }
 
 /*# sourceMappingURL=phone.css.map */
