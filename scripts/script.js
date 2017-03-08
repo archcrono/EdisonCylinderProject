@@ -189,7 +189,24 @@ $(document).ready(function(){
     arrows: false,
     infinite: false,
     dots: true
-  })
+  });
+
+
+});
+
+// ///////////////
+// Expand Cylinder
+// ///////////////
+$(document).on('click','.cylinderSquare',function(){
+
+  // Reveal Extra Cylinder Data
+  $(this).find('.extraCylinderData').css('display', 'initial')
+  $(this).find('.extraCylinderData').animate({
+    opacity: 1
+  }, 500);
+  $(this).animate({
+    width: '95%'
+  }, 500);
 });
 
 // /////////////
@@ -301,7 +318,6 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
       $scope.returnedCylinderData[i].imageURL = randomCylinderImage();
 
     }
-
 
   });
 

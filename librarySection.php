@@ -8,14 +8,6 @@
 
 <main>
 
-  <div id="searchBar" class="search">
-  <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-
-      <input type="text" name="" ng-model="searchCylinder" placeholder="Search...">
-      <i class="fa fa-search" aria-hidden="true"></i>
-
-  </div>
-
     <!-- Place your HTML here -->
 
     <!-- Search bar HTML is needed -->
@@ -35,6 +27,15 @@
     <!-- search -->
   </div><!-- top -->
 
+
+    <div id="searchBar" class="search">
+
+        <input type="text" ng-model="searchCylinder" placeholder="Search...">
+        <i class="fa fa-search" aria-hidden="true"></i>
+
+    </div>
+
+
     <!-- <div class="overPlay">
       <img src="img/temp.jpg" width="300px">
       <div class="shadeBackBig">
@@ -47,19 +48,26 @@
     </div> -->
 
   <div class="libGrid">
-    <div class="cylinderSquare" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
-    <div class="square">
-      <img ng-src="{{ item.imageURL }}" width="100%">
-      <div class="overlay"></div>
-    </div>
-    <div class="shadeBack">
-      <h2>{{ item.title }}</h2>
-      <h3>{{ item.artist }}</h3>
- <!-- <audio controls="controls" preload="none">
-        <source src="{{item.url}}" type="audio/ogg">
-      </audio> -->
+    <div class="cylinderSquare" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
 
-    </div>
+      <div class="extraCylinderData">
+        <h2>{{ item.title }}</h2>
+        <h3>{{ item.artist }}</h3>
+        <audio class="cylinderPlayer" controls="controls" preload="none">
+          <source src="{{item.url}}" type="audio/ogg">
+        </audio>
+      </div>
+
+      <div class="square">
+        <img ng-src="{{ item.imageURL }}" width="100%">
+        <div class="overlay"></div>
+      </div>
+      <div class="shadeBack">
+        <h2>{{ item.title }}</h2>
+        <h3>{{ item.artist }}</h3>
+
+
+      </div>
     </div> <!-- ng-repeat -->
   </div> <!-- libgrid -->
 

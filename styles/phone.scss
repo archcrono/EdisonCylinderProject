@@ -62,6 +62,9 @@ $standard-font: 'Rubik', sans-serif;
   background-color: white;
   // background-color: red;
 }
+.activeClyinder{
+  width: 100%;
+}
 // ////////
 // All
 // ////////
@@ -363,8 +366,7 @@ footer{
         top: 10px;
         right: 15px;
       }
-
-    }
+    }//End of Search Bar
 
     h2{
       font-family: $header-font;
@@ -375,10 +377,20 @@ footer{
       font-family: $alternative-font;
     }
 
+
+    // Cylinder Styling
+
+    .cylinderSquare{
+
+      .extraCylinderData{
+        display: none;
+        opacity: 0;
+      }
+    }
+
         // styling the library grid
 
     .libGrid{
-      text-align: center;
       margin-top: 70px;
     }
 
@@ -397,26 +409,6 @@ footer{
      }
 
   .top{
-
-    // Might not need this
-    .search{
-      display: inline-block;
-      width: 100%;
-      position: relative;
-      text-align: center;
-      margin-top: 5px;
-      height: 60px;
-      p{
-        font-size: 1.3em;
-        border: none;
-        border-bottom: 2px solid white;
-
-        background: none;
-        padding-bottom: 5px;
-        padding-top: 25%;
-
-      }
-    }
 
     .menu-item {
       position: relative;

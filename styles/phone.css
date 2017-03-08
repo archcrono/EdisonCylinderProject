@@ -13,6 +13,9 @@
     z-index: 20 !important;
     background-color: white; }
 
+  .activeClyinder {
+    width: 100%; }
+
   #container {
     width: 100%; }
 
@@ -234,8 +237,10 @@
       font-weight: bold; }
     #librarySection main h3 {
       font-family: "Rubik", sans-serif; }
+    #librarySection main .cylinderSquare .extraCylinderData {
+      display: none;
+      opacity: 0; }
     #librarySection main .libGrid {
-      text-align: center;
       margin-top: 70px; }
     #librarySection main .overPlay {
       width: 290px;
@@ -247,20 +252,6 @@
       height: 85px;
       margin: 3px;
       padding: 2px; }
-    #librarySection main .top .search {
-      display: inline-block;
-      width: 100%;
-      position: relative;
-      text-align: center;
-      margin-top: 5px;
-      height: 60px; }
-      #librarySection main .top .search p {
-        font-size: 1.3em;
-        border: none;
-        border-bottom: 2px solid white;
-        background: none;
-        padding-bottom: 5px;
-        padding-top: 25%; }
     #librarySection main .top .menu-item {
       position: relative;
       display: inline-block; }
