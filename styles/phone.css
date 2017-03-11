@@ -238,8 +238,20 @@
     #librarySection main h3 {
       font-family: "Rubik", sans-serif; }
     #librarySection main .cylinderSquare .extraCylinderData {
+      position: absolute;
       display: none;
       opacity: 0; }
+      #librarySection main .cylinderSquare .extraCylinderData .extraCylinderDataHeader {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        padding: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7); }
+      #librarySection main .cylinderSquare .extraCylinderData audio {
+        position: absolute;
+        bottom: 0;
+        z-index: 10; }
     #librarySection main .libGrid {
       margin-top: 70px; }
     #librarySection main .overPlay {
@@ -318,16 +330,18 @@
     #informationSection .header__search {
       display: none; }
     #informationSection h1 {
+      font-family: "Arsenal", sans-serif;
       font-size: 35px;
       padding: 0;
       padding-left: 15px;
       margin-top: 30px;
-      margin-bottom: 50px; }
+      margin-bottom: 30px; }
     #informationSection iframe {
       width: 100%;
       height: 350px !important;
       display: block; }
     #informationSection p {
+      font-family: "Nunito Sans", sans-serif;
       line-height: 1.3em;
       margin: 50px 0;
       padding-left: 15px;
@@ -343,77 +357,42 @@
     #informationSection .row:last-child .row__img:last-child {
       margin-bottom: 0; }
 
-  .container {
-    max-width: 510px;
-    min-width: 324px;
-    margin: 50px auto 0px;
-    background-color: white;
-    border: 1px solid #838383;
-    border-bottom: 3px solid grey; }
-
-  .row {
-    width: 100%;
-    margin: 0 0 1em 0;
-    padding: 0 2.5em; }
-    .row.header {
-      padding: 1.5em 2.5em;
-      border-bottom: 1px solid grey;
-      background: url(https://ibb.co/n1RfWF) left -80px;
-      color: white; }
-    .row.body {
-      padding: .5em 2.5em 1em; }
-
-  .pull-right {
-    float: right; }
-
-  form {
+  #contactSection main #contactHeader {
     max-width: 100%;
-    display: block; }
-    form ul {
-      margin: 0;
-      padding: 0;
-      list-style: none; }
-      form ul li {
-        margin: 0 0 0.25em 0;
-        clear: both;
+    padding: 20px 10px; }
+    #contactSection main #contactHeader h2 {
+      font-size: 1.7em; }
+  #contactSection main #contactContainer {
+    width: 100%;
+    font-family: "Arsenal", sans-serif;
+    padding-bottom: 15px;
+    background-color: white; }
+    #contactSection main #contactContainer form {
+      width: 80%;
+      margin: auto;
+      border: 1px solid black;
+      padding: 0 20px; }
+      #contactSection main #contactContainer form h3 {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 1.3em;
+        font-weight: bold; }
+      #contactSection main #contactContainer form input {
+        width: 100%;
         display: inline-block;
-        width: 100%; }
-        form ul li:last-child {
-          margin: 0; }
-        form ul li p {
-          margin: 0;
-          padding: 0;
-          float: left; }
-          form ul li p.right {
-            float: right; }
-        form ul li .divider {
-          margin: 0.5em 0 0.5em 0;
-          border: 0;
-          height: 1px;
-          width: 100%;
-          display: block;
-          background-color: blue;
-          background-image: linear-gradient(to right, pink, blue); }
-        form ul li .req {
-          color: pink; }
-    form label {
-      display: block;
-      margin: 0 0 0.5em 0;
-      color: blue;
-      font-size: pxtoem(16, 16); }
-    form input {
-      margin: 0 0 0.5em 0;
-      border: 1px solid grey;
-      padding: 6px 10px;
-      color: grey;
-      font-size: pxtoem(16, 16); }
-    form textarea {
-      border: 1px solid grey;
-      padding: 6px 10px;
-      width: 100%;
-      color: grey; }
-    form small {
-      color: blue;
-      margin: 0 0 0 0.5em; } }
+        margin: 10px 0;
+        border: 1px solid black;
+        font-size: 1.3em; }
+      #contactSection main #contactContainer form textarea {
+        margin: 10px 0;
+        width: 100%;
+        height: 200px;
+        border: 1px solid black;
+        resize: none; }
+      #contactSection main #contactContainer form button {
+        display: block;
+        text-align: right;
+        border: 1px solid black;
+        margin: 10px 0; } }
 
 /*# sourceMappingURL=phone.css.map */

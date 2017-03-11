@@ -51,8 +51,11 @@
     <div class="cylinderSquare" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
 
       <div class="extraCylinderData">
-        <h2>{{ item.title }}</h2>
-        <h3>{{ item.artist }}</h3>
+        <div class="extraCylinderDataHeader">
+          <h2>{{ item.title }}</h2>
+          <h3>{{ item.artist }}</h3>
+        </div>
+
         <audio class="cylinderPlayer" controls="controls" preload="none">
           <source src="{{item.url}}" type="audio/ogg">
         </audio>

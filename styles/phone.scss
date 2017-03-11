@@ -377,16 +377,30 @@ footer{
       font-family: $alternative-font;
     }
 
-
+    //
     // Cylinder Styling
-
+    //
     .cylinderSquare{
 
       .extraCylinderData{
+        position: absolute;
         display: none;
         opacity: 0;
-      }
-    }
+        .extraCylinderDataHeader{
+          position: absolute;
+          z-index: 10;
+          width: 100%;
+          padding: 10px;
+          color: white;
+          background-color: rgba(0,0,0,.7);
+        }
+        audio{
+          position: absolute;
+          bottom: 0;
+          z-index: 10;
+        }
+      }//End of Extra Cylinder Data
+    }//End of Cylinder Square
 
         // styling the library grid
 
@@ -504,11 +518,12 @@ footer{
     }
   }
   h1{
+    font-family: $header-font;
     font-size: 35px;
     padding: 0;
     padding-left: 15px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   iframe{
   width: 100%;
@@ -516,6 +531,7 @@ footer{
   display: block;
   }
   p{
+    font-family: $body-font;
     line-height: 1.3em;
     margin: 50px 0;
     padding-left: 15px;
@@ -544,92 +560,147 @@ footer{
 // //////////////
 // Contact Page
 // //////////////
-.container {
-  max-width: 510px;
-  min-width: 324px;
-  margin: 50px auto 0px;
-  background-color: white;
-  border: 1px solid lighten(grey, 1%);
-  border-bottom: 3px solid grey;
-}
-.row {
-  width: 100%;
-  margin: 0 0 1em 0;
-  padding: 0 2.5em;
-  &.header {
-    padding: 1.5em 2.5em;
-    border-bottom: 1px solid grey;
-    background: url(https://ibb.co/n1RfWF) left -80px;
-    color: white;
-  }
-   &.body {
-    padding: .5em 2.5em 1em;
-  }
-}
-.pull-right {
-  float: right;
-}
-form {
-  max-width: 100%;
-  display: block;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    li {
-      margin: 0 0 0.25em 0;
-      clear: both;
-      display: inline-block;
-      width: 100%;
-      &:last-child {
-          margin: 0;
-        }
-        p {
-          margin: 0;
-          padding: 0;
-          float: left;
-          &.right {
-            float: right;
-          }
-        }
-        .divider {
-          margin: 0.5em 0 0.5em 0;
-          border: 0;
-          height: 1px;
-          width: 100%;
-          display: block;
-          background-color: blue;
-          background-image: linear-gradient(to right, pink, blue);
-        }
-        .req {
-          color: pink;
-        }
+
+#contactSection{
+
+  main{
+
+    #contactHeader{
+      max-width: 100%;
+      padding: 20px 10px;
+
+      h2{
+        font-size: 1.7em;
+      }
     }
-  }
-  label {
-    display: block;
-    margin: 0 0 0.5em 0;
-    color: blue;
-    font-size: pxtoem(16, 16);
-  }
-  input {
-    margin: 0 0 0.5em 0;
-    border: 1px solid grey;
-    padding: 6px 10px;
-    color: grey;
-    font-size: pxtoem(16, 16);
-  }
-  textarea {
-    border: 1px solid grey;
-    padding: 6px 10px;
-    width: 100%;
-    color: grey;
-  }
-  small {
-    color: blue;
-    margin: 0 0 0 0.5em;
-  }
-}
+
+    #contactContainer{
+      width: 100%;
+      font-family: $header-font;
+      padding-bottom: 15px;
+      background-color: white;
+      form{
+        width: 80%;
+        margin: auto;
+        border: 1px solid black;
+        padding: 0 20px;
+        h3{
+          width: 100%;
+          margin: 10px 0;
+          font-size: 1.3em;
+          font-weight: bold;
+        }
+        input{
+          width: 100%;
+          display: inline-block;
+          margin: 10px 0;
+          border: 1px solid black;
+          font-size: 1.3em;
+        }
+        textarea{
+          margin: 10px 0;
+          width: 100%;
+          height: 200px;
+          border: 1px solid black;
+          resize: none;
+        }
+        button{
+          display: block;
+          text-align: right;
+          border: 1px solid black;
+          margin: 10px 0;
+        }
+      }
+    }//End of Contact container
+  }//End of Contact Main
+}//End of Contact Section
+
+// .container {
+//   max-width: 510px;
+//   min-width: 324px;
+//   margin: 50px auto 0px;
+//   background-color: white;
+//   border: 1px solid lighten(grey, 1%);
+//   border-bottom: 3px solid grey;
+// }
+// .row {
+//   width: 100%;
+//   margin: 0 0 1em 0;
+//   padding: 0 2.5em;
+//   &.header {
+//     padding: 1.5em 2.5em;
+//     border-bottom: 1px solid grey;
+//     background: url(https://ibb.co/n1RfWF) left -80px;
+//     color: white;
+//   }
+//    &.body {
+//     padding: .5em 2.5em 1em;
+//   }
+// }
+// .pull-right {
+//   float: right;
+// }
+// form {
+//   max-width: 100%;
+//   display: block;
+//   ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//     li {
+//       margin: 0 0 0.25em 0;
+//       clear: both;
+//       display: inline-block;
+//       width: 100%;
+//       &:last-child {
+//           margin: 0;
+//         }
+//         p {
+//           margin: 0;
+//           padding: 0;
+//           float: left;
+//           &.right {
+//             float: right;
+//           }
+//         }
+//         .divider {
+//           margin: 0.5em 0 0.5em 0;
+//           border: 0;
+//           height: 1px;
+//           width: 100%;
+//           display: block;
+//           background-color: blue;
+//           background-image: linear-gradient(to right, pink, blue);
+//         }
+//         .req {
+//           color: pink;
+//         }
+//     }
+//   }
+//   label {
+//     display: block;
+//     margin: 0 0 0.5em 0;
+//     color: blue;
+//     font-size: pxtoem(16, 16);
+//   }
+//   input {
+//     margin: 0 0 0.5em 0;
+//     border: 1px solid grey;
+//     padding: 6px 10px;
+//     color: grey;
+//     font-size: pxtoem(16, 16);
+//   }
+//   textarea {
+//     border: 1px solid grey;
+//     padding: 6px 10px;
+//     width: 100%;
+//     color: grey;
+//   }
+//   small {
+//     color: blue;
+//     margin: 0 0 0 0.5em;
+//   }
+// }
 
 
 // /////////

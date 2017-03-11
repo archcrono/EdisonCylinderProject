@@ -5,13 +5,33 @@
     </li>
   </ul>
 </header>
-<main style="background-color: green;">
+<main>
 
     <!-- Place your HTML here -->
 
-<div class="container">
+  <?php include 'banner.php'; ?>
+
+
+  <div id="contactContainer">
+    <div id="contactHeader">
+      <h2>Contact Us</h2>
+      <h3>Have a question? Let us know!</h3>
+    </div>
+    <form>
+      <h3>Name</h3>
+      <input type="text" name="" value="">
+      <h3>Email</h3>
+      <input type="text" name="" value="">
+      <h3>Question/Comment</h3>
+      <textarea name="name"></textarea>
+      <button type="submit" name="button">Send</button>
+    </form>
+  </div>
+
+
+<!-- <div class="container">
   		<div class="row header">
-    		<h1>CONTACT US &nbsp;</h1>
+    		<h1 style="color: black;">CONTACT US &nbsp;</h1>
     	<h3>Fill out the form below to learn more!</h3>
   </div>
 
@@ -50,12 +70,7 @@
       </ul>
     </form>
   </div>
-</div>
+</div> -->
 
-
-     </main>
-    </section>
-
-  </div>
 
 </main>

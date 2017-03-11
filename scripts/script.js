@@ -200,13 +200,31 @@ $(document).ready(function(){
 $(document).on('click','.cylinderSquare',function(){
 
   // Reveal Extra Cylinder Data
-  $(this).find('.extraCylinderData').css('display', 'initial')
+  $(this).find('.extraCylinderData').css('display', 'initial');
+
+  // ShadeBack Animation
+  $(this).find('.shadeBack').animate({
+    opacity: 0
+  },500,function(){
+    $(this).find('.shadeBack').css('display','none');
+  })
+
+  // extraCylinderData Animation
   $(this).find('.extraCylinderData').animate({
     opacity: 1
   }, 500);
+
+  // Cylinder Square Animation
   $(this).animate({
     width: '95%'
-  }, 500);
+  }, 500, function(){
+
+    var cylinderHeight = $(this).find('.overlay').height();
+    var cylinderWidth = $(this).find('.overlay').width();
+    $(this).find('.extraCylinderData').height(cylinderHeight);
+    $(this).find('.extraCylinderData').width(cylinderWidth - 20);
+
+  });
 });
 
 // /////////////
