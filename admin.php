@@ -8,8 +8,10 @@
     <!-- Bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link href="styles/admin.css" rel="stylesheet" type="text/css" >
+    <!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" type="text/javascript"></script>
   </head>
-  <body>
+  <body ng-app="cylinderAdminApp" ng-controller="cylinderAdminCtrl">
     <div class="panel panel-default">
       <div class="jumbotron">
         <h1>UVU Cylinder Admin</h1>
@@ -41,56 +43,26 @@
 
     <div class="data">
       <div class="col-lg-10 col-lg-offset-1">
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
-        </div>
-        <div class="panel panel-default col-lg-3 box">
-          <h2>Title</h2>
-          <h3>Artist</h3>
+        <div class="panel panel-default col-lg-3 box" ng-click="getItemData()" ng-repeat="item in returnedData">
+          <h2>{{ item.title }}</h2>
+          <h3>{{ item.artist }}</h3>
         </div>
       </div>
     </div>
+
+
+    <form id="cylinderFormInfo">
+      <h1>This is a form</h1>
+      <input ng-model="cylinderTitle" type="text" name="" value="">
+      <input ng-model="cylinderArtist" type="text" name="" value="">
+      <input ng-model="cylinderComments" type="text" name="" value="">
+
+      <button type="button" name="button" ng-click="closeEdit()">close</button>
+    </form>
+
+    <form id="createNewCylinderForm">
+      <input type="text" name="newArtist" value="">
+    </form>
 
     <script type="text/javascript" src="scripts/adminScript.js"></script>
   </body>
