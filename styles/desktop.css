@@ -7,7 +7,6 @@
     width: 30%; }
     #librarySection main .top .search p {
       font-size: 2em; }
-
   #informationSection {
     background: white; }
     #informationSection .header {
@@ -47,5 +46,3 @@
           width: 100%;
           height: auto;
           display: block; } }
-
-/*# sourceMappingURL=desktop.css.map */
