@@ -31,50 +31,23 @@
 // Information Section
 // /////////////
 #informationSection{
-	background: white;
-	.header{
-	    display: flex;
-	    justify-content: space-between;
-	    &__banner{
-	      width: 60%;
-	      height: auto;
-	      img{
-	        width: 100%;
-	        height: auto;
-	      }
-	    }
-	    &__search{
-	      display: block;
-	      width: 35%;
-	      background: #3E693F;
-	      position: relative;
-	      input{
-	      	font-size: 2em;
-	        border: none;
-	        border-bottom: 2px solid white;
-	        background: none;
-	        padding-bottom: 5px;
-	        position: absolute;
-	        left: 25%;
-	        bottom: 40%;
-	      }
-	    }
-	  }
+	.about{
+		.row{
+			background: none !important;
+		}
+	}
 	.row{
 		display: flex;
-		justify-content: space-between;
-		width: 80%;
-		margin: 0 auto;
-		margin-bottom: 50px;
-		.row__img{
-			margin-bottom: 20px;
-			width: 30%;
-			height: auto;
-			img{
-				width: 100%;
-				height: auto;
-				display: block;
+		.col{
+			width: 50%;
+			&__img{
+				display: inherit;
 			}
+		}
+	}
+	.members{
+		.member{
+			width: 30%;
 		}
 	}
 }
