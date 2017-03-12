@@ -368,6 +368,7 @@ footer{
       }
     }//End of Search Bar
 
+    // Do we need this?
     h2{
       font-family: $header-font;
       font-size: 1.2em;
@@ -380,120 +381,53 @@ footer{
     //
     // Cylinder Styling
     //
-    .cylinderSquare{
+    #libraryContainer{
+      width: 100%;
+      margin-top: 60px;
 
-      .extraCylinderData{
-        position: absolute;
-        display: none;
-        opacity: 0;
-        .extraCylinderDataHeader{
-          position: absolute;
-          z-index: 10;
-          width: 100%;
-          padding: 10px;
-          color: white;
-          background-color: rgba(0,0,0,.7);
+      .cylinderSquare{
+        width: 49.5%;
+        display: inline-block;
+        box-sizing: border-box;
+        background-color: grey;
+        background-clip: content-box;
+        overflow: hidden;
+        position: relative;
+
+        &:nth-child(odd){
+          padding: 2px 2.5px 0 5px;
         }
-        audio{
+        &:nth-child(even){
+          padding: 2px 5px 0 2.5px;
+        }
+        img{
+          width: 100%;
+          opacity: .5;
+        }
+
+
+        .metaInfo{
           position: absolute;
+          width: 100%;
+          color: white;
+          background-color: rgba(0,0,0,.6);
           bottom: 0;
           z-index: 10;
-        }
-      }//End of Extra Cylinder Data
-    }//End of Cylinder Square
+          padding: 10px 0;
+          i{
+            position: absolute;
+            right: 10px;
+          }
+          .subMetaInfo{
+            display: none;
+          }
+        }//End Meta Info
 
-        // styling the library grid
 
-    .libGrid{
-      margin-top: 70px;
-    }
+      }//End of cylinderSquare
+    }//End of Library Container
 
-    .overPlay{
-       width: 290px;
-       padding: 10px;
-       float: left;
-     }
 
-    .ng-scope {
-      display: inline-block;
-      width: 45%;
-      height: 85px;
-      margin: 3px;
-      padding: 2px;
-     }
-
-  .top{
-
-    .menu-item {
-      position: relative;
-      display: inline-block;
-    }
-
-    .sub-menu {
-      display: none;
-      position: inherit;
-      background-color: $pan374;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      padding: 12px 16px;
-      z-index: 1;
-
-      .menu-item{
-        padding-bottom: 10px;
-      }
-    }
-
-    .menu-item:hover .sub-menu {
-      display: block;
-      max-width: 20px;
-    }
-  } // .top
-
-.overlay {
-    background-color: $uvuGrey;
-    bottom:0;
-    left: 0;
-    opacity: 0.5;
-    position: absolute;
-    right:0;
-    top:0;
-    z-index: 1;
-
-}
-.square{position:relative;}
-
-.shadeBack{
-  text-align: left;
-  position: absolute;
-  margin-top: -47px;
-  background-color: black;
-  opacity: 0.7;
-  width: 45%;
-  z-index: 10;
-          h2, h3 {
-          padding: 3px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: white;
-        }
-}
-
-.shadeBackBig{
-  position: absolute;
-  margin-top: -47px;
-  background-color: black;
-  opacity: 0.7;
-  width: 300px;
-  z-index: 10;
-          h2, h3 {
-          padding: 3px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: white;
-        }
-}
 
   }//End of Main
 }//End of Library Section

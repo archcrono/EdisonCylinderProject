@@ -199,32 +199,16 @@ $(document).ready(function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
-  // Reveal Extra Cylinder Data
-  $(this).find('.extraCylinderData').css('display', 'initial');
-
-  // ShadeBack Animation
-  $(this).find('.shadeBack').animate({
-    opacity: 0
-  },500,function(){
-    $(this).find('.shadeBack').css('display','none');
-  })
-
-  // extraCylinderData Animation
-  $(this).find('.extraCylinderData').animate({
-    opacity: 1
-  }, 500);
+  $('.metaInfo i').css('display', 'block');
+  $('.metaInfo').css('top','0');
+  $('.metaInfo').css('bottom','auto');
 
   // Cylinder Square Animation
   $(this).animate({
-    width: '95%'
-  }, 500, function(){
+    width: '100%',
+    'padding-right': 5
+  }, 500);
 
-    var cylinderHeight = $(this).find('.overlay').height();
-    var cylinderWidth = $(this).find('.overlay').width();
-    $(this).find('.extraCylinderData').height(cylinderHeight);
-    $(this).find('.extraCylinderData').width(cylinderWidth - 20);
-
-  });
 });
 
 // /////////////
@@ -340,6 +324,9 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   });
 
 
+  $scope.expandCylinder = function(){
+    console.log(this.item);
+  }
 
   // $scope.cylinderSquare.forEach(function(){
   //   console.log("hello");
