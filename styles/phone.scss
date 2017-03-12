@@ -63,7 +63,11 @@ $standard-font: 'Rubik', sans-serif;
   // background-color: red;
 }
 .activeClyinder{
-  width: 100%;
+  top: 0;
+  bottom: auto !important;
+  i{
+    display: block !important;
+  }
 }
 // ////////
 // All
@@ -416,7 +420,9 @@ footer{
           padding: 10px 0;
           i{
             position: absolute;
-            right: 10px;
+            right: 20px;
+            top: 7px;
+            font-size: 1.6em;
           }
           .subMetaInfo{
             display: none;

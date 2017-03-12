@@ -199,9 +199,7 @@ $(document).ready(function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
-  $('.metaInfo i').css('display', 'block');
-  $('.metaInfo').css('top','0');
-  $('.metaInfo').css('bottom','auto');
+  $(this).find('.metaInfo').addClass('activeClyinder');
 
   // Cylinder Square Animation
   $(this).animate({
@@ -210,6 +208,13 @@ $(document).on('click','.cylinderSquare',function(){
   }, 500);
 
 });
+  //
+  // Expand Meta Info
+  //
+$(document).on('click','.activeClyinder',function(){
+  $(this).find('.subMetaInfo').toggle();
+});
+
 
 // /////////////
 // Advanced Search

@@ -14,7 +14,10 @@
     background-color: white; }
 
   .activeClyinder {
-    width: 100%; }
+    top: 0;
+    bottom: auto !important; }
+    .activeClyinder i {
+      display: block !important; }
 
   #container {
     width: 100%; }
@@ -265,7 +268,9 @@
           padding: 10px 0; }
           #librarySection main #libraryContainer .cylinderSquare .metaInfo i {
             position: absolute;
-            right: 10px; }
+            right: 20px;
+            top: 7px;
+            font-size: 1.6em; }
           #librarySection main #libraryContainer .cylinderSquare .metaInfo .subMetaInfo {
             display: none; }
 
