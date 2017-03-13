@@ -286,13 +286,6 @@ var randomCylinderImage = function(){
   return cylinderImagePath + (Math.round(Math.random() * 27) + 1) + '.jpg';
 }
 
-// //////////////////////
-// Select Background Color
-// //////////////////////
-$(document).ready(function(){
-  $('.cylinderSquare').css('background-color','red');
-})
-
 // ////////
 // Angular
 // ////////
@@ -341,6 +334,16 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   // Variables
   $scope.returnedCylinderData;
 
+
+
+  // Select Background Color
+  var bgColors = ['red', 'orange', 'yellow','green','blue','indigo','violet'];
+
+  var randomColor = function(){
+    return bgColors[Math.round(Math.random() * (bgColors.length -1))];
+  }
+
+
   // Get data
   cylinderData.getCylinderData().then(function(data){
     $scope.returnedCylinderData = data.data;
@@ -350,10 +353,12 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
     for(var i = 0; i < $scope.returnedCylinderData.length; i++){
 
       $scope.returnedCylinderData[i].imageURL = randomCylinderImage();
+      $scope.returnedCylinderData[i].backColor = randomColor();
 
     }
 
   });
+
 
 
   // $scope.expandCylinder = function(){

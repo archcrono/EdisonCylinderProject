@@ -26,7 +26,7 @@
   </div>
 
   <div id="libraryContainer">
-    <div class="cylinderSquare" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
+    <div class="cylinderSquare" style="background-color: {{ item.backColor }}" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
 
       <div class="metaInfo">
         <h2>{{ item.title }}</h2>
