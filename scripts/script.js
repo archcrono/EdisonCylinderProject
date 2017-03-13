@@ -199,33 +199,22 @@ $(document).ready(function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
-  // Reveal Extra Cylinder Data
-  $(this).find('.extraCylinderData').css('display', 'initial');
-
-  // ShadeBack Animation
-  $(this).find('.shadeBack').animate({
-    opacity: 0
-  },500,function(){
-    $(this).find('.shadeBack').css('display','none');
-  })
-
-  // extraCylinderData Animation
-  $(this).find('.extraCylinderData').animate({
-    opacity: 1
-  }, 500);
+  $(this).find('.metaInfo').addClass('activeClyinder');
 
   // Cylinder Square Animation
   $(this).animate({
-    width: '95%'
-  }, 500, function(){
+    width: '100%',
+    'padding-right': 5
+  }, 500);
 
-    var cylinderHeight = $(this).find('.overlay').height();
-    var cylinderWidth = $(this).find('.overlay').width();
-    $(this).find('.extraCylinderData').height(cylinderHeight);
-    $(this).find('.extraCylinderData').width(cylinderWidth - 20);
-
-  });
 });
+  //
+  // Expand Meta Info
+  //
+$(document).on('click','.activeClyinder',function(){
+  $(this).find('.subMetaInfo').toggle();
+});
+
 
 // /////////////
 // Advanced Search
@@ -340,6 +329,9 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   });
 
 
+  $scope.expandCylinder = function(){
+    console.log(this.item);
+  }
 
   // $scope.cylinderSquare.forEach(function(){
   //   console.log("hello");

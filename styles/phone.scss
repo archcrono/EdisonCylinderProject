@@ -63,7 +63,11 @@ $standard-font: 'Rubik', sans-serif;
   // background-color: red;
 }
 .activeClyinder{
-  width: 100%;
+  top: 0;
+  bottom: auto !important;
+  i{
+    display: block !important;
+  }
 }
 // ////////
 // All
@@ -368,6 +372,7 @@ footer{
       }
     }//End of Search Bar
 
+    // Do we need this?
     h2{
       font-family: $header-font;
       font-size: 1.2em;
@@ -380,120 +385,55 @@ footer{
     //
     // Cylinder Styling
     //
-    .cylinderSquare{
+    #libraryContainer{
+      width: 100%;
+      margin-top: 60px;
 
-      .extraCylinderData{
-        position: absolute;
-        display: none;
-        opacity: 0;
-        .extraCylinderDataHeader{
-          position: absolute;
-          z-index: 10;
-          width: 100%;
-          padding: 10px;
-          color: white;
-          background-color: rgba(0,0,0,.7);
+      .cylinderSquare{
+        width: 49.5%;
+        display: inline-block;
+        box-sizing: border-box;
+        background-color: grey;
+        background-clip: content-box;
+        overflow: hidden;
+        position: relative;
+
+        &:nth-child(odd){
+          padding: 2px 2.5px 0 5px;
         }
-        audio{
+        &:nth-child(even){
+          padding: 2px 5px 0 2.5px;
+        }
+        img{
+          width: 100%;
+          opacity: .5;
+        }
+
+
+        .metaInfo{
           position: absolute;
+          width: 100%;
+          color: white;
+          background-color: rgba(0,0,0,.6);
           bottom: 0;
           z-index: 10;
-        }
-      }//End of Extra Cylinder Data
-    }//End of Cylinder Square
+          padding: 10px 0;
+          i{
+            position: absolute;
+            right: 20px;
+            top: 7px;
+            font-size: 1.6em;
+          }
+          .subMetaInfo{
+            display: none;
+          }
+        }//End Meta Info
 
-        // styling the library grid
 
-    .libGrid{
-      margin-top: 70px;
-    }
+      }//End of cylinderSquare
+    }//End of Library Container
 
-    .overPlay{
-       width: 290px;
-       padding: 10px;
-       float: left;
-     }
 
-    .ng-scope {
-      display: inline-block;
-      width: 45%;
-      height: 85px;
-      margin: 3px;
-      padding: 2px;
-     }
-
-  .top{
-
-    .menu-item {
-      position: relative;
-      display: inline-block;
-    }
-
-    .sub-menu {
-      display: none;
-      position: inherit;
-      background-color: $pan374;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      padding: 12px 16px;
-      z-index: 1;
-
-      .menu-item{
-        padding-bottom: 10px;
-      }
-    }
-
-    .menu-item:hover .sub-menu {
-      display: block;
-      max-width: 20px;
-    }
-  } // .top
-
-.overlay {
-    background-color: $uvuGrey;
-    bottom:0;
-    left: 0;
-    opacity: 0.5;
-    position: absolute;
-    right:0;
-    top:0;
-    z-index: 1;
-
-}
-.square{position:relative;}
-
-.shadeBack{
-  text-align: left;
-  position: absolute;
-  margin-top: -47px;
-  background-color: black;
-  opacity: 0.7;
-  width: 45%;
-  z-index: 10;
-          h2, h3 {
-          padding: 3px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: white;
-        }
-}
-
-.shadeBackBig{
-  position: absolute;
-  margin-top: -47px;
-  background-color: black;
-  opacity: 0.7;
-  width: 300px;
-  z-index: 10;
-          h2, h3 {
-          padding: 3px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: white;
-        }
-}
 
   }//End of Main
 }//End of Library Section
@@ -503,55 +443,138 @@ footer{
 // /////////////
 
 #informationSection{
-  background: white;
-  .header{
-    &__banner{
-      width: 100%;
-      height: auto;
-      img{
-        width: 100%;
-        height: auto;
-      }
-    }
-    &__search{
-      display: none;
-    }
+  box-sizing: border-box;
+  background: white/*  */;
+  img{
+    width: 100%;
   }
   h1{
-    font-family: $header-font;
-    font-size: 35px;
-    padding: 0;
-    padding-left: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    font-size: 3em;
+    text-align: center;
+    margin: 40px auto;
   }
-  iframe{
-  width: 100%;
-  height: 350px !important;
-  display: block;
+  .top__content{
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.8em;
+    margin-bottom: 40px;
   }
-  p{
-    font-family: $body-font;
-    line-height: 1.3em;
-    margin: 50px 0;
-    padding-left: 15px;
-    padding-right: 15px;
+  .vis{
+    // margin-bottom: 40px;
+    display: none;
   }
-  .row{
-    .row__img{
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-      img{
-        display: block;
-        width: 100%;
-        height: auto;
+  .about{
+    .row{
+      &:nth-child(1){
+        background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/cover5.png') no-repeat;
+      }
+      &:nth-child(2){
+        background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/libraryCover/cylinder16.jpg') no-repeat right;
+      }
+      &:nth-child(3){
+        background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/libraryCover/cylinder19.jpg') no-repeat;
+      }
+      &:nth-child(4){
+        background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/cover2.png') no-repeat right;
+      }
+      &:nth-child(5){
+        background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/cover1.png') no-repeat;
+      }
+      &:last-child{
+        margin-bottom: 40px;
       }
     }
   }
-  .row:last-child{
-    .row__img:last-child{
-      margin-bottom: 0;
+  .row{
+    .col{
+      padding: 40px;
+      .header{
+        margin-bottom: 20px;
+        position: relative;
+        &__title{
+          font-size: 3em;
+          position:relative;
+          z-index: 1;
+        }
+        &__subtitle{
+          font-size: 1.3em;
+          position:relative;
+          z-index: 1;
+        }
+        &__num{
+          position: absolute;
+          left: 0;
+          top: -35px;
+          color: rgba(0, 149, 200, .25);
+          font-size: 8em;
+        }
+      }
+      .content{
+        position: relative;
+        &:before{
+          content: "";
+          position: absolute;
+          border-bottom: 2px solid #efefef;
+          width: 25%;
+        }
+        &:after{
+          content: "";
+          position: absolute;
+          border-bottom: 2px solid #efefef;
+          width: 25%;
+          right: 0;
+        }
+        p{
+          line-height: 1.8em;
+          padding: 15px 0;
+          color: #888;
+        }
+        .right{
+          text-align: right;
+        }
+        button{
+          margin-bottom: 15px;
+          background: none;
+          padding: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          &:hover{
+            border: 1px solid #fff;
+            box-shadow: 0 0 10px #ddd;
+          }
+          &:focus{
+            outline: none;
+            box-shadow: inset 0 0 10px #ddd;
+          }
+        }
+      }
+      &__img{
+        display: none;
+      }
+    }
+  }
+  .members{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    .member{
+      margin-bottom: 15px;
+      img{
+        display: block;
+        width: auto;
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+      .img--circle{
+        border-radius: 50%;
+      }
+      p{
+        width: 75%;
+        text-align: center;
+        margin: 0 auto;
+      }
     }
   }
 }

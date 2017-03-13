@@ -45,4 +45,15 @@
         #informationSection .row .row__img img {
           width: 100%;
           height: auto;
-          display: block; } }
+          display: block; }
+  #informationSection .about .row {
+    background: none !important; }
+  #informationSection .row {
+    display: flex; }
+    #informationSection .row .col {
+      width: 50%; }
+      #informationSection .row .col__img {
+        display: inherit; }
+  #informationSection .members .member {
+    width: 30%; }
+}
