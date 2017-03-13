@@ -7,6 +7,45 @@
     width: 30%; }
     #librarySection main .top .search p {
       font-size: 2em; }
+  #informationSection {
+    background: white; }
+    #informationSection .header {
+      display: flex;
+      justify-content: space-between; }
+      #informationSection .header__banner {
+        width: 60%;
+        height: auto; }
+        #informationSection .header__banner img {
+          width: 100%;
+          height: auto; }
+      #informationSection .header__search {
+        display: block;
+        width: 35%;
+        background: #3E693F;
+        position: relative; }
+        #informationSection .header__search input {
+          font-size: 2em;
+          border: none;
+          border-bottom: 2px solid white;
+          background: none;
+          padding-bottom: 5px;
+          position: absolute;
+          left: 25%;
+          bottom: 40%; }
+    #informationSection .row {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 50px; }
+      #informationSection .row .row__img {
+        margin-bottom: 20px;
+        width: 30%;
+        height: auto; }
+        #informationSection .row .row__img img {
+          width: 100%;
+          height: auto;
+          display: block; }
   #informationSection .about .row {
     background: none !important; }
   #informationSection .row {
@@ -16,4 +55,5 @@
       #informationSection .row .col__img {
         display: inherit; }
   #informationSection .members .member {
-    width: 30%; } }
+    width: 30%; }
+}
