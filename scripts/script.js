@@ -199,19 +199,38 @@ $(document).ready(function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
-  $(this).find('.metaInfo').addClass('activeClyinder');
+  // Restore Previous Active Cylinder
+  $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');
+  $('.activeCylinder').animate({
+    width: '49.5%'
+  }, 500)
+  $('.activeCylinder').addClass('cylinderSquare');
+  $('.activeCylinder').removeClass('activeCylinder');
+
+
+  // Add Active Classes
+  $(this).addClass('activeCylinder');
+  $(this).removeClass('cylinderSquare');
+  $(this).find('.metaInfo').addClass('activeMetaInfo');
 
   // Cylinder Square Animation
-  $(this).animate({
-    width: '100%',
-    'padding-right': 5
-  }, 500);
+  if(($(this).index() + 1) % 2 == 0){
+     $(this).prev().before($(this));
+
+     $(this).animate({
+       width: "100%"
+     }, 500)
+   }else{
+     $(this).animate({
+       width: "100%"
+     }, 500)
+   }
 
 });
   //
   // Expand Meta Info
   //
-$(document).on('click','.activeClyinder',function(){
+$(document).on('click','.activeMetaInfo',function(){
   $(this).find('.subMetaInfo').toggle();
 });
 
@@ -267,6 +286,12 @@ var randomCylinderImage = function(){
   return cylinderImagePath + (Math.round(Math.random() * 27) + 1) + '.jpg';
 }
 
+// //////////////////////
+// Select Background Color
+// //////////////////////
+$(document).ready(function(){
+  $('.cylinderSquare').css('background-color','red');
+})
 
 // ////////
 // Angular
@@ -320,6 +345,8 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   cylinderData.getCylinderData().then(function(data){
     $scope.returnedCylinderData = data.data;
 
+
+
     for(var i = 0; i < $scope.returnedCylinderData.length; i++){
 
       $scope.returnedCylinderData[i].imageURL = randomCylinderImage();
@@ -329,9 +356,9 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   });
 
 
-  $scope.expandCylinder = function(){
-    console.log(this.item);
-  }
+  // $scope.expandCylinder = function(){
+  //   console.log(this.item);
+  // }
 
   // $scope.cylinderSquare.forEach(function(){
   //   console.log("hello");

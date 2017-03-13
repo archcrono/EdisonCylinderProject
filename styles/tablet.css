@@ -1,10 +1,12 @@
 @media only screen and (min-width: 651px) and (max-width: 999em) {
   .active {
     z-index: -1; }
+
   .inactive {
     top: 0;
     display: none;
     z-index: 1; }
+
   section {
     width: 100%; }
     section header {
@@ -19,6 +21,7 @@
           top: 50%; }
     section main {
       margin-left: 50px; }
+
   .footerButtonContainers {
     position: absolute;
     top: 0;
@@ -40,6 +43,7 @@
       .footerButtonContainers i:nth-child(4) {
         top: 85%;
         left: 35%; }
+
   footer {
     position: absolute;
     top: 0;
@@ -47,6 +51,9 @@
     height: 100%;
     right: 0;
     z-index: 10; }
+
+  #librarySection main .cylinderSquare {
+    width: 250px !important; }
   #librarySection main .ng-scope {
     width: 150px; }
   #librarySection main .top {
@@ -77,5 +84,8 @@
           display: inline-block; }
   #librarySection main .libGrid .shadeBack {
     width: 150px; }
+
   #informationSection .vis {
     display: block !important; } }
+
+/*# sourceMappingURL=tablet.css.map */
