@@ -24,6 +24,43 @@
 	    }
 	  }
 
+	  //
+    // Cylinder Styling
+    //
+    #libraryContainer{
+
+        .cylinderSquare{
+        width: 20%;
+
+        // img{
+        //   width: 100%;
+        //   height: 100%;
+        // }
+
+
+        // .metaInfo{
+        //   position: absolute;
+        //   width: 100%;
+        //   color: white;
+        //   background-color: rgba(0,0,0,.6);
+        //   bottom: 0;
+        //   z-index: 10;
+        //   padding: 10px 0;
+        //   i{
+        //     position: absolute;
+        //     right: 20px;
+        //     top: 7px;
+        //     font-size: 1.6em;
+        //   }
+        //   .subMetaInfo{
+        //     display: none;
+        //   }
+        // }//End Meta Info
+
+
+      }//End of cylinderSquare
+    }//End of Library Container
+
   }//End of Main
 }//End of Library Section
 
