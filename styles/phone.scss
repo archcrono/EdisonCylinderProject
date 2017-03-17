@@ -422,7 +422,7 @@ footer{
       margin-top: 60px;
 
       .cylinderSquare{
-        width: 49.5%;
+        width: 50%;
         display: inline-block;
         box-sizing: border-box;
         background-clip: content-box;
@@ -440,7 +440,12 @@ footer{
           height: 100%;
           opacity: .5;
         }
-
+        
+        h2{
+          white-space: nowrap; 
+          overflow: hidden;
+          text-overflow: ellipsis; 
+        }
 
         .metaInfo{
           position: absolute;

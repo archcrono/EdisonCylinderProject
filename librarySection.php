@@ -32,15 +32,12 @@
         <h2>{{ item.title }}</h2>
         <i class="fa fa-sort-desc" style="display: none;" aria-hidden="true"></i>
         <div class="subMetaInfo">
-          <h3>{{ item.artist }}</h3>
+          <h3>Artist: {{ item.artist }}</h3>
           <h4>Take: {{ item.take }}</h4>
           <h4>Mold: {{ item.mold }}</h4>
         </div>
 
       </div>
-
-
-
 
       <img ng-src="{{ item.imageURL }}" alt="">
     </div>

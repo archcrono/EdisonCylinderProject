@@ -52,8 +52,6 @@
     right: 0;
     z-index: 10; }
 
-  #librarySection main .cylinderSquare {
-    width: 250px !important; }
   #librarySection main .ng-scope {
     width: 150px; }
   #librarySection main .top {
@@ -82,8 +80,8 @@
         #librarySection main .top .search #advancedSearch select {
           width: 50%;
           display: inline-block; }
-  #librarySection main .libGrid .shadeBack {
-    width: 150px; }
+  #librarySection main #libraryContainer .cylinderSquare {
+    width: 33.1%; }
 
   #informationSection .vis {
     display: block !important; } }
