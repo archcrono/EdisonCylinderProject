@@ -268,6 +268,16 @@
       font-weight: bold; }
     #librarySection main h3 {
       font-family: "Rubik", sans-serif; }
+    #librarySection main h4 {
+      font-family: "Arsenal", sans-serif;
+      font-size: 1.2em; }
+    #librarySection main .cylinderPlayOptions {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: red;
+      z-index: 10; }
     #librarySection main #libraryContainer {
       width: 100%;
       margin-top: 60px; }
@@ -309,7 +319,7 @@
   #informationSection {
     box-sizing: border-box;
     background: white; }
-    #informationSection img {
+    #informationSection #infoContainer img {
       width: 100%; }
     #informationSection h1 {
       font-size: 3em;

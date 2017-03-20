@@ -7,18 +7,15 @@
 </header>
 <main>
   <div class="header">
-    <!-- <div class="header__banner">
-      <img src="img/banner.png">
-    </div>
-    <div class="header__search">
-      <input type="text" placeholder="Search...">
-    </div> -->
 
     <?php include 'banner.php'; ?>
   </div>
 
 
   <!-- Place your HTML here -->
+  <div id="infoContainer">
+
+
   <h1>Cylinder Project</h1>
   <p class="top__content">This website is an ongoing collective project of Utah Valley University Digital Media Students. It took a lot of different skillsets to create this website over a period of several years.</p>
   <div class="vis">
@@ -138,4 +135,6 @@
       <p>Name of Member</p>
     </div>
   </div>
+
+  </div><!-- End of Info Container -->
 </main>

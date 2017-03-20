@@ -201,6 +201,7 @@ $(document).on('click','.cylinderSquare',function(){
 
   // Restore Previous Active Cylinder
   $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');
+  $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
   $('.activeCylinder').animate({
     width: '49.5%'
   }, 500)
@@ -212,6 +213,7 @@ $(document).on('click','.cylinderSquare',function(){
   $(this).addClass('activeCylinder');
   $(this).removeClass('cylinderSquare');
   $(this).find('.metaInfo').addClass('activeMetaInfo');
+  $(this).find('.cylinderPlayOptions').css('display','block');//Show Play Button
 
   // Cylinder Square Animation
   if(($(this).index() + 1) % 2 == 0){
@@ -232,6 +234,7 @@ $(document).on('click','.cylinderSquare',function(){
   //
 $(document).on('click','.activeMetaInfo',function(){
   $(this).find('.subMetaInfo').toggle();
+
 });
 
 
@@ -361,12 +364,49 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
 
 
-  // $scope.expandCylinder = function(){
-  //   console.log(this.item);
-  // }
+  $scope.expandCylinder = function(){
+    console.log(this.item);
+
+  }
 
   // $scope.cylinderSquare.forEach(function(){
   //   console.log("hello");
   // })
 
 }]);//End Of controller
+
+
+
+$(document).on('click','#playButton', function() {
+
+ console.log("How are we going to make this work?");
+ $("#player").jPlayer({
+     ready: function(event) {
+         $(this).jPlayer("setMedia", {
+     title: "Bubble",
+     m4a: "http://jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+     oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+         });
+     },
+     swfPath: "http://jplayer.org/latest/dist/jplayer",
+     supplied: "mp3, oga",
+ useStateClassSkin: true
+ });
+
+});
+
+$(document).ready(function() {
+
+    $("#player").jPlayer({
+        ready: function(event) {
+            $(this).jPlayer("setMedia", {
+				title: "Bubble",
+				m4a: "http://jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+				oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            });
+        },
+        swfPath: "http://jplayer.org/latest/dist/jplayer",
+        supplied: "mp3, oga",
+		useStateClassSkin: true
+    });
+});

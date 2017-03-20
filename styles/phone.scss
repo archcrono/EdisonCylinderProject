@@ -110,7 +110,6 @@ $standard-font: 'Rubik', sans-serif;
 
 .banner{
   height: 80px;
-  // background-image: url('../img/banner1.png');
   background-position: right;
   background-repeat: no-repeat;
   padding: 10px 0 0 10px;
@@ -413,6 +412,19 @@ footer{
     h3{
       font-family: $alternative-font;
     }
+    h4{
+      font-family: $header-font;
+      font-size: 1.2em;
+    }
+
+    .cylinderPlayOptions{
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: red;
+      z-index: 10;
+    }
 
     //
     // Cylinder Styling
@@ -435,17 +447,20 @@ footer{
         &:nth-child(even){
           padding: 2px 5px 0 2.5px;
         }
+
+
         img{
           width: 100%;
           height: 100%;
           opacity: .5;
         }
-        
+
         h2{
-          white-space: nowrap; 
+          white-space: nowrap;
           overflow: hidden;
-          text-overflow: ellipsis; 
+          text-overflow: ellipsis;
         }
+
 
         .metaInfo{
           position: absolute;
@@ -463,6 +478,7 @@ footer{
           }
           .subMetaInfo{
             display: none;
+
           }
         }//End Meta Info
 
@@ -481,9 +497,12 @@ footer{
 
 #informationSection{
   box-sizing: border-box;
-  background: white/*  */;
-  img{
-    width: 100%;
+  background: white;
+
+  #infoContainer{
+    img{
+      width: 100%;
+    }
   }
   h1{
     font-size: 3em;
@@ -521,6 +540,7 @@ footer{
       &:last-child{
         margin-bottom: 40px;
       }
+
     }
   }
   .row{

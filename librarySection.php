@@ -28,6 +28,16 @@
   <div id="libraryContainer">
     <div class="cylinderSquare" style="background-color: {{ item.backColor }}" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
 
+      <div id="player"></div>
+<div id="jp_container_1" class="cylinderPlayOptions" aria-label="media player">
+
+        <button id="playButton" class="jp-play" role="button">play</button>
+
+</div>
+
+    
+
+
       <div class="metaInfo">
         <h2>{{ item.title }}</h2>
         <i class="fa fa-sort-desc" style="display: none;" aria-hidden="true"></i>
@@ -42,5 +52,10 @@
       <img ng-src="{{ item.imageURL }}" alt="">
     </div>
   </div>
+
+
+
+
+
 
 </main>
