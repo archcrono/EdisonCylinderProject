@@ -5,6 +5,7 @@ var screenSizeChange = 650;//The pixel size when the styling changes
 var screenSize = null; //False indicates mobile, True indicates tablet and larger
 
 
+
 // Fit screen type
 var fitScreen = function(){
   // Makes the elements fit appropriate depending upon screensize
@@ -21,6 +22,12 @@ var fitScreen = function(){
     $('#homeSlider div').height(screenHeight - 270);
     $('.backColor').width(screenWidth);
 
+    // Cylinder Metadata
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
+
   }else{
     $('section').height(screenHeight);
     $('section main').height(screenHeight);
@@ -36,6 +43,7 @@ fitScreen();
 $(window).resize(function(){
   screenHeight = $(window).height();
   screenWidth = $(window).width();
+
   fitScreen();
 });
 
@@ -43,10 +51,6 @@ $(window).resize(function(){
 
 // Get selected section
 $('.navButton').on('click', function(){
-
-  // console.log('Clicked!');
-  // $('.navButton').off('click');
-  // $('.tempButton').removeClass('navButton');
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -223,13 +227,16 @@ $(document).on('click','.cylinderSquare',function(){
   $('.playButton').css('display','block');
   $('.pauseButton').css('display','none');
 
+  // Hide Meta Data if open
+  $('.activeCylinder').find('.subMetaInfo').css('display','none');
+  $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());
 
   // Restore Previous Active Cylinder
   $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');
   $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
   $('.activeCylinder').animate({
-    width: '49.5%'
-  }, 500)
+    width: '50%' //This might need to be restore to 49.5%
+  }, 500);
   $('.activeCylinder').addClass('cylinderSquare');
   $('.activeCylinder').removeClass('activeCylinder');
 
@@ -242,15 +249,27 @@ $(document).on('click','.cylinderSquare',function(){
 
   // Cylinder Square Animation
   if(($(this).index() + 1) % 2 == 0){
+    // If in an even position spot, move and animate size
      $(this).prev().before($(this));
 
      $(this).animate({
        width: "100%"
-     }, 500)
+     }, 500);
+
+    // Animate Meta Info
+     $(this).find('.activeMetaInfo').animate({
+       width: $(window).width() - 10
+     }, 500);
+
    }else{
      $(this).animate({
        width: "100%"
-     }, 500)
+     }, 500);
+
+    // Animate Meta Info
+     $(this).find('.activeMetaInfo').animate({
+       width: $(window).width() - 10
+     }, 500);
    }
 
 });
@@ -258,6 +277,9 @@ $(document).on('click','.cylinderSquare',function(){
   // Expand Meta Info
   //
 $(document).on('click','.activeMetaInfo',function(){
+
+  $(this).find('.subMetaInfo').height($(this).parent().height());
+
   $(this).find('.subMetaInfo').toggle();
 
 });
@@ -272,6 +294,8 @@ $(document).on('click','.pauseButton',function(){
   $('.playButton').toggle();
   $('.pauseButton').toggle();
 });
+
+
 
 // /////////////
 // Advanced Search

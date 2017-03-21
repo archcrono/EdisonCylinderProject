@@ -38,8 +38,6 @@
       </div>
 
 
-
-
       <div class="metaInfo">
         <h2>{{ item.title }}</h2>
         <i class="fa fa-sort-desc" style="display: none;" aria-hidden="true"></i>
@@ -54,10 +52,5 @@
       <img ng-src="{{ item.imageURL }}" alt="">
     </div>
   </div>
-
-
-
-
-
 
 </main>
