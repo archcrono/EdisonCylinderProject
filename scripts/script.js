@@ -103,6 +103,10 @@ $('.navButton').on('click', function(){
     // Prep/Animate selected section
     $(selectedSection).css('display','block');
     $(selectedSection + ' header i').css('left', iconPosition);
+    // Assign meta info width
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    
     $(selectedSection).animate({
       top: 0
     },500,function(){
