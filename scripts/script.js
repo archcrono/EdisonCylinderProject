@@ -200,7 +200,6 @@ $(document).ready(function(){
 $(document).on('click','.cylinderSquare',function(){
 
   // Ready Player
-
   var cylinderURL = $(this).find('.cylinderURL').html();
 
   $(".musicPlayer").jPlayer("clearMedia");
@@ -219,6 +218,10 @@ $(document).on('click','.cylinderSquare',function(){
       supplied: "mp3, oga",
       useStateClassSkin: true
   });
+
+  // Reset Play/Pause Button
+  $('.playButton').css('display','block');
+  $('.pauseButton').css('display','none');
 
 
   // Restore Previous Active Cylinder
@@ -261,13 +264,13 @@ $(document).on('click','.activeMetaInfo',function(){
   //
   // Toggle Play/Pause
   //
-$(document).on('click','#playButton',function(){
-  $('#playButton').toggle();
-  $('#pauseButton').toggle();
+$(document).on('click','.playButton',function(){
+  $('.playButton').toggle();
+  $('.pauseButton').toggle();
 });
-$(document).on('click','#pauseButton',function(){
-  $('#playButton').toggle();
-  $('#pauseButton').toggle();
+$(document).on('click','.pauseButton',function(){
+  $('.playButton').toggle();
+  $('.pauseButton').toggle();
 });
 
 // /////////////
