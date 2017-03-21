@@ -28,14 +28,16 @@
   <div id="libraryContainer">
     <div class="cylinderSquare" style="background-color: {{ item.backColor }}" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
 
-      <div id="player"></div>
-<div id="jp_container_1" class="cylinderPlayOptions" aria-label="media player">
+      <h5 class="cylinderURL" style="display: none;">{{ item.url }}</h5>
+
+      <div class="musicPlayer"></div>
+      <div id="jp_container_1" class="cylinderPlayOptions" aria-label="media player">
 
         <button id="playButton" class="jp-play" role="button">play</button>
 
-</div>
+      </div>
 
-    
+
 
 
       <div class="metaInfo">

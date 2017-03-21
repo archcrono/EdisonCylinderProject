@@ -199,6 +199,30 @@ $(document).ready(function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
+  var cylinderURL = $(this).find('.cylinderURL').html();
+
+  $(".musicPlayer").jPlayer("clearMedia");
+  $(".musicPlayer").jPlayer("setMedia",{
+    m4a: cylinderURL,
+    oga: cylinderURL
+  });
+
+
+
+  // Ready Player
+
+  $(".musicPlayer").jPlayer({
+      ready: function(event) {
+        $(this).jPlayer("setMedia", {
+          m4a: cylinderURL,
+          oga: cylinderURL
+        });
+      },
+      supplied: "mp3, oga",
+      useStateClassSkin: true
+  });
+
+
   // Restore Previous Active Cylinder
   $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');
   $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
@@ -365,7 +389,7 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
 
   $scope.expandCylinder = function(){
-    console.log(this.item);
+    // console.log(this.item);
 
   }
 
@@ -377,36 +401,17 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
 
 
-$(document).on('click','#playButton', function() {
-
- console.log("How are we going to make this work?");
- $("#player").jPlayer({
-     ready: function(event) {
-         $(this).jPlayer("setMedia", {
-     title: "Bubble",
-     m4a: "http://jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
-     oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-         });
-     },
-     swfPath: "http://jplayer.org/latest/dist/jplayer",
-     supplied: "mp3, oga",
- useStateClassSkin: true
- });
-
-});
-
-$(document).ready(function() {
-
-    $("#player").jPlayer({
-        ready: function(event) {
-            $(this).jPlayer("setMedia", {
-				title: "Bubble",
-				m4a: "http://jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
-				oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-            });
-        },
-        swfPath: "http://jplayer.org/latest/dist/jplayer",
-        supplied: "mp3, oga",
-		useStateClassSkin: true
-    });
-});
+// $(document).on('click','#playButton', function() {
+//
+//  $("#player").jPlayer({
+//      ready: function(event) {
+//        $(this).jPlayer("setMedia", {
+//          m4a: "http://jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+//          oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+//        });
+//      },
+//      supplied: "mp3, oga",
+//      useStateClassSkin: true
+//  });
+//
+// });
