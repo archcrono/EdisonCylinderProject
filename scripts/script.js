@@ -199,6 +199,8 @@ $(document).ready(function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
+  // Ready Player
+
   var cylinderURL = $(this).find('.cylinderURL').html();
 
   $(".musicPlayer").jPlayer("clearMedia");
@@ -206,10 +208,6 @@ $(document).on('click','.cylinderSquare',function(){
     m4a: cylinderURL,
     oga: cylinderURL
   });
-
-
-
-  // Ready Player
 
   $(".musicPlayer").jPlayer({
       ready: function(event) {
@@ -260,7 +258,17 @@ $(document).on('click','.activeMetaInfo',function(){
   $(this).find('.subMetaInfo').toggle();
 
 });
-
+  //
+  // Toggle Play/Pause
+  //
+$(document).on('click','#playButton',function(){
+  $('#playButton').toggle();
+  $('#pauseButton').toggle();
+});
+$(document).on('click','#pauseButton',function(){
+  $('#playButton').toggle();
+  $('#pauseButton').toggle();
+});
 
 // /////////////
 // Advanced Search
@@ -398,20 +406,3 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   // })
 
 }]);//End Of controller
-
-
-
-// $(document).on('click','#playButton', function() {
-//
-//  $("#player").jPlayer({
-//      ready: function(event) {
-//        $(this).jPlayer("setMedia", {
-//          m4a: "http://jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
-//          oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-//        });
-//      },
-//      supplied: "mp3, oga",
-//      useStateClassSkin: true
-//  });
-//
-// });

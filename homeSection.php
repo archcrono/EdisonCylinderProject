@@ -23,7 +23,7 @@
       <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
       <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
     </div>
-    
+
     <div id="homeSlider">
 
       <div id="libraryLink">
