@@ -150,6 +150,10 @@ $standard-font: 'Rubik', sans-serif;
   }
 }
 
+.largeBanner{
+  display: none;
+}
+
 // /////////
 // Sections (Pages)
 // /////////
@@ -663,7 +667,6 @@ footer{
       form{
         width: 80%;
         margin: auto;
-        border: 1px solid black;
         padding: 0 20px;
         h3{
           width: 100%;

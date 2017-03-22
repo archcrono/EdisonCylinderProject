@@ -84,6 +84,9 @@
       width: 400px;
       z-index: -1; }
 
+  .largeBanner {
+    display: none; }
+
   section {
     width: 100%;
     position: absolute;
@@ -430,7 +433,6 @@
     #contactSection main #contactContainer form {
       width: 80%;
       margin: auto;
-      border: 1px solid black;
       padding: 0 20px; }
       #contactSection main #contactContainer form h3 {
         width: 100%;

@@ -10,7 +10,18 @@
   display: none;
   z-index: 1;
 }
-
+// //////
+// All
+// //////
+.banner{
+  display: none;
+}
+.largeBanner{
+  display: block;
+  width: 400px;
+  height: 150px;
+  background-color: red;
+}
 // ///////////
 // Section
 // ///////////
@@ -79,6 +90,40 @@ footer{
   z-index: 10;
 }
 
+// /////////////
+// Home Section
+// /////////////
+#homeSection{
+
+  #homeContainer{
+    .bannerAndCylinder{
+      #cylinderOfTheDay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        height: 150px;
+      }
+    }
+
+    #homeSlider{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 0;
+      .slide{
+        display: inline-block;
+        width: 30%;
+        .backColor{
+          width: 30%;
+          height: 300px;
+        }
+      }
+    }
+
+  }//End of Home Container
+}//End Of Home Section
 
 // /////////////
 // Library Section
@@ -86,7 +131,7 @@ footer{
 
 #librarySection{
 
-  main{    
+  main{
 
     .ng-scope{
       width: 150px;

@@ -27,6 +27,14 @@ var fitScreen = function(){
     $('.metaInfo').width(cylinderWidth);
     $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
 
+    // Slick Slider
+    $('#homeSlider').slick({
+      arrows: false,
+      infinite: false,
+      dots: true
+    });
+
+
 
   }else{
     $('section').height(screenHeight);
@@ -35,6 +43,13 @@ var fitScreen = function(){
     $('section main').width(screenWidth - 100);
     $('.footerButtonContainers i').removeAttr('style');
     screenSize = true;
+
+    // Cylinder of the Day / Search resize
+    $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
+
+    // Home Content Fit
+    $('#homeSlider').height($('#homeSlider').parent().parent().height() - 155);
+
   }
 };
 fitScreen();
@@ -100,13 +115,19 @@ $('.navButton').on('click', function(){
     $('#container').css('position','absolute');
     $('#container').css('overflow','hidden');
 
+    // Home Slider Width
+    $('#homeSlider .slick-track').width('100%');
+    $('#homeSlider .slick-slide').width('100%');
+
     // Prep/Animate selected section
     $(selectedSection).css('display','block');
     $(selectedSection + ' header i').css('left', iconPosition);
+
     // Assign meta info width
     var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
     $('.metaInfo').width(cylinderWidth);
-    
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
     $(selectedSection).animate({
       top: 0
     },500,function(){
@@ -193,12 +214,12 @@ var changeActiveFooter = function(){
 // ///////////
 
 $(document).ready(function(){
-  $('#homeSlider').slick({
-    arrows: false,
-    infinite: false,
-    dots: true
-  });
-
+  // $('#homeSlider').slick({
+  //   arrows: false,
+  //   infinite: false,
+  //   dots: true
+  // });
+  //
 
 });
 

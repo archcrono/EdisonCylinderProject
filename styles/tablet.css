@@ -7,6 +7,15 @@
     display: none;
     z-index: 1; }
 
+  .banner {
+    display: none; }
+
+  .largeBanner {
+    display: block;
+    width: 400px;
+    height: 150px;
+    background-color: red; }
+
   section {
     width: 100%; }
     section header {
@@ -51,6 +60,25 @@
     height: 100%;
     right: 0;
     z-index: 10; }
+
+  #homeSection #homeContainer .bannerAndCylinder #cylinderOfTheDay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    height: 150px; }
+  #homeSection #homeContainer #homeSlider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0; }
+    #homeSection #homeContainer #homeSlider .slide {
+      display: inline-block;
+      width: 30%; }
+      #homeSection #homeContainer #homeSlider .slide .backColor {
+        width: 30%;
+        height: 300px; }
 
   #librarySection main .ng-scope {
     width: 150px; }

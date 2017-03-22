@@ -15,3 +15,6 @@
   </svg>
   <!-- <img src="img/banner1.png" alt=""> -->
 </div>
+<div class="largeBanner">
+  <h1>UVU Cylinder Library</h1>
+</div>
