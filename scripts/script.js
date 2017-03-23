@@ -44,6 +44,14 @@ var fitScreen = function(){
     $('.footerButtonContainers i').removeAttr('style');
     screenSize = true;
 
+    // Cylinder Metadata
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
+    // Cylinder of the Day / Search resize
+    $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
+    $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
 
     // Home Content Fit
     $('#homeSlider').height($('#homeSlider').parent().parent().height() - 155);
@@ -267,9 +275,21 @@ $(document).on('click','.cylinderSquare',function(){
   // Restore Previous Active Cylinder
   $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');
   $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
-  $('.activeCylinder').animate({
-    width: '50%' //This might need to be restore to 49.5%
-  }, 500);
+
+  if(!screenSize){
+    // Mobile View
+    $('.activeCylinder').animate({
+      width: '50%' //This might need to be restore to 49.5%
+    }, 500);
+    console.log("phone");
+  }else{
+    // Tablet Above view
+    $('.activeCylinder').animate({
+      width: '33.1%'
+    }, 500);
+    console.log("tablet")
+  }
+
   $('.activeCylinder').addClass('cylinderSquare');
   $('.activeCylinder').removeClass('activeCylinder');
 
@@ -305,7 +325,7 @@ $(document).on('click','.cylinderSquare',function(){
      }, 500);
    }
 
-});
+});//End Expand Cylinder
   //
   // Expand Meta Info
   //

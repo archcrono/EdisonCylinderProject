@@ -111,10 +111,22 @@
       height: 150px;
       background-color: blue; }
   #librarySection main #libraryContainer {
-    margin-top: 155px; }
+    padding-left: 5px;
+    margin-top: 155px;
+    box-sizing: border-box; }
     #librarySection main #libraryContainer .cylinderSquare {
       width: 33.1%; }
+      #librarySection main #libraryContainer .cylinderSquare:nth-child(odd) {
+        padding: 0;
+        padding-right: 5px; }
+      #librarySection main #libraryContainer .cylinderSquare:nth-child(even) {
+        padding: 0;
+        padding-right: 5px; }
 
+  #informationSection main .header .largeBanner {
+    position: absolute; }
+  #informationSection main #infoContainer {
+    margin-top: 150px; }
   #informationSection .vis {
     display: block !important; } }
 
