@@ -15,6 +15,17 @@
     width: 400px;
     height: 150px;
     background-color: red; }
+    .largeBanner svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .6; }
+    .largeBanner .bannerBar:nth-of-type(2) {
+      margin-left: 170px; }
+    .largeBanner .bannerBar:nth-of-type(3) {
+      margin-left: 220px; }
+    .largeBanner .bannerBar:nth-of-type(4) {
+      margin-left: 280px; }
 
   section {
     width: 100%; }
@@ -67,6 +78,8 @@
     right: 0;
     margin: 0;
     height: 150px; }
+  #homeSection #homeContainer #indicators {
+    display: none; }
   #homeSection #homeContainer #homeSlider {
     width: 100%;
     display: flex;
@@ -75,41 +88,32 @@
     bottom: 0; }
     #homeSection #homeContainer #homeSlider .slide {
       display: inline-block;
-      width: 30%; }
+      width: 32%; }
       #homeSection #homeContainer #homeSlider .slide .backColor {
-        width: 30%;
+        width: 32%;
         height: 300px; }
 
   #librarySection main .ng-scope {
     width: 150px; }
   #librarySection main .top {
+    position: fixed;
     display: flex;
-    justify-content: space-between; }
-    #librarySection main .top .banner {
-      height: 90px;
-      width: 400px; }
-      #librarySection main .top .banner .bannerRotate {
-        right: inherit; }
-    #librarySection main .top .search {
-      display: inline-block;
-      width: 35%; }
-      #librarySection main .top .search span {
-        position: relative;
-        top: 10%; }
-        #librarySection main .top .search span input {
-          width: 60%;
-          margin-bottom: 0px; }
-      #librarySection main .top .search #advancedSearch {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        background-color: #c5e86c;
-        z-index: 10; }
-        #librarySection main .top .search #advancedSearch select {
-          width: 50%;
-          display: inline-block; }
-  #librarySection main #libraryContainer .cylinderSquare {
-    width: 33.1%; }
+    justify-content: space-between;
+    background-color: white;
+    padding-bottom: 5px;
+    z-index: 20; }
+    #librarySection main .top #searchBar {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: 0;
+      margin-left: 5px;
+      height: 150px;
+      background-color: blue; }
+  #librarySection main #libraryContainer {
+    margin-top: 155px; }
+    #librarySection main #libraryContainer .cylinderSquare {
+      width: 33.1%; }
 
   #informationSection .vis {
     display: block !important; } }

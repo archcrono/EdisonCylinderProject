@@ -46,9 +46,16 @@ var fitScreen = function(){
 
     // Cylinder of the Day / Search resize
     $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
+    $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
 
     // Home Content Fit
     $('#homeSlider').height($('#homeSlider').parent().parent().height() - 155);
+
+    // Cylinder Metadata
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    console.log(cylinderWidth);
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
 
   }
 };
@@ -337,13 +344,18 @@ var searchBar = $('#searchBar');
 $('#librarySection main').scroll(function(){
   // console.log(searchBar.position().top);
 
-	if($('#librarySection main').scrollTop() > 90 ){
-    // console.log("Hello");
-		searchBar.addClass("lockBar");
-	}
-	else{
-		searchBar.removeClass("lockBar");
-	}
+  if(screenWidth <= screenSizeChange){
+    // Mobile
+    if($('#librarySection main').scrollTop() > 90 ){
+      // console.log("Hello");
+  		searchBar.addClass("lockBar");
+  	}
+  	else{
+  		searchBar.removeClass("lockBar");
+  	}
+  }
+
+
 });
 
 // //////////////

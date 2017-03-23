@@ -15,15 +15,17 @@
 
     <?php include 'banner.php'; ?>
 
+    <div id="searchBar" class="search">
+
+      <input type="text" ng-model="searchCylinder" placeholder="Search...">
+      <i class="fa fa-search" aria-hidden="true"></i>
+
+    </div>
+
   </div><!-- top -->
 
 
-  <div id="searchBar" class="search">
 
-    <input type="text" ng-model="searchCylinder" placeholder="Search...">
-    <i class="fa fa-search" aria-hidden="true"></i>
-
-  </div>
 
   <div id="libraryContainer">
     <div class="cylinderSquare" style="background-color: {{ item.backColor }}" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
