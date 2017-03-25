@@ -46,6 +46,14 @@
     bottom: auto !important; }
     .activeMetaInfo i {
       display: block !important; }
+    .activeMetaInfo h4 {
+      padding-top: 5px;
+      padding-left: 10px; }
+    .activeMetaInfo b {
+      font-weight: bold;
+      color: #c5e86c; }
+    .activeMetaInfo .subMetaInfo {
+      margin-top: 5px; }
 
   #container {
     width: 100%; }
