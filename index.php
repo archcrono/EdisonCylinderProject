@@ -33,13 +33,13 @@
 
       <!-- Home Section/Landing Page -->
 
-      <section id="homeSection" class="active">
+      <section id="homeSection" class="inactive">
         <?php include 'homeSection.php'; ?>
       </section>
 
       <!-- Library Section/Cylinder Library -->
 
-      <section id="librarySection" class="inactive">
+      <section id="librarySection" class="active">
         <?php include 'librarySection.php'; ?>
       </section>
 

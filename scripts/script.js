@@ -301,29 +301,49 @@ $(document).on('click','.cylinderSquare',function(){
   $(this).find('.cylinderPlayOptions').css('display','block');//Show Play Button
 
   // Cylinder Square Animation
-  if(($(this).index() + 1) % 2 == 0){
-    // If in an even position spot, move and animate size
-     $(this).prev().before($(this));
 
-     $(this).animate({
-       width: "100%"
-     }, 500);
+  // Mobile
+  // if(($(this).index() + 1) % 2 == 0){
+  //   // If in an even position spot, move and animate size
+  //    $(this).prev().before($(this));
+  //
+  //    $(this).animate({
+  //      width: "100%"
+  //    }, 500);
+  //
+  //   // Animate Meta Info
+  //    $(this).find('.activeMetaInfo').animate({
+  //      width: $(window).width() - 10
+  //    }, 500);
+  //
+  //  }else{
+  //    $(this).animate({
+  //      width: "100%"
+  //    }, 500);
+  //
+  //   // Animate Meta Info
+  //    $(this).find('.activeMetaInfo').animate({
+  //      width: $(window).width() - 10
+  //    }, 500);
+  //  }
 
-    // Animate Meta Info
-     $(this).find('.activeMetaInfo').animate({
-       width: $(window).width() - 10
-     }, 500);
+  // Tablet
+  if(screenWidth >= 650 && screenWidth <= 1100){
+    switch (($(this).index() + 1) % 3) {
+      case 1:
+        // Do Things
+        break;
+      case 2:
+        // Do Things
+        break;
+      case 0:
+        // Do Things
+        break;
 
-   }else{
-     $(this).animate({
-       width: "100%"
-     }, 500);
+    }
 
-    // Animate Meta Info
-     $(this).find('.activeMetaInfo').animate({
-       width: $(window).width() - 10
-     }, 500);
-   }
+    console.log($('.cylinderSquare').eq(0)[0]);
+  }
 
 });//End Expand Cylinder
   //
