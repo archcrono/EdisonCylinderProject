@@ -44,9 +44,9 @@
         <h2>{{ item.title }}</h2>
         <i class="fa fa-sort-desc" style="display: none;" aria-hidden="true"></i>
         <div class="subMetaInfo">
-          <h3>Artist: {{ item.artist }}</h3>
-          <h4>Take: {{ item.take }}</h4>
-          <h4>Mold: {{ item.mold }}</h4>
+          <h4><b>Artist:</b> {{ item.artist }}</h4>
+          <h4><b>Take:</b> {{ item.take }}</h4>
+          <h4><b>Mold:</b> {{ item.mold }}</h4>
         </div>
 
       </div>
