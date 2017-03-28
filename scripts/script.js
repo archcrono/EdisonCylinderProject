@@ -55,6 +55,9 @@ var fitScreen = function(){
     // Home Content Fit
     $('#homeSlider').height($('#homeSlider').parent().parent().height() - 155);
 
+    // Large Active Cylinder
+    $('#largeActiveCylinder').width(screenWidth - 116);
+
   }
 };
 fitScreen();
@@ -312,24 +315,27 @@ $(document).on('click','.cylinderSquare',function(){
      }
   }//End of Mobile
   else if(screenWidth >= 650 && screenWidth <= 1100){
+    //
     // Tablet
+    //
 
     // // Remove Large Active Cylinder
-    $('#largeActiveCylinder').css('display','none');
-    $("#largeActiveCylinder").insertAfter('#libraryContainer');//Must be moved first to keep index in order
+    $('#largeActiveCylinder').css('display','none');//Hide active cylinder
+    $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
+    $('#largeActiveCylinder').width(screenWidth - 116);
+    $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
+    $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
+
     switch (($(this).index() + 1) % 3) {
       case 0:
-        console.log($(this).index());
         $("#largeActiveCylinder").insertAfter($(this));
         $("#largeActiveCylinder").css('display','block');
         break;
       case 1:
-        console.log($(this).index());
         $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 2));
         $("#largeActiveCylinder").css('display','block');
         break;
       case 2:
-        console.log($(this).index());
         $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 1));
         $("#largeActiveCylinder").css('display','block');
         break;
@@ -337,7 +343,40 @@ $(document).on('click','.cylinderSquare',function(){
 
   }//End of Tablet
   else{
+    //
     // Desktop
+    //
+
+    // // Remove Large Active Cylinder
+    $('#largeActiveCylinder').css('display','none');//Hide active cylinder
+    $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
+    $('#largeActiveCylinder').width(screenWidth - 110);
+    $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
+    $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
+
+    switch (($(this).index() + 1) % 5) {
+      case 0:
+        $("#largeActiveCylinder").insertAfter($(this));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 1:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 4));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 2:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 3));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 3:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 2));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 4:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 1));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+
+    }
 
   }//End of Desktop
 
