@@ -328,6 +328,8 @@
             font-size: 1.6em; }
           #librarySection main #libraryContainer .cylinderSquare .metaInfo .subMetaInfo {
             display: none; }
+    #librarySection main #largeActiveCylinder {
+      display: none; }
 
   #informationSection {
     box-sizing: border-box;

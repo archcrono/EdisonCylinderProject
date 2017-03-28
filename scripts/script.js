@@ -5,7 +5,6 @@ var screenSizeChange = 650;//The pixel size when the styling changes
 var screenSize = null; //False indicates mobile, True indicates tablet and larger
 
 
-
 // Fit screen type
 var fitScreen = function(){
   // Makes the elements fit appropriate depending upon screensize
@@ -244,106 +243,104 @@ $(document).ready(function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
-  // Ready Player
-  var cylinderURL = $(this).find('.cylinderURL').html();
+    // Ready Player
+    var cylinderURL = $(this).find('.cylinderURL').html();
 
-  $(".musicPlayer").jPlayer("clearMedia");
-  $(".musicPlayer").jPlayer("setMedia",{
-    m4a: cylinderURL,
-    oga: cylinderURL
-  });
+    $(".musicPlayer").jPlayer("clearMedia");
+    $(".musicPlayer").jPlayer("setMedia",{
+      m4a: cylinderURL,
+      oga: cylinderURL
+    });
 
-  $(".musicPlayer").jPlayer({
-      ready: function(event) {
-        $(this).jPlayer("setMedia", {
-          m4a: cylinderURL,
-          oga: cylinderURL
-        });
-      },
-      supplied: "mp3, oga",
-      useStateClassSkin: true
-  });
+    $(".musicPlayer").jPlayer({
+        ready: function(event) {
+          $(this).jPlayer("setMedia", {
+            m4a: cylinderURL,
+            oga: cylinderURL
+          });
+        },
+        supplied: "mp3, oga",
+        useStateClassSkin: true
+    });
 
-  // Reset Play/Pause Button
-  $('.playButton').css('display','block');
-  $('.pauseButton').css('display','none');
+  if(screenWidth < 650){
+    // Mobile
 
-  // Hide Meta Data if open
-  $('.activeCylinder').find('.subMetaInfo').css('display','none');
-  $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());
-
-  // Restore Previous Active Cylinder
-  $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');
-  $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
-
-  if(!screenSize){
-    // Mobile View
+    // Animate active cylinder back to normal
     $('.activeCylinder').animate({
       width: '50%' //This might need to be restore to 49.5%
     }, 500);
-    console.log("phone");
-  }else{
-    // Tablet Above view
-    $('.activeCylinder').animate({
-      width: '33.1%'
-    }, 500);
-    console.log("tablet")
-  }
 
-  $('.activeCylinder').addClass('cylinderSquare');
-  $('.activeCylinder').removeClass('activeCylinder');
+    // Restore active cylinder to normal
+    $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
+    $('.playButton').css('display','block');//Make play button the first one to appear
+    $('.pauseButton').css('display','none');//Hide pause button
+    $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');//Removes Active Metadata Status
+    $('.activeCylinder').find('.subMetaInfo').css('display','none');//Hides Sub Meta info if open
+    $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());//Restores width of metadata to regular cylinder width
+    $('.activeCylinder').addClass('cylinderSquare');//Restores cylinder class (so it can be clicked)
+    $('.activeCylinder').removeClass('activeCylinder');//Removes active cylinder class
 
+    // Make this active cylinder
+    $(this).addClass('activeCylinder');//Add active cylinder class to this
+    $(this).removeClass('cylinderSquare');//Remove cylinder class (so it cannot be clicked)
+    $(this).find('.metaInfo').addClass('activeMetaInfo');//Make this metadata the active metadata
+    $(this).find('.cylinderPlayOptions').css('display','block');//Show Play Button
 
-  // Add Active Classes
-  $(this).addClass('activeCylinder');
-  $(this).removeClass('cylinderSquare');
-  $(this).find('.metaInfo').addClass('activeMetaInfo');
-  $(this).find('.cylinderPlayOptions').css('display','block');//Show Play Button
+    if(($(this).index() + 1) % 2 == 0){
+      // If in an even position spot, move and animate size
+       $(this).prev().before($(this));
 
-  // Cylinder Square Animation
+       $(this).animate({
+         width: "100%"
+       }, 500);
 
-  // Mobile
-  // if(($(this).index() + 1) % 2 == 0){
-  //   // If in an even position spot, move and animate size
-  //    $(this).prev().before($(this));
-  //
-  //    $(this).animate({
-  //      width: "100%"
-  //    }, 500);
-  //
-  //   // Animate Meta Info
-  //    $(this).find('.activeMetaInfo').animate({
-  //      width: $(window).width() - 10
-  //    }, 500);
-  //
-  //  }else{
-  //    $(this).animate({
-  //      width: "100%"
-  //    }, 500);
-  //
-  //   // Animate Meta Info
-  //    $(this).find('.activeMetaInfo').animate({
-  //      width: $(window).width() - 10
-  //    }, 500);
-  //  }
+      // Animate Meta Info
+       $(this).find('.activeMetaInfo').animate({
+         width: $(window).width() - 10
+       }, 500);
 
-  // Tablet
-  if(screenWidth >= 650 && screenWidth <= 1100){
+     }else{
+       $(this).animate({
+         width: "100%"
+       }, 500);
+
+      // Animate Meta Info
+       $(this).find('.activeMetaInfo').animate({
+         width: $(window).width() - 10
+       }, 500);
+     }
+  }//End of Mobile
+  else if(screenWidth >= 650 && screenWidth <= 1100){
+    // Tablet
+
+    // // Remove Large Active Cylinder
+    $('#largeActiveCylinder').css('display','none');
+    $("#largeActiveCylinder").insertAfter('#libraryContainer');//Must be moved first to keep index in order
     switch (($(this).index() + 1) % 3) {
+      case 0:
+        console.log($(this).index());
+        $("#largeActiveCylinder").insertAfter($(this));
+        $("#largeActiveCylinder").css('display','block');
+        break;
       case 1:
-        // Do Things
+        console.log($(this).index());
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 2));
+        $("#largeActiveCylinder").css('display','block');
         break;
       case 2:
-        // Do Things
+        console.log($(this).index());
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 1));
+        $("#largeActiveCylinder").css('display','block');
         break;
-      case 0:
-        // Do Things
-        break;
-
     }
 
-    console.log($('.cylinderSquare').eq(0)[0]);
-  }
+  }//End of Tablet
+  else{
+    // Desktop
+
+  }//End of Desktop
+
 
 });//End Expand Cylinder
   //
@@ -502,7 +499,11 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
 
   $scope.expandCylinder = function(){
-    // console.log(this.item);
+
+    $('#largeCylinderName').html(this.item.title);
+    $('#largeArtistName').html(this.item.artist);
+    $('#largeMoldNumber').html(this.item.mold);
+    $('#largeTakeNumber').html(this.item.take);
 
   }
 

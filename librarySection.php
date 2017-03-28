@@ -55,4 +55,12 @@
     </div>
   </div>
 
+  <div id="largeActiveCylinder">
+    <h1 id="largeCylinderName"></h1>
+    <h1 id="largeArtistName"></h1>
+    <h2 id="largeMoldNumber"></h2>
+    <h2 id="largeTakeNumber"></h2>
+  </div>
+  <!-- Large Active Cylinder Info -->
+
 </main>

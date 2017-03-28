@@ -16,6 +16,7 @@
   <!-- <img src="img/banner1.png" alt=""> -->
 </div>
 <div class="largeBanner">
+  <img class="uvuLogo" src="img/uvuLogo.png" alt="UVU Logo">
   <h1>UVU Cylinder Library</h1>
   <svg height="150" width="250">
     <polygon points="0,0 200,0 150,150 0,150" style="fill:green;"/>
