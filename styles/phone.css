@@ -336,6 +336,8 @@
   #informationSection {
     box-sizing: border-box;
     background: white; }
+    #informationSection .sectionHeader .cylinderOfTheDay {
+      display: none; }
     #informationSection #infoContainer img {
       width: 100%; }
     #informationSection h1 {
@@ -433,6 +435,8 @@
           text-align: center;
           margin: 0 auto; }
 
+  #contactSection main .sectionHeader .cylinderOfTheDay {
+    display: none; }
   #contactSection main #contactHeader {
     max-width: 100%;
     padding: 20px 10px; }

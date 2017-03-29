@@ -7,9 +7,17 @@
 </header>
 <main>
 
-    <!-- Place your HTML here -->
+  <div class="sectionHeader">
+    <!-- Banner -->
+    <?php include 'banner.php'; ?>
+    <!-- Cylinder of the Day -->
+    <div class="cylinderOfTheDay">
+      <img src="img/cover4.png" alt="Album Cover">
+      <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+      <h2>Song Title</h2>
+    </div>
+  </div>
 
-  <?php include 'banner.php'; ?>
 
 
   <div id="contactContainer">
@@ -25,13 +33,13 @@
         <h3>Email</h3>
         <input type="email" name="email" required>
         <h3>Comments</h3>
-        <textarea rows="6" cols="20"></textarea>  
+        <textarea rows="6" cols="20"></textarea>
       </fieldset>
       <button class="submit_button" type="submit" name="submit" value="Submit">Submit</button>
     </form>
   </div>
 
-      
+
 <!-- <div class="container">
   		<div class="row header">
     		<h1 style="color: black;">CONTACT US &nbsp;</h1>

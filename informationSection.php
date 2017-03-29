@@ -6,9 +6,15 @@
   </ul>
 </header>
 <main>
-  <div class="header">
-
+  <div class="sectionHeader">
+    <!-- Banner -->
     <?php include 'banner.php'; ?>
+    <!-- Cylinder Of The Day -->
+    <div class="cylinderOfTheDay">
+      <img src="img/cover4.png" alt="Album Cover">
+      <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+      <h2>Song Title</h2>
+    </div>
   </div>
 
 

@@ -132,14 +132,30 @@
     color: white;
     display: none; }
 
-  #informationSection main .header .largeBanner {
-    position: absolute; }
+  #informationSection main .sectionHeader .cylinderOfTheDay {
+    display: block;
+    background-color: grey;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    #informationSection main .sectionHeader .cylinderOfTheDay img {
+      width: 100px; }
   #informationSection main #infoContainer {
     margin-top: 150px; }
   #informationSection .vis {
     display: block !important; }
 
-  #contactContainer fieldset {
+  #contactSection main .sectionHeader .cylinderOfTheDay {
+    display: block;
+    background-color: grey;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    #contactSection main .sectionHeader .cylinderOfTheDay img {
+      width: 100px; }
+  #contactSection main #contactContainer fieldset {
     width: 50%; } }
 
 /*# sourceMappingURL=tablet.css.map */

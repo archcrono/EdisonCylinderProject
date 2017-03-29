@@ -45,7 +45,7 @@ var compareScreenType = function(){
     $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());//Restores width of metadata to regular cylinder width
     $('.activeCylinder').addClass('cylinderSquare');//Restores cylinder class (so it can be clicked)
     $('.activeCylinder').removeClass('activeCylinder');//Removes active cylinder class
-    console.log($('.activeCylinder').width());
+
   }
 }
 
@@ -74,13 +74,10 @@ var fitScreen = function(){
     $('.metaInfo').width(cylinderWidth);
     $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
 
-    // Slick Slider
-    $('#homeSlider').slick({
-      arrows: false,
-      infinite: false,
-      dots: true
-    });
+    $('#cylinderOfTheDay').width(screenWidth);//Reset Cylinder of the Day Width
+    $('#searchBar').width(screenWidth);//Reset searchBar width
 
+    $('header ul li i').removeAttr('style');//Restore header icon back to header area
 
 
   }else{
@@ -108,6 +105,9 @@ var fitScreen = function(){
 
     // Home page color width
     $('.backColor').width($('#largeHomeSlider .slide').width());
+
+    // Cylinder Of The Day width
+    $('.cylinderOfTheDay').width(screenWidth - 505);
 
   }
 };
@@ -282,12 +282,12 @@ var changeActiveFooter = function(){
 // ///////////
 
 $(document).ready(function(){
-  // $('#homeSlider').slick({
-  //   arrows: false,
-  //   infinite: false,
-  //   dots: true
-  // });
-  //
+  $('#homeSlider').slick({
+    arrows: false,
+    infinite: false,
+    dots: true
+  });
+
 
 });
 

@@ -261,11 +261,22 @@ footer{
 
 #informationSection{
   main{
-    .header{
-      .largeBanner{
+
+    .sectionHeader{
+
+      .cylinderOfTheDay{
+        display: block;
+        background-color: grey;
+        height: 150px;
         position: absolute;
+        right: 0;
+        top: 0;
+        img{
+          width: 100px;
+        }
       }
-    }
+    }//End of Section Header
+
     #infoContainer{
       margin-top: 150px;
     }
@@ -280,11 +291,34 @@ footer{
 // Contact Page
 // //////////////
 
-#contactContainer{
-  fieldset{
-    width: 50%;
+#contactSection{
+  main{
+    .sectionHeader{
+
+      .cylinderOfTheDay{
+        display: block;
+        background-color: grey;
+        height: 150px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        img{
+          width: 100px;
+        }
+      }//End of Cylinder Of The Day
+    }//End of Section Header
+
+    #contactContainer{
+
+      fieldset{
+        width: 50%;
+      }
+    }//End of Contact container
   }
-}//End of Contact container
+
+}//End of Contact Section
+
+
 
 // ////////////
 // End Of Tablet

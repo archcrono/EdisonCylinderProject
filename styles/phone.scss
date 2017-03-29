@@ -524,6 +524,12 @@ footer{
   box-sizing: border-box;
   background: white;
 
+  .sectionHeader{
+    .cylinderOfTheDay{
+      display: none;
+    }
+  }
+
   #infoContainer{
     img{
       width: 100%;
@@ -669,6 +675,12 @@ footer{
 #contactSection{
 
   main{
+
+    .sectionHeader{
+      .cylinderOfTheDay{
+        display: none;
+      }
+    }
 
     #contactHeader{
       max-width: 100%;
