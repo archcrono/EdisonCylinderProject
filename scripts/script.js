@@ -4,8 +4,9 @@ var screenWidth = $(window).width();
 var screenSizeChange = 650;//The pixel size when the styling changes
 var screenSize = null; //False indicates mobile, True indicates tablet and larger
 
-
+// /////////////
 // Fit screen type
+// /////////////
 var fitScreen = function(){
   // Makes the elements fit appropriate depending upon screensize
   if(screenWidth <= screenSizeChange){
@@ -61,6 +62,9 @@ var fitScreen = function(){
   }
 };
 fitScreen();
+
+
+// Check If Screen Size Has Changed
 
 
 $(window).resize(function(){
@@ -495,7 +499,7 @@ cylinderApp.filter('searchForCylinder', function(){
 
     angular.forEach(arr, function(item){
 
-      if(item.title.toLowerCase().indexOf(searchCylinder) !== -1){
+      if(item.title.toLowerCase().indexOf(searchCylinder) !== -1 || item.artist.toLowerCase().indexOf(searchCylinder) !== -1){
         result.push(item);
       }
     });
