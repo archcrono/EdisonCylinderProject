@@ -5,10 +5,56 @@ var screenSizeChange = 650;//The pixel size when the styling changes
 var screenSize = null; //False indicates mobile, True indicates tablet and larger
 var screenType = null;//Determine screen type (phone/tablet/desktop)
 
+
+// ///////////////
+// Check If Screen Size Has Changed
+// ///////////////
+if(screenWidth < 650){
+  screenType = 'phone';
+}
+else if(screenWidth >= 650 && screenWidth <= 1100){
+  screenType = 'tablet';
+}
+else{
+  screenType = 'desktop';
+}
+
+var compareScreenType = function(){
+  var currentScreenType = null;
+
+  if(screenWidth < 650){
+    currentScreenType = 'phone';
+  }
+  else if(screenWidth >= 650 && screenWidth <= 1100){
+    currentScreenType = 'tablet';
+  }
+  else if(screenWidth > 1100){
+    currentScreenType = 'desktop';
+  }
+
+  if(screenType !== currentScreenType){
+    // console.log("Change!");
+    screenType = currentScreenType;
+    $('#largeActiveCylinder').css('display','none');//Hide active cylinder
+    $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
+    $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
+    $('.playButton').css('display','block');//Make play button the first one to appear
+    $('.pauseButton').css('display','none');//Hide pause button
+    $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');//Removes Active Metadata Status
+    $('.activeCylinder').find('.subMetaInfo').css('display','none');//Hides Sub Meta info if open
+    $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());//Restores width of metadata to regular cylinder width
+    $('.activeCylinder').addClass('cylinderSquare');//Restores cylinder class (so it can be clicked)
+    $('.activeCylinder').removeClass('activeCylinder');//Removes active cylinder class
+    console.log($('.activeCylinder').width());
+  }
+}
+
+
 // /////////////
 // Fit screen type
 // /////////////
 var fitScreen = function(){
+
   // Makes the elements fit appropriate depending upon screensize
   if(screenWidth <= screenSizeChange){
     $('section').height(screenHeight - 50);
@@ -55,38 +101,22 @@ var fitScreen = function(){
     $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
 
     // Home Content Fit
-    $('#homeSlider').height($('#homeSlider').parent().parent().height() - 155);
+    $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 155);
 
     // Large Active Cylinder
     $('#largeActiveCylinder').width(screenWidth - 116);
+
+    // Home page color width
+    $('.backColor').width($('#largeHomeSlider .slide').width());
 
   }
 };
 fitScreen();
 
-// ///////////////
-// Check If Screen Size Has Changed
-// ///////////////
-var checkScreenType =  function(){
-  if(screenWidth < 650){
-    console.log('phone');
-    screenType = 'phone';
-  }
-  else if(screenWidth >= 650 && screenWidth <= 1100){
-    console.log('tablet');
-    screenType = 'tablet';
-  }
-  else{
-    console.log('desktop');
-    screenType = 'desktop';
-  }
-}
-checkScreenType();
-
 $(window).resize(function(){
   screenHeight = $(window).height();
   screenWidth = $(window).width();
-  checkScreenType();
+  compareScreenType();
   fitScreen();
 });
 

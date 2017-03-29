@@ -29,7 +29,7 @@
 
     <div id="homeSlider">
 
-      <div id="libraryLink" class="slide">
+      <div class="libraryLink slide">
         <h2>Search Library</h2>
         <p>You can search our extensive library of many cylinders.</p>
         <p>Feel free to search by artist, title, or even year!</p>
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div id="historyLink" class="slide">
+      <div class="historyLink slide">
         <h2>Today In History</h2>
         <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
         <div class="backColor">
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <div id="randomLink" class="slide">
+      <div class="randomLink slide">
         <h2>Random</h2>
         <p>Can't think of something to look for? Try one at random!</p>
         <div class="backColor">
@@ -54,7 +54,36 @@
         </div>
       </div>
 
-    </div>
+    </div><!-- End of Home Slider -->
+
+    <div id="largeHomeSlider">
+
+      <div class="libraryLink slide">
+        <h2>Search Library</h2>
+        <p>You can search our extensive library of many cylinders.</p>
+        <p>Feel free to search by artist, title, or even year!</p>
+        <div class="backColor">
+
+        </div>
+      </div>
+
+      <div class="historyLink slide">
+        <h2>Today In History</h2>
+        <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
+        <div class="backColor">
+
+        </div>
+      </div>
+
+      <div class="randomLink slide">
+        <h2>Random</h2>
+        <p>Can't think of something to look for? Try one at random!</p>
+        <div class="backColor">
+
+        </div>
+      </div>
+
+    </div><!-- End of Large Home Slider -->
 
 
   </div>

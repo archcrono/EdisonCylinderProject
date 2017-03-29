@@ -311,7 +311,7 @@ footer{
       }
     }//End of indicators
 
-    #homeSlider{
+    #homeSlider, #largeHomeSlider{
       width: 100%;
       position: absolute;
       font-family: $standard-font;
@@ -347,19 +347,19 @@ footer{
       }//End of Divs in Slider
 
       // Sliders
-      #libraryLink{
+      .libraryLink{
         background-image: url('../img/cover1.png');
         .backColor{
           background: -webkit-linear-gradient(top, rgba(255,0,0,1) 0%,rgba(255,255,255,0) 100%);
         }
       }//End of Library Link
-      #historyLink{
+      .historyLink{
         background-image: url('../img/cover2.png');
         .backColor{
           background: -webkit-linear-gradient(top, rgba(0,25,255,1) 0%,rgba(255,255,255,0) 100%);
         }
       }
-      #randomLink{
+      .randomLink{
         background-image: url('../img/cover3.png');
         .backColor{
           background: -webkit-linear-gradient(top, rgba(40,120,0,1) 0%,rgba(255,255,255,0) 100%);
@@ -374,6 +374,10 @@ footer{
       }
 
     }//End of Home Slider
+
+    #largeHomeSlider{
+      display: none;
+    }
 
   }//End of Home Container
 }//End of Home Section

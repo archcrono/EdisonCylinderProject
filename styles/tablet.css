@@ -83,15 +83,17 @@
   #homeSection #homeContainer #indicators {
     display: none; }
   #homeSection #homeContainer #homeSlider {
+    display: none; }
+  #homeSection #homeContainer #largeHomeSlider {
     width: 100%;
     display: flex;
     justify-content: space-between;
     position: absolute;
     bottom: 0; }
-    #homeSection #homeContainer #homeSlider .slide {
+    #homeSection #homeContainer #largeHomeSlider .slide {
       display: inline-block;
       width: 32%; }
-      #homeSection #homeContainer #homeSlider .slide .backColor {
+      #homeSection #homeContainer #largeHomeSlider .slide .backColor {
         width: 32%;
         height: 300px; }
 
