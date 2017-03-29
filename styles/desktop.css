@@ -19,6 +19,9 @@
       #informationSection .row .col__img {
         display: inherit; }
   #informationSection .members .member {
-    width: 30%; } }
+    width: 30%; }
+
+  #contactContainer fieldset {
+    width: 35%; } }
 
 /*# sourceMappingURL=desktop.css.map */
