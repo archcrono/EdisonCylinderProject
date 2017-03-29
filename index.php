@@ -15,7 +15,7 @@
     <!-- Angular -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" type="text/javascript"></script>
     <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Rubik|Arsenal" rel="stylesheet">
     <!-- jQuery -->
@@ -24,6 +24,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <!-- JPlayer -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
   </head>
   <body ng-app="cylinderApp">
 
@@ -31,13 +33,13 @@
 
       <!-- Home Section/Landing Page -->
 
-      <section id="homeSection" class="inactive">
+      <section id="homeSection" class="active">
         <?php include 'homeSection.php'; ?>
       </section>
 
       <!-- Library Section/Cylinder Library -->
 
-      <section id="librarySection" class="active">
+      <section id="librarySection" class="inactive">
         <?php include 'librarySection.php'; ?>
       </section>
 

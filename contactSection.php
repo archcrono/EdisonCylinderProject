@@ -17,18 +17,21 @@
       <h2>Contact Us</h2>
       <h3>Have a question? Let us know!</h3>
     </div>
+    <!-- <form action="FormToEmail.php"> -->
     <form>
-      <h3>Name</h3>
-      <input type="text" name="" value="">
-      <h3>Email</h3>
-      <input type="text" name="" value="">
-      <h3>Question/Comment</h3>
-      <textarea name="name"></textarea>
-      <button type="submit" name="button">Send</button>
+      <fieldset>
+        <h3>Name</h3>
+        <input type="text" name="fullName" required>
+        <h3>Email</h3>
+        <input type="email" name="email" required>
+        <h3>Comments</h3>
+        <textarea rows="6" cols="20"></textarea>  
+      </fieldset>
+      <button class="submit_button" type="submit" name="submit" value="Submit">Submit</button>
     </form>
   </div>
 
-
+      
 <!-- <div class="container">
   		<div class="row header">
     		<h1 style="color: black;">CONTACT US &nbsp;</h1>

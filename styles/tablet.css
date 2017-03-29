@@ -1,10 +1,34 @@
 @media only screen and (min-width: 651px) and (max-width: 999em) {
   .active {
     z-index: -1; }
+
   .inactive {
     top: 0;
     display: none;
     z-index: 1; }
+
+  .banner {
+    display: none; }
+
+  .largeBanner {
+    display: block;
+    width: 400px;
+    height: 150px;
+    background-color: red; }
+    .largeBanner .uvuLogo {
+      width: 100px; }
+    .largeBanner svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .6; }
+    .largeBanner .bannerBar:nth-of-type(2) {
+      margin-left: 170px; }
+    .largeBanner .bannerBar:nth-of-type(3) {
+      margin-left: 220px; }
+    .largeBanner .bannerBar:nth-of-type(4) {
+      margin-left: 280px; }
+
   section {
     width: 100%; }
     section header {
@@ -19,6 +43,7 @@
           top: 50%; }
     section main {
       margin-left: 50px; }
+
   .footerButtonContainers {
     position: absolute;
     top: 0;
@@ -40,6 +65,7 @@
       .footerButtonContainers i:nth-child(4) {
         top: 85%;
         left: 35%; }
+
   footer {
     position: absolute;
     top: 0;
@@ -47,35 +73,71 @@
     height: 100%;
     right: 0;
     z-index: 10; }
-  #librarySection main .ng-scope {
-    width: 150px; }
-  #librarySection main .top {
+
+  #homeSection #homeContainer .bannerAndCylinder #cylinderOfTheDay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    height: 150px; }
+  #homeSection #homeContainer #indicators {
+    display: none; }
+  #homeSection #homeContainer #homeSlider {
+    width: 100%;
     display: flex;
-    justify-content: space-between; }
-    #librarySection main .top .banner {
-      height: 90px;
-      width: 400px; }
-      #librarySection main .top .banner .bannerRotate {
-        right: inherit; }
-    #librarySection main .top .search {
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0; }
+    #homeSection #homeContainer #homeSlider .slide {
       display: inline-block;
-      width: 35%; }
-      #librarySection main .top .search span {
-        position: relative;
-        top: 10%; }
-        #librarySection main .top .search span input {
-          width: 60%;
-          margin-bottom: 0px; }
-      #librarySection main .top .search #advancedSearch {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        background-color: #c5e86c;
-        z-index: 10; }
-        #librarySection main .top .search #advancedSearch select {
-          width: 50%;
-          display: inline-block; }
-  #librarySection main .libGrid .shadeBack {
-    width: 150px; }
+      width: 32%; }
+      #homeSection #homeContainer #homeSlider .slide .backColor {
+        width: 32%;
+        height: 300px; }
+
+  #librarySection main .top {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-bottom: 5px;
+    z-index: 20; }
+    #librarySection main .top #searchBar {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: 0;
+      margin-left: 5px;
+      height: 150px;
+      background-color: #d0d0ce; }
+  #librarySection main #libraryContainer {
+    padding-left: 5px;
+    margin-top: 155px;
+    box-sizing: border-box; }
+    #librarySection main #libraryContainer .cylinderSquare {
+      width: 33.1%; }
+      #librarySection main #libraryContainer .cylinderSquare:nth-child(odd) {
+        padding: 0;
+        padding-right: 5px; }
+      #librarySection main #libraryContainer .cylinderSquare:nth-child(even) {
+        padding: 0;
+        padding-right: 5px; }
+  #librarySection main #largeActiveCylinder {
+    background-color: grey;
+    margin-bottom: 5px;
+    max-width: 100%;
+    height: 200px;
+    color: white;
+    display: none; }
+
+  #informationSection main .header .largeBanner {
+    position: absolute; }
+  #informationSection main #infoContainer {
+    margin-top: 150px; }
   #informationSection .vis {
-    display: block !important; } }
+    display: block !important; }
+
+  #contactContainer fieldset {
+    width: 50%; } }
+
+/*# sourceMappingURL=tablet.css.map */

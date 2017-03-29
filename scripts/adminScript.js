@@ -71,9 +71,9 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
   }
 
   $scope.closeEdit = function(){
+
     $('#cylinderFormInfo').removeClass('show');
     $('#modal--bg').removeClass('dark');
-    
     
     $scope.cylinderTitle = null;
     $scope.cylinderArtist = null;

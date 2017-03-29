@@ -3,9 +3,11 @@ var screenHeight = $(window).height();
 var screenWidth = $(window).width();
 var screenSizeChange = 650;//The pixel size when the styling changes
 var screenSize = null; //False indicates mobile, True indicates tablet and larger
+var screenType = null;//Determine screen type (phone/tablet/desktop)
 
-
+// /////////////
 // Fit screen type
+// /////////////
 var fitScreen = function(){
   // Makes the elements fit appropriate depending upon screensize
   if(screenWidth <= screenSizeChange){
@@ -21,6 +23,20 @@ var fitScreen = function(){
     $('#homeSlider div').height(screenHeight - 270);
     $('.backColor').width(screenWidth);
 
+    // Cylinder Metadata IS THIS NECCESSARY?
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
+    // Slick Slider
+    $('#homeSlider').slick({
+      arrows: false,
+      infinite: false,
+      dots: true
+    });
+
+
+
   }else{
     $('section').height(screenHeight);
     $('section main').height(screenHeight);
@@ -28,14 +44,49 @@ var fitScreen = function(){
     $('section main').width(screenWidth - 100);
     $('.footerButtonContainers i').removeAttr('style');
     screenSize = true;
+
+    // Cylinder Metadata
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
+    // Cylinder of the Day / Search resize
+    $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
+    $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
+
+    // Home Content Fit
+    $('#homeSlider').height($('#homeSlider').parent().parent().height() - 155);
+
+    // Large Active Cylinder
+    $('#largeActiveCylinder').width(screenWidth - 116);
+
   }
 };
 fitScreen();
 
+// ///////////////
+// Check If Screen Size Has Changed
+// ///////////////
+var checkScreenType =  function(){
+  if(screenWidth < 650){
+    console.log('phone');
+    screenType = 'phone';
+  }
+  else if(screenWidth >= 650 && screenWidth <= 1100){
+    console.log('tablet');
+    screenType = 'tablet';
+  }
+  else{
+    console.log('desktop');
+    screenType = 'desktop';
+  }
+}
+checkScreenType();
 
 $(window).resize(function(){
   screenHeight = $(window).height();
   screenWidth = $(window).width();
+  checkScreenType();
   fitScreen();
 });
 
@@ -43,10 +94,6 @@ $(window).resize(function(){
 
 // Get selected section
 $('.navButton').on('click', function(){
-
-  // console.log('Clicked!');
-  // $('.navButton').off('click');
-  // $('.tempButton').removeClass('navButton');
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -96,9 +143,19 @@ $('.navButton').on('click', function(){
     $('#container').css('position','absolute');
     $('#container').css('overflow','hidden');
 
+    // Home Slider Width
+    $('#homeSlider .slick-track').width('100%');
+    $('#homeSlider .slick-slide').width('100%');
+
     // Prep/Animate selected section
     $(selectedSection).css('display','block');
     $(selectedSection + ' header i').css('left', iconPosition);
+
+    // Assign meta info width
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
     $(selectedSection).animate({
       top: 0
     },500,function(){
@@ -137,6 +194,16 @@ $('.navButton').on('click', function(){
     $(selectedSection).css('top','0');
     $(selectedSection).css('left', screenWidth);
 
+    // Cylinder of the Day / Search resize
+    $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
+    $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
+
+
+    // Cylinder Metadata
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
 
     $(selectedSection + ' header i').css('top', iconPosition);
 
@@ -160,7 +227,7 @@ $('.navButton').on('click', function(){
 
   }
 
-$('.navButton').on('click');
+// $('.navButton').on('click');
 
 });//End of get selected sections
 
@@ -185,12 +252,12 @@ var changeActiveFooter = function(){
 // ///////////
 
 $(document).ready(function(){
-  $('#homeSlider').slick({
-    arrows: false,
-    infinite: false,
-    dots: true
-  });
-
+  // $('#homeSlider').slick({
+  //   arrows: false,
+  //   infinite: false,
+  //   dots: true
+  // });
+  //
 
 });
 
@@ -199,21 +266,164 @@ $(document).ready(function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
-  $(this).find('.metaInfo').addClass('activeClyinder');
+    // Ready Player
+    var cylinderURL = $(this).find('.cylinderURL').html();
 
-  // Cylinder Square Animation
-  $(this).animate({
-    width: '100%',
-    'padding-right': 5
-  }, 500);
+    $(".musicPlayer").jPlayer("clearMedia");
+    $(".musicPlayer").jPlayer("setMedia",{
+      m4a: cylinderURL,
+      oga: cylinderURL
+    });
 
-});
+    $(".musicPlayer").jPlayer({
+        ready: function(event) {
+          $(this).jPlayer("setMedia", {
+            m4a: cylinderURL,
+            oga: cylinderURL
+          });
+        },
+        supplied: "mp3, oga",
+        useStateClassSkin: true
+    });
+
+  if(screenWidth < 650){
+    // Mobile
+
+    // Animate active cylinder back to normal
+    $('.activeCylinder').animate({
+      width: '50%' //This might need to be restore to 49.5%
+    }, 500);
+
+    // Restore active cylinder to normal
+    $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
+    $('.playButton').css('display','block');//Make play button the first one to appear
+    $('.pauseButton').css('display','none');//Hide pause button
+    $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');//Removes Active Metadata Status
+    $('.activeCylinder').find('.subMetaInfo').css('display','none');//Hides Sub Meta info if open
+    $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());//Restores width of metadata to regular cylinder width
+    $('.activeCylinder').addClass('cylinderSquare');//Restores cylinder class (so it can be clicked)
+    $('.activeCylinder').removeClass('activeCylinder');//Removes active cylinder class
+
+    // Make this active cylinder
+    $(this).addClass('activeCylinder');//Add active cylinder class to this
+    $(this).removeClass('cylinderSquare');//Remove cylinder class (so it cannot be clicked)
+    $(this).find('.metaInfo').addClass('activeMetaInfo');//Make this metadata the active metadata
+    $(this).find('.cylinderPlayOptions').css('display','block');//Show Play Button
+
+    if(($(this).index() + 1) % 2 == 0){
+      // If in an even position spot, move and animate size
+       $(this).prev().before($(this));
+
+       $(this).animate({
+         width: "100%"
+       }, 500);
+
+      // Animate Meta Info
+       $(this).find('.activeMetaInfo').animate({
+         width: $(window).width() - 10
+       }, 500);
+
+     }else{
+       $(this).animate({
+         width: "100%"
+       }, 500);
+
+      // Animate Meta Info
+       $(this).find('.activeMetaInfo').animate({
+         width: $(window).width() - 10
+       }, 500);
+     }
+  }//End of Mobile
+  else if(screenWidth >= 650 && screenWidth <= 1100){
+    //
+    // Tablet
+    //
+
+    // // Remove Large Active Cylinder
+    $('#largeActiveCylinder').css('display','none');//Hide active cylinder
+    $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
+    $('#largeActiveCylinder').width(screenWidth - 116);
+    $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
+    $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
+
+    switch (($(this).index() + 1) % 3) {
+      case 0:
+        $("#largeActiveCylinder").insertAfter($(this));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 1:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 2));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 2:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 1));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+    }
+
+  }//End of Tablet
+  else{
+    //
+    // Desktop
+    //
+
+    // // Remove Large Active Cylinder
+    $('#largeActiveCylinder').css('display','none');//Hide active cylinder
+    $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
+    $('#largeActiveCylinder').width(screenWidth - 110);
+    $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
+    $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
+
+    switch (($(this).index() + 1) % 5) {
+      case 0:
+        $("#largeActiveCylinder").insertAfter($(this));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 1:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 4));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 2:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 3));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 3:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 2));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+      case 4:
+        $("#largeActiveCylinder").insertAfter($(".cylinderSquare").eq($(this).index() + 1));
+        $("#largeActiveCylinder").css('display','block');
+        break;
+
+    }
+
+  }//End of Desktop
+
+
+});//End Expand Cylinder
   //
   // Expand Meta Info
   //
-$(document).on('click','.activeClyinder',function(){
+$(document).on('click','.activeMetaInfo',function(){
+
+  $(this).find('.subMetaInfo').height($(this).parent().height());
+
   $(this).find('.subMetaInfo').toggle();
+
 });
+  //
+  // Toggle Play/Pause
+  //
+$(document).on('click','.playButton',function(){
+  $('.playButton').toggle();
+  $('.pauseButton').toggle();
+});
+$(document).on('click','.pauseButton',function(){
+  $('.playButton').toggle();
+  $('.pauseButton').toggle();
+});
+
 
 
 // /////////////
@@ -231,13 +441,18 @@ var searchBar = $('#searchBar');
 $('#librarySection main').scroll(function(){
   // console.log(searchBar.position().top);
 
-	if($('#librarySection main').scrollTop() > 90 ){
-    // console.log("Hello");
-		searchBar.addClass("lockBar");
-	}
-	else{
-		searchBar.removeClass("lockBar");
-	}
+  if(screenWidth <= screenSizeChange){
+    // Mobile
+    if($('#librarySection main').scrollTop() > 90 ){
+      // console.log("Hello");
+  		searchBar.addClass("lockBar");
+  	}
+  	else{
+  		searchBar.removeClass("lockBar");
+  	}
+  }
+
+
 });
 
 // //////////////
@@ -266,7 +481,6 @@ var randomCylinderImage = function(){
   var cylinderImagePath = 'img/libraryCover/cylinder';
   return cylinderImagePath + (Math.round(Math.random() * 27) + 1) + '.jpg';
 }
-
 
 // ////////
 // Angular
@@ -301,7 +515,7 @@ cylinderApp.filter('searchForCylinder', function(){
 
     angular.forEach(arr, function(item){
 
-      if(item.title.toLowerCase().indexOf(searchCylinder) !== -1){
+      if(item.title.toLowerCase().indexOf(searchCylinder) !== -1 || item.artist.toLowerCase().indexOf(searchCylinder) !== -1){
         result.push(item);
       }
     });
@@ -316,21 +530,40 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   // Variables
   $scope.returnedCylinderData;
 
+
+
+  // Select Background Color
+  var bgColors = ['red', 'orange', 'yellow','green','blue','indigo','violet'];
+
+  var randomColor = function(){
+    return bgColors[Math.round(Math.random() * (bgColors.length -1))];
+  }
+
+
   // Get data
   cylinderData.getCylinderData().then(function(data){
     $scope.returnedCylinderData = data.data;
 
+
+
     for(var i = 0; i < $scope.returnedCylinderData.length; i++){
 
       $scope.returnedCylinderData[i].imageURL = randomCylinderImage();
+      $scope.returnedCylinderData[i].backColor = randomColor();
 
     }
 
   });
 
 
+
   $scope.expandCylinder = function(){
-    console.log(this.item);
+
+    $('#largeCylinderName').html(this.item.title);
+    $('#largeArtistName').html(this.item.artist);
+    $('#largeMoldNumber').html(this.item.mold);
+    $('#largeTakeNumber').html(this.item.take);
+
   }
 
   // $scope.cylinderSquare.forEach(function(){

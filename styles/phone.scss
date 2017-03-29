@@ -62,11 +62,54 @@ $standard-font: 'Rubik', sans-serif;
   background-color: white;
   // background-color: red;
 }
-.activeClyinder{
+.activeCylinder{
+  width: 49.5%;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: grey;
+  background-clip: content-box;
+  overflow: hidden;
+  position: relative;
+  padding: 0 5px;
+  img{
+    width: 100%;
+    opacity: .5;
+  }
+  .metaInfo{
+    position: absolute;
+    width: 100%;
+    color: white;
+    background-color: rgba(0,0,0,.6);
+    bottom: 0;
+    z-index: 10;
+    padding: 10px 0;
+    i{
+      position: absolute;
+      right: 20px;
+      top: 7px;
+      font-size: 1.6em;
+    }
+    .subMetaInfo{
+      display: none;
+    }
+  }
+}//End Active Cylinder
+.activeMetaInfo{
   top: 0;
   bottom: auto !important;
   i{
     display: block !important;
+  }
+  h4{
+    padding-top:5px;
+    padding-left:10px;
+  }
+  b{
+    font-weight:bold;
+    color:$pan374;
+  }
+  .subMetaInfo{
+    margin-top:5px;
   }
 }
 // ////////
@@ -78,7 +121,6 @@ $standard-font: 'Rubik', sans-serif;
 
 .banner{
   height: 80px;
-  // background-image: url('../img/banner1.png');
   background-position: right;
   background-repeat: no-repeat;
   padding: 10px 0 0 10px;
@@ -98,7 +140,7 @@ $standard-font: 'Rubik', sans-serif;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .6
+    opacity: .6;
   }
   .bannerBar:nth-of-type(2){
     margin-left: 160px;
@@ -117,6 +159,10 @@ $standard-font: 'Rubik', sans-serif;
     width: 400px;
     z-index: -1;
   }
+}
+
+.largeBanner{
+  display: none;
 }
 
 // /////////
@@ -166,6 +212,7 @@ section{
   bottom: 0;
   i{
     position: absolute;
+    cursor: pointer;
     color: white;
     z-index: 10;
     font-size: 1.2em;
@@ -372,7 +419,7 @@ footer{
       }
     }//End of Search Bar
 
-    // Do we need this?
+    // Yes we do, it's for the fonts
     h2{
       font-family: $header-font;
       font-size: 1.2em;
@@ -380,6 +427,20 @@ footer{
     }
     h3{
       font-family: $alternative-font;
+    }
+    h4{
+      font-family: $header-font;
+      font-size: 1.2em;
+    }
+
+    .cylinderPlayOptions{
+      display: none;
+      position: absolute;
+      top: 35%;
+      left: 40%;
+      color: white;
+      font-size: 8em;
+      z-index: 10;
     }
 
     //
@@ -390,10 +451,9 @@ footer{
       margin-top: 60px;
 
       .cylinderSquare{
-        width: 49.5%;
+        width: 50%;
         display: inline-block;
         box-sizing: border-box;
-        background-color: grey;
         background-clip: content-box;
         overflow: hidden;
         position: relative;
@@ -404,9 +464,18 @@ footer{
         &:nth-child(even){
           padding: 2px 5px 0 2.5px;
         }
+
+
         img{
           width: 100%;
+          height: 100%;
           opacity: .5;
+        }
+
+        h2{
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
 
@@ -426,6 +495,7 @@ footer{
           }
           .subMetaInfo{
             display: none;
+
           }
         }//End Meta Info
 
@@ -433,6 +503,10 @@ footer{
       }//End of cylinderSquare
     }//End of Library Container
 
+
+    #largeActiveCylinder{
+      display: none;
+    }
 
 
   }//End of Main
@@ -444,9 +518,12 @@ footer{
 
 #informationSection{
   box-sizing: border-box;
-  background: white/*  */;
-  img{
-    width: 100%;
+  background: white;
+
+  #infoContainer{
+    img{
+      width: 100%;
+    }
   }
   h1{
     font-size: 3em;
@@ -484,6 +561,7 @@ footer{
       &:last-child{
         margin-bottom: 40px;
       }
+
     }
   }
   .row{
@@ -593,7 +671,12 @@ footer{
       padding: 20px 10px;
 
       h2{
-        font-size: 1.7em;
+        font-size: 3em;
+        color:$pan348;
+      }
+      h3{
+        font-size: 1.5em;
+        color:$pan7738;
       }
     }
 
@@ -605,13 +688,13 @@ footer{
       form{
         width: 80%;
         margin: auto;
-        border: 1px solid black;
         padding: 0 20px;
         h3{
           width: 100%;
           margin: 10px 0;
           font-size: 1.3em;
           font-weight: bold;
+          color:$pan348;
         }
         input{
           width: 100%;
@@ -630,100 +713,22 @@ footer{
         button{
           display: block;
           text-align: right;
-          border: 1px solid black;
+          border: 1px solid;
           margin: 10px 0;
+          font-size: 1.2em;
+          color:white;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
+          background: #006e2e; /* Old browsers */
+          background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #006e2e 0%,#006e2e 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, #006e2e 0%,#006e2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 ); /* IE6-9 */
         }
       }
     }//End of Contact container
   }//End of Contact Main
 }//End of Contact Section
 
-// .container {
-//   max-width: 510px;
-//   min-width: 324px;
-//   margin: 50px auto 0px;
-//   background-color: white;
-//   border: 1px solid lighten(grey, 1%);
-//   border-bottom: 3px solid grey;
-// }
-// .row {
-//   width: 100%;
-//   margin: 0 0 1em 0;
-//   padding: 0 2.5em;
-//   &.header {
-//     padding: 1.5em 2.5em;
-//     border-bottom: 1px solid grey;
-//     background: url(https://ibb.co/n1RfWF) left -80px;
-//     color: white;
-//   }
-//    &.body {
-//     padding: .5em 2.5em 1em;
-//   }
-// }
-// .pull-right {
-//   float: right;
-// }
-// form {
-//   max-width: 100%;
-//   display: block;
-//   ul {
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-//     li {
-//       margin: 0 0 0.25em 0;
-//       clear: both;
-//       display: inline-block;
-//       width: 100%;
-//       &:last-child {
-//           margin: 0;
-//         }
-//         p {
-//           margin: 0;
-//           padding: 0;
-//           float: left;
-//           &.right {
-//             float: right;
-//           }
-//         }
-//         .divider {
-//           margin: 0.5em 0 0.5em 0;
-//           border: 0;
-//           height: 1px;
-//           width: 100%;
-//           display: block;
-//           background-color: blue;
-//           background-image: linear-gradient(to right, pink, blue);
-//         }
-//         .req {
-//           color: pink;
-//         }
-//     }
-//   }
-//   label {
-//     display: block;
-//     margin: 0 0 0.5em 0;
-//     color: blue;
-//     font-size: pxtoem(16, 16);
-//   }
-//   input {
-//     margin: 0 0 0.5em 0;
-//     border: 1px solid grey;
-//     padding: 6px 10px;
-//     color: grey;
-//     font-size: pxtoem(16, 16);
-//   }
-//   textarea {
-//     border: 1px solid grey;
-//     padding: 6px 10px;
-//     width: 100%;
-//     color: grey;
-//   }
-//   small {
-//     color: blue;
-//     margin: 0 0 0 0.5em;
-//   }
-// }
 
 
 // /////////
