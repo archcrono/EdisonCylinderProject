@@ -42,6 +42,7 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
     console.log(this.item);
     $('#modal--bg').addClass('modal--bg');
     $('#cylinderFormInfo').css('display','block');
+    // $('.modal__container').css('display','block');
 
     $scope.cylinderTitle = this.item.title;
     $scope.cylinderArtist = this.item.artist;
@@ -52,6 +53,8 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
     $('#modal--bg').removeClass('modal--bg');
     $('#cylinderFormInfo').css('display','none');
+    // $('.modal__container').css('display','none');
+    
     $scope.cylinderTitle = null;
     $scope.cylinderArtist = null;
     $scope.cylinderComments = null;
@@ -69,3 +72,12 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
 
 }])
+
+
+$('#content_1').click(function(){
+  console.log('test1');
+});
+
+$('#content_2').click(function(){
+  console.log('test');
+});

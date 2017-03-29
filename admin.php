@@ -24,7 +24,7 @@
       <div class="col-sm-10 col-sm-offset-1">
         <div class="form-group">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
+            <input type="text" class="form-control" placeholder="Search for..." ng-model="search">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button">Go!</button>
             </span>
@@ -38,9 +38,9 @@
 
     <div class="data">
       <div class="col-sm-10 col-sm-offset-1">
-        <div class="panel panel-default box" ng-click="getItemData()" ng-repeat="item in returnedData">
-          <h2>{{ item.title }}</h2>
-          <h3>{{ item.artist }}</h3>
+        <div class="panel panel-default box" ng-click="getItemData()" ng-repeat="item in returnedData | filter:search">
+          <h2 ng-bind="item.title"></h2>
+          <h3 ng-bind="item.artist"></h3>
         </div>
       </div>
     </div>
@@ -49,9 +49,9 @@
 
     <div id="modal--bg">
     
-      <div class="modal__container panel panel-default"">
+      <div id="cylinderFormInfo" class="modal__container panel panel-default"">
         <h3 class="text-center">Update Cylinder Information</h3>
-        <form id="cylinderFormInfo" enctype="multipart/form-data" action="" method="POST">
+        <form enctype="multipart/form-data" action="" method="POST">
           <div class="col-sm-12">
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
@@ -84,9 +84,9 @@
       <!-- <input ng-model="cylinderComments" type="text" name="" value=""> -->
       
 
-      <div class="modal__container panel panel-default"">
+      <div id="createNewCylinderForm" class="modal__container panel panel-default"">
         <h3 class="text-center">Add New Cylinder</h3>
-        <form id="createNewCylinderForm" enctype="multipart/form-data" action="" method="POST">
+        <form enctype="multipart/form-data" action="" method="POST">
           <div class="col-sm-12">
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
