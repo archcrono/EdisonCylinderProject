@@ -3,6 +3,7 @@ var screenHeight = $(window).height();
 var screenWidth = $(window).width();
 var screenSizeChange = 650;//The pixel size when the styling changes
 var screenSize = null; //False indicates mobile, True indicates tablet and larger
+var screenType = null;//Determine screen type (phone/tablet/desktop)
 
 // /////////////
 // Fit screen type
@@ -63,14 +64,29 @@ var fitScreen = function(){
 };
 fitScreen();
 
-
+// ///////////////
 // Check If Screen Size Has Changed
-
+// ///////////////
+var checkScreenType =  function(){
+  if(screenWidth < 650){
+    console.log('phone');
+    screenType = 'phone';
+  }
+  else if(screenWidth >= 650 && screenWidth <= 1100){
+    console.log('tablet');
+    screenType = 'tablet';
+  }
+  else{
+    console.log('desktop');
+    screenType = 'desktop';
+  }
+}
+checkScreenType();
 
 $(window).resize(function(){
   screenHeight = $(window).height();
   screenWidth = $(window).width();
-
+  checkScreenType();
   fitScreen();
 });
 
