@@ -435,7 +435,11 @@
     max-width: 100%;
     padding: 20px 10px; }
     #contactSection main #contactHeader h2 {
-      font-size: 1.7em; }
+      font-size: 3em;
+      color: #00843d; }
+    #contactSection main #contactHeader h3 {
+      font-size: 1.5em;
+      color: #4ba23f; }
   #contactSection main #contactContainer {
     width: 100%;
     font-family: "Arsenal", sans-serif;
@@ -449,7 +453,8 @@
         width: 100%;
         margin: 10px 0;
         font-size: 1.3em;
-        font-weight: bold; }
+        font-weight: bold;
+        color: #00843d; }
       #contactSection main #contactContainer form input {
         width: 100%;
         display: inline-block;
@@ -465,7 +470,20 @@
       #contactSection main #contactContainer form button {
         display: block;
         text-align: right;
-        border: 1px solid black;
-        margin: 10px 0; } }
+        border: 1px solid;
+        margin: 10px 0;
+        font-size: 1.2em;
+        color: white;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
+        background: #006e2e;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #006e2e 0%, #006e2e 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #006e2e 0%, #006e2e 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
+        /* IE6-9 */ } }
 
 /*# sourceMappingURL=phone.css.map */

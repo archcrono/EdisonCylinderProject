@@ -135,6 +135,9 @@
   #informationSection main #infoContainer {
     margin-top: 150px; }
   #informationSection .vis {
-    display: block !important; } }
+    display: block !important; }
+
+  #contactContainer fieldset {
+    width: 50%; } }
 
 /*# sourceMappingURL=tablet.css.map */

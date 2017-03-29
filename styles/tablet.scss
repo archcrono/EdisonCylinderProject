@@ -1,4 +1,47 @@
 @media only screen and (min-width: 651px) and (max-width: 999em){
+// //////////
+// Variables
+// //////////
+$header-font: 'Arsenal', sans-serif;
+// $header-font: 'Roboto', sans-serif;
+$body-font: 'Nunito Sans', sans-serif;
+$alternative-font: 'Rubik', sans-serif;
+// $header-font: Arial;
+$standard-font: 'Rubik', sans-serif;
+
+  // UVU Color Palette Variables     https://www.uvu.edu/marketing/docs/branding_guides/uvu_web_style_guide_logos.pdf page 7
+  $uvuPrime: #275D38; // UVU Green
+  // Black
+  // White
+  $uvuGrey: #8e8c89; // Primary Grey
+
+    // Complementary Colors
+      //Green
+      $pan348: #00843d; // Green
+      $pan7738: #4ba23f; // Green
+      $pan368: #78be20; // Light Green
+      $pan374: #c5e86c; // Cool Green
+
+      //Orange
+      $pan7483: #275d38; // Dark Red
+      $pan7625: #e1523d; // Peachish
+      $pan717: #d45d00; // Orange
+      $pan7549: #ffb500; // Yellow
+      $pan120: #fbdb65; // Cool Yellow
+
+      //Blue
+      $pan5275: #595478; // Purple
+      $pan639: #0095c8; // Sky Blue
+      $pan3262: #00bfb3; // Tealish
+      $pan564: #86c8bc; // Cool Blue
+      $pan544: #bdd6e6; // Coolest Blue
+
+      //Grey
+      $pan405: #696158; // Grey
+      $pan8: #8c8279; // Warm Grey, Similar to UVU Grey
+      $pan6: #a7a8aa; // Cool Grey
+      $pan2: #d0d0ce; // Coolest Grey
+
 // /////////
 // Active/Inactive Classes
 // /////////
@@ -229,6 +272,16 @@ footer{
   }
 }
 
+
+// //////////////
+// Contact Page
+// //////////////
+
+#contactContainer{
+  fieldset{
+    width: 50%;
+  }
+}//End of Contact container
 
 // ////////////
 // End Of Tablet
