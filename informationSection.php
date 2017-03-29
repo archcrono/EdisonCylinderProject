@@ -28,14 +28,13 @@
   <div class="row">
     <div class="col">
       <div class="header">
-        <h2 class="header__title">title</h2>
-        <p class="header__subtitle">subtitle</p>
+        <h2 class="header__title">Transcribing</h2>
         <p class="header__num">01</p>
       </div>
       <div class="content">
         <p>The cylinders needed to be transcribed. Over the past 7 years, with the input of Professor Mike Wisland and mechanical engineer Gary Hannah, the method of transcription has evolved over the years to the point that we now have a unique way of transcribing cylinder not found anywhere else. Read more information on our transcribing process activities here.</p>
         <div class="right">
-          <button>Read More</button>
+          <button id="content_1">Read More</button>
         </div>
       </div>
     </div>
@@ -49,15 +48,14 @@
     </div>
     <div class="col">
       <div class="header">
-        <h2 class="header__title">title</h2>
-        <p class="header__subtitle">subtitle</p>
+        <h2 class="header__title">Restoration</h2>
         <p class="header__num">02</p>
       </div>
       <div class="content">
         <div>
           <p>The transcribed audio files then need to be restored. The Audio Restoration students first declick the cylinders, then denoise them before posting them to the website. We use a variety of softwares to do this, and that is an ever-evolving process. More information on who and how we restored the cylinders can be found here.</p>
           <div class="right">
-            <button>Read More</button>
+            <button id="content_2">Read More</button>
           </div>
         </div>
       </div>
@@ -66,8 +64,7 @@
   <div class="row">
     <div class="col">
       <div class="header">
-        <h2 class="header__title">title</h2>
-        <p class="header__subtitle">subtitle</p>
+        <h2 class="header__title">Information</h2>
         <p class="header__num">03</p>
       </div>
       <div class="content">
@@ -84,8 +81,7 @@
     </div>
     <div class="col">
       <div class="header">
-        <h2 class="header__title">title</h2>
-        <p class="header__subtitle">subtitle</p>
+        <h2 class="header__title">Website</h2>
         <p class="header__num">04</p>
       </div>
       <div class="content">
@@ -98,8 +94,7 @@
   <div class="row">
     <div class="col">
       <div class="header">
-        <h2 class="header__title">title</h2>
-        <p class="header__subtitle">subtitle</p>
+        <h2 class="header__title">Database</h2>
         <p class="header__num">05</p>
       </div>
       <div class="content">

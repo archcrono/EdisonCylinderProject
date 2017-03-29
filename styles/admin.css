@@ -18,8 +18,14 @@ body {
   top: 50px;
   width: 80%;
   border: 1px solid black;
-  background-color: white;
-  display: none; }
+  background-color: white; }
+
+#createNewCylinderForm {
+  position: absolute;
+  top: 50px;
+  width: 80%;
+  border: 1px solid black;
+  background-color: white; }
 
 .modal--bg {
   position: fixed;
