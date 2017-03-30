@@ -15,7 +15,7 @@
   <body ng-app="cylinderAdminApp" ng-controller="cylinderAdminCtrl">
     <div class="panel panel-default">
       <div class="jumbotron">
-        <h1>UVU Cylinder Admin</h1>
+        <h1 class="text-center">UVU Cylinder Admin</h1>
       </div>
     </div>
 
@@ -31,26 +31,28 @@
           </div><!-- /input-group -->
         </div><!-- /form-group -->
         <div class="form-group">
-          <button type="submit" id="add" class="btn btn-default pull-right" ng-click="openNew()">Add</button>
+          <button type="submit" id="add" class="btn btn-default pull-right" ng-click="openNewForm()">Add</button>
         </div>
       </div><!-- /.col-lg-10 -->
     </div><!-- /.row -->
 
-    <div class="data">
+    <div class="data row">
       <div class="col-sm-10 col-sm-offset-1">
-        <div class="panel panel-default box" ng-click="getItemData()" ng-repeat="item in returnedData | filter:search">
-          <h2 ng-bind="item.title"></h2>
-          <h3 ng-bind="item.artist"></h3>
+        <div class="col-sm-4" ng-repeat="item in returnedData | filter:search">
+          <div class="panel panel-default box" ng-click="getItemData()">
+            <h2 ng-bind="item.title"></h2>
+            <h4 ng-bind="item.artist"></h3>
+          </div>
         </div>
       </div>
     </div>
 
 
 
-    <div id="modal--bg">
+    <div id="modal--bg" class="light">
     
       <div id="cylinderFormInfo" class="modal__container panel panel-default"">
-        <h3 class="text-center">Update Cylinder Information</h3>
+        <h3 class="text-center">Update "{{ cylinderTitle }}"</h3>
         <form enctype="multipart/form-data" action="" method="POST">
           <div class="col-sm-12">
             <div class="form-group row">
@@ -66,23 +68,94 @@
               </div>
             </div>
             <div class="form-group row">
-              <input type="file" name="" class="pull-right">
+              <label class="col-sm-3 col-form-label" for="artist">URL</label>
+              <div class="col-sm-9">
+                <input ng-model="cylinderURL" class="form-control" type="text" name="url" value="">
+              </div>
             </div>
+            <div class="form-group row">
+              <div class="text-right">
+                <input type="file" name="" class="pull-right">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Condition</label>
+                <div class="col-sm-6">
+                  <input ng-model="cylinderCondition" class="input-sm form-control" type="number" name="condition" value="">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Mold</label>
+                <div class="col-sm-6">
+                  <input ng-model="cylinderMold" class="input-sm form-control" type="number" name="mold" value="">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Number</label>
+                <div class="col-sm-6">
+                  <input ng-model="cylinderNumber" class="input-sm form-control" type="number" name="number" value="">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Take</label>
+                <div class="col-sm-6">
+                  <input ng-model="cylinderTake" class="input-sm form-control" type="text" name="take" value="">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-2 col-sm-offset-1">
+                <div class="checkbox">
+                  <label>
+                    <input ng-model="checkbox.playable" type="checkbox" name="playable" value="">Cracked Playable
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input ng-model="checkbox.unplayable" type="checkbox" name="cracked" value="">Cracked Unplayable
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input ng-model="checkbox.flatEdge" type="checkbox" name="edge" value="">Flat Edge
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input ng-model="checkbox.ucsb" type="checkbox" name="ucsb" value="">in UCSB db
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input ng-model="checkbox.website" type="checkbox" name="ucsb" value="">on Website
+                  </label>
+                </div>
+              </div>
+            </div>
+            
             <div class="form-group">
               <label for="artist">Comments</label>
               <textarea ng-model="cylinderComments" class="form-control" type="text" name="comments" value="" rows="7"></textarea>
             </div>
             <div class="form-inline pull-right">
-              <button type="submit" class="btn btn-default" ng-click="closeEdit()">Cancel</button>
+              <div class="btn btn-default" ng-click="closeEdit()">Cancel</div>
               <button type="submit" name="btn_update" class="btn btn-primary">Submit</button>
             </div>
           </div>
         </form>
       </div>
-      <!-- <input ng-model="cylinderTitle" type="text" name="" value=""> -->
-      <!-- <input ng-model="cylinderArtist" type="text" name="" value=""> -->
-      <!-- <input ng-model="cylinderComments" type="text" name="" value=""> -->
-      
+
 
       <div id="createNewCylinderForm" class="modal__container panel panel-default"">
         <h3 class="text-center">Add New Cylinder</h3>
@@ -91,25 +164,99 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
               <div class="col-sm-9">
-                <input class="form-control" type="text" name="newArtist" value="">
+                <input class="form-control" type="text" name="artist" value="">
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Title of Cylinder</label>
               <div class="col-sm-9">
-                <input class="form-control" type="text" name="newTitle" value="">
+                <input class="form-control" type="text" name="title" value="">
               </div>
             </div>
             <div class="form-group row">
-              <input type="file" name="cylinderFile" class="pull-right">
+              <label class="col-sm-3 col-form-label" for="artist">URL</label>
+              <div class="col-sm-9">
+                <input class="form-control" type="text" name="url" value="">
+              </div>
             </div>
+            <div class="form-group row">
+              <div class="text-right">
+                <input type="file" name="" class="pull-right">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Condition</label>
+                <div class="col-sm-6">
+                  <input class="input-sm form-control" type="number" name="condition" value="">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Mold</label>
+                <div class="col-sm-6">
+                  <input class="input-sm form-control" type="number" name="mold" value="">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Number</label>
+                <div class="col-sm-6">
+                  <input class="input-sm form-control" type="number" name="number" value="">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Take</label>
+                <div class="col-sm-6">
+                  <input class="input-sm form-control" type="text" name="take" value="">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-2 col-sm-offset-1">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="playable" value="">Cracked Playable
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="unplayable" value="">Cracked Unplayable
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="edge" value="">Flat Edge
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="ucsb" value="">in UCSB db
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="website" value="">on Website
+                  </label>
+                </div>
+              </div>
+            </div>
+            
             <div class="form-group">
               <label for="artist">Comments</label>
-              <textarea class="form-control" type="text" name="newComments" value="" rows="7"></textarea>
+              <textarea class="form-control" type="text" name="comments" value="" rows="7"></textarea>
             </div>
             <div class="form-inline pull-right">
-              <button type="submit" class="btn btn-default" ng-click="closeNewForm()">Cancel</button>
-              <button type="submit" name="btn_add" class="btn btn-primary">Submit</button>
+              <div class="btn btn-default" ng-click="closeNewForm()">Cancel</div>
+              <button type="submit" name="btn_update" class="btn btn-primary">Submit</button>
             </div>
           </div>
         </form>
