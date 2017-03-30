@@ -50,6 +50,9 @@ var compareScreenType = function(){
 }
 
 
+
+
+
 // /////////////
 // Fit screen type
 // /////////////
