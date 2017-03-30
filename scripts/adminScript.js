@@ -40,44 +40,67 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
   $scope.getItemData = function(){
     console.log(this.item);
-    $('#modal--bg').addClass('modal--bg');
-    $('#cylinderFormInfo').css('display','block');
-    // $('.modal__container').css('display','block');
+    $('#modal--bg').addClass('dark');
+    $('#cylinderFormInfo').addClass('show');
 
     $scope.cylinderTitle = this.item.title;
     $scope.cylinderArtist = this.item.artist;
     $scope.cylinderComments = this.item.comments;
+    $scope.cylinderURL = this.item.url;
+    $scope.cylinderCondition = this.item.condition;
+    $scope.cylinderMold = this.item.mold;
+    $scope.cylinderNumber = this.item.number;
+    $scope.cylinderTake = this.item.take;
+    $scope.cylinderPlayable = this.item.crackedPlayable;
+    
+    $scope.checkbox = {
+      unplayable: false,
+      playable: false,
+      flatEdge: false,
+      ucsb: false,
+      website: false
+    }
+
+    $scope.checkbox.playable = this.item.crackedPlayable;
+    $scope.checkbox.unplayable = this.item.cracedUnplayable;
+    $scope.checkbox.flatEdge = this.item.flatEdge;
+    $scope.checkbox.ucsb = this.item.inUCSBdb;
+    $scope.checkbox.website = this.item.onWebsite;
+
+
   }
 
   $scope.closeEdit = function(){
 
-    $('#modal--bg').removeClass('modal--bg');
-    $('#cylinderFormInfo').css('display','none');
-    // $('.modal__container').css('display','none');
+    $('#cylinderFormInfo').removeClass('show');
+    $('#modal--bg').removeClass('dark');
     
     $scope.cylinderTitle = null;
     $scope.cylinderArtist = null;
     $scope.cylinderComments = null;
+    $scope.cylinderURL = null;
+    $scope.cylinderCondition = null;
+    $scope.cylinderMold = null;
+    $scope.cylinderNumber = null;
+    $scope.cylinderTake = null;
+    $scope.cylinderPlayable = null;
+    $scope.checkbox.playable = null;
+    $scope.checkbox.unplayable = null;
+    $scope.checkbox.flatEdge = null;
+    $scope.checkbox.ucsb = null;
+    $scope.checkbox.website = null;
+
   }
 
-  $scope.openNew = function(){
-    console.log('clicked');
-    $('#modal--bg').addClass('modal--bg');
-    $('.modal__container').css('display','block');
+
+  $scope.openNewForm = function(){
+    $('#modal--bg').addClass('dark');
+    $('#createNewCylinderForm').addClass('show');
   }
   $scope.closeNewForm = function(){
-    $('#modal--bg').removeClass('modal--bg');
-    $('.modal__container').css('display','none');
+    $('#modal--bg').removeClass('dark');
+    $('#createNewCylinderForm').removeClass('show');
   }
 
 
-}])
-
-
-$('#content_1').click(function(){
-  console.log('test1');
-});
-
-$('#content_2').click(function(){
-  console.log('test');
-});
+}]);
