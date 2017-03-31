@@ -533,20 +533,39 @@ cylinderApp.service('cylinderData', ['$http', function($http){
 // Searchbar
 // //////////////////////
 
-$('.activeFooter > #searchButton').click(function(){
-  console.log('clicked');
-  var width = $('#searchFunction').width();
-  console.log(width);
-  if(width == 0){
-    $('#searchFunction').animate({
-      width: "60%"
-    });  
-  }else{
-    $('#searchFunction').animate({
-      width: 0
-    });
-  }  
-});
+if(screenType == 'phone'){
+  $('.activeFooter > #searchButton').click(function(){
+    console.log('clicked');
+    var height = $('#searchFunction').height();
+    console.log(height);
+    if(height == 0){
+      $('#searchFunction').animate({
+        height: "100px"
+      },300);
+    }else if(height > 0){
+      $('#searchFunction').animate({
+        height: 0
+      }, 300);
+    }
+  });
+}else{
+  $('.activeFooter > #searchButton').click(function(){
+    console.log('clicked');
+    var width = $('#searchFunction').width();
+    console.log(width);
+    if(width == 0){
+      $('#searchFunction').animate({
+        width: "60%"
+      },300);  
+    }else{
+      $('#searchFunction').animate({
+        width: 0
+      },300);
+    }  
+  });
+}
+
+
 
 // //////////////////////
 // Filter / Search Feature

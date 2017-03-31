@@ -752,6 +752,39 @@ footer{
   }//End of Contact Main
 }//End of Contact Section
 
+// ////////////
+// search feature
+// ////////////
+
+#searchFunction{
+  // display: none;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  // width: 60%;
+  background: white;
+  box-shadow: 0 0 10px black;
+  width: 100%;
+  overflow: hidden;
+  #Container{
+    width: 100%;
+    padding: .5em 2em;
+    box-sizing: border-box;
+    input[type=text]{
+      background: none;
+      border: none;
+      border-bottom: 2px solid #666;
+      font-size: 1.5em;
+      width: 50%;
+      transition: width .35s ease-in-out;
+      &:focus{
+        outline: none;
+        width: 80%;
+      }
+    }
+  }
+}
+
 
 
 // /////////
