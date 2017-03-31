@@ -1,16 +1,21 @@
 // ////////
 // ajax
 // ////////
-$('#submitButton').click(function(){
-  var data = $('form').serialize();
+$('#createNewCylinderButton').click(function(){
+
+  $('#cylinderId').val(Date.now());
+  var data = $('#createForm').serialize();
+
   $.ajax({
     data: data,
     type: "post",
     url: "php/post.php",
     success: function(data){
+      // window.location.reload();
       alert("data save: " + data);
     }
   })
+
 })
 
 // //////
@@ -23,7 +28,9 @@ var cylinderAdminApp = angular.module('cylinderAdminApp', []);
   //
 cylinderAdminApp.service('cylinderAdminData', ['$http', function($http){
   this.getAdminCylinderData = function(){
-    return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json');
+    return $http.get('php/get.php');
+
+    // return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json');
   }
 }]);
 
@@ -52,7 +59,7 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
     $scope.cylinderNumber = this.item.number;
     $scope.cylinderTake = this.item.take;
     $scope.cylinderPlayable = this.item.crackedPlayable;
-    
+
     $scope.checkbox = {
       unplayable: false,
       playable: false,
@@ -74,7 +81,7 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
     $('#cylinderFormInfo').removeClass('show');
     $('#modal--bg').removeClass('dark');
-    
+
     $scope.cylinderTitle = null;
     $scope.cylinderArtist = null;
     $scope.cylinderComments = null;

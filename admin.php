@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    
+
     <!-- Bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link href="styles/admin.css" rel="stylesheet" type="text/css" >
@@ -50,8 +50,8 @@
 
 
     <div id="modal--bg" class="light">
-    
-      <div id="cylinderFormInfo" class="modal__container panel panel-default"">
+
+      <div id="cylinderFormInfo" class="modal__container panel panel-default">
         <h3 class="text-center">Update "{{ cylinderTitle }}"</h3>
         <form enctype="multipart/form-data" action="" method="POST">
           <div class="col-sm-12">
@@ -143,7 +143,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="form-group">
               <label for="artist">Comments</label>
               <textarea ng-model="cylinderComments" class="form-control" type="text" name="comments" value="" rows="7"></textarea>
@@ -157,9 +157,10 @@
       </div>
 
 
-      <div id="createNewCylinderForm" class="modal__container panel panel-default"">
+      <div id="createNewCylinderForm" class="modal__container panel panel-default">
         <h3 class="text-center">Add New Cylinder</h3>
-        <form enctype="multipart/form-data" action="" method="POST">
+        <form enctype="multipart/form-data" id="createForm" method="POST">
+          <input type="text" style="display: none;"id="cylinderId" name="id" value="" readonly="">
           <div class="col-sm-12">
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
@@ -176,7 +177,7 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">URL</label>
               <div class="col-sm-9">
-                <input class="form-control" type="text" name="url" value="">
+                <input class="form-control" type="text" name="url" value="www.website.com">
               </div>
             </div>
             <div class="form-group row">
@@ -216,47 +217,47 @@
               <div class="col-sm-2 col-sm-offset-1">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="playable" value="">Cracked Playable
+                    <input type="checkbox" name="playable">Cracked Playable
                   </label>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="unplayable" value="">Cracked Unplayable
+                    <input type="checkbox" name="unplayable">Cracked Unplayable
                   </label>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="edge" value="">Flat Edge
+                    <input type="checkbox" name="edge">Flat Edge
                   </label>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="ucsb" value="">in UCSB db
+                    <input type="checkbox" name="ucsb">in UCSB db
                   </label>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="website" value="">on Website
+                    <input type="checkbox" name="website">on Website
                   </label>
                 </div>
               </div>
             </div>
-            
+
             <div class="form-group">
               <label for="artist">Comments</label>
               <textarea class="form-control" type="text" name="comments" value="" rows="7"></textarea>
             </div>
             <div class="form-inline pull-right">
               <div class="btn btn-default" ng-click="closeNewForm()">Cancel</div>
-              <button type="submit" name="btn_update" class="btn btn-primary">Submit</button>
+              <button type="submit" name="btn_update" id="createNewCylinderButton" class="btn btn-primary">Submit</button>
             </div>
           </div>
         </form>
@@ -264,7 +265,7 @@
 
 
     </div>
-    
+
     <script type="text/javascript" src="scripts/adminScript.js"></script>
   </body>
 </html>
