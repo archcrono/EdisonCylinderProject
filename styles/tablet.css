@@ -148,24 +148,9 @@
   #contactSection main #contactContainer fieldset {
     width: 50%; }
   #searchFunction {
-    position: absolute;
     top: 0;
     right: 0;
     height: 150px;
-    background: white;
-    box-shadow: 0 0 10px black;
     width: 0; }
     #searchFunction #Container {
-      width: 100%;
-      padding: 4em;
-      box-sizing: border-box; }
-      #searchFunction #Container input[type=text] {
-        background: none;
-        border: none;
-        border-bottom: 2px solid #666;
-        font-size: 1.5em;
-        width: 50%;
-        transition: width .35s ease-in-out; }
-        #searchFunction #Container input[type=text]:focus {
-          outline: none;
-          width: 80%; } }
+      padding: 4em; } }

@@ -480,4 +480,26 @@
         background: linear-gradient(to bottom, #006e2e 0%, #006e2e 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
-        /* IE6-9 */ } }
+        /* IE6-9 */ }
+  #searchFunction {
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    background: white;
+    box-shadow: 0 0 10px black;
+    width: 100%;
+    overflow: hidden; }
+    #searchFunction #Container {
+      width: 100%;
+      padding: .5em 2em;
+      box-sizing: border-box; }
+      #searchFunction #Container input[type=text] {
+        background: none;
+        border: none;
+        border-bottom: 2px solid #666;
+        font-size: 1.5em;
+        width: 50%;
+        transition: width .35s ease-in-out; }
+        #searchFunction #Container input[type=text]:focus {
+          outline: none;
+          width: 80%; } }
