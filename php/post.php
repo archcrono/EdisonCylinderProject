@@ -11,55 +11,57 @@ if(isset($_REQUEST)){
   $url= $_POST['url'];
   $condition = $_POST['condition'];
   $mold = $_POST['mold'];
-  $number = $_POST['number'];
+  $cylinderNumber = $_POST['$cylinderNumber'];
   $take = $_POST['take'];
   $comments = $_POST['comments'];
   // Playable Checkbox
   $playable = $_POST['playable'];
   if ($playable) {
-      $playable = 1;
+      $playable = true;
   }else{
-      $playable = 0;
+      $playable = false;
   }
   // Unplayed Checkbox
   $unplayable = $_POST['unplayable'];
   if ($unplayable) {
-      $unplayable = 1;
+      $unplayable = true;
   }else{
-      $unplayable = 0;
+      $unplayable = false;
   }
 
   // Flat Edge Checkbox
   $edge = $_POST['edge'];
   if ($edge) {
-      $edge = 1;
+      $edge = true;
   }else{
-      $edge = 0;
+      $edge = false;
   }
 
   // In UCSB Checkbox
   $ucsb = $_POST['ucsb'];
   if ($ucsb) {
-      $ucsb = 1;
+      $ucsb = true;
   }else{
-      $ucsb = 0;
+      $ucsb = false;
   }
 
   // On Website
   $website = $_POST['website'];
   if ($website) {
-      $website = 1;
+      $website = true;
   }else{
-      $website = 0;
+      $website = false;
   }
 
 
-  $sql = "INSERT INTO cylinders (id, number, take, mold, title, artist, comments, onWebsite, cylinderCondition, flatEdge, crackedPlayable, crackedUnplayable, inUCSBdb, url)
+  $sql = "INSERT INTO cylinderMetaData (id, cylinderNumber, take, mold, title, artist, comments, onWebsite, cylinderCondition, flatEdge, crackedPlayable, crackedUnplayable, inUCSBdb, url)
     VALUES ('$id', '$number', '$take', '$mold', '$title', '$artist', '$comments', '$website', '$condition', '$edge', '$playable', '$unplayable', '$ucsb', '$url')";
 
   $result = mysql_query($sql);
   if($result){
-    echo "I hope this saved the data";
+    echo "Save Successful!";
+  }else{
+    echo "Unable to save";
   }
 
 

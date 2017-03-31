@@ -50,14 +50,15 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
     $('#modal--bg').addClass('dark');
     $('#cylinderFormInfo').addClass('show');
 
+
     $scope.cylinderTitle = this.item.title;
     $scope.cylinderArtist = this.item.artist;
     $scope.cylinderComments = this.item.comments;
     $scope.cylinderURL = this.item.url;
-    $scope.cylinderCondition = this.item.condition;
-    $scope.cylinderMold = this.item.mold;
-    $scope.cylinderNumber = this.item.number;
-    $scope.cylinderTake = this.item.take;
+    $scope.cylinderCondition = parseInt(this.item.cylinderCondition);
+    $scope.cylinderMold = parseInt(this.item.mold);
+    $scope.cylinderNumber = parseInt(this.item.cylinderNumber);
+    $scope.cylinderTake = parseInt(this.item.take);
     $scope.cylinderPlayable = this.item.crackedPlayable;
 
     $scope.checkbox = {
@@ -68,11 +69,19 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
       website: false
     }
 
-    $scope.checkbox.playable = this.item.crackedPlayable;
-    $scope.checkbox.unplayable = this.item.cracedUnplayable;
-    $scope.checkbox.flatEdge = this.item.flatEdge;
-    $scope.checkbox.ucsb = this.item.inUCSBdb;
-    $scope.checkbox.website = this.item.onWebsite;
+    var changeToBoolean = function(itemData){
+      if(parseInt(itemData) == 1){
+        return true;
+      }else{
+        return false;
+      }
+    }
+
+    $scope.checkbox.playable = changeToBoolean(this.item.crackedPlayable);
+    $scope.checkbox.unplayable = changeToBoolean(this.item.cracedUnplayable);
+    $scope.checkbox.flatEdge = changeToBoolean(this.item.flatEdge);
+    $scope.checkbox.ucsb = changeToBoolean(this.item.inUCSBdb);
+    $scope.checkbox.website = changeToBoolean(this.item.onWebsite);
 
 
   }

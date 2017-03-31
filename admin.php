@@ -95,13 +95,13 @@
               <div class="col-sm-3">
                 <label class="col-sm-6 col-form-label" for="condition">Number</label>
                 <div class="col-sm-6">
-                  <input ng-model="cylinderNumber" class="input-sm form-control" type="number" name="number" value="">
+                  <input ng-model="cylinderNumber" class="input-sm form-control" type="number" name="$cylinderNumber" value="">
                 </div>
               </div>
               <div class="col-sm-3">
                 <label class="col-sm-6 col-form-label" for="condition">Take</label>
                 <div class="col-sm-6">
-                  <input ng-model="cylinderTake" class="input-sm form-control" type="text" name="take" value="">
+                  <input ng-model="cylinderTake" class="input-sm form-control" type="number" name="take" value="">
                 </div>
               </div>
             </div>
