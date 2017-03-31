@@ -512,6 +512,12 @@ var randomCylinderImage = function(){
   return cylinderImagePath + (Math.round(Math.random() * 27) + 1) + '.jpg';
 }
 
+// ///////////////////////
+// adjust img height for about page
+// ///////////////////////
+
+console.log($('#content_one').height());
+
 // ////////
 // Angular
 // ////////

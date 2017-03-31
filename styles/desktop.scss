@@ -76,7 +76,31 @@
 	.row{
 		display: flex;
 		.col{
-			width: 50%;
+            &:nth-child(even){
+                .header{
+                    text-align: right;
+                    &__num{
+                        right: 0;
+                    }
+                }
+                .content{
+                    position: relative;
+                    &:before{
+                      content: "";
+                      position: absolute;
+                      border-bottom: 2px solid #efefef;
+                      width: 25%;
+                      right: 0;
+                    }
+                    &:after{
+                      content: "";
+                      position: absolute;
+                      border-bottom: 2px solid #efefef;
+                      width: 25%;
+                      left: 0;
+                    }
+                }
+            }
 			&__img{
 				display: inherit;
 			}

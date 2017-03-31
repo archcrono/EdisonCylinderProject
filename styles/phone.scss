@@ -521,6 +521,8 @@ footer{
 // /////////////
 
 #informationSection{
+  font-family: $standard-font;
+  font-size: 16px;
   box-sizing: border-box;
   background: white;
 
@@ -531,9 +533,9 @@ footer{
   }
 
   #infoContainer{
-    img{
-      width: 100%;
-    }
+    // img{
+    //   width: 100%;
+    // }
   }
   h1{
     font-size: 3em;
@@ -545,7 +547,7 @@ footer{
     text-align: center;
     margin: 0 auto;
     line-height: 1.8em;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
   }
   .vis{
     // margin-bottom: 40px;
@@ -578,7 +580,7 @@ footer{
     .col{
       padding: 40px;
       .header{
-        margin-bottom: 20px;
+        margin-bottom: 3em;
         position: relative;
         &__title{
           font-size: 3em;
@@ -592,8 +594,9 @@ footer{
         }
         &__num{
           position: absolute;
+          font-family: $header-font;
           left: 0;
-          top: -35px;
+          top: -55px;
           color: rgba(0, 149, 200, .25);
           font-size: 8em;
         }
@@ -616,7 +619,7 @@ footer{
         p{
           line-height: 1.8em;
           padding: 15px 0;
-          color: #888;
+          color: #666;
         }
         .right{
           text-align: right;
@@ -628,7 +631,7 @@ footer{
           border: 1px solid #ccc;
           border-radius: 5px;
           &:hover{
-            border: 1px solid #fff;
+            border: 1px solid #ccc;
             box-shadow: 0 0 10px #ddd;
           }
           &:focus{
@@ -639,6 +642,10 @@ footer{
       }
       &__img{
         display: none;
+        img{
+          width: 290px;
+          height: 290px;
+        }
       }
     }
   }

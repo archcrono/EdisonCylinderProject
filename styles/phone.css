@@ -1,18 +1,15 @@
 @media only screen and (max-width: 999em) {
   .active {
     z-index: -1; }
-
   .inactive {
     top: 100%;
     display: none;
     z-index: 1; }
-
   .lockBar {
     position: fixed !important;
     top: 50px !important;
     z-index: 20 !important;
     background-color: white; }
-
   .activeCylinder {
     width: 49.5%;
     display: inline-block;
@@ -40,7 +37,6 @@
         font-size: 1.6em; }
       .activeCylinder .metaInfo .subMetaInfo {
         display: none; }
-
   .activeMetaInfo {
     top: 0;
     bottom: auto !important; }
@@ -54,10 +50,8 @@
       color: #c5e86c; }
     .activeMetaInfo .subMetaInfo {
       margin-top: 5px; }
-
   #container {
     width: 100%; }
-
   .banner {
     height: 80px;
     background-position: right;
@@ -91,10 +85,8 @@
       height: 90px;
       width: 400px;
       z-index: -1; }
-
   .largeBanner {
     display: none; }
-
   section {
     width: 100%;
     position: absolute;
@@ -114,7 +106,6 @@
       position: absolute;
       overflow: scroll;
       width: 100%; }
-
   .footerButtonContainers {
     height: 50px;
     width: 100%;
@@ -136,7 +127,6 @@
         left: 65%; }
       .footerButtonContainers i:nth-child(4) {
         left: 85%; }
-
   footer {
     height: 50px;
     width: 100%;
@@ -145,7 +135,6 @@
     bottom: 0px;
     color: white;
     z-index: -10; }
-
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
@@ -246,7 +235,6 @@
           bottom: 10px; }
       #homeSection #homeContainer #largeHomeSlider {
         display: none; }
-
   #librarySection {
     background-color: white; }
     #librarySection main #searchBar {
@@ -332,14 +320,13 @@
             display: none; }
     #librarySection main #largeActiveCylinder {
       display: none; }
-
   #informationSection {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
     box-sizing: border-box;
     background: white; }
     #informationSection .sectionHeader .cylinderOfTheDay {
       display: none; }
-    #informationSection #infoContainer img {
-      width: 100%; }
     #informationSection h1 {
       font-size: 3em;
       text-align: center;
@@ -349,7 +336,7 @@
       text-align: center;
       margin: 0 auto;
       line-height: 1.8em;
-      margin-bottom: 40px; }
+      margin-bottom: 100px; }
     #informationSection .vis {
       display: none; }
     #informationSection .about .row:nth-child(1) {
@@ -367,7 +354,7 @@
     #informationSection .row .col {
       padding: 40px; }
       #informationSection .row .col .header {
-        margin-bottom: 20px;
+        margin-bottom: 3em;
         position: relative; }
         #informationSection .row .col .header__title {
           font-size: 3em;
@@ -379,8 +366,9 @@
           z-index: 1; }
         #informationSection .row .col .header__num {
           position: absolute;
+          font-family: "Arsenal", sans-serif;
           left: 0;
-          top: -35px;
+          top: -55px;
           color: rgba(0, 149, 200, 0.25);
           font-size: 8em; }
       #informationSection .row .col .content {
@@ -399,7 +387,7 @@
         #informationSection .row .col .content p {
           line-height: 1.8em;
           padding: 15px 0;
-          color: #888; }
+          color: #666; }
         #informationSection .row .col .content .right {
           text-align: right; }
         #informationSection .row .col .content button {
@@ -409,13 +397,16 @@
           border: 1px solid #ccc;
           border-radius: 5px; }
           #informationSection .row .col .content button:hover {
-            border: 1px solid #fff;
+            border: 1px solid #ccc;
             box-shadow: 0 0 10px #ddd; }
           #informationSection .row .col .content button:focus {
             outline: none;
             box-shadow: inset 0 0 10px #ddd; }
       #informationSection .row .col__img {
         display: none; }
+        #informationSection .row .col__img img {
+          width: 290px;
+          height: 290px; }
     #informationSection .members {
       display: flex;
       justify-content: space-around;
@@ -434,7 +425,6 @@
           width: 75%;
           text-align: center;
           margin: 0 auto; }
-
   #contactSection main .sectionHeader .cylinderOfTheDay {
     display: none; }
   #contactSection main #contactHeader {
@@ -491,5 +481,3 @@
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
         /* IE6-9 */ } }
-
-/*# sourceMappingURL=phone.css.map */
