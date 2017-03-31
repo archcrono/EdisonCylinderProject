@@ -515,12 +515,6 @@ var randomCylinderImage = function(){
   return cylinderImagePath + (Math.round(Math.random() * 27) + 1) + '.jpg';
 }
 
-// ///////////////////////
-// adjust img height for about page
-// ///////////////////////
-
-console.log($('#content_one').height());
-
 // ////////
 // Angular
 // ////////
@@ -534,6 +528,25 @@ cylinderApp.service('cylinderData', ['$http', function($http){
     return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json');
   }
 }]);
+
+// //////////////////////
+// Searchbar
+// //////////////////////
+
+$('.activeFooter > #searchButton').click(function(){
+  console.log('clicked');
+  var width = $('#searchFunction').width();
+  console.log(width);
+  if(width == 0){
+    $('#searchFunction').animate({
+      width: "60%"
+    });  
+  }else{
+    $('#searchFunction').animate({
+      width: 0
+    });
+  }  
+});
 
 // //////////////////////
 // Filter / Search Feature

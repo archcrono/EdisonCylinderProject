@@ -1,3 +1,12 @@
+<!-- searchbar -->
+
+<div id="searchFunction">
+  <div id="Container">
+    <input type="text" name="" placeholder="Search...">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </div>
+</div>
+
 <!-- Footer Buttons -->
 <div id="homeButtonContainer" class="footerButtonContainers activeFooter" style="opacity: 1;">
   <i id="searchButton" style="cursor: pointer;" class="fa fa-search navButton" aria-hidden="true"></i>

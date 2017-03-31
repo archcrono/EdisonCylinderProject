@@ -1,15 +1,12 @@
 @media only screen and (min-width: 651px) and (max-width: 999em) {
   .active {
     z-index: -1; }
-
   .inactive {
     top: 0;
     display: none;
     z-index: 1; }
-
   .banner {
     display: none; }
-
   .largeBanner {
     display: block;
     width: 400px;
@@ -28,7 +25,6 @@
       margin-left: 220px; }
     .largeBanner .bannerBar:nth-of-type(4) {
       margin-left: 280px; }
-
   section {
     width: 100%; }
     section header {
@@ -43,7 +39,6 @@
           top: 50%; }
     section main {
       margin-left: 50px; }
-
   .footerButtonContainers {
     position: absolute;
     top: 0;
@@ -65,7 +60,6 @@
       .footerButtonContainers i:nth-child(4) {
         top: 85%;
         left: 35%; }
-
   footer {
     position: absolute;
     top: 0;
@@ -73,7 +67,6 @@
     height: 100%;
     right: 0;
     z-index: 10; }
-
   #homeSection #homeContainer .bannerAndCylinder #cylinderOfTheDay {
     position: absolute;
     top: 0;
@@ -96,7 +89,6 @@
       #homeSection #homeContainer #largeHomeSlider .slide .backColor {
         width: 32%;
         height: 300px; }
-
   #librarySection main .top {
     position: fixed;
     display: flex;
@@ -131,7 +123,6 @@
     height: 200px;
     color: white;
     display: none; }
-
   #informationSection main .sectionHeader .cylinderOfTheDay {
     display: block;
     background-color: grey;
@@ -145,7 +136,6 @@
     margin-top: 150px; }
   #informationSection .vis {
     display: block !important; }
-
   #contactSection main .sectionHeader .cylinderOfTheDay {
     display: block;
     background-color: grey;
@@ -156,6 +146,26 @@
     #contactSection main .sectionHeader .cylinderOfTheDay img {
       width: 100px; }
   #contactSection main #contactContainer fieldset {
-    width: 50%; } }
-
-/*# sourceMappingURL=tablet.css.map */
+    width: 50%; }
+  #searchFunction {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 150px;
+    background: white;
+    box-shadow: 0 0 10px black;
+    width: 0; }
+    #searchFunction #Container {
+      width: 100%;
+      padding: 4em;
+      box-sizing: border-box; }
+      #searchFunction #Container input[type=text] {
+        background: none;
+        border: none;
+        border-bottom: 2px solid #666;
+        font-size: 1.5em;
+        width: 50%;
+        transition: width .35s ease-in-out; }
+        #searchFunction #Container input[type=text]:focus {
+          outline: none;
+          width: 80%; } }
