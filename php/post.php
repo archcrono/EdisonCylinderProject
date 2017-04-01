@@ -11,7 +11,7 @@ if(isset($_REQUEST)){
   $url= $_POST['url'];
   $condition = $_POST['condition'];
   $mold = $_POST['mold'];
-  $cylinderNumber = $_POST['$cylinderNumber'];
+  $number = $_POST['number'];
   $take = $_POST['take'];
   $comments = $_POST['comments'];
   // Playable Checkbox

@@ -2,8 +2,8 @@
 // ajax
 // ////////
 $('#createNewCylinderButton').click(function(){
+  $('#randomCylinderId').val(Date.now());
 
-  $('#cylinderId').val(Date.now());
   var data = $('#createForm').serialize();
 
   $.ajax({
@@ -12,10 +12,39 @@ $('#createNewCylinderButton').click(function(){
     url: "php/post.php",
     success: function(data){
       // window.location.reload();
-      alert("data save: " + data);
+      alert(data);
     }
   })
 
+});
+
+$('#updateCylinder').click(function(){
+  var data = $('#cylinderUpdateForm').serialize();
+
+  $.ajax({
+    data: data,
+    type: "post",
+    url: "php/update.php",
+    success: function(data){
+      // window.location.reload();
+      alert(data);
+    }
+  })
+
+})
+
+$('#deleteCylinder').click(function(){
+  var data = $('#cylinderUpdateForm').serialize();
+
+  $.ajax({
+    data: data,
+    type: "post",
+    url: "php/delete.php",
+    success: function(data){
+      // window.location.reload();
+      alert(data);
+    }
+  })
 })
 
 // //////
@@ -59,7 +88,7 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
     $scope.cylinderMold = parseInt(this.item.mold);
     $scope.cylinderNumber = parseInt(this.item.cylinderNumber);
     $scope.cylinderTake = parseInt(this.item.take);
-    $scope.cylinderPlayable = this.item.crackedPlayable;
+    $scope.cylinderId = parseInt(this.item.id);
 
     $scope.checkbox = {
       unplayable: false,

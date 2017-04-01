@@ -53,7 +53,8 @@
 
       <div id="cylinderFormInfo" class="modal__container panel panel-default">
         <h3 class="text-center">Update "{{ cylinderTitle }}"</h3>
-        <form enctype="multipart/form-data" action="" method="POST">
+        <form enctype="multipart/form-data" id="cylinderUpdateForm">
+          <input ng-model="cylinderId" name="id" readonly>
           <div class="col-sm-12">
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
@@ -95,7 +96,7 @@
               <div class="col-sm-3">
                 <label class="col-sm-6 col-form-label" for="condition">Number</label>
                 <div class="col-sm-6">
-                  <input ng-model="cylinderNumber" class="input-sm form-control" type="number" name="$cylinderNumber" value="">
+                  <input ng-model="cylinderNumber" class="input-sm form-control" type="number" name="number" value="">
                 </div>
               </div>
               <div class="col-sm-3">
@@ -110,35 +111,35 @@
               <div class="col-sm-2 col-sm-offset-1">
                 <div class="checkbox">
                   <label>
-                    <input ng-model="checkbox.playable" type="checkbox" name="playable" value="">Cracked Playable
+                    <input ng-model="checkbox.playable" type="checkbox" name="playable">Cracked Playable
                   </label>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="checkbox">
                   <label>
-                    <input ng-model="checkbox.unplayable" type="checkbox" name="cracked" value="">Cracked Unplayable
+                    <input ng-model="checkbox.unplayable" type="checkbox" name="unplayable">Cracked Unplayable
                   </label>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="checkbox">
                   <label>
-                    <input ng-model="checkbox.flatEdge" type="checkbox" name="edge" value="">Flat Edge
+                    <input ng-model="checkbox.flatEdge" type="checkbox" name="edge">Flat Edge
                   </label>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="checkbox">
                   <label>
-                    <input ng-model="checkbox.ucsb" type="checkbox" name="ucsb" value="">in UCSB db
+                    <input ng-model="checkbox.ucsb" type="checkbox" name="ucsb">in UCSB db
                   </label>
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="checkbox">
                   <label>
-                    <input ng-model="checkbox.website" type="checkbox" name="ucsb" value="">on Website
+                    <input ng-model="checkbox.website" type="checkbox" name="website">on Website
                   </label>
                 </div>
               </div>
@@ -150,7 +151,8 @@
             </div>
             <div class="form-inline pull-right">
               <div class="btn btn-default" ng-click="closeEdit()">Cancel</div>
-              <button type="submit" name="btn_update" class="btn btn-primary">Submit</button>
+              <button name="btn_update" id="deleteCylinder" class="btn btn-danger">Delete</button>
+              <button name="btn_update" id="updateCylinder" class="btn btn-primary">Update</button>
             </div>
           </div>
         </form>
@@ -160,7 +162,7 @@
       <div id="createNewCylinderForm" class="modal__container panel panel-default">
         <h3 class="text-center">Add New Cylinder</h3>
         <form enctype="multipart/form-data" id="createForm" method="POST">
-          <input type="text" style="display: none;"id="cylinderId" name="id" value="" readonly="">
+          <input type="text" style=""id="randomCylinderId" name="id" value="" readonly>
           <div class="col-sm-12">
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
