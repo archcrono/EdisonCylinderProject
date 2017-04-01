@@ -47,6 +47,7 @@
           <h4><b>Artist:</b> {{ item.artist }}</h4>
           <h4><b>Take:</b> {{ item.take }}</h4>
           <h4><b>Mold:</b> {{ item.mold }}</h4>
+          <h4><b>Comments:</b> {{ item.comments }}</h4>
         </div>
 
       </div>
@@ -57,17 +58,21 @@
   </div>
 
   <div id="largeActiveCylinder" class="activeMetaInfo">
-    <img src="" alt="Cylinder Image" style="width: 150px; height: 150px; background-color: red;">
+    <div class="line">
+      <img src="http://localhost/edisoncylinderproject/img/libraryCover/cylinder13.jpg" alt="Cylinder Image" style="width: 200px; height: 200px; background-color: orange;">
 
-    <div id="jp_container_1" class="largeCylinderPlayOptions" aria-label="media player">
-      <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
-      <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
-    </div>
-    <h4 id="largeCylinderName"></h4>
-    <h4 id="largeArtistName"></h4>
-    <h4 id="largeMoldNumber"></h4>
-    <h4 id="largeTakeNumber"></h4>
-
+      <div id="jp_container_1" class="largeCylinderPlayOptions" aria-label="media player">
+        <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
+        <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i><br>
+      </div>
+      <span>
+        <h4><b>Cylinder: </b></h4><h5 id="largeCylinderName"></h5>
+        <h4><b>Artist: </b></h4><h5 id="largeArtistName"></h5>
+        <h4><b>Take: </b></h4><h5 id="largeTakeNumber"></h5>
+        <h4><b>Mold: </b></h4><h5 id="largeMoldNumber"></h5>
+        <h4><b>Comments: </b></h4><h5 id="largeComments"></h5>
+      </span>
+    </div><!-- line -->
   </div>
   <!-- Large Active Cylinder Info -->
 
