@@ -53,19 +53,20 @@
 
       <img ng-src="{{ item.imageURL }}" alt="">
     </div>
+
   </div>
 
-  <div id="largeActiveCylinder">
+  <div id="largeActiveCylinder" class="activeMetaInfo">
     <img src="" alt="Cylinder Image" style="width: 150px; height: 150px; background-color: red;">
 
     <div id="jp_container_1" class="largeCylinderPlayOptions" aria-label="media player">
       <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
       <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
     </div>
-    <h1 id="largeCylinderName"></h1>
-    <h1 id="largeArtistName"></h1>
-    <h2 id="largeMoldNumber"></h2>
-    <h2 id="largeTakeNumber"></h2>
+    <h4 id="largeCylinderName"></h4>
+    <h4 id="largeArtistName"></h4>
+    <h4 id="largeMoldNumber"></h4>
+    <h4 id="largeTakeNumber"></h4>
 
   </div>
   <!-- Large Active Cylinder Info -->

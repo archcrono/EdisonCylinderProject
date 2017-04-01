@@ -1,3 +1,20 @@
+// Test Upload
+$('#uploadAudio').click(function(){
+
+  var data = $('#fileForm').serialize();
+
+  $.ajax({
+    data: data,
+    type: "post",
+    url: "php/test.php",
+    success: function(data){
+      // window.location.reload();
+      alert(data);
+    }
+  })
+
+});
+
 // ////////
 // ajax
 // ////////

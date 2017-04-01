@@ -36,6 +36,12 @@
       </div><!-- /.col-lg-10 -->
     </div><!-- /.row -->
 
+    <form id="fileForm" style="border: 1px solid black;"class="" action="index.html" method="post">
+      <input type="file" name="audioFile" class="pull-right">
+
+      <button type="button" id="uploadAudio" name="button">Upload</button>
+    </form>
+
     <div class="data row">
       <div class="col-sm-10 col-sm-offset-1">
         <div class="col-sm-4" ng-repeat="item in returnedData | filter:search">

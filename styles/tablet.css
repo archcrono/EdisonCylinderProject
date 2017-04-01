@@ -1,15 +1,17 @@
 @media only screen and (min-width: 651px) and (max-width: 999em) {
   .active {
     z-index: -1; }
+
   .inactive {
     top: 0;
     display: none;
     z-index: 1; }
+
   .banner {
     display: none; }
+
   .largeBanner {
     display: block;
-    width: 400px;
     height: 150px;
     background-color: red; }
     .largeBanner .uvuLogo {
@@ -25,6 +27,7 @@
       margin-left: 220px; }
     .largeBanner .bannerBar:nth-of-type(4) {
       margin-left: 280px; }
+
   section {
     width: 100%; }
     section header {
@@ -39,6 +42,7 @@
           top: 50%; }
     section main {
       margin-left: 50px; }
+
   .footerButtonContainers {
     position: absolute;
     top: 0;
@@ -60,6 +64,7 @@
       .footerButtonContainers i:nth-child(4) {
         top: 85%;
         left: 35%; }
+
   footer {
     position: absolute;
     top: 0;
@@ -67,6 +72,7 @@
     height: 100%;
     right: 0;
     z-index: 10; }
+
   #homeSection #homeContainer .bannerAndCylinder #cylinderOfTheDay {
     position: absolute;
     top: 0;
@@ -89,6 +95,7 @@
       #homeSection #homeContainer #largeHomeSlider .slide .backColor {
         width: 32%;
         height: 300px; }
+
   #librarySection main .top {
     position: fixed;
     display: flex;
@@ -123,6 +130,9 @@
     height: 200px;
     color: white;
     display: none; }
+    #librarySection main #largeActiveCylinder i {
+      font-size: 3em; }
+
   #informationSection main .sectionHeader .cylinderOfTheDay {
     display: block;
     background-color: grey;
@@ -136,6 +146,7 @@
     margin-top: 150px; }
   #informationSection .vis {
     display: block !important; }
+
   #contactSection main .sectionHeader .cylinderOfTheDay {
     display: block;
     background-color: grey;
@@ -147,6 +158,7 @@
       width: 100px; }
   #contactSection main #contactContainer fieldset {
     width: 50%; }
+
   #searchFunction {
     top: 0;
     right: 0;
@@ -154,3 +166,11 @@
     width: 0; }
     #searchFunction #Container {
       padding: 4em; } }
+@media only screen and (min-width: 651px) and (max-width: 900px) {
+  .largeBanner {
+    width: 400px; } }
+@media only screen and (min-width: 901px) and (max-width: 1099px) {
+  .largeBanner {
+    width: 700px; } }
+
+/*# sourceMappingURL=tablet.css.map */

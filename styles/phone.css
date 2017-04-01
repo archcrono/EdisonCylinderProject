@@ -1,15 +1,18 @@
 @media only screen and (max-width: 999em) {
   .active {
     z-index: -1; }
+
   .inactive {
     top: 100%;
     display: none;
     z-index: 1; }
+
   .lockBar {
     position: fixed !important;
     top: 50px !important;
     z-index: 20 !important;
     background-color: white; }
+
   .activeCylinder {
     width: 49.5%;
     display: inline-block;
@@ -37,11 +40,10 @@
         font-size: 1.6em; }
       .activeCylinder .metaInfo .subMetaInfo {
         display: none; }
+
   .activeMetaInfo {
     top: 0;
     bottom: auto !important; }
-    .activeMetaInfo i {
-      display: block !important; }
     .activeMetaInfo h4 {
       padding-top: 5px;
       padding-left: 10px; }
@@ -50,8 +52,10 @@
       color: #c5e86c; }
     .activeMetaInfo .subMetaInfo {
       margin-top: 5px; }
+
   #container {
     width: 100%; }
+
   .banner {
     height: 80px;
     background-position: right;
@@ -85,8 +89,10 @@
       height: 90px;
       width: 400px;
       z-index: -1; }
+
   .largeBanner {
     display: none; }
+
   section {
     width: 100%;
     position: absolute;
@@ -106,6 +112,7 @@
       position: absolute;
       overflow: scroll;
       width: 100%; }
+
   .footerButtonContainers {
     height: 50px;
     width: 100%;
@@ -127,6 +134,7 @@
         left: 65%; }
       .footerButtonContainers i:nth-child(4) {
         left: 85%; }
+
   footer {
     height: 50px;
     width: 100%;
@@ -135,6 +143,7 @@
     bottom: 0px;
     color: white;
     z-index: -10; }
+
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
@@ -235,6 +244,7 @@
           bottom: 10px; }
       #homeSection #homeContainer #largeHomeSlider {
         display: none; }
+
   #librarySection {
     background-color: white; }
     #librarySection main #searchBar {
@@ -320,6 +330,7 @@
             display: none; }
     #librarySection main #largeActiveCylinder {
       display: none; }
+
   #informationSection {
     font-family: "Rubik", sans-serif;
     font-size: 16px;
@@ -425,6 +436,7 @@
           width: 75%;
           text-align: center;
           margin: 0 auto; }
+
   #contactSection main .sectionHeader .cylinderOfTheDay {
     display: none; }
   #contactSection main #contactHeader {
@@ -481,6 +493,7 @@
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
         /* IE6-9 */ }
+
   #searchFunction {
     position: absolute;
     bottom: 0;
@@ -503,3 +516,5 @@
         #searchFunction #Container input[type=text]:focus {
           outline: none;
           width: 80%; } }
+
+/*# sourceMappingURL=phone.css.map */

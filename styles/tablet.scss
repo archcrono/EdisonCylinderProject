@@ -61,7 +61,7 @@ $standard-font: 'Rubik', sans-serif;
 }
 .largeBanner{
   display: block;
-  width: 400px;
+  // width: 400px;
   height: 150px;
   background-color: red;
   .uvuLogo{
@@ -250,6 +250,9 @@ footer{
       height: 200px;
       color: white;
       display: none;
+      i{
+        font-size: 3em;
+      }
     }
 
   }//End of Main
@@ -337,3 +340,15 @@ footer{
 // End Of Tablet
 // ////////////
 }// Don't type below this
+
+
+@media only screen and (min-width: 651px) and (max-width: 900px){
+  .largeBanner{
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 901px) and (max-width: 1099px){
+  .largeBanner{
+    width: 700px;
+  }
+}
