@@ -339,6 +339,17 @@ footer{
           position: relative;
           z-index: 1;
         }
+
+        button{
+          font-size: 2em;
+          color: white;
+          position: absolute;
+          bottom: 30px;
+          border: none;
+          padding: 5px 10px;
+          margin-left: 25%;
+        }
+
         .backColor{
           max-width: 100%;
           position: absolute;
@@ -349,18 +360,27 @@ footer{
       // Sliders
       .libraryLink{
         background-image: url('../img/cover1.png');
+        button{
+          background-color: rgb(255,0,0);
+        }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(255,0,0,1) 0%,rgba(255,255,255,0) 100%);
         }
       }//End of Library Link
       .historyLink{
         background-image: url('../img/cover2.png');
+        button{
+          background-color: rgb(0,25,255);
+        }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(0,25,255,1) 0%,rgba(255,255,255,0) 100%);
         }
       }
       .randomLink{
         background-image: url('../img/cover3.png');
+        button{
+          background-color: rgb(40,120,0);
+        }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(40,120,0,1) 0%,rgba(255,255,255,0) 100%);
         }

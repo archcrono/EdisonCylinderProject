@@ -62,7 +62,7 @@ $standard-font: 'Rubik', sans-serif;
 .largeBanner{
   display: block;
   // width: 400px;
-  height: 150px;
+  height: 125px;
   background-color: red;
   .uvuLogo{
     width: 100px;
@@ -181,12 +181,16 @@ footer{
       .slide{
         display: inline-block;
         width: 32%;
+
+        button{
+          margin-left: 24%;
+        }
         .backColor{
           width: 32%;
           height: 300px;
         }
       }
-    }
+    }//End of Large Home Slider
 
   }//End of Home Container
 }//End Of Home Section

@@ -33,6 +33,8 @@
         <h2>Search Library</h2>
         <p>You can search our extensive library of many cylinders.</p>
         <p>Feel free to search by artist, title, or even year!</p>
+
+        <button class='homeLibraryButton'>Go!</button>
         <div class="backColor">
 
         </div>
@@ -41,6 +43,8 @@
       <div class="historyLink slide">
         <h2>Today In History</h2>
         <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
+
+        <button class='homeHistoryButton'>Go!</button>
         <div class="backColor">
 
         </div>
@@ -49,6 +53,8 @@
       <div class="randomLink slide">
         <h2>Random</h2>
         <p>Can't think of something to look for? Try one at random!</p>
+
+        <button class='homeRandomButton'>Go!</button>
         <div class="backColor">
 
         </div>
@@ -62,6 +68,8 @@
         <h2>Search Library</h2>
         <p>You can search our extensive library of many cylinders.</p>
         <p>Feel free to search by artist, title, or even year!</p>
+
+        <button class='homeLibraryButton'>Go!</button>
         <div class="backColor">
 
         </div>
@@ -70,6 +78,8 @@
       <div class="historyLink slide">
         <h2>Today In History</h2>
         <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
+
+        <button class='homeHistoryButton'>Go!</button>
         <div class="backColor">
 
         </div>
@@ -78,6 +88,8 @@
       <div class="randomLink slide">
         <h2>Random</h2>
         <p>Can't think of something to look for? Try one at random!</p>
+
+        <button class='homeRandomButton'>Go!</button>
         <div class="backColor">
 
         </div>

@@ -47,6 +47,7 @@
           <h4><b>Artist:</b> {{ item.artist }}</h4>
           <h4><b>Take:</b> {{ item.take }}</h4>
           <h4><b>Mold:</b> {{ item.mold }}</h4>
+          <h4><b>Comments:</b> {{ item.comments }}</h4>
         </div>
 
       </div>
