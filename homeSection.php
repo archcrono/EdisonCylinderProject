@@ -10,7 +10,7 @@
 
   <!-- Place your HTML here -->
   <div id="homeContainer">
-    <div class="bannerAndCylinder">
+    <div class="bannerContainer">
       <!-- Banner -->
       <?php include 'banner.php'; ?>
       <!-- Cylinder Of The Day -->

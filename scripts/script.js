@@ -77,7 +77,7 @@ var fitScreen = function(){
     $('.metaInfo').width(cylinderWidth);
     $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
 
-    $('#cylinderOfTheDay').width(screenWidth);//Reset Cylinder of the Day Width
+    $('.active .cylinderOfTheDay').width(screenWidth);//Reset Cylinder of the Day Width
     $('#searchBar').width(screenWidth);//Reset searchBar width
 
     $('header ul li i').removeAttr('style');//Restore header icon back to header area
@@ -97,8 +97,9 @@ var fitScreen = function(){
     $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
 
     // Cylinder of the Day / Search resize
-    $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
-    $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
+    $('.bannerContainer').width($('.active main').width());
+    $('.active .cylinderOfTheDay').width(($('.active .cylinderOfTheDay').parent().width() - $('.active .tabletBanner').width()) - 5);
+    $('#searchBar').width(($('#searchBar').parent().width() - $('.active .tabletBanner').width()) - 5);
 
     // Home Content Fit
     $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 155);
@@ -110,7 +111,7 @@ var fitScreen = function(){
     $('.backColor').width($('#largeHomeSlider .slide').width());
 
     // Cylinder Of The Day width
-    $('.cylinderOfTheDay').width(screenWidth - 505);
+    // $('.cylinderOfTheDay').width(screenWidth - 505);
 
     // Section Header (Information/Contact Page)
     $('.sectionHeader').width(screenWidth - 100);
@@ -231,10 +232,6 @@ $('.navButton').on('click', function(selectedSection){
     $(selectedSection).css('top','0');
     $(selectedSection).css('left', screenWidth);
 
-    // Cylinder of the Day / Search resize
-    $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
-    $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
-
 
     // Cylinder Metadata
     var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
@@ -254,7 +251,7 @@ $('.navButton').on('click', function(selectedSection){
       $('.active').removeClass('active');
       $(selectedSection).removeClass('inactive');
       $(selectedSection).addClass('active');
-
+      fitScreen();
       // Move Selected Icon to center
       $(selectedSection + ' header i').animate({
         top: '50%'
@@ -341,10 +338,6 @@ var homeNavButtons = function(){
     fitScreen();
     $('#librarySection').css('top','0');
     $('#librarySection').css('left', screenWidth);
-
-    // Cylinder of the Day / Search resize
-    $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
-    $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
 
 
     // Cylinder Metadata

@@ -11,7 +11,7 @@
     <!-- Place your HTML here -->
 
     <!-- Search bar HTML is needed -->
-  <div class="top">
+  <div class="bannerContainer">
 
     <?php include 'banner.php'; ?>
 

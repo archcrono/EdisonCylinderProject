@@ -161,7 +161,7 @@ $standard-font: 'Rubik', sans-serif;
   }
 }
 
-.largeBanner{
+.tabletBanner{
   display: none;
 }
 
@@ -252,7 +252,7 @@ footer{
   #homeContainer{
     width: 100%;
 
-    #cylinderOfTheDay{
+    .cylinderOfTheDay{
       width: 100%;
       height: 70px;
       background-color: grey;
@@ -547,7 +547,7 @@ footer{
   box-sizing: border-box;
   background: white;
 
-  .sectionHeader{
+  .bannerContainer{
     .cylinderOfTheDay{
       display: none;
     }
@@ -704,7 +704,7 @@ footer{
 
   main{
 
-    .sectionHeader{
+    .bannerContainer{
       .cylinderOfTheDay{
         display: none;
       }

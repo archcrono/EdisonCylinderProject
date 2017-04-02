@@ -10,24 +10,19 @@
   .banner {
     display: none; }
 
-  .largeBanner {
+  .tabletBanner {
     display: block;
+    width: 60%;
     background-color: red;
     height: 150px;
     background-color: blue; }
-    .largeBanner .uvuLogo {
+    .tabletBanner .uvuLogo {
       width: 100px; }
-    .largeBanner svg {
+    .tabletBanner svg {
       position: absolute;
       top: 0;
       left: 0;
       opacity: .6; }
-    .largeBanner .bannerBar:nth-of-type(2) {
-      margin-left: 170px; }
-    .largeBanner .bannerBar:nth-of-type(3) {
-      margin-left: 220px; }
-    .largeBanner .bannerBar:nth-of-type(4) {
-      margin-left: 280px; }
 
   section {
     width: 100%; }
@@ -74,7 +69,7 @@
     right: 0;
     z-index: 10; }
 
-  #homeSection #homeContainer .bannerAndCylinder #cylinderOfTheDay {
+  #homeSection #homeContainer .bannerContainer .cylinderOfTheDay {
     position: absolute;
     top: 0;
     right: 0;
@@ -99,14 +94,17 @@
         width: 32%;
         height: 300px; }
 
-  #librarySection main .top {
+  #librarySection main .bannerContainer {
+    max-width: 100%;
     position: fixed;
     display: flex;
     justify-content: space-between;
     background-color: white;
     padding-bottom: 5px;
     z-index: 20; }
-    #librarySection main .top #searchBar {
+    #librarySection main .bannerContainer .tabletBanner {
+      width: 60%; }
+    #librarySection main .bannerContainer #searchBar {
       position: relative;
       top: 0;
       right: 0;
@@ -150,43 +148,50 @@
       padding-left: 10px;
       display: inline-block; }
 
-  #informationSection main .sectionHeader {
+  #informationSection main .bannerContainer {
     position: fixed;
     z-index: 20;
     border-bottom: 5px solid white; }
-    #informationSection main .sectionHeader .cylinderOfTheDay {
+    #informationSection main .bannerContainer .tabletBanner {
+      width: 60%; }
+    #informationSection main .bannerContainer .cylinderOfTheDay {
       display: block;
       background-color: grey;
       height: 150px;
       position: absolute;
       right: 0;
       top: 0; }
-      #informationSection main .sectionHeader .cylinderOfTheDay img {
+      #informationSection main .bannerContainer .cylinderOfTheDay img {
         width: 100px; }
   #informationSection main #infoContainer {
     margin-top: 200px; }
   #informationSection .vis {
     display: block !important; }
 
-  #contactSection main .sectionHeader {
+  #contactSection main .bannerContainer {
     position: fixed;
     z-index: 20;
     border-bottom: 5px solid white; }
-    #contactSection main .sectionHeader .cylinderOfTheDay {
+    #contactSection main .bannerContainer .cylinderOfTheDay {
       display: block;
       background-color: grey;
       height: 150px;
       position: absolute;
       right: 0;
       top: 0; }
-      #contactSection main .sectionHeader .cylinderOfTheDay img {
+      #contactSection main .bannerContainer .cylinderOfTheDay img {
         width: 100px; }
   #contactSection main #contactContainer {
-    margin-top: 200px;
-    padding-left: 20%;
-    padding-right: 30%; }
-    #contactSection main #contactContainer fieldset {
-      width: 50%; }
+    margin-top: 175px;
+    width: 100%; }
+    #contactSection main #contactContainer #contactHeader {
+      width: 80%;
+      margin: auto; }
+    #contactSection main #contactContainer form {
+      width: 80%;
+      margin: auto; }
+      #contactSection main #contactContainer form fieldset {
+        width: 100%; }
 
   #searchFunction {
     top: 0;
@@ -195,11 +200,12 @@
     width: 0; }
     #searchFunction #Container {
       padding: 4em; } }
-@media only screen and (min-width: 651px) and (max-width: 750px) {
-  .largeBanner {
-    width: 300px; } }
-@media only screen and (min-width: 751px) {
-  .largeBanner {
-    width: 400%; } }
+@media only screen and (min-width: 851px) {
+  .tabletBanner .bannerBar:nth-of-type(2) {
+    margin-left: 240px; }
+  .tabletBanner .bannerBar:nth-of-type(3) {
+    margin-left: 280px; }
+  .tabletBanner .bannerBar:nth-of-type(4) {
+    margin-left: 320px; } }
 
 /*# sourceMappingURL=tablet.css.map */

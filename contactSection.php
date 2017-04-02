@@ -7,7 +7,7 @@
 </header>
 <main>
 
-  <div class="sectionHeader">
+  <div class="bannerContainer">
     <!-- Banner -->
     <?php include 'banner.php'; ?>
     <!-- Cylinder of the Day -->

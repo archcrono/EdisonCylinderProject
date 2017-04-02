@@ -59,9 +59,9 @@ $standard-font: 'Rubik', sans-serif;
 .banner{
   display: none;
 }
-.largeBanner{
+.tabletBanner{
   display: block;
-  // width: 400px;
+  width: 60%;
   // height: 125px;
   background-color: red;
   height: 150px;
@@ -75,15 +75,15 @@ $standard-font: 'Rubik', sans-serif;
     left: 0;
     opacity: .6;
   }
-  .bannerBar:nth-of-type(2){
-    margin-left: 170px;
-  }
-  .bannerBar:nth-of-type(3){
-    margin-left: 220px;
-  }
-  .bannerBar:nth-of-type(4){
-    margin-left: 280px;
-  }
+  // .bannerBar:nth-of-type(2){
+  //   margin-left: 240px;
+  // }
+  // .bannerBar:nth-of-type(3){
+  //   margin-left: 280px;
+  // }
+  // .bannerBar:nth-of-type(4){
+  //   margin-left: 320px;
+  // }
 }
 // ///////////
 // Section
@@ -159,8 +159,8 @@ footer{
 #homeSection{
 
   #homeContainer{
-    .bannerAndCylinder{
-      #cylinderOfTheDay{
+    .bannerContainer{
+      .cylinderOfTheDay{
         position: absolute;
         top: 0;
         right: 0;
@@ -205,13 +205,17 @@ footer{
 
   main{
 
-  .top{
+  .bannerContainer{
+    max-width: 100%;
     position: fixed;
     display: flex;
     justify-content: space-between;
     background-color: white;
     padding-bottom: 5px;
     z-index: 20;
+    .tabletBanner{
+      width: 60%;
+    }
     #searchBar{
       position: relative;
       top: 0;
@@ -288,10 +292,14 @@ footer{
 #informationSection{
   main{
 
-    .sectionHeader{
+    .bannerContainer{
       position: fixed;
       z-index: 20;
       border-bottom: 5px solid white;
+
+      .tabletBanner{
+        width: 60%;
+      }
 
       .cylinderOfTheDay{
         display: block;
@@ -322,7 +330,7 @@ footer{
 
 #contactSection{
   main{
-    .sectionHeader{
+    .bannerContainer{
       position: fixed;
       z-index: 20;
       border-bottom: 5px solid white;
@@ -341,12 +349,22 @@ footer{
     }//End of Section Header
 
     #contactContainer{
-    margin-top: 200px;
-    padding-left:20%;
-    padding-right:30%;
+    margin-top: 175px;
+    width: 100%;
+
+    #contactHeader{
+      width: 80%;
+      margin: auto;
+    }
+
+    form{
+      width: 80%;
+      margin: auto;
       fieldset{
-        width: 50%;
+        width: 100%;
       }
+    }
+
     }//End of Contact container
   }
 
@@ -373,13 +391,29 @@ footer{
 }// Don't type below this
 
 
- @media only screen and (min-width: 651px) and (max-width: 750px){
-  .largeBanner{
-    width: 300px;
+ @media only screen and (min-width: 651px) and (max-width: 850px){
+  .tabletBanner{
+    // .bannerBar:nth-of-type(2){
+    //   margin-left: 240px;
+    // }
+    // .bannerBar:nth-of-type(3){
+    //   margin-left: 280px;
+    // }
+    // .bannerBar:nth-of-type(4){
+    //   margin-left: 320px;
+    // }
   }
 }
-@media only screen and (min-width: 751px){
-  .largeBanner{
-    width: 400%;
+@media only screen and (min-width: 851px){
+  .tabletBanner{
+    .bannerBar:nth-of-type(2){
+      margin-left: 240px;
+    }
+    .bannerBar:nth-of-type(3){
+      margin-left: 280px;
+    }
+    .bannerBar:nth-of-type(4){
+      margin-left: 320px;
+    }
   }
 }
