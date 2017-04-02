@@ -348,6 +348,7 @@ footer{
           border: none;
           padding: 5px 10px;
           margin-left: 25%;
+          z-index: 10;
         }
 
         .backColor{
@@ -361,7 +362,7 @@ footer{
       .libraryLink{
         background-image: url('../img/cover1.png');
         button{
-          background-color: rgb(255,0,0);
+          background-color: rgba(255,0,0,.6);
         }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(255,0,0,1) 0%,rgba(255,255,255,0) 100%);
@@ -370,7 +371,7 @@ footer{
       .historyLink{
         background-image: url('../img/cover2.png');
         button{
-          background-color: rgb(0,25,255);
+          background-color: rgba(0,25,255,.6);
         }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(0,25,255,1) 0%,rgba(255,255,255,0) 100%);
@@ -379,7 +380,7 @@ footer{
       .randomLink{
         background-image: url('../img/cover3.png');
         button{
-          background-color: rgb(40,120,0);
+          background-color: rgba(40,120,0,.6);
         }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(40,120,0,1) 0%,rgba(255,255,255,0) 100%);

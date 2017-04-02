@@ -34,7 +34,7 @@
         <p>You can search our extensive library of many cylinders.</p>
         <p>Feel free to search by artist, title, or even year!</p>
 
-        <button class='homeLibraryButton'>Go!</button>
+        <button class='homeLibraryButton' onclick="homeNavButtons()">Go!</button>
         <div class="backColor">
 
         </div>
@@ -44,7 +44,7 @@
         <h2>Today In History</h2>
         <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
 
-        <button class='homeHistoryButton'>Go!</button>
+        <button class='homeHistoryButton' onclick="homeNavButtons()">Go!</button>
         <div class="backColor">
 
         </div>
@@ -54,7 +54,7 @@
         <h2>Random</h2>
         <p>Can't think of something to look for? Try one at random!</p>
 
-        <button class='homeRandomButton'>Go!</button>
+        <button class='homeRandomButton' onclick="homeNavButtons()">Go!</button>
         <div class="backColor">
 
         </div>
@@ -69,7 +69,7 @@
         <p>You can search our extensive library of many cylinders.</p>
         <p>Feel free to search by artist, title, or even year!</p>
 
-        <button class='homeLibraryButton'>Go!</button>
+        <button class='homeLibraryButton' onclick="homeNavButtons()">Go!</button>
         <div class="backColor">
 
         </div>
@@ -79,7 +79,7 @@
         <h2>Today In History</h2>
         <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
 
-        <button class='homeHistoryButton'>Go!</button>
+        <button class='homeHistoryButton' onclick="homeNavButtons()">Go!</button>
         <div class="backColor">
 
         </div>
@@ -89,7 +89,7 @@
         <h2>Random</h2>
         <p>Can't think of something to look for? Try one at random!</p>
 
-        <button class='homeRandomButton'>Go!</button>
+        <button class='homeRandomButton' onclick="homeNavButtons()">Go!</button>
         <div class="backColor">
 
         </div>

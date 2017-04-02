@@ -124,9 +124,10 @@ $(window).resize(function(){
 });
 
 
-
-// Get selected section
-$('.navButton').on('click', function(){
+// ///////////////
+// Get selected Nav section
+// ///////////////
+$('.navButton').on('click', function(selectedSection){
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -224,6 +225,7 @@ $('.navButton').on('click', function(){
     $(selectedSection).css('display','block');
     $(selectedSection).height(screenHeight);
     $(selectedSection).width(screenWidth - 50);
+    fitScreen();
     $(selectedSection).css('top','0');
     $(selectedSection).css('left', screenWidth);
 
@@ -263,6 +265,116 @@ $('.navButton').on('click', function(){
 // $('.navButton').on('click');
 
 });//End of get selected sections
+
+
+
+
+var homeNavButtons = function(){
+
+  $('.activeFooter').addClass('tempActive');
+  $('.activeFooter').removeClass('activeFooter');
+  $('#libraryButtonContainer').addClass('activeFooter');
+  changeActiveFooter();
+
+  // Determin if screen is in Mobile or Tablet/Desktop View
+  if(!screenSize){
+    // Mobile view
+
+    // var iconPosition = $(this).position().left;
+
+    // Add styles to container so it remains stationary
+    // This is not handled by CSS because the broswer cannot handle two levels of hidden overflow
+    // It also locks the container in place so that scrolling down can not occur while screen changes.
+    $('#container').height(screenHeight - 50);
+    $('#container').css('position','absolute');
+    $('#container').css('overflow','hidden');
+
+    // Home Slider Width
+    $('#homeSlider .slick-track').width('100%');
+    $('#homeSlider .slick-slide').width('100%');
+
+    // Prep/Animate selected section
+    $('#librarySection').css('display','block');
+
+    // Assign meta info width
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
+    $('#librarySection').animate({
+      top: 0
+    },500,function(){
+
+      // Remove and add active and inactive classes
+      $('.active').addClass('inactive');
+      $('.active').removeAttr('style');
+      $('.active').removeClass('active');
+      $('#librarySection').removeClass('inactive');
+      $('#librarySection').addClass('active');
+
+      // Remove container restrictions
+      $('#container').height(screenHeight);
+      $('#container').removeAttr('style');
+
+      // Reset Section Height
+      $('section').height(screenHeight - 50);
+      $('section main').height(screenHeight - 100);
+
+      // Move selected section icon to the center
+      $('#librarySection' + ' header i').animate({
+        left: '50%'
+      },500);
+
+    });
+  }
+  else if (screenSize){
+    // Tablet/Desktop view
+
+    // var iconPosition = $(this).position().top;
+
+    // Assign Height and width to the selected section
+    $('#librarySection').css('display','block');
+    $('#librarySection').height(screenHeight);
+    $('#librarySection').width(screenWidth - 50);
+    fitScreen();
+    $('#librarySection').css('top','0');
+    $('#librarySection').css('left', screenWidth);
+
+    // Cylinder of the Day / Search resize
+    $('#cylinderOfTheDay').width($('#cylinderOfTheDay').parent().width() - 405);
+    $('#searchBar').width($('#searchBar').parent().parent().width() - 405);
+
+
+    // Cylinder Metadata
+    var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
+    $('.metaInfo').width(cylinderWidth);
+    $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
+
+
+
+    $('#librarySection').animate({
+      left: 0
+    }, 500, function(){
+
+      // Remove and add active and inactive classes
+      $('.active').addClass('inactive');
+      $('.active').removeAttr('style');
+      $('.active').removeClass('active');
+      $('#librarySection').removeClass('inactive');
+      $('#librarySection').addClass('active');
+
+      // Move Selected Icon to center
+      $('#librarySection' + ' header i').animate({
+        top: '50%'
+      },500);
+
+    });
+
+  }
+
+};//End of get selected sections
+
+
 
 // Function For Changing footer
 var changeActiveFooter = function(){
