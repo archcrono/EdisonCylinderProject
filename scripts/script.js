@@ -25,10 +25,10 @@ var compareScreenType = function(){
   if(screenWidth < 650){
     currentScreenType = 'phone';
   }
-  else if(screenWidth >= 650 && screenWidth <= 1100){
+  else if(screenWidth >= 650 && screenWidth <= 999){
     currentScreenType = 'tablet';
   }
-  else if(screenWidth > 1100){
+  else if(screenWidth >= 1000){
     currentScreenType = 'desktop';
   }
 
@@ -367,7 +367,7 @@ $(document).on('click','.cylinderSquare',function(){
        }, 500);
      }
   }//End of Mobile
-  else if(screenWidth >= 650 && screenWidth <= 1100){
+  else if(screenWidth >= 650 && screenWidth <= 999){
     //
     // Tablet
     //
@@ -556,12 +556,12 @@ if(screenType == 'phone'){
     if(width == 0){
       $('#searchFunction').animate({
         width: "60%"
-      },300);  
+      },300);
     }else{
       $('#searchFunction').animate({
         width: 0
       },300);
-    }  
+    }
   });
 }
 
