@@ -112,6 +112,8 @@ var fitScreen = function(){
     // Cylinder Of The Day width
     $('.cylinderOfTheDay').width(screenWidth - 505);
 
+    // Section Header (Information/Contact Page)
+    $('.sectionHeader').width(screenWidth - 100);
   }
 };
 fitScreen();
@@ -515,7 +517,7 @@ $(document).on('click','.cylinderSquare',function(){
     // // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
-    $('#largeActiveCylinder').width(screenWidth - 110);
+    $('#largeActiveCylinder').width(screenWidth - 116);
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
 

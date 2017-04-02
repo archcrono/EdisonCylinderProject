@@ -150,30 +150,39 @@
       padding-left: 10px;
       display: inline-block; }
 
-  #informationSection main .sectionHeader .cylinderOfTheDay {
-    display: block;
-    background-color: grey;
-    height: 150px;
-    position: absolute;
-    right: 0;
-    top: 0; }
-    #informationSection main .sectionHeader .cylinderOfTheDay img {
-      width: 100px; }
+  #informationSection main .sectionHeader {
+    position: fixed;
+    z-index: 20;
+    border-bottom: 5px solid white; }
+    #informationSection main .sectionHeader .cylinderOfTheDay {
+      display: block;
+      background-color: grey;
+      height: 150px;
+      position: absolute;
+      right: 0;
+      top: 0; }
+      #informationSection main .sectionHeader .cylinderOfTheDay img {
+        width: 100px; }
   #informationSection main #infoContainer {
-    margin-top: 150px; }
+    margin-top: 200px; }
   #informationSection .vis {
     display: block !important; }
 
-  #contactSection main .sectionHeader .cylinderOfTheDay {
-    display: block;
-    background-color: grey;
-    height: 150px;
-    position: absolute;
-    right: 0;
-    top: 0; }
-    #contactSection main .sectionHeader .cylinderOfTheDay img {
-      width: 100px; }
+  #contactSection main .sectionHeader {
+    position: fixed;
+    z-index: 20;
+    border-bottom: 5px solid white; }
+    #contactSection main .sectionHeader .cylinderOfTheDay {
+      display: block;
+      background-color: grey;
+      height: 150px;
+      position: absolute;
+      right: 0;
+      top: 0; }
+      #contactSection main .sectionHeader .cylinderOfTheDay img {
+        width: 100px; }
   #contactSection main #contactContainer {
+    margin-top: 200px;
     padding-left: 20%;
     padding-right: 30%; }
     #contactSection main #contactContainer fieldset {
