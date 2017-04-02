@@ -18,7 +18,7 @@
 <div class="tabletBanner">
   <img class="uvuLogo" src="img/uvuLogo.png" alt="UVU Logo">
   <h1>Cylinder Library</h1>
-  <!-- <svg height="150" width="325">
+  <svg class="largeBannerBar" height="150" width="325">
     <polygon points="0,0 275,0 225,150 0,150" style="fill:green;"/>
   </svg>
   <svg class="bannerBar" height="150" width="75">
@@ -29,5 +29,5 @@
   </svg>
   <svg class="bannerBar" height="150" width="75">
     <polygon points="50,0 75,0 25,150 0,150" style="fill:green;"/>
-  </svg> -->
+  </svg>
 </div>

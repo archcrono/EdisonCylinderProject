@@ -599,6 +599,9 @@ $('#librarySection main').scroll(function(){
 // Select banner
 // //////////////
 
+//
+// Phone
+//
 var imgArray = ['banner1.png', 'banner2.png', 'banner3.png', 'banner4.png'];//Potential banner img URLs
 var bannerImgPath = "img/";
 
@@ -611,6 +614,21 @@ var randomBannerImg = function(){
 for(var i = 0; i < $('.banner').length; i++){
   $('.banner').eq(i).append(
     "<img class='bannerRotate' src='" + randomBannerImg() + "' alt='Banner Image'>"
+  )
+}
+
+//
+// Tablet
+//
+var randomTabletBannerNumber = function(){
+  return Math.round(Math.random() * 4);
+}
+
+for(var i = 0; i < $('.tabletBanner').length; i++){
+  $('.tabletBanner').eq(i).append(
+    "<img class='largeBannerRotate' src='img/tabletBanners/tabletBanner" +
+    randomTabletBannerNumber() +
+    ".jpg' alt='Banner Image'>"
   )
 }
 
