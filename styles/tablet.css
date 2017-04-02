@@ -168,8 +168,11 @@
     top: 0; }
     #contactSection main .sectionHeader .cylinderOfTheDay img {
       width: 100px; }
-  #contactSection main #contactContainer fieldset {
-    width: 50%; }
+  #contactSection main #contactContainer {
+    padding-left: 20%;
+    padding-right: 30%; }
+    #contactSection main #contactContainer fieldset {
+      width: 50%; }
 
   #searchFunction {
     top: 0;
