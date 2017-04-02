@@ -141,12 +141,14 @@
       margin: none; }
     #librarySection main #largeActiveCylinder h4 {
       font-size: 1em;
-      padding-left: 5px; }
+      padding-left: 5px;
+      display: inline-block; }
     #librarySection main #largeActiveCylinder h5 {
       font-family: "Arsenal", sans-serif;
       font-size: .8em;
       padding-top: 2px;
-      padding-left: 10px; }
+      padding-left: 10px;
+      display: inline-block; }
 
   #informationSection main .sectionHeader .cylinderOfTheDay {
     display: block;
