@@ -14,10 +14,13 @@
       <!-- Banner -->
       <?php include 'banner.php'; ?>
       <!-- Cylinder Of The Day -->
-      <div id="cylinderOfTheDay" class="cylinderOfTheDay">
+      <div class="cylinderOfTheDay">
         <img src="img/cover4.png" alt="Album Cover">
         <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-        <h2>Song Title</h2>
+        <div class="cylinderOfTheDayMetadata">
+          <h2>Song Title</h2>
+          <h3>Artist Name</h3>
+        </div>
       </div>
     </div>
 

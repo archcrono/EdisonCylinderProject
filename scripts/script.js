@@ -76,7 +76,7 @@ var fitScreen = function(){
     var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
     $('.metaInfo').width(cylinderWidth);
     $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
-
+    $('.bannerContainer').width($('.active main').width());
     $('.active .cylinderOfTheDay').width(screenWidth);//Reset Cylinder of the Day Width
     $('#searchBar').width(screenWidth);//Reset searchBar width
 
@@ -109,9 +109,6 @@ var fitScreen = function(){
 
     // Home page color width
     $('.backColor').width($('#largeHomeSlider .slide').width());
-
-    // Cylinder Of The Day width
-    // $('.cylinderOfTheDay').width(screenWidth - 505);
 
     // Section Header (Information/Contact Page)
     $('.sectionHeader').width(screenWidth - 100);
@@ -621,7 +618,7 @@ for(var i = 0; i < $('.banner').length; i++){
 // Tablet
 //
 var randomTabletBannerNumber = function(){
-  return Math.round(Math.random() * 4);
+  return Math.floor(Math.random() * 4) + 1;
 }
 
 for(var i = 0; i < $('.tabletBanner').length; i++){

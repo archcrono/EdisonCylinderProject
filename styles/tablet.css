@@ -12,7 +12,6 @@
 
   .tabletBanner {
     display: block;
-    background-color: rgba(200, 0, 0, 0.3);
     width: 60%;
     height: 150px;
     font-family: "Rubik", sans-serif;
@@ -37,6 +36,30 @@
       opacity: .6; }
     .tabletBanner .largeBannerRotate {
       float: right; }
+
+  .cylinderOfTheDay {
+    display: initial;
+    justify-content: initial;
+    margin: 0; }
+    .cylinderOfTheDay img {
+      display: inline-block;
+      margin-top: 12px;
+      width: 120px;
+      height: auto; }
+    .cylinderOfTheDay i {
+      position: absolute;
+      margin: 90px 0 0 40px;
+      font-size: 2.5em;
+      display: inline-block; }
+    .cylinderOfTheDay .cylinderOfTheDayMetadata {
+      position: absolute;
+      margin-left: 10px;
+      display: inline-block; }
+      .cylinderOfTheDay .cylinderOfTheDayMetadata h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px; }
+      .cylinderOfTheDay .cylinderOfTheDayMetadata h3 {
+        display: block; }
 
   section {
     width: 100%; }
@@ -126,6 +149,10 @@
       margin-left: 5px;
       height: 150px;
       background-color: #d0d0ce; }
+      #librarySection main .bannerContainer #searchBar input {
+        margin-top: 40px; }
+      #librarySection main .bannerContainer #searchBar i {
+        margin-top: 40px; }
   #librarySection main #libraryContainer {
     padding-left: 5px;
     margin-top: 155px;
@@ -165,18 +192,35 @@
   #informationSection main .bannerContainer {
     position: fixed;
     z-index: 20;
-    border-bottom: 5px solid white; }
+    border-bottom: 5px solid white;
+    background-color: white; }
     #informationSection main .bannerContainer .tabletBanner {
       width: 60%; }
     #informationSection main .bannerContainer .cylinderOfTheDay {
       display: block;
-      background-color: grey;
+      background-color: #a7a8aa;
       height: 150px;
       position: absolute;
       right: 0;
       top: 0; }
       #informationSection main .bannerContainer .cylinderOfTheDay img {
-        width: 100px; }
+        display: inline-block;
+        margin-top: 12px;
+        width: 120px;
+        height: auto; }
+      #informationSection main .bannerContainer .cylinderOfTheDay i {
+        position: absolute;
+        font-size: 2.5em;
+        display: inline-block; }
+      #informationSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata {
+        position: absolute;
+        margin-left: 10px;
+        display: inline-block; }
+        #informationSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h2 {
+          font-size: 1.5em;
+          margin-bottom: 10px; }
+        #informationSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h3 {
+          display: block; }
   #informationSection main #infoContainer {
     margin-top: 200px; }
   #informationSection .vis {
@@ -185,16 +229,35 @@
   #contactSection main .bannerContainer {
     position: fixed;
     z-index: 20;
-    border-bottom: 5px solid white; }
+    border-bottom: 5px solid white;
+    background-color: white; }
+    #contactSection main .bannerContainer .tabletBanner {
+      width: 60%; }
     #contactSection main .bannerContainer .cylinderOfTheDay {
       display: block;
-      background-color: grey;
+      background-color: #a7a8aa;
       height: 150px;
       position: absolute;
       right: 0;
       top: 0; }
       #contactSection main .bannerContainer .cylinderOfTheDay img {
-        width: 100px; }
+        display: inline-block;
+        margin-top: 12px;
+        width: 120px;
+        height: auto; }
+      #contactSection main .bannerContainer .cylinderOfTheDay i {
+        position: absolute;
+        font-size: 2.5em;
+        display: inline-block; }
+      #contactSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata {
+        position: absolute;
+        margin-left: 10px;
+        display: inline-block; }
+        #contactSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h2 {
+          font-size: 1.5em;
+          margin-bottom: 10px; }
+        #contactSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h3 {
+          display: block; }
   #contactSection main #contactContainer {
     margin-top: 175px;
     width: 100%; }

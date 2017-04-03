@@ -42,6 +42,53 @@ $standard-font: 'Rubik', sans-serif;
       $pan6: #a7a8aa; // Cool Grey
       $pan2: #d0d0ce; // Coolest Grey
 
+// //////
+//Mixins
+// //////
+@mixin cylinderStyling(){
+  .bannerContainer{
+    position: fixed;
+    z-index: 20;
+    border-bottom: 5px solid white;
+    background-color: white;
+    .tabletBanner{
+      width: 60%;
+    }
+
+    .cylinderOfTheDay{
+      display: block;
+      background-color: #a7a8aa;
+      height: 150px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      img{
+        display: inline-block;
+        margin-top: 12px;
+        width: 120px;
+        height: auto;
+      }
+      i{
+        position: absolute;
+        font-size: 2.5em;
+        display: inline-block;
+      }
+      .cylinderOfTheDayMetadata{
+        position: absolute;
+        margin-left: 10px;
+        display: inline-block;
+        h2{
+          font-size: 1.5em;
+          margin-bottom: 10px;
+        }
+        h3{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 // /////////
 // Active/Inactive Classes
 // /////////
@@ -61,7 +108,6 @@ $standard-font: 'Rubik', sans-serif;
 }
 .tabletBanner{
   display: block;
-  background-color: rgba(200,0,0,.3);
   width: 60%;
   height: 150px;
   font-family: $standard-font;
@@ -91,9 +137,40 @@ $standard-font: 'Rubik', sans-serif;
     float: right;
   }
 }
+.cylinderOfTheDay{
+  display: initial;
+  justify-content: initial;
+  margin: 0;
+  img{
+    display: inline-block;
+    margin-top: 12px;
+    width: 120px;
+    height: auto;
+  }
+  i{
+    position: absolute;
+    margin: 90px 0 0 40px;
+    font-size: 2.5em;
+    display: inline-block;
+  }
+  .cylinderOfTheDayMetadata{
+    position: absolute;
+    margin-left: 10px;
+    display: inline-block;
+    h2{
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    h3{
+      display: block;
+    }
+  }
+}//End of Cylinder of the day
+
 // ///////////
 // Section
 // ///////////
+
 section{
   width: 100%;
  header{
@@ -230,6 +307,12 @@ footer{
       margin-left: 5px;
       height: 150px;
       background-color: #d0d0ce;
+      input{
+        margin-top: 40px;
+      }
+      i{
+        margin-top: 40px;
+      }
     }
   } // top
 
@@ -297,28 +380,7 @@ footer{
 
 #informationSection{
   main{
-
-    .bannerContainer{
-      position: fixed;
-      z-index: 20;
-      border-bottom: 5px solid white;
-
-      .tabletBanner{
-        width: 60%;
-      }
-
-      .cylinderOfTheDay{
-        display: block;
-        background-color: grey;
-        height: 150px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        img{
-          width: 100px;
-        }
-      }
-    }//End of Section Header
+    @include cylinderStyling();
 
     #infoContainer{
       margin-top: 200px;
@@ -336,23 +398,8 @@ footer{
 
 #contactSection{
   main{
-    .bannerContainer{
-      position: fixed;
-      z-index: 20;
-      border-bottom: 5px solid white;
+    @include cylinderStyling();
 
-      .cylinderOfTheDay{
-        display: block;
-        background-color: grey;
-        height: 150px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        img{
-          width: 100px;
-        }
-      }//End of Cylinder Of The Day
-    }//End of Section Header
 
     #contactContainer{
     margin-top: 175px;

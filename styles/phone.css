@@ -96,6 +96,30 @@
   .tabletBanner {
     display: none; }
 
+  .cylinderOfTheDay {
+    width: 100%;
+    height: 70px;
+    background-color: #a7a8aa;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0; }
+    .cylinderOfTheDay img {
+      margin: 5px 0 0 20px;
+      width: 60px;
+      height: 60px;
+      background-color: red; }
+    .cylinderOfTheDay i {
+      font-size: 3em;
+      position: relative;
+      text-align: center;
+      margin: 10px 0 0 30px; }
+    .cylinderOfTheDay h2 {
+      margin: 25px 20px 0 0; }
+    .cylinderOfTheDay h3 {
+      display: none; }
+
   section {
     width: 100%;
     position: absolute;
@@ -151,27 +175,6 @@
     background-color: white; }
     #homeSection #homeContainer {
       width: 100%; }
-      #homeSection #homeContainer .cylinderOfTheDay {
-        width: 100%;
-        height: 70px;
-        background-color: grey;
-        color: white;
-        font-family: "Rubik", sans-serif;
-        display: flex;
-        justify-content: space-between;
-        margin: 5px 0; }
-        #homeSection #homeContainer .cylinderOfTheDay img {
-          margin: 5px 0 0 20px;
-          width: 60px;
-          height: 60px;
-          background-color: red; }
-        #homeSection #homeContainer .cylinderOfTheDay i {
-          font-size: 3em;
-          position: relative;
-          text-align: center;
-          margin: 10px 0 0 30px; }
-        #homeSection #homeContainer .cylinderOfTheDay h2 {
-          margin: 25px 20px 0 0; }
       #homeSection #homeContainer #indicators {
         color: white; }
         #homeSection #homeContainer #indicators i {
@@ -356,101 +359,101 @@
     background: white; }
     #informationSection .bannerContainer .cylinderOfTheDay {
       display: none; }
-    #informationSection h1 {
+    #informationSection #infoContainer h1 {
       font-size: 3em;
       text-align: center;
       margin: 40px auto; }
-    #informationSection .top__content {
+    #informationSection #infoContainer .top__content {
       width: 75%;
       text-align: center;
       margin: 0 auto;
       line-height: 1.8em;
       margin-bottom: 100px; }
-    #informationSection .vis {
+    #informationSection #infoContainer .vis {
       display: none; }
-    #informationSection .about .row:nth-child(1) {
+    #informationSection #infoContainer .about .row:nth-child(1) {
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover5.png") no-repeat; }
-    #informationSection .about .row:nth-child(2) {
+    #informationSection #infoContainer .about .row:nth-child(2) {
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/libraryCover/cylinder16.jpg") no-repeat right; }
-    #informationSection .about .row:nth-child(3) {
+    #informationSection #infoContainer .about .row:nth-child(3) {
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/libraryCover/cylinder19.jpg") no-repeat; }
-    #informationSection .about .row:nth-child(4) {
+    #informationSection #infoContainer .about .row:nth-child(4) {
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover2.png") no-repeat right; }
-    #informationSection .about .row:nth-child(5) {
+    #informationSection #infoContainer .about .row:nth-child(5) {
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover1.png") no-repeat; }
-    #informationSection .about .row:last-child {
+    #informationSection #infoContainer .about .row:last-child {
       margin-bottom: 40px; }
-    #informationSection .row .col {
+    #informationSection #infoContainer .row .col {
       padding: 40px; }
-      #informationSection .row .col .header {
+      #informationSection #infoContainer .row .col .header {
         margin-bottom: 3em;
         position: relative; }
-        #informationSection .row .col .header__title {
+        #informationSection #infoContainer .row .col .header__title {
           font-size: 3em;
           position: relative;
           z-index: 1; }
-        #informationSection .row .col .header__subtitle {
+        #informationSection #infoContainer .row .col .header__subtitle {
           font-size: 1.3em;
           position: relative;
           z-index: 1; }
-        #informationSection .row .col .header__num {
+        #informationSection #infoContainer .row .col .header__num {
           position: absolute;
           font-family: "Arsenal", sans-serif;
           left: 0;
           top: -55px;
           color: rgba(0, 149, 200, 0.25);
           font-size: 8em; }
-      #informationSection .row .col .content {
+      #informationSection #infoContainer .row .col .content {
         position: relative; }
-        #informationSection .row .col .content:before {
+        #informationSection #infoContainer .row .col .content:before {
           content: "";
           position: absolute;
           border-bottom: 2px solid #efefef;
           width: 25%; }
-        #informationSection .row .col .content:after {
+        #informationSection #infoContainer .row .col .content:after {
           content: "";
           position: absolute;
           border-bottom: 2px solid #efefef;
           width: 25%;
           right: 0; }
-        #informationSection .row .col .content p {
+        #informationSection #infoContainer .row .col .content p {
           line-height: 1.8em;
           padding: 15px 0;
           color: #666; }
-        #informationSection .row .col .content .right {
+        #informationSection #infoContainer .row .col .content .right {
           text-align: right; }
-        #informationSection .row .col .content button {
+        #informationSection #infoContainer .row .col .content button {
           margin-bottom: 15px;
           background: none;
           padding: 15px;
           border: 1px solid #ccc;
           border-radius: 5px; }
-          #informationSection .row .col .content button:hover {
+          #informationSection #infoContainer .row .col .content button:hover {
             border: 1px solid #ccc;
             box-shadow: 0 0 10px #ddd; }
-          #informationSection .row .col .content button:focus {
+          #informationSection #infoContainer .row .col .content button:focus {
             outline: none;
             box-shadow: inset 0 0 10px #ddd; }
-      #informationSection .row .col__img {
+      #informationSection #infoContainer .row .col__img {
         display: none; }
-        #informationSection .row .col__img img {
+        #informationSection #infoContainer .row .col__img img {
           width: 290px;
           height: 290px; }
-    #informationSection .members {
+    #informationSection #infoContainer .members {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       margin-bottom: 20px; }
-      #informationSection .members .member {
+      #informationSection #infoContainer .members .member {
         margin-bottom: 15px; }
-        #informationSection .members .member img {
+        #informationSection #infoContainer .members .member img {
           display: block;
           width: auto;
           margin: 0 auto;
           margin-bottom: 15px; }
-        #informationSection .members .member .img--circle {
+        #informationSection #infoContainer .members .member .img--circle {
           border-radius: 50%; }
-        #informationSection .members .member p {
+        #informationSection #infoContainer .members .member p {
           width: 75%;
           text-align: center;
           margin: 0 auto; }
