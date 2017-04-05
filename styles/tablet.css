@@ -166,7 +166,7 @@
         padding: 0;
         padding-right: 5px; }
   #librarySection main #largeActiveCylinder {
-    background-color: grey;
+    background-color: #696158;
     margin-bottom: 5px;
     max-width: 100%;
     height: 200px;
@@ -183,14 +183,22 @@
       margin-left: -115px; }
     #librarySection main #largeActiveCylinder h4 {
       font-size: 1em;
-      padding-left: 5px;
-      display: inline-block; }
+      padding-left: 20px;
+      display: inline-block;
+      color: #d45d00; }
     #librarySection main #largeActiveCylinder h5 {
       font-family: "Arsenal", sans-serif;
       font-size: .8em;
       padding-top: 2px;
       padding-left: 10px;
       display: inline-block; }
+    #librarySection main #largeActiveCylinder h6 {
+      font-family: "Arsenal", sans-serif;
+      font-size: 1.5em;
+      padding-top: 2px;
+      padding-left: 10px;
+      display: inline-block;
+      color: #00bfb3; }
 
   #informationSection main .bannerContainer {
     position: fixed;
