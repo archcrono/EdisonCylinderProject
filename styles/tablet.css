@@ -175,9 +175,12 @@
     #librarySection main #largeActiveCylinder .line {
       display: inline-flex; }
     #librarySection main #largeActiveCylinder i {
-      font-size: 2em;
+      font-size: 3em;
       padding: none;
-      margin: none; }
+      margin: none;
+      position: absolute;
+      margin-top: 70px;
+      margin-left: -115px; }
     #librarySection main #largeActiveCylinder h4 {
       font-size: 1em;
       padding-left: 5px;

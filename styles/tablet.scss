@@ -353,9 +353,12 @@ footer{
         display: inline-flex;
       }
       i{
-        font-size: 2em;
+        font-size: 3em;
         padding:none;
         margin:none;
+        position: absolute;
+        margin-top: 70px;
+        margin-left: -115px;
       }
       h4{
       font-size: 1em;
