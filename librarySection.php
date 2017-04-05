@@ -66,7 +66,7 @@
         <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i><br>
       </div>
       <span>
-        <h4><b>Cylinder: </b></h4><h5 id="largeCylinderName"></h5><br>
+        <h6 id="largeCylinderName"></h6><br>
         <h4><b>Artist: </b></h4><h5 id="largeArtistName"></h5><br>
         <h4><b>Take: </b></h4><h5 id="largeTakeNumber"></h5><br>
         <h4><b>Mold: </b></h4><h5 id="largeMoldNumber"></h5><br>
