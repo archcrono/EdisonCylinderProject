@@ -756,6 +756,7 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
     $('#largeArtistName').html(this.item.artist);
     $('#largeMoldNumber').html(this.item.mold);
     $('#largeTakeNumber').html(this.item.take);
+    $('#largeComments').html(this.item.comments);
 
   }
 

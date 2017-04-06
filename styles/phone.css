@@ -333,7 +333,8 @@
         #librarySection main #libraryContainer .cylinderSquare h2 {
           white-space: nowrap;
           overflow: hidden;
-          text-overflow: ellipsis; }
+          text-overflow: ellipsis;
+          padding-left: 7px; }
         #librarySection main #libraryContainer .cylinderSquare .metaInfo {
           position: absolute;
           width: 100%;
