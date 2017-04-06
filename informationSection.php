@@ -71,12 +71,12 @@
       </div>
     </div>
     <div class="col col__img">
-      <img src="img/cover5.png" alt="">
+      <img src="img/cylinder1.jpg" alt="">
     </div>
   </div>
   <div class="row">
     <div class="col col__img">
-      <img src="img/libraryCover/cylinder16.jpg" alt="">
+      <img src="img/cylinder2.jpg" alt="">
     </div>
     <div class="col">
       <div class="header">
@@ -123,12 +123,12 @@
       </div>
     </div>
     <div class="col col__img">
-      <img src="img/libraryCover/cylinder19.jpg" alt="">
+      <img src="img/cylinder3.jpg" alt="">
     </div>
   </div>
   <div class="row">
     <div class="col col__img">
-      <img src="img/cover2.png" alt="">
+      <img src="img/cylinder4.jpg" alt="">
     </div>
     <div class="col">
       <div class="header">
@@ -153,7 +153,7 @@
       </div>
     </div>
     <div class="col col__img">
-      <img src="img/cover1.png" alt="">
+      <img src="img/cylinder2.jpg" alt="">
     </div>
   </div>
   </div>

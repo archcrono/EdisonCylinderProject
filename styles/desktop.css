@@ -10,7 +10,6 @@
     position: absolute;
     right: 0;
     display: inline-block; }
-
   #librarySection main .ng-scope {
     width: 150px; }
   #librarySection main .top .banner {
@@ -21,7 +20,6 @@
       font-size: 2em; }
   #librarySection main #libraryContainer .cylinderSquare {
     width: 20%; }
-
   #informationSection main .bannerContainer .cylinderOfTheDay i {
     margin: 0;
     position: absolute;
@@ -56,10 +54,9 @@
         width: 25%;
         left: 0; }
     #informationSection .row .col__img {
-      display: inherit; }
+      display: inherit !important; }
   #informationSection .members .member {
     width: 30%; }
-
   #contactSection main .bannerContainer .cylinderOfTheDay i {
     margin: 0;
     position: absolute;
@@ -73,5 +70,3 @@
     display: inline-block; }
   #contactSection #contactContainer fieldset {
     width: 35%; } }
-
-/*# sourceMappingURL=desktop.css.map */
