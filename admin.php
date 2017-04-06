@@ -13,11 +13,9 @@
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   </head>
   <body ng-app="cylinderAdminApp" ng-controller="cylinderAdminCtrl">
-    <div class="panel panel-default">
       <div class="jumbotron">
         <h1 class="text-center">UVU Cylinder Admin</h1>
       </div>
-    </div>
 
       <!-- Search Bar -->
     <div class="row">
@@ -168,7 +166,7 @@
       <div id="createNewCylinderForm" class="modal__container panel panel-default">
         <h3 class="text-center">Add New Cylinder</h3>
         <form enctype="multipart/form-data" id="createForm" method="POST">
-          <input type="text" style=""id="randomCylinderId" name="id" value="" readonly>
+          <input type="text" style="" id="randomCylinderId" name="id" value="" readonly>
           <div class="col-sm-12">
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
