@@ -58,6 +58,8 @@ body {
   position: fixed;
   left: 50%;
   width: 80%;
+  height: 80%;
+  overflow-y: auto;
   margin-left: -40%;
   z-index: 99999; }
   .modal__container h3 {
