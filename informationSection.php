@@ -39,25 +39,32 @@
       </div>
       <div class="content">
         <p>The cylinders needed to be transcribed. Over the past 7 years, with the input of Professor Mike Wisland and mechanical engineer Gary Hannah, the method of transcription has evolved over the years to the point that we now have a unique way of transcribing cylinder not found anywhere else. Read more information on our transcribing process activities here.</p>
-        <div id="hidden_one" style="display: none;">
-          <div style="display:flex;">
-            <p>
+        <div id="hidden_one">
+            <p class="clear">
+            <img src="/img/img1.JPG" class="hidden_img">
             First, to transcribe the cylinders we borrowed a cylinder playback device from the Library of Congress.  The device, pictured here, was made by an unknown inventor sometime in the early 2000’s.  We had the device copied, and mounted it into an Edison Amberola 30 player, allowing electric playback, as pictured here.
             </p>
-            <img src="/img/img1.JPG" style="width: 30%; height: 30%;">
-          </div>
-          <div style="display:flex;">
-            <p>
+            <p class="clear">
+            <img src="img/img2.JPG" style="width: 25%; height: 25%;float:left; margin-right: 1em;">
               We decided that the contact angle was not optimized, so we decided to modify the playback device to correct the contact angle.  That device is pictured on the right, here.
             </p>
-            <img src="img/img2.JPG" style="width: 30%; height: 30%;">
-          </div>
-          </p>
+            <div style="clear:both;"></div>
+            <div class="video">
+              <button id="video_btn">Watch Video</button>
+            </div>
+            <div id="modal">
+              <div class="modal">
+                <div class="modal_content">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZG1vrfoe8ns" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
         </div>
         <div class="right">
           <button id="content_1">Read More</button>
         </div>
         <script>
+        // show and hide Readmore contents
           $('#content_1').click(function(){
             $('#hidden_one').slideToggle();
             var x = $('#content_1').text();
@@ -65,6 +72,23 @@
               $('#content_1').text('Close');
             }else{
               $('#content_1').text('Read More');
+            }
+          });
+
+        // modal
+          $('#video_btn').click(function(){
+            var targetW = $('.modal_content iframe').width();
+            var targetH = $('.modal_content iframe').height();
+            $('.modal').css('display', 'block');
+            $('.modal_content').css({
+              'width': targetW,
+              'height': targetH
+            });
+          });
+          $(window).click(function(e){
+            var modal = $('.modal')[0];
+            if(e.target == modal){
+              $('.modal').css('display', 'none');
             }
           });
         </script>
@@ -86,7 +110,7 @@
       <div class="content">
         <div>
           <p>The transcribed audio files then need to be restored. The Audio Restoration students first declick the cylinders, then denoise them before posting them to the website. We use a variety of softwares to do this, and that is an ever-evolving process. More information on who and how we restored the cylinders can be found here.</p>
-          <div id="hidden_two" style="display: none;">
+          <div id="hidden_two">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
