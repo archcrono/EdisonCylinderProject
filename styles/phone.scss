@@ -671,7 +671,33 @@ footer{
             width: 25%;
             height: 25%;
             float:left;
-            margin-right: 1em;
+            margin-right: 2em;
+            text-align: center;
+            padding-top: 15px;
+            img{
+              width: 100%;
+            }
+            span{
+              width: 100%;
+              word-wrap: break-word;
+              color: #ccc;
+            }
+          }
+          .hidden_img-right{
+            width: 25%;
+            height: 25%;
+            float:right;
+            margin-left: 2em;
+            text-align: center;
+            padding-top: 15px;
+            img{
+              width: 100%;
+            }
+            span{
+              width: 100%;
+              word-wrap: break-word;
+              color: #ccc;
+            }
           }
           .clear:after{
             content: '';

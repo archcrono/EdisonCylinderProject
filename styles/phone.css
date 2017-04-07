@@ -428,7 +428,33 @@
             width: 25%;
             height: 25%;
             float: left;
-            margin-right: 1em; }
+            margin-right: 2em;
+            text-align: center;
+            padding-top: 15px; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img img,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img img {
+              width: 100%; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img span,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img span {
+              width: 100%;
+              word-wrap: break-word;
+              color: #ccc; }
+          #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right,
+          #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right {
+            width: 25%;
+            height: 25%;
+            float: right;
+            margin-left: 2em;
+            text-align: center;
+            padding-top: 15px; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right img,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right img {
+              width: 100%; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right span,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right span {
+              width: 100%;
+              word-wrap: break-word;
+              color: #ccc; }
           #informationSection #infoContainer .row .col .content #hidden_one .clear:after,
           #informationSection #infoContainer .row .col .content #hidden_two .clear:after {
             content: '';
