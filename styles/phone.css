@@ -146,21 +146,26 @@
     background-color: black;
     opacity: 0;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    display: flex;
+    justify-content: space-between; }
     .footerButtonContainers i {
+      margin-top: 15px;
       position: absolute;
       cursor: pointer;
       color: white;
       z-index: 10;
       font-size: 1.2em; }
       .footerButtonContainers i:nth-child(1) {
-        left: 10%; }
+        left: 7%; }
       .footerButtonContainers i:nth-child(2) {
-        left: 35%; }
+        left: 27%; }
       .footerButtonContainers i:nth-child(3) {
-        left: 65%; }
+        left: 47%; }
       .footerButtonContainers i:nth-child(4) {
-        left: 85%; }
+        left: 67%; }
+      .footerButtonContainers i:nth-child(5) {
+        left: 87%; }
 
   footer {
     height: 50px;
@@ -459,62 +464,63 @@
           text-align: center;
           margin: 0 auto; }
 
-  #contactSection main .bannerContainer .cylinderOfTheDay {
-    display: none; }
-  #contactSection main #contactHeader {
-    max-width: 100%;
-    padding: 20px 10px; }
-    #contactSection main #contactHeader h2 {
-      font-size: 3em;
-      color: #00843d; }
-    #contactSection main #contactHeader h3 {
-      font-size: 1.5em;
-      color: #d45d00; }
-  #contactSection main #contactContainer {
-    width: 100%;
-    font-family: "Arsenal", sans-serif;
-    padding-bottom: 15px;
+  #contactSection {
     background-color: white; }
-    #contactSection main #contactContainer form {
-      width: 80%;
-      margin: auto;
-      padding: 0 20px; }
-      #contactSection main #contactContainer form h3 {
-        width: 100%;
-        margin: 10px 0;
-        font-size: 1.3em;
-        font-weight: bold;
-        color: #78be20; }
-      #contactSection main #contactContainer form input {
-        width: 100%;
-        display: inline-block;
-        margin: 10px 0;
-        border: 1px solid black;
-        font-size: 1.3em; }
-      #contactSection main #contactContainer form textarea {
-        margin: 10px 0;
-        width: 100%;
-        height: 200px;
-        border: 1px solid black;
-        resize: none; }
-      #contactSection main #contactContainer form button {
-        display: block;
-        text-align: right;
-        border: 1px solid;
-        margin: 10px 0;
-        font-size: 1.2em;
-        color: white;
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
-        background: #006e2e;
-        /* Old browsers */
-        background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #006e2e 0%, #006e2e 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #006e2e 0%, #006e2e 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
-        /* IE6-9 */ }
+    #contactSection main .bannerContainer .cylinderOfTheDay {
+      display: none; }
+    #contactSection main #contactHeader {
+      max-width: 100%;
+      padding: 20px 10px; }
+      #contactSection main #contactHeader h2 {
+        font-size: 3em;
+        color: #00843d; }
+      #contactSection main #contactHeader h3 {
+        font-size: 1.5em;
+        color: #d45d00; }
+    #contactSection main #contactContainer {
+      width: 100%;
+      font-family: "Arsenal", sans-serif;
+      padding-bottom: 15px; }
+      #contactSection main #contactContainer form {
+        width: 80%;
+        margin: auto;
+        padding: 0 20px; }
+        #contactSection main #contactContainer form h3 {
+          width: 100%;
+          margin: 10px 0;
+          font-size: 1.3em;
+          font-weight: bold;
+          color: #78be20; }
+        #contactSection main #contactContainer form input {
+          width: 100%;
+          display: inline-block;
+          margin: 10px 0;
+          border: 1px solid black;
+          font-size: 1.3em; }
+        #contactSection main #contactContainer form textarea {
+          margin: 10px 0;
+          width: 100%;
+          height: 200px;
+          border: 1px solid black;
+          resize: none; }
+        #contactSection main #contactContainer form button {
+          display: block;
+          text-align: right;
+          border: 1px solid;
+          margin: 10px 0;
+          font-size: 1.2em;
+          color: white;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
+          background: #006e2e;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #006e2e 0%, #006e2e 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, #006e2e 0%, #006e2e 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
+          /* IE6-9 */ }
 
   #searchFunction {
     position: absolute;

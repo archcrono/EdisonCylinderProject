@@ -64,7 +64,6 @@ var fitScreen = function(){
     $('section main').height(screenHeight - 100);
     $('section').width(screenWidth);
     $('section main').css('width','100%');
-    $('.footerButtonContainers i').css('top', '15px');
     screenSize = false;
 
     // Home Page Slider Height and Width
@@ -88,7 +87,6 @@ var fitScreen = function(){
     $('section main').height(screenHeight);
     $('section').width(screenWidth - 50);
     $('section main').width(screenWidth - 100);
-    $('.footerButtonContainers i').removeAttr('style');
     screenSize = true;
 
     // Cylinder Metadata
@@ -127,7 +125,10 @@ $(window).resize(function(){
 // ///////////////
 // Get selected Nav section
 // ///////////////
-$('.navButton').on('click', function(selectedSection){
+$('.navButton').on('click', function(){
+
+  $('.navButton').css('color','white');
+  $(this).css('color','green');
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -136,33 +137,42 @@ $('.navButton').on('click', function(selectedSection){
   switch ($(this).attr('id')) {
     case 'homeButton':
         selectedSection = '#homeSection';
-        $('.activeFooter').addClass('tempActive');
-        $('.activeFooter').removeClass('activeFooter');
-        $('#homeButtonContainer').addClass('activeFooter');
-        changeActiveFooter();
+
+        $('#homeSlider').slick({
+          arrows: false,
+          infinite: false,
+          dots: true
+        });
+
       break;
     case 'libraryButton':
         selectedSection = '#librarySection';
-        $('.activeFooter').addClass('tempActive');
-        $('.activeFooter').removeClass('activeFooter');
-        $('#libraryButtonContainer').addClass('activeFooter');
-        changeActiveFooter();
+
+        $(selectedSection + ' .banner h3').html('Cylinder Library');
+        $(selectedSection + ' .tabletBanner h1').html('Cylinder Library');
+
+        $('#homeSlider').slick('unslick');
       break;
     case 'informationButton':
         selectedSection = '#informationSection';
-        $('.activeFooter').addClass('tempActive');
-        $('.activeFooter').removeClass('activeFooter');
-        $('#informationButtonContainer').addClass('activeFooter');
-        changeActiveFooter();
+
+        $(selectedSection + ' .banner h3').html('Cylinder Information');
+        $(selectedSection + ' .tabletBanner h1').html('Cylinder Information');
+
+        $('#homeSlider').slick('unslick');
       break;
     case 'contactButton':
         selectedSection = '#contactSection';
-        $('.activeFooter').addClass('tempActive');
-        $('.activeFooter').removeClass('activeFooter');
-        $('#contactButtonContainer').addClass('activeFooter');
-        changeActiveFooter();
+
+        $(selectedSection + ' .banner h3').html('Cylinder Contact');
+        $(selectedSection + ' .tabletBanner h1').html('Cylinder Contact');
+
+        $('#homeSlider').slick('unslick');
       break;
   }
+
+
+  // $(selectedSection + ' .navButton').css('color','red');
 
   // Determin if screen is in Mobile or Tablet/Desktop View
   if(!screenSize){
@@ -175,6 +185,7 @@ $('.navButton').on('click', function(selectedSection){
     // It also locks the container in place so that scrolling down can not occur while screen changes.
     $('#container').height(screenHeight - 50);
     $('#container').css('position','absolute');
+    $('#container').css('top','0');
     $('#container').css('overflow','hidden');
 
     // Home Slider Width
@@ -264,13 +275,14 @@ $('.navButton').on('click', function(selectedSection){
 
 
 
-
+// Home Nav Button Is for the slider button navigation
 var homeNavButtons = function(){
 
-  $('.activeFooter').addClass('tempActive');
-  $('.activeFooter').removeClass('activeFooter');
-  $('#libraryButtonContainer').addClass('activeFooter');
-  changeActiveFooter();
+
+  $('#container').css('top','0');
+  $('#librarySection .banner h3').html('Cylinder Library');
+  $('#librarySection .tabletBanner h1').html('Cylinder Library');
+  $('#homeSlider').slick('unslick');
 
   // Determin if screen is in Mobile or Tablet/Desktop View
   if(!screenSize){
@@ -368,21 +380,7 @@ var homeNavButtons = function(){
 
 
 
-// Function For Changing footer
-var changeActiveFooter = function(){
-  $('.tempActive').animate({
-    opacity: 0
-  }, 500, function(){
-    $('.tempActive').css('display','none');
-    $('.tempActive').removeClass('tempActive');
-  })
 
-
-  $('.activeFooter').css('display','block');
-  $('.activeFooter').animate({
-    opacity: 1
-  }, 500)
-};
 
 // ///////////
 // Slick Slider

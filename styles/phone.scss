@@ -243,23 +243,29 @@ section{
   opacity: 0;
   position: absolute;
   bottom: 0;
+  display: flex;
+  justify-content: space-between;
   i{
+    margin-top: 15px;
     position: absolute;
     cursor: pointer;
     color: white;
     z-index: 10;
     font-size: 1.2em;
     &:nth-child(1){
-      left: 10%;
+      left: 7%;
     }
     &:nth-child(2){
-      left: 35%;
+      left: 27%;
     }
     &:nth-child(3){
-      left: 65%;
+      left: 47%;
     }
     &:nth-child(4){
-      left: 85%;
+      left: 67%;
+    }
+    &:nth-child(5){
+      left: 87%;
     }
 
   }//End of icons
@@ -707,6 +713,7 @@ footer{
 // //////////////
 
 #contactSection{
+    background-color: white;
 
   main{
 
@@ -734,7 +741,6 @@ footer{
       width: 100%;
       font-family: $header-font;
       padding-bottom: 15px;
-      background-color: white;
       form{
         width: 80%;
         margin: auto;

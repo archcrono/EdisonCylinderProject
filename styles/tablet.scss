@@ -209,19 +209,23 @@ section{
     position: absolute;
 
     &:nth-child(1){
-      top: 10%;
+      top: 7%;
       left: 35%;
     }
     &:nth-child(2){
-      top: 35%;
+      top: 27%;
       left: 35%;
     }
     &:nth-child(3){
-      top: 65%;
+      top: 47%;
       left: 35%;
     }
     &:nth-child(4){
-      top: 85%;
+      top: 67%;
+      left: 35%;
+    }
+    &:nth-child(5){
+      top: 87%;
       left: 35%;
     }
   }
@@ -379,7 +383,7 @@ footer{
       padding-top:2px;
       padding-left:10px;
       display: inline-block;
-      color:$pan3262;      
+      color:$pan3262;
       }
     }
 
