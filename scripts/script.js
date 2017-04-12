@@ -705,7 +705,7 @@ cylinderApp.filter('searchForCylinder', function(){
 
 
   return function(arr, searchCylinder){
-
+    fitScreen();
     if(!searchCylinder){
       return arr;
     }
