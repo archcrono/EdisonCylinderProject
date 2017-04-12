@@ -38,35 +38,30 @@
         <p class="header__num">01</p>
       </div>
       <div class="content">
-        <p>The cylinders needed to be transcribed. Over the past 7 years, with the input of Professor Mike Wisland and mechanical engineer Gary Hannah, the method of transcription has evolved over the years to the point that we now have a unique way of transcribing cylinder not found anywhere else. Read more information on our transcribing process activities here.</p>
+        <p>The cylinders needed to be transcribed. Over the past 7 years, with the input of Professor Mike Wisland and mechanical engineer Gary Hannah, the method of transcription has evolved over the years to the point that we now have a unique way of transcribing cylinders that is not found anywhere else. Read more information on our transcribing process activities here.</p>
         <div id="hidden_one">
           <div class="hidden_img">
-            <img src="/img/img1.JPG">  
-            <span>description</span>
+            <img src="/img/devices/original/original.png">  
+            <span>Figure 1. Original Assesmbly</span>
           </div>
-            <p>
-            First, to transcribe the cylinders electrically, we remove the original Edison playback assembly (needle and diaphragm) and insert some form of playback device using a modern phonograph needle.  Using a Stanton 500 cartridge, we can use a wide variety of needle sizes to optimize the playback of the cylinders.  The first device we had seen on the internet was a brass device that fit perfectly into the Edison mounting hole, but with a phono needle mounted directly beneath. The device, pictured here, was made by an unknown inventor sometime in the early 2000’s. The item was no longer available, so we borrowed the same device from the Library of Congress and had the device copied, and mounted it into an Edison Amberola 30 player, allowing electric playback, as pictured here.
+            <p style="position:relative;">
+            First, to transcribe the cylinders electrically, we remove the original Edison playback assembly (needle and diaphragm), pictued in figure 1, and insert some form of playback device using a modern phonograph needle.  Using a Stanton 500 cartridge, we can use a wide variety of needle sizes to optimize the playback of the cylinders. The first device we had seen on the internet was a brass device that fit perfectly into the Edison mounting hole, but with a phono needle mounted directly beneath. The device was made by an unknown inventor sometime in the early 2000’s. The item was no longer available, so we borrowed the same device from the Library of Congress and had the device copied, and mounted it into an Edison Amberola 30 player, allowing electric playback. We eventually decided that the contact angle was not optimized, so we decided to modify the playback device to correct the contact angle. Those devices are pictured in figure 2.
+            <img src="/img/devices/comparison.png" style="position: absolute; width: 250px; right: -40%; bottom: 20px;"><span>Figure 2.  Old and New Playback Devices</span>
             </p>
-          <div class="hidden_img-right">
-            <img src="/img/img1.JPG">  
-            <span>description</span>
+          
+          <div class="hidden_img">
+            <img src="/img/devices/clear.png">  
+            <span>Figure 3. Tonearm Device</span>
           </div>
             <p>
-              We eventually decided that the contact angle was not optimized, so we decided to modify the playback device to correct the contact angle.  That device is pictured on the right, here.
+              After studying the devices we had created, Gary Hannah, a mechanical engineer from Kansas City, decided to approach a playback device from a completely new angle. Truly thinking outside of the circle, Gary engineered a playback device that resembles a tonearm that fits into the original Edison hole. The picture presented here in figure 3 shows how this fits into an Amberola. This allows the tonearm to float considerably more, to allow playback of out-of-round cylinders. It is a very effective device to use to try to correct skips using the first method.
             </p>
           <div class="hidden_img">
-            <img src="/img/img1.JPG">  
-            <span>description</span>
+            <img src="/img/devices/color/colored.png">  
+            <span>Figure 4. Back to Edison Style</span>
           </div>
             <p>
-              After studying the devices we had created, Gary Hannah, a mecahnical engineer from Kansas City, decided to approach a playback device from a completely new angle.  Truly thinking outside of the circle, Gary engineered a playback device that resembles a tonearm that fits into the original Edison hole.  The pictures presented here show how this fits into an Amberola.  This allows the tonearm to float considerably more, to allow playback of out-of-round cylinders.  It is a very effective device to use to try to correct skips using the first method.
-            </p>
-          <div class="hidden_img">
-            <img src="/img/img1.JPG">  
-            <span>description</span>
-          </div>
-            <p>
-              Gary was determined to create an even better transcribing device.  If you’ve ever used an original Edison Amberola to play back cylinders, you know how robust that device is in playing not only out-of-round cylinders, but also its ability to play through skips.  So we went back to the original Edison design to creat our 4th modification of cylinder playback.  Gary carefully made measurement of the original Amerola 30 device, including the original needle and rocker arm, tied to the diaphragm with a string.  We simply replaced the diapraghm with an inverted Stanton 500 cartride, by with no needle since that’s no longer necessary.  It’s tied to a new needle that we ground out of a 8 mil saphire rod. Gary then 3-D printed the whole device.  Fully assembled.  This is how that device looks now.
+              Gary was determined to create an even better transcribing device. If you’ve ever used an original Edison Amberola to play back cylinders, you know how robust that device is in playing not only out-of-round cylinders, but also its ability to play through skips. So we went back to the original Edison design to creat our 4th modification of cylinder playback. Gary carefully made measurement of the original Amerola 30 device, including the original needle and rocker arm, tied to the diaphragm with a string. We simply replaced the diapraghm with an inverted Stanton 500 cartride, but with no needle since that’s no longer necessary. It’s tied to a new needle that we ground out of a 8 mil saphire rod. Gary then 3-D printed the whole device.  Fully assembled. This is how that device looks now.
             </p>
             <div style="clear:both;"></div>
             <div class="video">
