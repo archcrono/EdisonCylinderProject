@@ -240,6 +240,7 @@
             position: absolute;
             bottom: 30px;
             border: none;
+            border-radius: 15px;
             padding: 5px 10px;
             margin-left: 25%;
             z-index: 10; }
@@ -250,19 +251,19 @@
         #homeSection #homeContainer #homeSlider .libraryLink, #homeSection #homeContainer #largeHomeSlider .libraryLink {
           background-image: url("../img/cover1.png"); }
           #homeSection #homeContainer #homeSlider .libraryLink button, #homeSection #homeContainer #largeHomeSlider .libraryLink button {
-            background-color: rgba(255, 0, 0, 0.6); }
+            background-color: rgba(255, 0, 0, 0.9); }
           #homeSection #homeContainer #homeSlider .libraryLink .backColor, #homeSection #homeContainer #largeHomeSlider .libraryLink .backColor {
             background: -webkit-linear-gradient(top, red 0%, rgba(255, 255, 255, 0) 100%); }
         #homeSection #homeContainer #homeSlider .historyLink, #homeSection #homeContainer #largeHomeSlider .historyLink {
           background-image: url("../img/cover2.png"); }
           #homeSection #homeContainer #homeSlider .historyLink button, #homeSection #homeContainer #largeHomeSlider .historyLink button {
-            background-color: rgba(0, 25, 255, 0.6); }
+            background-color: rgba(0, 25, 255, 0.9); }
           #homeSection #homeContainer #homeSlider .historyLink .backColor, #homeSection #homeContainer #largeHomeSlider .historyLink .backColor {
             background: -webkit-linear-gradient(top, #0019ff 0%, rgba(255, 255, 255, 0) 100%); }
         #homeSection #homeContainer #homeSlider .randomLink, #homeSection #homeContainer #largeHomeSlider .randomLink {
           background-image: url("../img/cover3.png"); }
           #homeSection #homeContainer #homeSlider .randomLink button, #homeSection #homeContainer #largeHomeSlider .randomLink button {
-            background-color: rgba(40, 120, 0, 0.6); }
+            background-color: rgba(40, 120, 0, 0.9); }
           #homeSection #homeContainer #homeSlider .randomLink .backColor, #homeSection #homeContainer #largeHomeSlider .randomLink .backColor {
             background: -webkit-linear-gradient(top, #287800 0%, rgba(255, 255, 255, 0) 100%); }
         #homeSection #homeContainer #homeSlider .slick-dots, #homeSection #homeContainer #largeHomeSlider .slick-dots {

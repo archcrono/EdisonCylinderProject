@@ -35,9 +35,15 @@ var compareScreenType = function(){
   if(screenType !== currentScreenType){
     // console.log("Change!");
     screenType = currentScreenType;
+    var activeBackgroundColor = $('.activeCylinder').css('backgroundColor');//Get active cylinder backgroundColor
+
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
     $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
+
+
+    $('.activeCylinder').removeAttr('style');
+    $('.activeCylinder').css('background-color', activeBackgroundColor);
     $('.playButton').css('display','block');//Make play button the first one to appear
     $('.pauseButton').css('display','none');//Hide pause button
     $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');//Removes Active Metadata Status
@@ -110,6 +116,9 @@ var fitScreen = function(){
 
     // Section Header (Information/Contact Page)
     $('.sectionHeader').width(screenWidth - 100);
+
+    // Remove Search Bar Lock
+    $('#searchBar').removeClass("lockBar");
   }
 };
 fitScreen();
@@ -278,6 +287,8 @@ $('.navButton').on('click', function(){
 // Home Nav Button Is for the slider button navigation
 var homeNavButtons = function(){
 
+  $('.navButton').css('color','white');
+  $('#libraryButton').css('color','green');
 
   $('#container').css('top','0');
   $('#librarySection .banner h3').html('Cylinder Library');
