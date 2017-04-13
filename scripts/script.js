@@ -66,15 +66,15 @@ var fitScreen = function(){
 
   // Makes the elements fit appropriate depending upon screensize
   if(screenWidth <= screenSizeChange){
-    $('section').height(screenHeight - 50);
-    $('section main').height(screenHeight - 100);
+    $('section').height(screenHeight);
+    $('section main').height(screenHeight -50);
     $('section').width(screenWidth);
     $('section main').css('width','100%');
     screenSize = false;
 
     // Home Page Slider Height and Width
-    $('#homeSlider').height(screenHeight - 270);
-    $('#homeSlider div').height(screenHeight - 270);
+    $('#homeSlider').height(screenHeight - 220);
+    $('#homeSlider div').height(screenHeight - 220);
     $('.backColor').width(screenWidth);
 
     // Cylinder Metadata IS THIS NECCESSARY?
@@ -91,8 +91,8 @@ var fitScreen = function(){
   }else{
     $('section').height(screenHeight);
     $('section main').height(screenHeight);
-    $('section').width(screenWidth - 50);
-    $('section main').width(screenWidth - 100);
+    $('section').width(screenWidth);
+    $('section main').width(screenWidth);
     screenSize = true;
 
     // Cylinder Metadata
@@ -226,8 +226,8 @@ $('.navButton').on('click', function(){
       $('#container').removeAttr('style');
 
       // Reset Section Height
-      $('section').height(screenHeight - 50);
-      $('section main').height(screenHeight - 100);
+      $('section').height(screenHeight);
+      $('section main').height(screenHeight - 50);
 
       // Move selected section icon to the center
       $(selectedSection + ' header i').animate({
@@ -336,8 +336,8 @@ var homeNavButtons = function(){
       $('#container').removeAttr('style');
 
       // Reset Section Height
-      $('section').height(screenHeight - 50);
-      $('section main').height(screenHeight - 100);
+      $('section').height(screenHeight);
+      $('section main').height(screenHeight -50);
 
       // Move selected section icon to the center
       $('#librarySection' + ' header i').animate({
@@ -425,7 +425,8 @@ $(document).on('click','.cylinderSquare',function(){
         ready: function(event) {
           $(this).jPlayer("setMedia", {
             m4a: cylinderURL,
-            oga: cylinderURL
+            oga: cylinderURL,
+            preload: 'metadata'
           });
         },
         supplied: "mp3, oga",

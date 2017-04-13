@@ -1,10 +1,4 @@
-<header>
-  <ul>
-    <li>
-      <i class="fa fa-home" aria-hidden="true"></i>
-    </li>
-  </ul>
-</header>
+
 <main>
 
 

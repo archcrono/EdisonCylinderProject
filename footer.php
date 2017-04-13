@@ -16,8 +16,3 @@
   <i id="informationButton" style="cursor: pointer;" class="fa fa-info-circle navButton" aria-hidden="true"></i>
   <i id="contactButton" style="cursor: pointer;" class="fa fa-envelope navButton" aria-hidden="true"></i>
 </div>
-
-
-<footer>
-  <!-- Footer is supposed to be empty. Footer buttons have been moved to overlay this section -->
-</footer>

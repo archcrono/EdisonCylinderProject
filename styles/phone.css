@@ -12,7 +12,7 @@
 
   .lockBar {
     position: fixed !important;
-    top: 50px !important;
+    top: 0px !important;
     z-index: 20 !important;
     background-color: white; }
 
