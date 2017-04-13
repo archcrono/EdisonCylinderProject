@@ -370,10 +370,19 @@ section{
 
     #infoContainer{
       margin-top: 200px;
+      .hidden_img{
+        width: 30%;
+        height: 30%;
+        float:left;
+        margin-right: 2em;
+      }
+      .hidden_img-right{
+        width: 30%;
+        height: 30%;
+        float:right;
+        margin-left: 2em;
+      }
     }
-  }
-  .vis{
-    display: block !important;
   }
 }
 

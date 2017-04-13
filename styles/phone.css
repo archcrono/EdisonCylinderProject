@@ -1,21 +1,17 @@
 @media only screen and (max-width: 999em) {
   ::-webkit-scrollbar {
     display: none; }
-
   .active {
     z-index: -1; }
-
   .inactive {
     top: 100%;
     display: none;
     z-index: 1; }
-
   .lockBar {
     position: fixed !important;
     top: 0px !important;
     z-index: 20 !important;
     background-color: white; }
-
   .activeCylinder {
     width: 49.5%;
     display: inline-block;
@@ -43,7 +39,6 @@
         font-size: 1.6em; }
       .activeCylinder .metaInfo .subMetaInfo {
         display: none; }
-
   .activeMetaInfo {
     top: 0;
     bottom: auto !important; }
@@ -55,10 +50,8 @@
       color: #c5e86c; }
     .activeMetaInfo .subMetaInfo {
       margin-top: 5px; }
-
   #container {
     width: 100%; }
-
   .banner {
     height: 80px;
     background-position: right;
@@ -92,10 +85,8 @@
       height: 90px;
       width: 400px;
       z-index: -1; }
-
   .tabletBanner {
     display: none; }
-
   .cylinderOfTheDay {
     width: 100%;
     height: 70px;
@@ -119,7 +110,6 @@
       margin: 25px 20px 0 0; }
     .cylinderOfTheDay h3 {
       display: none; }
-
   section {
     width: 100%;
     position: absolute;
@@ -141,6 +131,7 @@
       width: 100%; }
 
   .navButtonContainers {
+    
     height: 50px;
     width: 100%;
     background-color: black;
@@ -166,9 +157,10 @@
         left: 65%; }
       .navButtonContainers i:nth-child(5) {
         left: 85%; }
+
       .navButtonContainers i span {
         display: none; }
-
+    
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
@@ -264,7 +256,6 @@
           bottom: 10px; }
       #homeSection #homeContainer #largeHomeSlider {
         display: none; }
-
   #librarySection {
     background-color: white; }
     #librarySection main #searchBar {
@@ -351,7 +342,6 @@
             display: none; }
     #librarySection main #largeActiveCylinder {
       display: none; }
-
   #informationSection {
     font-family: "Rubik", sans-serif;
     font-size: 16px;
@@ -404,22 +394,12 @@
           color: rgba(0, 149, 200, 0.25);
           font-size: 8em; }
       #informationSection #infoContainer .row .col .content {
-        position: relative; }
-        #informationSection #infoContainer .row .col .content:before {
-          content: "";
-          position: absolute;
-          border-bottom: 2px solid #efefef;
-          width: 25%; }
-        #informationSection #infoContainer .row .col .content:after {
-          content: "";
-          position: absolute;
-          border-bottom: 2px solid #efefef;
-          width: 25%;
-          right: 0; }
-        #informationSection #infoContainer .row .col .content p {
-          line-height: 1.8em;
-          padding: 15px 0;
-          color: #666; }
+        position: relative;
+        line-height: 1.8em;
+        padding: 15px 0;
+        color: #666; }
+        #informationSection #infoContainer .row .col .content .paragraph {
+          margin-bottom: 15px; }
         #informationSection #infoContainer .row .col .content .right {
           text-align: right; }
         #informationSection #infoContainer .row .col .content button {
@@ -434,6 +414,81 @@
           #informationSection #infoContainer .row .col .content button:focus {
             outline: none;
             box-shadow: inset 0 0 10px #ddd; }
+        #informationSection #infoContainer .row .col .content #hidden_one,
+        #informationSection #infoContainer .row .col .content #hidden_two {
+          display: none; }
+          #informationSection #infoContainer .row .col .content #hidden_one .hidden_img,
+          #informationSection #infoContainer .row .col .content #hidden_two .hidden_img {
+            text-align: center;
+            padding-top: 15px; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img img,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img img {
+              width: 100%; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img span,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img span {
+              width: 100%;
+              word-wrap: break-word;
+              color: #4e4e4e; }
+          #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right,
+          #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right {
+            text-align: center;
+            padding-top: 15px; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right img,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right img {
+              width: 100%; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right span,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right span {
+              width: 100%;
+              word-wrap: break-word;
+              color: #4e4e4e; }
+          #informationSection #infoContainer .row .col .content #hidden_one .clear:after,
+          #informationSection #infoContainer .row .col .content #hidden_two .clear:after {
+            content: '';
+            clear: both; }
+          #informationSection #infoContainer .row .col .content #hidden_one .video,
+          #informationSection #infoContainer .row .col .content #hidden_two .video {
+            padding-top: 1em;
+            text-align: center; }
+          #informationSection #infoContainer .row .col .content #hidden_one .modal,
+          #informationSection #infoContainer .row .col .content #hidden_two .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.4); }
+            #informationSection #infoContainer .row .col .content #hidden_one .modal .modal_content,
+            #informationSection #infoContainer .row .col .content #hidden_two .modal .modal_content {
+              position: relative;
+              background-color: #fefefe;
+              margin: auto;
+              padding: 0;
+              border: 1px solid #888;
+              width: 80%;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              -webkit-animation-name: animatetop;
+              -webkit-animation-duration: 0.6s;
+              animation-name: animatetop;
+              animation-duration: 0.6s; }
+  @-webkit-keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0; }
+    to {
+      top: 0;
+      opacity: 1; } }
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0; }
+    to {
+      top: 0;
+      opacity: 1; } }
       #informationSection #infoContainer .row .col__img {
         display: none; }
         #informationSection #infoContainer .row .col__img img {
@@ -457,6 +512,7 @@
           width: 75%;
           text-align: center;
           margin: 0 auto; }
+
 
   #contactSection {
     background-color: white; }
@@ -515,7 +571,6 @@
           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
           /* IE6-9 */ }
-
   #searchFunction {
     position: absolute;
     bottom: 0;
@@ -538,5 +593,3 @@
         #searchFunction #Container input[type=text]:focus {
           outline: none;
           width: 80%; } }
-
-/*# sourceMappingURL=phone.css.map */
