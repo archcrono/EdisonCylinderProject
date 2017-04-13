@@ -234,9 +234,9 @@ section{
 
 
 // ///////
-// Footer
+// Navigation
 // ////////
-.footerButtonContainers{
+.navButtonContainers{
   height: 50px;
   width: 100%;
   background-color: black;
@@ -253,34 +253,28 @@ section{
     z-index: 10;
     font-size: 1.2em;
     &:nth-child(1){
-      left: 7%;
+      left: 5%;
     }
     &:nth-child(2){
-      left: 27%;
+      left: 25%;
     }
     &:nth-child(3){
-      left: 47%;
+      left: 45%;
     }
     &:nth-child(4){
-      left: 67%;
+      left: 65%;
     }
     &:nth-child(5){
-      left: 87%;
+      left: 85%;
+    }
+
+    span{
+      display: none;
     }
 
   }//End of icons
-}//End of Footer Button Container
+}//End of Nav Button Container
 
-footer{
-  height: 50px;
-  width: 100%;
-  background-color: black;
-  position: absolute;
-  bottom: 0px;
-  color: white;
-  z-index: -10;
-
-}//End of Footer
 
 // //////////////
 // Home Page/Landing Page Section

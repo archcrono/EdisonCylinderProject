@@ -109,7 +109,7 @@ var fitScreen = function(){
     $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 155);
 
     // Large Active Cylinder
-    $('#largeActiveCylinder').width(screenWidth - 116);
+    $('#largeActiveCylinder').width(screenWidth - 10);
 
     // Home page color width
     $('.backColor').width($('#largeHomeSlider .slide').width());
@@ -489,7 +489,7 @@ $(document).on('click','.cylinderSquare',function(){
     // // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
-    $('#largeActiveCylinder').width(screenWidth - 116);
+    $('#largeActiveCylinder').width(screenWidth - 10);
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
 
@@ -517,7 +517,7 @@ $(document).on('click','.cylinderSquare',function(){
     // // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
-    $('#largeActiveCylinder').width(screenWidth - 116);
+    $('#largeActiveCylinder').width(screenWidth - 10);
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
 
@@ -666,7 +666,7 @@ cylinderApp.service('cylinderData', ['$http', function($http){
 // //////////////////////
 
 if(screenType == 'phone'){
-  $('.activeFooter > #searchButton').click(function(){
+  $('.navButtonContainers > #searchButton').click(function(){
     console.log('clicked');
     var height = $('#searchFunction').height();
     console.log(height);
@@ -681,7 +681,7 @@ if(screenType == 'phone'){
     }
   });
 }else{
-  $('.activeFooter > #searchButton').click(function(){
+  $('.navButtonContainers > #searchButton').click(function(){
     console.log('clicked');
     var width = $('#searchFunction').width();
     console.log(width);
