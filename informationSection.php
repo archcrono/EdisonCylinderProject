@@ -1,10 +1,4 @@
-<header>
-  <ul>
-    <li>
-      <i class="fa fa-info-circle" aria-hidden="true"></i>
-    </li>
-  </ul>
-</header>
+
 <main>
   <div class="bannerContainer">
     <!-- Banner -->

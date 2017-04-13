@@ -1,10 +1,4 @@
-<header>
-  <ul>
-    <li>
-      <i class="fa fa-home" aria-hidden="true"></i>
-    </li>
-  </ul>
-</header>
+
 <main>
 
 
@@ -25,10 +19,10 @@
     </div>
 
     <!-- Main Content -->
-    <div id="indicators">
+    <!-- <div id="indicators">
       <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
       <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-    </div>
+    </div> -->
 
     <div id="homeSlider">
 

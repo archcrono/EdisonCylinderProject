@@ -5,7 +5,7 @@
     <title>Cylinder Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Reset -->
-      <link href="styles/reset.css" rel="stylesheet" type="text/css" >'
+      <link href="styles/reset.css" rel="stylesheet" type="text/css" >
       <div id="styleContainer">
         <!-- Phone -->
           <link href="styles/phone.css" rel="stylesheet" type="text/css" >
@@ -33,6 +33,7 @@
   <body ng-app="cylinderApp">
 
     <div id="container" ng-controller="cylinderAppCtrl">
+      <!-- Banner/COD/Player  -->
 
       <!-- Home Section/Landing Page -->
 

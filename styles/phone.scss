@@ -60,7 +60,7 @@ $standard-font: 'Rubik', sans-serif;
 }
 .lockBar{
   position: fixed !important;
-  top: 50px !important;
+  top: 0px !important;
   z-index: 20 !important;
   background-color: white;
   // background-color: red;
@@ -234,47 +234,47 @@ section{
 
 
 // ///////
-// Footer
+// Navigation
 // ////////
-.footerButtonContainers{
+.navButtonContainers{
   height: 50px;
   width: 100%;
   background-color: black;
   opacity: 0;
   position: absolute;
   bottom: 0;
+  display: flex;
+  justify-content: space-between;
   i{
+    margin-top: 15px;
     position: absolute;
     cursor: pointer;
     color: white;
     z-index: 10;
     font-size: 1.2em;
     &:nth-child(1){
-      left: 10%;
+      left: 5%;
     }
     &:nth-child(2){
-      left: 35%;
+      left: 25%;
     }
     &:nth-child(3){
-      left: 65%;
+      left: 45%;
     }
     &:nth-child(4){
+      left: 65%;
+    }
+    &:nth-child(5){
       left: 85%;
     }
 
+    span{
+      display: none;
+    }
+
   }//End of icons
-}//End of Footer Button Container
+}//End of Nav Button Container
 
-footer{
-  height: 50px;
-  width: 100%;
-  background-color: black;
-  position: absolute;
-  bottom: 0px;
-  color: white;
-  z-index: -10;
-
-}//End of Footer
 
 // //////////////
 // Home Page/Landing Page Section
@@ -352,6 +352,7 @@ footer{
           position: absolute;
           bottom: 30px;
           border: none;
+          border-radius: 15px;
           padding: 5px 10px;
           margin-left: 25%;
           z-index: 10;
@@ -368,7 +369,7 @@ footer{
       .libraryLink{
         background-image: url('../img/cover1.png');
         button{
-          background-color: rgba(255,0,0,.6);
+          background-color: rgba(255,0,0,.9);
         }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(255,0,0,1) 0%,rgba(255,255,255,0) 100%);
@@ -377,7 +378,7 @@ footer{
       .historyLink{
         background-image: url('../img/cover2.png');
         button{
-          background-color: rgba(0,25,255,.6);
+          background-color: rgba(0,25,255,.9);
         }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(0,25,255,1) 0%,rgba(255,255,255,0) 100%);
@@ -386,7 +387,7 @@ footer{
       .randomLink{
         background-image: url('../img/cover3.png');
         button{
-          background-color: rgba(40,120,0,.6);
+          background-color: rgba(40,120,0,.9);
         }
         .backColor{
           background: -webkit-linear-gradient(top, rgba(40,120,0,1) 0%,rgba(255,255,255,0) 100%);
@@ -779,6 +780,7 @@ footer{
 // //////////////
 
 #contactSection{
+    background-color: white;
 
   main{
 
@@ -806,7 +808,6 @@ footer{
       width: 100%;
       font-family: $header-font;
       padding-bottom: 15px;
-      background-color: white;
       form{
         width: 80%;
         margin: auto;

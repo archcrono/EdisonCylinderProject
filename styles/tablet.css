@@ -68,36 +68,19 @@
         section header ul li i {
           left: 35%;
           top: 50%; }
-    section main {
-      margin-left: 50px; }
-  .footerButtonContainers {
+
+  .navButtonContainers {
+
     position: absolute;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    right: 0;
+    top: 100px;
     z-index: 11; }
-    .footerButtonContainers i {
-      position: absolute; }
-      .footerButtonContainers i:nth-child(1) {
-        top: 10%;
-        left: 35%; }
-      .footerButtonContainers i:nth-child(2) {
-        top: 35%;
-        left: 35%; }
-      .footerButtonContainers i:nth-child(3) {
-        top: 65%;
-        left: 35%; }
-      .footerButtonContainers i:nth-child(4) {
-        top: 85%;
-        left: 35%; }
-  footer {
-    position: absolute;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    right: 0;
-    z-index: 10; }
+
+    .navButtonContainers i span {
+      font-family: "Rubik", sans-serif;
+      margin-left: 10px;
+      display: initial; }
+
+
   #homeSection #homeContainer .bannerContainer .cylinderOfTheDay {
     position: absolute;
     top: 0;

@@ -9,7 +9,7 @@
     z-index: 1; }
   .lockBar {
     position: fixed !important;
-    top: 50px !important;
+    top: 0px !important;
     z-index: 20 !important;
     background-color: white; }
   .activeCylinder {
@@ -129,35 +129,38 @@
       position: absolute;
       overflow: scroll;
       width: 100%; }
-  .footerButtonContainers {
+
+  .navButtonContainers {
+    
     height: 50px;
     width: 100%;
     background-color: black;
     opacity: 0;
     position: absolute;
-    bottom: 0; }
-    .footerButtonContainers i {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between; }
+    .navButtonContainers i {
+      margin-top: 15px;
       position: absolute;
       cursor: pointer;
       color: white;
       z-index: 10;
       font-size: 1.2em; }
-      .footerButtonContainers i:nth-child(1) {
-        left: 10%; }
-      .footerButtonContainers i:nth-child(2) {
-        left: 35%; }
-      .footerButtonContainers i:nth-child(3) {
+      .navButtonContainers i:nth-child(1) {
+        left: 5%; }
+      .navButtonContainers i:nth-child(2) {
+        left: 25%; }
+      .navButtonContainers i:nth-child(3) {
+        left: 45%; }
+      .navButtonContainers i:nth-child(4) {
         left: 65%; }
-      .footerButtonContainers i:nth-child(4) {
+      .navButtonContainers i:nth-child(5) {
         left: 85%; }
-  footer {
-    height: 50px;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-    bottom: 0px;
-    color: white;
-    z-index: -10; }
+
+      .navButtonContainers i span {
+        display: none; }
+    
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
@@ -222,6 +225,7 @@
             position: absolute;
             bottom: 30px;
             border: none;
+            border-radius: 15px;
             padding: 5px 10px;
             margin-left: 25%;
             z-index: 10; }
@@ -232,19 +236,19 @@
         #homeSection #homeContainer #homeSlider .libraryLink, #homeSection #homeContainer #largeHomeSlider .libraryLink {
           background-image: url("../img/cover1.png"); }
           #homeSection #homeContainer #homeSlider .libraryLink button, #homeSection #homeContainer #largeHomeSlider .libraryLink button {
-            background-color: rgba(255, 0, 0, 0.6); }
+            background-color: rgba(255, 0, 0, 0.9); }
           #homeSection #homeContainer #homeSlider .libraryLink .backColor, #homeSection #homeContainer #largeHomeSlider .libraryLink .backColor {
             background: -webkit-linear-gradient(top, red 0%, rgba(255, 255, 255, 0) 100%); }
         #homeSection #homeContainer #homeSlider .historyLink, #homeSection #homeContainer #largeHomeSlider .historyLink {
           background-image: url("../img/cover2.png"); }
           #homeSection #homeContainer #homeSlider .historyLink button, #homeSection #homeContainer #largeHomeSlider .historyLink button {
-            background-color: rgba(0, 25, 255, 0.6); }
+            background-color: rgba(0, 25, 255, 0.9); }
           #homeSection #homeContainer #homeSlider .historyLink .backColor, #homeSection #homeContainer #largeHomeSlider .historyLink .backColor {
             background: -webkit-linear-gradient(top, #0019ff 0%, rgba(255, 255, 255, 0) 100%); }
         #homeSection #homeContainer #homeSlider .randomLink, #homeSection #homeContainer #largeHomeSlider .randomLink {
           background-image: url("../img/cover3.png"); }
           #homeSection #homeContainer #homeSlider .randomLink button, #homeSection #homeContainer #largeHomeSlider .randomLink button {
-            background-color: rgba(40, 120, 0, 0.6); }
+            background-color: rgba(40, 120, 0, 0.9); }
           #homeSection #homeContainer #homeSlider .randomLink .backColor, #homeSection #homeContainer #largeHomeSlider .randomLink .backColor {
             background: -webkit-linear-gradient(top, #287800 0%, rgba(255, 255, 255, 0) 100%); }
         #homeSection #homeContainer #homeSlider .slick-dots, #homeSection #homeContainer #largeHomeSlider .slick-dots {
@@ -508,62 +512,65 @@
           width: 75%;
           text-align: center;
           margin: 0 auto; }
-  #contactSection main .bannerContainer .cylinderOfTheDay {
-    display: none; }
-  #contactSection main #contactHeader {
-    max-width: 100%;
-    padding: 20px 10px; }
-    #contactSection main #contactHeader h2 {
-      font-size: 3em;
-      color: #00843d; }
-    #contactSection main #contactHeader h3 {
-      font-size: 1.5em;
-      color: #d45d00; }
-  #contactSection main #contactContainer {
-    width: 100%;
-    font-family: "Arsenal", sans-serif;
-    padding-bottom: 15px;
+
+
+  #contactSection {
     background-color: white; }
-    #contactSection main #contactContainer form {
-      width: 80%;
-      margin: auto;
-      padding: 0 20px; }
-      #contactSection main #contactContainer form h3 {
-        width: 100%;
-        margin: 10px 0;
-        font-size: 1.3em;
-        font-weight: bold;
-        color: #78be20; }
-      #contactSection main #contactContainer form input {
-        width: 100%;
-        display: inline-block;
-        margin: 10px 0;
-        border: 1px solid black;
-        font-size: 1.3em; }
-      #contactSection main #contactContainer form textarea {
-        margin: 10px 0;
-        width: 100%;
-        height: 200px;
-        border: 1px solid black;
-        resize: none; }
-      #contactSection main #contactContainer form button {
-        display: block;
-        text-align: right;
-        border: 1px solid;
-        margin: 10px 0;
-        font-size: 1.2em;
-        color: white;
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
-        background: #006e2e;
-        /* Old browsers */
-        background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #006e2e 0%, #006e2e 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #006e2e 0%, #006e2e 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
-        /* IE6-9 */ }
+    #contactSection main .bannerContainer .cylinderOfTheDay {
+      display: none; }
+    #contactSection main #contactHeader {
+      max-width: 100%;
+      padding: 20px 10px; }
+      #contactSection main #contactHeader h2 {
+        font-size: 3em;
+        color: #00843d; }
+      #contactSection main #contactHeader h3 {
+        font-size: 1.5em;
+        color: #d45d00; }
+    #contactSection main #contactContainer {
+      width: 100%;
+      font-family: "Arsenal", sans-serif;
+      padding-bottom: 15px; }
+      #contactSection main #contactContainer form {
+        width: 80%;
+        margin: auto;
+        padding: 0 20px; }
+        #contactSection main #contactContainer form h3 {
+          width: 100%;
+          margin: 10px 0;
+          font-size: 1.3em;
+          font-weight: bold;
+          color: #78be20; }
+        #contactSection main #contactContainer form input {
+          width: 100%;
+          display: inline-block;
+          margin: 10px 0;
+          border: 1px solid black;
+          font-size: 1.3em; }
+        #contactSection main #contactContainer form textarea {
+          margin: 10px 0;
+          width: 100%;
+          height: 200px;
+          border: 1px solid black;
+          resize: none; }
+        #contactSection main #contactContainer form button {
+          display: block;
+          text-align: right;
+          border: 1px solid;
+          margin: 10px 0;
+          font-size: 1.2em;
+          color: white;
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
+          background: #006e2e;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #006e2e 0%, #006e2e 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, #006e2e 0%, #006e2e 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
+          /* IE6-9 */ }
   #searchFunction {
     position: absolute;
     bottom: 0;

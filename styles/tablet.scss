@@ -189,51 +189,25 @@ section{
    }//End of UL
  }//End of Header
 
- main{
-   margin-left: 50px;
- }
 }//End Of Section
 
 // //////////
-// Footer
+// Navigation
 // //////////
 
-.footerButtonContainers{
+.navButtonContainers{
   position: absolute;
-  top: 0;
-  width: 50px;
-  height: 100%;
-  right: 0;
+  top: 100px;
   z-index: 11;
-  i{
-    position: absolute;
 
-    &:nth-child(1){
-      top: 10%;
-      left: 35%;
-    }
-    &:nth-child(2){
-      top: 35%;
-      left: 35%;
-    }
-    &:nth-child(3){
-      top: 65%;
-      left: 35%;
-    }
-    &:nth-child(4){
-      top: 85%;
-      left: 35%;
+  i{
+    span{
+      font-family: $standard-font;
+      margin-left: 10px;
+      display: initial;
     }
   }
-}
 
-footer{
-  position: absolute;
-  top: 0;
-  width: 50px;
-  height: 100%;
-  right: 0;
-  z-index: 10;
 }
 
 // /////////////
@@ -379,7 +353,7 @@ footer{
       padding-top:2px;
       padding-left:10px;
       display: inline-block;
-      color:$pan3262;      
+      color:$pan3262;
       }
     }
 

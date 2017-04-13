@@ -35,9 +35,15 @@ var compareScreenType = function(){
   if(screenType !== currentScreenType){
     // console.log("Change!");
     screenType = currentScreenType;
+    var activeBackgroundColor = $('.activeCylinder').css('backgroundColor');//Get active cylinder backgroundColor
+
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
     $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
+
+
+    $('.activeCylinder').removeAttr('style');
+    $('.activeCylinder').css('background-color', activeBackgroundColor);
     $('.playButton').css('display','block');//Make play button the first one to appear
     $('.pauseButton').css('display','none');//Hide pause button
     $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');//Removes Active Metadata Status
@@ -60,16 +66,15 @@ var fitScreen = function(){
 
   // Makes the elements fit appropriate depending upon screensize
   if(screenWidth <= screenSizeChange){
-    $('section').height(screenHeight - 50);
-    $('section main').height(screenHeight - 100);
+    $('section').height(screenHeight);
+    $('section main').height(screenHeight -50);
     $('section').width(screenWidth);
     $('section main').css('width','100%');
-    $('.footerButtonContainers i').css('top', '15px');
     screenSize = false;
 
     // Home Page Slider Height and Width
-    $('#homeSlider').height(screenHeight - 270);
-    $('#homeSlider div').height(screenHeight - 270);
+    $('#homeSlider').height(screenHeight - 220);
+    $('#homeSlider div').height(screenHeight - 220);
     $('.backColor').width(screenWidth);
 
     // Cylinder Metadata IS THIS NECCESSARY?
@@ -86,9 +91,8 @@ var fitScreen = function(){
   }else{
     $('section').height(screenHeight);
     $('section main').height(screenHeight);
-    $('section').width(screenWidth - 50);
-    $('section main').width(screenWidth - 100);
-    $('.footerButtonContainers i').removeAttr('style');
+    $('section').width(screenWidth);
+    $('section main').width(screenWidth);
     screenSize = true;
 
     // Cylinder Metadata
@@ -105,13 +109,16 @@ var fitScreen = function(){
     $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 155);
 
     // Large Active Cylinder
-    $('#largeActiveCylinder').width(screenWidth - 116);
+    $('#largeActiveCylinder').width(screenWidth - 10);
 
     // Home page color width
     $('.backColor').width($('#largeHomeSlider .slide').width());
 
     // Section Header (Information/Contact Page)
     $('.sectionHeader').width(screenWidth - 100);
+
+    // Remove Search Bar Lock
+    $('#searchBar').removeClass("lockBar");
   }
 };
 fitScreen();
@@ -127,7 +134,10 @@ $(window).resize(function(){
 // ///////////////
 // Get selected Nav section
 // ///////////////
-$('.navButton').on('click', function(selectedSection){
+$('.navButton').on('click', function(){
+
+  $('.navButton').css('color','white');
+  $(this).css('color','green');
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -136,33 +146,42 @@ $('.navButton').on('click', function(selectedSection){
   switch ($(this).attr('id')) {
     case 'homeButton':
         selectedSection = '#homeSection';
-        $('.activeFooter').addClass('tempActive');
-        $('.activeFooter').removeClass('activeFooter');
-        $('#homeButtonContainer').addClass('activeFooter');
-        changeActiveFooter();
+
+        $('#homeSlider').slick({
+          arrows: false,
+          infinite: false,
+          dots: true
+        });
+
       break;
     case 'libraryButton':
         selectedSection = '#librarySection';
-        $('.activeFooter').addClass('tempActive');
-        $('.activeFooter').removeClass('activeFooter');
-        $('#libraryButtonContainer').addClass('activeFooter');
-        changeActiveFooter();
+
+        $(selectedSection + ' .banner h3').html('Cylinder Library');
+        $(selectedSection + ' .tabletBanner h1').html('Cylinder Library');
+
+        $('#homeSlider').slick('unslick');
       break;
     case 'informationButton':
         selectedSection = '#informationSection';
-        $('.activeFooter').addClass('tempActive');
-        $('.activeFooter').removeClass('activeFooter');
-        $('#informationButtonContainer').addClass('activeFooter');
-        changeActiveFooter();
+
+        $(selectedSection + ' .banner h3').html('Cylinder Information');
+        $(selectedSection + ' .tabletBanner h1').html('Cylinder Information');
+
+        $('#homeSlider').slick('unslick');
       break;
     case 'contactButton':
         selectedSection = '#contactSection';
-        $('.activeFooter').addClass('tempActive');
-        $('.activeFooter').removeClass('activeFooter');
-        $('#contactButtonContainer').addClass('activeFooter');
-        changeActiveFooter();
+
+        $(selectedSection + ' .banner h3').html('Cylinder Contact');
+        $(selectedSection + ' .tabletBanner h1').html('Cylinder Contact');
+
+        $('#homeSlider').slick('unslick');
       break;
   }
+
+
+  // $(selectedSection + ' .navButton').css('color','red');
 
   // Determin if screen is in Mobile or Tablet/Desktop View
   if(!screenSize){
@@ -175,6 +194,7 @@ $('.navButton').on('click', function(selectedSection){
     // It also locks the container in place so that scrolling down can not occur while screen changes.
     $('#container').height(screenHeight - 50);
     $('#container').css('position','absolute');
+    $('#container').css('top','0');
     $('#container').css('overflow','hidden');
 
     // Home Slider Width
@@ -206,8 +226,8 @@ $('.navButton').on('click', function(selectedSection){
       $('#container').removeAttr('style');
 
       // Reset Section Height
-      $('section').height(screenHeight - 50);
-      $('section main').height(screenHeight - 100);
+      $('section').height(screenHeight);
+      $('section main').height(screenHeight - 50);
 
       // Move selected section icon to the center
       $(selectedSection + ' header i').animate({
@@ -264,13 +284,16 @@ $('.navButton').on('click', function(selectedSection){
 
 
 
-
+// Home Nav Button Is for the slider button navigation
 var homeNavButtons = function(){
 
-  $('.activeFooter').addClass('tempActive');
-  $('.activeFooter').removeClass('activeFooter');
-  $('#libraryButtonContainer').addClass('activeFooter');
-  changeActiveFooter();
+  $('.navButton').css('color','white');
+  $('#libraryButton').css('color','green');
+
+  $('#container').css('top','0');
+  $('#librarySection .banner h3').html('Cylinder Library');
+  $('#librarySection .tabletBanner h1').html('Cylinder Library');
+  $('#homeSlider').slick('unslick');
 
   // Determin if screen is in Mobile or Tablet/Desktop View
   if(!screenSize){
@@ -313,8 +336,8 @@ var homeNavButtons = function(){
       $('#container').removeAttr('style');
 
       // Reset Section Height
-      $('section').height(screenHeight - 50);
-      $('section main').height(screenHeight - 100);
+      $('section').height(screenHeight);
+      $('section main').height(screenHeight -50);
 
       // Move selected section icon to the center
       $('#librarySection' + ' header i').animate({
@@ -368,21 +391,7 @@ var homeNavButtons = function(){
 
 
 
-// Function For Changing footer
-var changeActiveFooter = function(){
-  $('.tempActive').animate({
-    opacity: 0
-  }, 500, function(){
-    $('.tempActive').css('display','none');
-    $('.tempActive').removeClass('tempActive');
-  })
 
-
-  $('.activeFooter').css('display','block');
-  $('.activeFooter').animate({
-    opacity: 1
-  }, 500)
-};
 
 // ///////////
 // Slick Slider
@@ -416,7 +425,8 @@ $(document).on('click','.cylinderSquare',function(){
         ready: function(event) {
           $(this).jPlayer("setMedia", {
             m4a: cylinderURL,
-            oga: cylinderURL
+            oga: cylinderURL,
+            preload: 'metadata'
           });
         },
         supplied: "mp3, oga",
@@ -479,7 +489,7 @@ $(document).on('click','.cylinderSquare',function(){
     // // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
-    $('#largeActiveCylinder').width(screenWidth - 116);
+    $('#largeActiveCylinder').width(screenWidth - 10);
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
 
@@ -507,7 +517,7 @@ $(document).on('click','.cylinderSquare',function(){
     // // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
-    $('#largeActiveCylinder').width(screenWidth - 116);
+    $('#largeActiveCylinder').width(screenWidth - 10);
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
 
@@ -656,7 +666,7 @@ cylinderApp.service('cylinderData', ['$http', function($http){
 // //////////////////////
 
 if(screenType == 'phone'){
-  $('.activeFooter > #searchButton').click(function(){
+  $('.navButtonContainers > #searchButton').click(function(){
     console.log('clicked');
     var height = $('#searchFunction').height();
     console.log(height);
@@ -671,7 +681,7 @@ if(screenType == 'phone'){
     }
   });
 }else{
-  $('.activeFooter > #searchButton').click(function(){
+  $('.navButtonContainers > #searchButton').click(function(){
     console.log('clicked');
     var width = $('#searchFunction').width();
     console.log(width);
@@ -696,7 +706,7 @@ cylinderApp.filter('searchForCylinder', function(){
 
 
   return function(arr, searchCylinder){
-
+    fitScreen();
     if(!searchCylinder){
       return arr;
     }
