@@ -35,12 +35,10 @@
     background: none !important; }
   #informationSection .row {
     display: flex; }
-    #informationSection .row .col:nth-child(even) .header {
+    #informationSection .row:nth-child(even) .header {
       text-align: right; }
-      #informationSection .row .col:nth-child(even) .header__num {
+      #informationSection .row:nth-child(even) .header__num {
         right: 0; }
-    #informationSection .row .col .content {
-      position: relative; }
     #informationSection .row .col__img {
       display: inherit !important; }
       #informationSection .row .col__img--right {

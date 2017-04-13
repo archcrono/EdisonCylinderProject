@@ -96,18 +96,15 @@
 	}
 	.row{
 		display: flex;
+    &:nth-child(even){
+      .header{
+        text-align: right;
+        &__num{
+            right: 0;
+        }
+      }
+    }
 		.col{
-      &:nth-child(even){
-          .header{
-              text-align: right;
-              &__num{
-                  right: 0;
-              }
-          }
-      }
-      .content{
-        position: relative;
-      }
 			&__img{
 				display: inherit !important;
         &--right{
