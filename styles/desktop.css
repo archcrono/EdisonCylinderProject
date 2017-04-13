@@ -39,22 +39,14 @@
       text-align: right; }
       #informationSection .row .col:nth-child(even) .header__num {
         right: 0; }
-    #informationSection .row .col:nth-child(even) .content {
+    #informationSection .row .col .content {
       position: relative; }
-      #informationSection .row .col:nth-child(even) .content:before {
-        content: "";
-        position: absolute;
-        border-bottom: 2px solid #efefef;
-        width: 25%;
-        right: 0; }
-      #informationSection .row .col:nth-child(even) .content:after {
-        content: "";
-        position: absolute;
-        border-bottom: 2px solid #efefef;
-        width: 25%;
-        left: 0; }
     #informationSection .row .col__img {
       display: inherit !important; }
+      #informationSection .row .col__img--right {
+        float: right; }
+      #informationSection .row .col__img--left {
+        float: left; }
   #informationSection .members .member {
     width: 30%; }
   #contactSection main .bannerContainer .cylinderOfTheDay i {

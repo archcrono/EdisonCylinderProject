@@ -1,15 +1,12 @@
 @media only screen and (min-width: 651px) and (max-width: 999em) {
   .active {
     z-index: -1; }
-
   .inactive {
     top: 0;
     display: none;
     z-index: 1; }
-
   .banner {
     display: none; }
-
   .tabletBanner {
     display: block;
     width: 60%;
@@ -36,7 +33,6 @@
       opacity: .6; }
     .tabletBanner .largeBannerRotate {
       float: right; }
-
   .cylinderOfTheDay {
     display: initial;
     justify-content: initial;
@@ -60,7 +56,6 @@
         margin-bottom: 10px; }
       .cylinderOfTheDay .cylinderOfTheDayMetadata h3 {
         display: block; }
-
   section {
     width: 100%; }
     section header {
@@ -75,7 +70,6 @@
           top: 50%; }
     section main {
       margin-left: 50px; }
-
   .footerButtonContainers {
     position: absolute;
     top: 0;
@@ -97,7 +91,6 @@
       .footerButtonContainers i:nth-child(4) {
         top: 85%;
         left: 35%; }
-
   footer {
     position: absolute;
     top: 0;
@@ -105,7 +98,6 @@
     height: 100%;
     right: 0;
     z-index: 10; }
-
   #homeSection #homeContainer .bannerContainer .cylinderOfTheDay {
     position: absolute;
     top: 0;
@@ -130,7 +122,6 @@
       #homeSection #homeContainer #largeHomeSlider .slide .backColor {
         width: 32%;
         height: 300px; }
-
   #librarySection main .bannerContainer {
     max-width: 100%;
     position: fixed;
@@ -199,7 +190,6 @@
       padding-left: 10px;
       display: inline-block;
       color: #00bfb3; }
-
   #informationSection main .bannerContainer {
     position: fixed;
     z-index: 20;
@@ -234,9 +224,16 @@
           display: block; }
   #informationSection main #infoContainer {
     margin-top: 200px; }
-  #informationSection .vis {
-    display: block !important; }
-
+    #informationSection main #infoContainer .hidden_img {
+      width: 30%;
+      height: 30%;
+      float: left;
+      margin-right: 2em; }
+    #informationSection main #infoContainer .hidden_img-right {
+      width: 30%;
+      height: 30%;
+      float: right;
+      margin-left: 2em; }
   #contactSection main .bannerContainer {
     position: fixed;
     z-index: 20;
@@ -280,7 +277,6 @@
       margin: auto; }
       #contactSection main #contactContainer form fieldset {
         width: 100%; }
-
   #searchFunction {
     top: 0;
     right: 0;
@@ -288,6 +284,7 @@
     width: 0; }
     #searchFunction #Container {
       padding: 4em; } }
+
 @media only screen and (min-width: 651px) and (max-width: 850px) {
   .tabletBanner .largeBannerBar {
     margin-left: -120px; }
@@ -297,6 +294,7 @@
     margin-left: 160px; }
   .tabletBanner .bannerBar:nth-of-type(4) {
     margin-left: 200px; } }
+
 @media only screen and (min-width: 851px) {
   .tabletBanner .bannerBar:nth-of-type(2) {
     margin-left: 240px; }
@@ -304,5 +302,3 @@
     margin-left: 280px; }
   .tabletBanner .bannerBar:nth-of-type(4) {
     margin-left: 320px; } }
-
-/*# sourceMappingURL=tablet.css.map */

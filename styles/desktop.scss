@@ -97,34 +97,27 @@
 	.row{
 		display: flex;
 		.col{
-            &:nth-child(even){
-                .header{
-                    text-align: right;
-                    &__num{
-                        right: 0;
-                    }
-                }
-                .content{
-                    position: relative;
-                    &:before{
-                      content: "";
-                      position: absolute;
-                      border-bottom: 2px solid #efefef;
-                      width: 25%;
-                      right: 0;
-                    }
-                    &:after{
-                      content: "";
-                      position: absolute;
-                      border-bottom: 2px solid #efefef;
-                      width: 25%;
-                      left: 0;
-                    }
-                }
-            }
+      &:nth-child(even){
+          .header{
+              text-align: right;
+              &__num{
+                  right: 0;
+              }
+          }
+      }
+      .content{
+        position: relative;
+      }
 			&__img{
 				display: inherit !important;
+        &--right{
+          float:right;
+        }
+        &--left{
+          float:left;
+        }
 			}
+      
 		}
 	}
 	.members{

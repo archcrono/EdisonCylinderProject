@@ -390,22 +390,12 @@
           color: rgba(0, 149, 200, 0.25);
           font-size: 8em; }
       #informationSection #infoContainer .row .col .content {
-        position: relative; }
-        #informationSection #infoContainer .row .col .content:before {
-          content: "";
-          position: absolute;
-          border-bottom: 2px solid #efefef;
-          width: 25%; }
-        #informationSection #infoContainer .row .col .content:after {
-          content: "";
-          position: absolute;
-          border-bottom: 2px solid #efefef;
-          width: 25%;
-          right: 0; }
-        #informationSection #infoContainer .row .col .content p {
-          line-height: 1.8em;
-          padding: 15px 0;
-          color: #666; }
+        position: relative;
+        line-height: 1.8em;
+        padding: 15px 0;
+        color: #666; }
+        #informationSection #infoContainer .row .col .content .paragraph {
+          margin-bottom: 15px; }
         #informationSection #infoContainer .row .col .content .right {
           text-align: right; }
         #informationSection #infoContainer .row .col .content button {
@@ -425,10 +415,6 @@
           display: none; }
           #informationSection #infoContainer .row .col .content #hidden_one .hidden_img,
           #informationSection #infoContainer .row .col .content #hidden_two .hidden_img {
-            width: 25%;
-            height: 25%;
-            float: left;
-            margin-right: 2em;
             text-align: center;
             padding-top: 15px; }
             #informationSection #infoContainer .row .col .content #hidden_one .hidden_img img,
@@ -438,13 +424,9 @@
             #informationSection #infoContainer .row .col .content #hidden_two .hidden_img span {
               width: 100%;
               word-wrap: break-word;
-              color: #ccc; }
+              color: #4e4e4e; }
           #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right,
           #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right {
-            width: 25%;
-            height: 25%;
-            float: right;
-            margin-left: 2em;
             text-align: center;
             padding-top: 15px; }
             #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right img,
@@ -454,7 +436,7 @@
             #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right span {
               width: 100%;
               word-wrap: break-word;
-              color: #ccc; }
+              color: #4e4e4e; }
           #informationSection #infoContainer .row .col .content #hidden_one .clear:after,
           #informationSection #infoContainer .row .col .content #hidden_two .clear:after {
             content: '';
