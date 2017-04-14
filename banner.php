@@ -31,3 +31,7 @@
     <polygon points="50,0 75,0 25,150 0,150" style="fill:green;"/>
   </svg>
 </div>
+
+<div id="cylinderPlayer">
+
+</div>

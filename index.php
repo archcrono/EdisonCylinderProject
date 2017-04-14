@@ -34,9 +34,7 @@
       <!-- Banner/COD/Player  -->
       <div id="bannerContainer">
         <?php include 'banner.php' ?>
-        <div id="cylinderPlayer">
-
-        </div>
+        
       </div>
 
       <!-- Home Section/Landing Page -->
