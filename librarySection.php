@@ -5,18 +5,7 @@
     <!-- Place your HTML here -->
 
     <!-- Search bar HTML is needed -->
-  <div class="bannerContainer">
-
-    <?php include 'banner.php'; ?>
-
-    <div id="searchBar" class="search">
-
-      <input type="text" ng-model="searchCylinder" placeholder="Search...">
-      <i class="fa fa-search" aria-hidden="true"></i>
-
-    </div>
-
-  </div><!-- top -->
+  
 
 
 

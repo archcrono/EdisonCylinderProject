@@ -1,12 +1,15 @@
 @media only screen and (min-width: 651px) and (max-width: 999em) {
   .active {
     z-index: -1; }
+
   .inactive {
     top: 0;
     display: none;
     z-index: 1; }
+
   .banner {
     display: none; }
+
   .tabletBanner {
     display: block;
     width: 60%;
@@ -33,53 +36,28 @@
       opacity: .6; }
     .tabletBanner .largeBannerRotate {
       float: right; }
-  .cylinderOfTheDay {
-    display: initial;
-    justify-content: initial;
-    margin: 0; }
-    .cylinderOfTheDay img {
-      display: inline-block;
-      margin-top: 12px;
-      width: 120px;
-      height: auto; }
-    .cylinderOfTheDay i {
-      position: absolute;
-      margin: 90px 0 0 40px;
-      font-size: 2.5em;
-      display: inline-block; }
-    .cylinderOfTheDay .cylinderOfTheDayMetadata {
-      position: absolute;
-      margin-left: 10px;
-      display: inline-block; }
-      .cylinderOfTheDay .cylinderOfTheDayMetadata h2 {
-        font-size: 1.5em;
-        margin-bottom: 10px; }
-      .cylinderOfTheDay .cylinderOfTheDayMetadata h3 {
-        display: block; }
+
+  #bannerContainer #cylinderPlayer {
+    position: absolute;
+    width: 40%;
+    height: 100px;
+    top: 0;
+    right: 0; }
+
   section {
     width: 100%; }
-    section header {
-      position: absolute;
-      top: 0;
-      width: 50px;
-      height: 100%; }
-      section header ul {
-        padding-top: 10px; }
-        section header ul li i {
-          left: 35%;
-          top: 50%; }
+    section main {
+      margin: auto;
+      overflow: scroll; }
 
   .navButtonContainers {
-
     position: absolute;
     top: 100px;
     z-index: 11; }
-
     .navButtonContainers i span {
       font-family: "Rubik", sans-serif;
       margin-left: 10px;
       display: initial; }
-
 
   #homeSection #homeContainer .bannerContainer .cylinderOfTheDay {
     position: absolute;
@@ -105,6 +83,7 @@
       #homeSection #homeContainer #largeHomeSlider .slide .backColor {
         width: 32%;
         height: 300px; }
+
   #librarySection main .bannerContainer {
     max-width: 100%;
     position: fixed;
@@ -173,6 +152,7 @@
       padding-left: 10px;
       display: inline-block;
       color: #00bfb3; }
+
   #informationSection main .bannerContainer {
     position: fixed;
     z-index: 20;
@@ -217,6 +197,7 @@
       height: 30%;
       float: right;
       margin-left: 2em; }
+
   #contactSection main .bannerContainer {
     position: fixed;
     z-index: 20;
@@ -260,6 +241,7 @@
       margin: auto; }
       #contactSection main #contactContainer form fieldset {
         width: 100%; }
+
   #searchFunction {
     top: 0;
     right: 0;
@@ -267,7 +249,6 @@
     width: 0; }
     #searchFunction #Container {
       padding: 4em; } }
-
 @media only screen and (min-width: 651px) and (max-width: 850px) {
   .tabletBanner .largeBannerBar {
     margin-left: -120px; }
@@ -277,7 +258,6 @@
     margin-left: 160px; }
   .tabletBanner .bannerBar:nth-of-type(4) {
     margin-left: 200px; } }
-
 @media only screen and (min-width: 851px) {
   .tabletBanner .bannerBar:nth-of-type(2) {
     margin-left: 240px; }
@@ -285,3 +265,5 @@
     margin-left: 280px; }
   .tabletBanner .bannerBar:nth-of-type(4) {
     margin-left: 320px; } }
+
+/*# sourceMappingURL=tablet.css.map */

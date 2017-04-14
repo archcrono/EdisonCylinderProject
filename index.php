@@ -5,22 +5,20 @@
     <title>Cylinder Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Reset -->
-      <link href="styles/reset.css" rel="stylesheet" type="text/css" >
-      <div id="styleContainer">
-        <!-- Phone -->
-          <link href="styles/phone.css" rel="stylesheet" type="text/css" >
-        <!-- Tablet -->
-          <link href="styles/tablet.css" rel="stylesheet" type="text/css" >
-        <!-- Desktop -->
-          <link href="styles/desktop.css" rel="stylesheet" type="text/css" >
-      </div>
+      <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+    <!-- Phone -->
+      <link href="styles/phone.css" rel="stylesheet" type="text/css" />
+    <!-- Tablet -->
+      <link href="styles/tablet.css" rel="stylesheet" type="text/css" />
+    <!-- Desktop -->
+      <link href="styles/desktop.css" rel="stylesheet" type="text/css" />
 
     <!-- Angular -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" type="text/javascript"></script>
     <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Rubik|Arsenal" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Rubik|Arsenal" rel="stylesheet" />
     <!-- jQuery -->
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- Slick Slider -->
@@ -34,6 +32,12 @@
 
     <div id="container" ng-controller="cylinderAppCtrl">
       <!-- Banner/COD/Player  -->
+      <div id="bannerContainer">
+        <?php include 'banner.php' ?>
+        <div id="cylinderPlayer">
+
+        </div>
+      </div>
 
       <!-- Home Section/Landing Page -->
 

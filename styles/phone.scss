@@ -122,6 +122,20 @@ $standard-font: 'Rubik', sans-serif;
   width: 100%;
 }
 
+#bannerContainer{
+  height: 165px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  #cylinderPlayer{
+    width: 100%;
+    height: 70px;
+    background-color: grey;
+    border-bottom: 5px solid white;
+  }
+}
+
 .banner{
   height: 80px;
   background-position: right;
@@ -129,6 +143,7 @@ $standard-font: 'Rubik', sans-serif;
   padding: 10px 0 0 10px;
   font-family: $standard-font;
   color: white;
+  border-bottom: 5px solid white;
   img{
     width: 90px;
     position: relative;
@@ -224,8 +239,9 @@ section{
   }//End of Header
 
   main{
+    margin-top: 165px;
     position: absolute;
-    overflow: scroll;
+    // overflow: scroll;
     width: 100%;
   }
 
@@ -241,7 +257,7 @@ section{
   width: 100%;
   background-color: black;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: space-between;
@@ -480,7 +496,6 @@ section{
     //
     #libraryContainer{
       width: 100%;
-      margin-top: 60px;
 
       .cylinderSquare{
         width: 50%;
@@ -727,7 +742,7 @@ section{
               animation-duration: 0.6s
             }
             @-webkit-keyframes animatetop {
-                from {top:-300px; opacity:0} 
+                from {top:-300px; opacity:0}
                 to {top:0; opacity:1}
             }
 

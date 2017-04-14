@@ -103,8 +103,8 @@ var fitScreen = function(){
     // Cylinder of the Day / Search resize
     $('.bannerContainer').width($('.active main').width());
     $('.active .cylinderOfTheDay').width(($('.active .cylinderOfTheDay').parent().width() - $('.active .tabletBanner').width()) - 5);
-    $('#searchBar').width(($('#searchBar').parent().width() - $('.active .tabletBanner').width()) - 5);
-
+    $('#cylinderPlayer').width((screenWidth - $('.tabletBanner').width()) - 5);
+    
     // Home Content Fit
     $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 155);
 
@@ -583,14 +583,13 @@ $("#showAdvancedSearch").click(function(){
 // //////////////
 // SeachBar Lock
 // //////////////
-var searchBar = $('#searchBar');
+var searchBar = $('#cylinderPlayer');
 
-$('#librarySection main').scroll(function(){
-  // console.log(searchBar.position().top);
+$(window).scroll(function(){
 
   if(screenWidth <= screenSizeChange){
     // Mobile
-    if($('#librarySection main').scrollTop() > 90 ){
+    if($(this).scrollTop() > 90 ){
       // console.log("Hello");
   		searchBar.addClass("lockBar");
   	}

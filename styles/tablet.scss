@@ -137,35 +137,16 @@ $standard-font: 'Rubik', sans-serif;
     float: right;
   }
 }
-.cylinderOfTheDay{
-  display: initial;
-  justify-content: initial;
-  margin: 0;
-  img{
-    display: inline-block;
-    margin-top: 12px;
-    width: 120px;
-    height: auto;
-  }
-  i{
+#bannerContainer{
+  #cylinderPlayer{
     position: absolute;
-    margin: 90px 0 0 40px;
-    font-size: 2.5em;
-    display: inline-block;
+    width: 40%;
+    height: 100px;
+    top: 0;
+    right: 0;
   }
-  .cylinderOfTheDayMetadata{
-    position: absolute;
-    margin-left: 10px;
-    display: inline-block;
-    h2{
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-    h3{
-      display: block;
-    }
-  }
-}//End of Cylinder of the day
+}
+
 
 // ///////////
 // Section
@@ -173,21 +154,10 @@ $standard-font: 'Rubik', sans-serif;
 
 section{
   width: 100%;
- header{
-   position: absolute;
-   top: 0;
-   width: 50px;
-   height: 100%;
-   ul{
-     padding-top: 10px;
-     li{
-       i{
-         left: 35%;
-         top: 50%;
-       }//End of I
-     }//End of LI
-   }//End of UL
- }//End of Header
+  main{
+    margin: auto;
+    overflow: scroll;
+  }
 
 }//End Of Section
 

@@ -1,18 +1,5 @@
 
 <main>
-  <div class="bannerContainer">
-    <!-- Banner -->
-    <?php include 'banner.php'; ?>
-    <!-- Cylinder Of The Day -->
-    <div class="cylinderOfTheDay">
-      <img src="img/cover4.png" alt="Album Cover">
-      <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-      <div class="cylinderOfTheDayMetadata">
-        <h2>Song Title</h2>
-        <h3>Artist Name</h3>
-      </div>
-    </div>
-  </div>
 
 
   <!-- Place your HTML here -->
@@ -26,7 +13,7 @@
 
     <div class="row">
       <div class="col">
-        
+
         <div class="col__img col__img--right">
           <img src="img/cylinder1.jpg" alt="">
         </div>
@@ -42,9 +29,9 @@
           </div>
 
           <div id="hidden_one">
-            
+
             <div class="hidden_img">
-              <img src="/img/devices/original/original.png">  
+              <img src="/img/devices/original/original.png">
               <span>Figure 1. Original Assesmbly</span>
             </div>
 
@@ -60,26 +47,26 @@
             <div class="paragraph">
               The device was made by an unknown inventor sometime in the early 2000’s. The item was no longer available, so we borrowed the same device from the Library of Congress and had the device copied, and mounted it into an Edison Amberola 30 player, allowing electric playback. We eventually decided that the contact angle was not optimized, so we decided to modify the playback device to correct the contact angle. Those devices are pictured in figure 2.
             </div>
-            
-            
-            
+
+
+
             <div class="hidden_img">
-              <img src="/img/devices/clear.png">  
+              <img src="/img/devices/clear.png">
               <span>Figure 3. Tonearm Device</span>
             </div>
-            
+
             <div class="paragraph">
               After studying the devices we had created, Gary Hannah, a mechanical engineer from Kansas City, decided to approach a playback device from a completely new angle. Truly thinking outside of the circle, Gary engineered a playback device that resembles a tonearm that fits into the original Edison hole. The picture presented here in figure 3 shows how this fits into an Amberola. This allows the tonearm to float considerably more, to allow playback of out-of-round cylinders. It is a very effective device to use to try to correct skips using the first method.
             </div>
-            
+
             <div class="hidden_img-right">
-              <img src="/img/devices/color/colored.png">  
+              <img src="/img/devices/color/colored.png">
               <span>Figure 4. Back to Edison Style</span>
             </div>
-            
+
             <div class="paragraph">
               Gary was determined to create an even better transcribing device. If you’ve ever used an original Edison Amberola to play back cylinders, you know how robust that device is in playing not only out-of-round cylinders, but also its ability to play through skips. So we went back to the original Edison design to creat our 4th modification of cylinder playback. Gary carefully made measurement of the original Amerola 30 device, including the original needle and rocker arm, tied to the diaphragm with a string. We simply replaced the diapraghm with an inverted Stanton 500 cartride, but with no needle since that’s no longer necessary. It’s tied to a new needle that we ground out of a 8 mil saphire rod. Gary then 3-D printed the whole device.  Fully assembled. This is how that device looks now.
-            </div>            
+            </div>
 
             <div class="video">
               <button id="video_btn">Watch Video</button>
@@ -94,7 +81,7 @@
             </div>
 
           </div><!-- end hidden -->
-          
+
           <div class="right">
             <button id="content_1">Read More</button>
           </div>
@@ -140,7 +127,7 @@
 
     <div class="row">
       <div class="col">
-        
+
         <div class="col__img col__img--left">
           <img src="img/cylinder2.jpg" alt="">
         </div>
@@ -164,7 +151,7 @@
           <div class="right">
             <button id="content_2">Read More</button>
           </div>
-          
+
           <script>
             $('#content_2').click(function(){
               $('#hidden_two').slideToggle();
@@ -186,10 +173,10 @@
   <!-- /////////// -->
   <!-- information -->
   <!-- /////////// -->
-    
+
     <div class="row">
       <div class="col">
-        
+
         <div class="col__img col__img--right">
           <img src="img/cylinder3.jpg" alt="">
         </div>
@@ -223,7 +210,7 @@
           <h2 class="header__title">Website</h2>
           <p class="header__num">04</p>
         </div>
-        
+
         <div class="content">
           <div class="paragraph">
             The creation of the website itself is the work of Mengxi Li, Jared Cooley, and Yuki Arai. The project manager who put everything together was Abe Raigne. The Design, Look, and Function was created by Yuki Arai, Jared Cooley, and Blake Stevens. Once the website code is created, then it must interface with the database of the cylinder recordings and their metadata. It was decided to separate the website code from the ever-growing database. That is technically called the website’s back end, which was designed and implemented by Blake Stevens.
@@ -239,7 +226,7 @@
 
     <div class="row">
       <div class="col">
-        
+
         <div class="col__img col__img--right">
           <img src="img/cylinder2.jpg" alt="">
         </div>
