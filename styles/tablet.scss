@@ -138,6 +138,10 @@ $standard-font: 'Rubik', sans-serif;
   }
 }
 #bannerContainer{
+  height: 150px;
+  background-color: white;
+  border-bottom: 5px solid white;
+
   #cylinderPlayer{
     position: absolute;
     width: 40%;
