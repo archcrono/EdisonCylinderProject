@@ -150,7 +150,8 @@
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 50px; }
       #homeSection #homeContainer #homeSlider, #homeSection #homeContainer #largeHomeSlider {
         width: 100%;
         position: absolute;
@@ -232,7 +233,8 @@
       font-size: 8em;
       z-index: 10; }
     #librarySection main #libraryContainer {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 50px; }
       #librarySection main #libraryContainer .cylinderSquare {
         width: 50%;
         display: inline-block;
@@ -276,132 +278,134 @@
     font-size: 16px;
     box-sizing: border-box;
     background: white; }
-    #informationSection #infoContainer h1 {
-      font-size: 3em;
-      text-align: center;
-      margin: 40px auto; }
-    #informationSection #infoContainer .top__content {
-      width: 75%;
-      text-align: center;
-      margin: 0 auto;
-      line-height: 1.8em;
-      margin-bottom: 100px; }
-    #informationSection #infoContainer .vis {
-      display: none; }
-    #informationSection #infoContainer .about .row:nth-child(1) {
-      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover5.png") no-repeat; }
-    #informationSection #infoContainer .about .row:nth-child(2) {
-      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/libraryCover/cylinder16.jpg") no-repeat right; }
-    #informationSection #infoContainer .about .row:nth-child(3) {
-      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/libraryCover/cylinder19.jpg") no-repeat; }
-    #informationSection #infoContainer .about .row:nth-child(4) {
-      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover2.png") no-repeat right; }
-    #informationSection #infoContainer .about .row:nth-child(5) {
-      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover1.png") no-repeat; }
-    #informationSection #infoContainer .about .row:last-child {
-      margin-bottom: 40px; }
-    #informationSection #infoContainer .row .col {
-      padding: 40px; }
-      #informationSection #infoContainer .row .col .header {
-        margin-bottom: 3em;
-        position: relative; }
-        #informationSection #infoContainer .row .col .header__title {
-          font-size: 3em;
-          position: relative;
-          z-index: 1; }
-        #informationSection #infoContainer .row .col .header__subtitle {
-          font-size: 1.3em;
-          position: relative;
-          z-index: 1; }
-        #informationSection #infoContainer .row .col .header__num {
-          position: absolute;
-          font-family: "Arsenal", sans-serif;
-          left: 0;
-          top: -55px;
-          color: rgba(0, 149, 200, 0.25);
-          font-size: 8em; }
-      #informationSection #infoContainer .row .col .content {
-        position: relative;
+    #informationSection #infoContainer {
+      margin-bottom: 50px; }
+      #informationSection #infoContainer h1 {
+        font-size: 3em;
+        text-align: center;
+        margin: 40px auto; }
+      #informationSection #infoContainer .top__content {
+        width: 75%;
+        text-align: center;
+        margin: 0 auto;
         line-height: 1.8em;
-        padding: 15px 0;
-        color: #666; }
-        #informationSection #infoContainer .row .col .content .paragraph {
-          margin-bottom: 15px; }
-        #informationSection #infoContainer .row .col .content .right {
-          text-align: right; }
-        #informationSection #infoContainer .row .col .content button {
-          margin-bottom: 15px;
-          background: none;
-          padding: 15px;
-          border: 1px solid #ccc;
-          border-radius: 5px; }
-          #informationSection #infoContainer .row .col .content button:hover {
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px #ddd; }
-          #informationSection #infoContainer .row .col .content button:focus {
-            outline: none;
-            box-shadow: inset 0 0 10px #ddd; }
-        #informationSection #infoContainer .row .col .content #hidden_one,
-        #informationSection #infoContainer .row .col .content #hidden_two {
-          display: none; }
-          #informationSection #infoContainer .row .col .content #hidden_one .hidden_img,
-          #informationSection #infoContainer .row .col .content #hidden_two .hidden_img {
-            text-align: center;
-            padding-top: 15px; }
-            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img img,
-            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img img {
-              width: 100%; }
-            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img span,
-            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img span {
-              width: 100%;
-              word-wrap: break-word;
-              color: #4e4e4e; }
-          #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right,
-          #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right {
-            text-align: center;
-            padding-top: 15px; }
-            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right img,
-            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right img {
-              width: 100%; }
-            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right span,
-            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right span {
-              width: 100%;
-              word-wrap: break-word;
-              color: #4e4e4e; }
-          #informationSection #infoContainer .row .col .content #hidden_one .clear:after,
-          #informationSection #infoContainer .row .col .content #hidden_two .clear:after {
-            content: '';
-            clear: both; }
-          #informationSection #infoContainer .row .col .content #hidden_one .video,
-          #informationSection #infoContainer .row .col .content #hidden_two .video {
-            padding-top: 1em;
-            text-align: center; }
-          #informationSection #infoContainer .row .col .content #hidden_one .modal,
-          #informationSection #infoContainer .row .col .content #hidden_two .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            padding-top: 100px;
+        margin-bottom: 100px; }
+      #informationSection #infoContainer .vis {
+        display: none; }
+      #informationSection #infoContainer .about .row:nth-child(1) {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover5.png") no-repeat; }
+      #informationSection #infoContainer .about .row:nth-child(2) {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/libraryCover/cylinder16.jpg") no-repeat right; }
+      #informationSection #infoContainer .about .row:nth-child(3) {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/libraryCover/cylinder19.jpg") no-repeat; }
+      #informationSection #infoContainer .about .row:nth-child(4) {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover2.png") no-repeat right; }
+      #informationSection #infoContainer .about .row:nth-child(5) {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/cover1.png") no-repeat; }
+      #informationSection #infoContainer .about .row:last-child {
+        margin-bottom: 40px; }
+      #informationSection #infoContainer .row .col {
+        padding: 40px; }
+        #informationSection #infoContainer .row .col .header {
+          margin-bottom: 3em;
+          position: relative; }
+          #informationSection #infoContainer .row .col .header__title {
+            font-size: 3em;
+            position: relative;
+            z-index: 1; }
+          #informationSection #infoContainer .row .col .header__subtitle {
+            font-size: 1.3em;
+            position: relative;
+            z-index: 1; }
+          #informationSection #infoContainer .row .col .header__num {
+            position: absolute;
+            font-family: "Arsenal", sans-serif;
             left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: black;
-            background-color: rgba(0, 0, 0, 0.4); }
-            #informationSection #infoContainer .row .col .content #hidden_one .modal .modal_content,
-            #informationSection #infoContainer .row .col .content #hidden_two .modal .modal_content {
-              position: relative;
-              background-color: #fefefe;
-              margin: auto;
-              padding: 0;
-              border: 1px solid #888;
-              width: 80%;
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-              -webkit-animation-name: animatetop;
-              -webkit-animation-duration: 0.6s;
-              animation-name: animatetop;
-              animation-duration: 0.6s; }
+            top: -55px;
+            color: rgba(0, 149, 200, 0.25);
+            font-size: 8em; }
+        #informationSection #infoContainer .row .col .content {
+          position: relative;
+          line-height: 1.8em;
+          padding: 15px 0;
+          color: #666; }
+          #informationSection #infoContainer .row .col .content .paragraph {
+            margin-bottom: 15px; }
+          #informationSection #infoContainer .row .col .content .right {
+            text-align: right; }
+          #informationSection #infoContainer .row .col .content button {
+            margin-bottom: 15px;
+            background: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px; }
+            #informationSection #infoContainer .row .col .content button:hover {
+              border: 1px solid #ccc;
+              box-shadow: 0 0 10px #ddd; }
+            #informationSection #infoContainer .row .col .content button:focus {
+              outline: none;
+              box-shadow: inset 0 0 10px #ddd; }
+          #informationSection #infoContainer .row .col .content #hidden_one,
+          #informationSection #infoContainer .row .col .content #hidden_two {
+            display: none; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img {
+              text-align: center;
+              padding-top: 15px; }
+              #informationSection #infoContainer .row .col .content #hidden_one .hidden_img img,
+              #informationSection #infoContainer .row .col .content #hidden_two .hidden_img img {
+                width: 100%; }
+              #informationSection #infoContainer .row .col .content #hidden_one .hidden_img span,
+              #informationSection #infoContainer .row .col .content #hidden_two .hidden_img span {
+                width: 100%;
+                word-wrap: break-word;
+                color: #4e4e4e; }
+            #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right,
+            #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right {
+              text-align: center;
+              padding-top: 15px; }
+              #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right img,
+              #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right img {
+                width: 100%; }
+              #informationSection #infoContainer .row .col .content #hidden_one .hidden_img-right span,
+              #informationSection #infoContainer .row .col .content #hidden_two .hidden_img-right span {
+                width: 100%;
+                word-wrap: break-word;
+                color: #4e4e4e; }
+            #informationSection #infoContainer .row .col .content #hidden_one .clear:after,
+            #informationSection #infoContainer .row .col .content #hidden_two .clear:after {
+              content: '';
+              clear: both; }
+            #informationSection #infoContainer .row .col .content #hidden_one .video,
+            #informationSection #infoContainer .row .col .content #hidden_two .video {
+              padding-top: 1em;
+              text-align: center; }
+            #informationSection #infoContainer .row .col .content #hidden_one .modal,
+            #informationSection #infoContainer .row .col .content #hidden_two .modal {
+              display: none;
+              position: fixed;
+              z-index: 9999;
+              padding-top: 100px;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              background-color: black;
+              background-color: rgba(0, 0, 0, 0.4); }
+              #informationSection #infoContainer .row .col .content #hidden_one .modal .modal_content,
+              #informationSection #infoContainer .row .col .content #hidden_two .modal .modal_content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 0;
+                border: 1px solid #888;
+                width: 80%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                -webkit-animation-name: animatetop;
+                -webkit-animation-duration: 0.6s;
+                animation-name: animatetop;
+                animation-duration: 0.6s; }
   @-webkit-keyframes animatetop {
     from {
       top: -300px;
@@ -416,29 +420,29 @@
     to {
       top: 0;
       opacity: 1; } }
-      #informationSection #infoContainer .row .col__img {
-        display: none; }
-        #informationSection #infoContainer .row .col__img img {
-          width: 290px;
-          height: 290px; }
-    #informationSection #infoContainer .members {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-bottom: 20px; }
-      #informationSection #infoContainer .members .member {
-        margin-bottom: 15px; }
-        #informationSection #infoContainer .members .member img {
-          display: block;
-          width: auto;
-          margin: 0 auto;
+        #informationSection #infoContainer .row .col__img {
+          display: none; }
+          #informationSection #infoContainer .row .col__img img {
+            width: 290px;
+            height: 290px; }
+      #informationSection #infoContainer .members {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 20px; }
+        #informationSection #infoContainer .members .member {
           margin-bottom: 15px; }
-        #informationSection #infoContainer .members .member .img--circle {
-          border-radius: 50%; }
-        #informationSection #infoContainer .members .member p {
-          width: 75%;
-          text-align: center;
-          margin: 0 auto; }
+          #informationSection #infoContainer .members .member img {
+            display: block;
+            width: auto;
+            margin: 0 auto;
+            margin-bottom: 15px; }
+          #informationSection #infoContainer .members .member .img--circle {
+            border-radius: 50%; }
+          #informationSection #infoContainer .members .member p {
+            width: 75%;
+            text-align: center;
+            margin: 0 auto; }
 
   #contactSection {
     background-color: white; }
@@ -454,7 +458,8 @@
     #contactSection main #contactContainer {
       width: 100%;
       font-family: "Arsenal", sans-serif;
-      padding-bottom: 15px; }
+      padding-bottom: 15px;
+      margin-bottom: 50px; }
       #contactSection main #contactContainer form {
         width: 80%;
         margin: auto;

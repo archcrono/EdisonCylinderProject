@@ -38,7 +38,8 @@
       float: right; }
 
   #bannerContainer {
-    height: 150px;
+    height: 95px;
+    overflow: hidden;
     background-color: white;
     border-bottom: 5px solid white; }
     #bannerContainer #cylinderPlayer {
@@ -57,62 +58,44 @@
   .navButtonContainers {
     position: absolute;
     top: 100px;
-    z-index: 11; }
+    z-index: 11;
+    border-bottom: 5px solid white; }
     .navButtonContainers i span {
       font-family: "Rubik", sans-serif;
       margin-left: 10px;
       display: initial; }
 
-  #homeSection #homeContainer .bannerContainer .cylinderOfTheDay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    height: 150px; }
-  #homeSection #homeContainer #indicators {
-    display: none; }
-  #homeSection #homeContainer #homeSlider {
-    display: none; }
-  #homeSection #homeContainer #largeHomeSlider {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0; }
-    #homeSection #homeContainer #largeHomeSlider .slide {
-      display: inline-block;
-      width: 32%; }
-      #homeSection #homeContainer #largeHomeSlider .slide button {
-        margin-left: 24%; }
-      #homeSection #homeContainer #largeHomeSlider .slide .backColor {
-        width: 32%;
-        height: 300px; }
-
-  #librarySection main .bannerContainer {
-    max-width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    padding-bottom: 5px;
-    z-index: 20; }
-    #librarySection main .bannerContainer .tabletBanner {
-      width: 60%; }
-    #librarySection main .bannerContainer #searchBar {
-      position: relative;
+  #homeSection #homeContainer {
+    margin-bottom: 0; }
+    #homeSection #homeContainer .bannerContainer .cylinderOfTheDay {
+      position: absolute;
       top: 0;
       right: 0;
       margin: 0;
-      margin-left: 5px;
-      height: 150px;
-      background-color: #d0d0ce; }
-      #librarySection main .bannerContainer #searchBar input {
-        margin-top: 40px; }
-      #librarySection main .bannerContainer #searchBar i {
-        margin-top: 40px; }
+      height: 150px; }
+    #homeSection #homeContainer #indicators {
+      display: none; }
+    #homeSection #homeContainer #homeSlider {
+      display: none; }
+    #homeSection #homeContainer #largeHomeSlider {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 0; }
+      #homeSection #homeContainer #largeHomeSlider .slide {
+        display: inline-block;
+        width: 32%; }
+        #homeSection #homeContainer #largeHomeSlider .slide button {
+          margin-left: 24%; }
+        #homeSection #homeContainer #largeHomeSlider .slide .backColor {
+          width: 32%;
+          height: 300px; }
+
   #librarySection main #libraryContainer {
     padding-left: 5px;
     margin-top: 155px;
+    margin-bottom: 0;
     box-sizing: border-box; }
     #librarySection main #libraryContainer .cylinderSquare {
       width: 33.1%; }
@@ -190,7 +173,8 @@
         #informationSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h3 {
           display: block; }
   #informationSection main #infoContainer {
-    margin-top: 200px; }
+    margin-top: 200px;
+    margin-bottom: 0px; }
     #informationSection main #infoContainer .hidden_img {
       width: 30%;
       height: 30%;
@@ -236,6 +220,7 @@
           display: block; }
   #contactSection main #contactContainer {
     margin-top: 175px;
+    margin-bottom: 0px;
     width: 100%; }
     #contactSection main #contactContainer #contactHeader {
       width: 80%;

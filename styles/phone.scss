@@ -253,6 +253,7 @@ section{
 
   #homeContainer{
     width: 100%;
+    margin-bottom: 50px;
 
     #homeSlider, #largeHomeSlider{
       width: 100%;
@@ -386,6 +387,7 @@ section{
     //
     #libraryContainer{
       width: 100%;
+      margin-bottom: 50px;
 
       .cylinderSquare{
         width: 50%;
@@ -462,7 +464,7 @@ section{
 
 
   #infoContainer{
-
+    margin-bottom: 50px;
   h1{
     font-size: 3em;
     text-align: center;
@@ -703,6 +705,7 @@ section{
       width: 100%;
       font-family: $header-font;
       padding-bottom: 15px;
+      margin-bottom: 50px;
       form{
         width: 80%;
         margin: auto;
