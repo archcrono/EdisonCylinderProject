@@ -147,6 +147,9 @@
       .navButtonContainers i span {
         display: none; }
 
+  .activeNav {
+    color: green !important; }
+
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {

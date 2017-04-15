@@ -11,11 +11,17 @@
 
   i{
     span{
-
       display: initial !important;
     }
   }
-}
+}//End of Nav Button Conatiner
+
+.activeNav{
+
+    span{
+      animation: none;
+    }
+}//End of Active Nav
 
 // /////////////
 // Library Section

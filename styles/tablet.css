@@ -66,8 +66,16 @@
   .activeNav {
     color: green !important; }
     .activeNav span {
-      display: inline-block !important; }
+      display: inline-block !important;
+      animation: navSwipeIn;
+      animation-duration: .5s;
+      animation-iteration-count: 1; }
 
+  @keyframes navSwipeIn {
+    0% {
+      margin-left: -15px; }
+    100% {
+      margin-left: 10px; } }
   #homeSection #homeContainer {
     margin-bottom: 0; }
     #homeSection #homeContainer .bannerContainer .cylinderOfTheDay {

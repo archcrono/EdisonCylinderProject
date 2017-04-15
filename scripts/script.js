@@ -109,7 +109,12 @@ var fitScreen = function(){
     $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 140);
 
     // Large Active Cylinder
-    $('#largeActiveCylinder').width(screenWidth - 10);
+    if(screenWidth >= 650 && screenWidth <= 999){
+      $('#largeActiveCylinder').width(screenWidth - 15);
+    }else{
+      $('#largeActiveCylinder').width(screenWidth - 10);
+    }
+
 
     // Home page color width
     $('.backColor').width($('#largeHomeSlider .slide').width());
@@ -489,7 +494,7 @@ $(document).on('click','.cylinderSquare',function(){
     // // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
-    $('#largeActiveCylinder').width(screenWidth - 10);
+    $('#largeActiveCylinder').width(screenWidth - 15);
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
 
