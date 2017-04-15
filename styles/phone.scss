@@ -208,7 +208,7 @@ section{
 .navButtonContainers{
   height: 50px;
   width: 100%;
-  background-color: black;
+  background-color: white;
   opacity: 0;
   position: fixed;
   bottom: 0;
@@ -218,7 +218,7 @@ section{
     margin-top: 15px;
     position: absolute;
     cursor: pointer;
-    color: white;
+    color: black;
     z-index: 10;
     font-size: 1.2em;
     &:nth-child(1){

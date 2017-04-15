@@ -38,10 +38,9 @@
       float: right; }
 
   #bannerContainer {
-    height: 95px;
+    height: 90px;
     overflow: hidden;
-    background-color: white;
-    border-bottom: 5px solid white; }
+    background-color: white; }
     #bannerContainer #cylinderPlayer {
       position: absolute;
       width: 40%;
@@ -57,13 +56,17 @@
 
   .navButtonContainers {
     position: absolute;
-    top: 100px;
-    z-index: 11;
-    border-bottom: 5px solid white; }
+    top: 90px;
+    z-index: 11; }
     .navButtonContainers i span {
       font-family: "Rubik", sans-serif;
       margin-left: 10px;
-      display: initial; }
+      display: none; }
+
+  .activeNav {
+    color: green !important; }
+    .activeNav span {
+      display: inline-block !important; }
 
   #homeSection #homeContainer {
     margin-bottom: 0; }
@@ -94,7 +97,7 @@
 
   #librarySection main #libraryContainer {
     padding-left: 5px;
-    margin-top: 155px;
+    margin-top: 140px;
     margin-bottom: 0;
     box-sizing: border-box; }
     #librarySection main #libraryContainer .cylinderSquare {
@@ -140,40 +143,8 @@
       display: inline-block;
       color: #00bfb3; }
 
-  #informationSection main .bannerContainer {
-    position: fixed;
-    z-index: 20;
-    border-bottom: 5px solid white;
-    background-color: white; }
-    #informationSection main .bannerContainer .tabletBanner {
-      width: 60%; }
-    #informationSection main .bannerContainer .cylinderOfTheDay {
-      display: block;
-      background-color: #a7a8aa;
-      height: 150px;
-      position: absolute;
-      right: 0;
-      top: 0; }
-      #informationSection main .bannerContainer .cylinderOfTheDay img {
-        display: inline-block;
-        margin-top: 12px;
-        width: 120px;
-        height: auto; }
-      #informationSection main .bannerContainer .cylinderOfTheDay i {
-        position: absolute;
-        font-size: 2.5em;
-        display: inline-block; }
-      #informationSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata {
-        position: absolute;
-        margin-left: 10px;
-        display: inline-block; }
-        #informationSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h2 {
-          font-size: 1.5em;
-          margin-bottom: 10px; }
-        #informationSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h3 {
-          display: block; }
   #informationSection main #infoContainer {
-    margin-top: 200px;
+    margin-top: 160px;
     margin-bottom: 0px; }
     #informationSection main #infoContainer .hidden_img {
       width: 30%;
@@ -186,40 +157,8 @@
       float: right;
       margin-left: 2em; }
 
-  #contactSection main .bannerContainer {
-    position: fixed;
-    z-index: 20;
-    border-bottom: 5px solid white;
-    background-color: white; }
-    #contactSection main .bannerContainer .tabletBanner {
-      width: 60%; }
-    #contactSection main .bannerContainer .cylinderOfTheDay {
-      display: block;
-      background-color: #a7a8aa;
-      height: 150px;
-      position: absolute;
-      right: 0;
-      top: 0; }
-      #contactSection main .bannerContainer .cylinderOfTheDay img {
-        display: inline-block;
-        margin-top: 12px;
-        width: 120px;
-        height: auto; }
-      #contactSection main .bannerContainer .cylinderOfTheDay i {
-        position: absolute;
-        font-size: 2.5em;
-        display: inline-block; }
-      #contactSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata {
-        position: absolute;
-        margin-left: 10px;
-        display: inline-block; }
-        #contactSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h2 {
-          font-size: 1.5em;
-          margin-bottom: 10px; }
-        #contactSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata h3 {
-          display: block; }
   #contactSection main #contactContainer {
-    margin-top: 175px;
+    margin-top: 145px;
     margin-bottom: 0px;
     width: 100%; }
     #contactSection main #contactContainer #contactHeader {

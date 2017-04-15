@@ -2,46 +2,20 @@
 // ///////
 // Mixins
 // ///////
-@mixin desktopCylinderStyling(){
-  .bannerContainer{
-    .cylinderOfTheDay{
-      i{
-        margin: 0;
-        position: absolute;
-        top: 30px;
-        left: 45%;
-        font-size: 4.5em;
-        display: inline-block;
-      }
-      .cylinderOfTheDayMetadata{
-        position: absolute;
-        right: 0;
-        display: inline-block;
-      }
-    }
-  }
-}
+
 
 // ///////
 // All
 // ///////
-.cylinderOfTheDay{
+.navButtonContainers{
 
   i{
-    margin: 0;
-    position: absolute;
-    top: 30px;
-    left: 45%;
-    font-size: 4.5em;
-    display: inline-block;
-  }
-  .cylinderOfTheDayMetadata{
-    position: absolute;
-    right: 0;
-    display: inline-block;
-  }
-}//End of Cylinder of the day
+    span{
 
+      display: initial !important;
+    }
+  }
+}
 
 // /////////////
 // Library Section
@@ -86,9 +60,7 @@
 // Information Section
 // /////////////
 #informationSection{
-  main{
-    @include desktopCylinderStyling();
-  }
+
 	.about{
 		.row{
 			background: none !important;
@@ -114,7 +86,7 @@
           float:left;
         }
 			}
-      
+
 		}
 	}
 	.members{
@@ -129,9 +101,7 @@
 // //////////////
 
 #contactSection{
-  main{
-    @include desktopCylinderStyling();
-  }
+
   #contactContainer{
 
     fieldset{

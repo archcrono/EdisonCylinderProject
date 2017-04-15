@@ -67,7 +67,7 @@ var fitScreen = function(){
   // Makes the elements fit appropriate depending upon screensize
   if(screenWidth <= screenSizeChange){
     $('section').height(screenHeight);
-    $('section main').height(screenHeight -50);
+    $('section main').height(screenHeight - 50);
     $('section').width(screenWidth);
     $('section main').css('width','100%');
     screenSize = false;
@@ -104,9 +104,9 @@ var fitScreen = function(){
     $('.bannerContainer').width($('.active main').width());
     $('.active .cylinderOfTheDay').width(($('.active .cylinderOfTheDay').parent().width() - $('.active .tabletBanner').width()) - 5);
     $('#cylinderPlayer').width((screenWidth - $('.tabletBanner').width()) - 5);
-    
+
     // Home Content Fit
-    $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 155);
+    $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 140);
 
     // Large Active Cylinder
     $('#largeActiveCylinder').width(screenWidth - 10);
@@ -136,8 +136,9 @@ $(window).resize(function(){
 // ///////////////
 $('.navButton').on('click', function(){
 
-  $('.navButton').css('color','white');
-  $(this).css('color','green');
+  $('.navButton').css('color','black');
+  $('.activeNav').removeClass('activeNav');
+  $(this).addClass('activeNav');
 
   // Create blank variable for selected section and get icon position
   var selectedSection;
@@ -278,7 +279,6 @@ $('.navButton').on('click', function(){
 
   }
 
-// $('.navButton').on('click');
 
 });//End of get selected sections
 
@@ -627,7 +627,7 @@ for(var i = 0; i < $('.banner').length; i++){
 // Tablet
 //
 var randomTabletBannerNumber = function(){
-  return Math.floor(Math.random() * 4) + 1;
+  return Math.floor(Math.random() * 5) + 1;
 }
 
 for(var i = 0; i < $('.tabletBanner').length; i++){

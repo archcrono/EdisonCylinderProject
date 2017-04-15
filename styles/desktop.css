@@ -1,15 +1,7 @@
 @media only screen and (min-width: 1000px) {
-  .cylinderOfTheDay i {
-    margin: 0;
-    position: absolute;
-    top: 30px;
-    left: 45%;
-    font-size: 4.5em;
-    display: inline-block; }
-  .cylinderOfTheDay .cylinderOfTheDayMetadata {
-    position: absolute;
-    right: 0;
-    display: inline-block; }
+  .navButtonContainers i span {
+    display: initial !important; }
+
   #librarySection main .ng-scope {
     width: 150px; }
   #librarySection main .top .banner {
@@ -20,17 +12,7 @@
       font-size: 2em; }
   #librarySection main #libraryContainer .cylinderSquare {
     width: 20%; }
-  #informationSection main .bannerContainer .cylinderOfTheDay i {
-    margin: 0;
-    position: absolute;
-    top: 30px;
-    left: 45%;
-    font-size: 4.5em;
-    display: inline-block; }
-  #informationSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata {
-    position: absolute;
-    right: 0;
-    display: inline-block; }
+
   #informationSection .about .row {
     background: none !important; }
   #informationSection .row {
@@ -47,16 +29,8 @@
         float: left; }
   #informationSection .members .member {
     width: 30%; }
-  #contactSection main .bannerContainer .cylinderOfTheDay i {
-    margin: 0;
-    position: absolute;
-    top: 30px;
-    left: 45%;
-    font-size: 4.5em;
-    display: inline-block; }
-  #contactSection main .bannerContainer .cylinderOfTheDay .cylinderOfTheDayMetadata {
-    position: absolute;
-    right: 0;
-    display: inline-block; }
+
   #contactSection #contactContainer fieldset {
     width: 35%; } }
+
+/*# sourceMappingURL=desktop.css.map */
