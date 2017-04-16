@@ -44,7 +44,7 @@ var compareScreenType = function(){
 
     $('.activeCylinder').removeAttr('style');
     $('.activeCylinder').css('background-color', activeBackgroundColor);
-    $('.playButton').css('display','block');//Make play button the first one to appear
+    $('.playButton').css('display','inline-block');//Make play button the first one to appear
     $('.pauseButton').css('display','none');//Hide pause button
     $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');//Removes Active Metadata Status
     $('.activeCylinder').find('.subMetaInfo').css('display','none');//Hides Sub Meta info if open
@@ -72,12 +72,7 @@ var fitScreen = function(){
     $('section main').css('width','100%');
     screenSize = false;
 
-    // Home Page Slider Height and Width
-    $('#homeSlider').height(screenHeight - 220);
-    $('#homeSlider div').height(screenHeight - 220);
-    $('.backColor').width(screenWidth);
-
-    // Cylinder Metadata IS THIS NECCESSARY?
+    // Cylinder Metadata
     var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
     $('.metaInfo').width(cylinderWidth);
     $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
@@ -105,8 +100,6 @@ var fitScreen = function(){
     $('.active .cylinderOfTheDay').width(($('.active .cylinderOfTheDay').parent().width() - $('.active .tabletBanner').width()) - 5);
     $('#cylinderPlayer').width((screenWidth - $('.tabletBanner').width()) - 5);
 
-    // Home Content Fit
-    $('#largeHomeSlider').height($('#largeHomeSlider').parent().parent().height() - 140);
 
     // Large Active Cylinder
     if(screenWidth >= 650 && screenWidth <= 999){
@@ -115,9 +108,6 @@ var fitScreen = function(){
       $('#largeActiveCylinder').width(screenWidth - 10);
     }
 
-
-    // Home page color width
-    $('.backColor').width($('#largeHomeSlider .slide').width());
 
     // Section Header (Information/Contact Page)
     $('.sectionHeader').width(screenWidth - 100);
@@ -141,7 +131,7 @@ $(window).resize(function(){
 // ///////////////
 $('.navButton').on('click', function(){
 
-  $('.navButton').css('color','black');
+  $('.navButton').css('color','#717171');
   $('.activeNav').removeClass('activeNav');
   $(this).addClass('activeNav');
 
@@ -153,12 +143,6 @@ $('.navButton').on('click', function(){
     case 'homeButton':
         selectedSection = '#homeSection';
 
-        $('#homeSlider').slick({
-          arrows: false,
-          infinite: false,
-          dots: true
-        });
-
       break;
     case 'libraryButton':
         selectedSection = '#librarySection';
@@ -166,7 +150,6 @@ $('.navButton').on('click', function(){
         $(selectedSection + ' .banner h3').html('Cylinder Library');
         $(selectedSection + ' .tabletBanner h1').html('Cylinder Library');
 
-        $('#homeSlider').slick('unslick');
       break;
     case 'informationButton':
         selectedSection = '#informationSection';
@@ -174,7 +157,6 @@ $('.navButton').on('click', function(){
         $(selectedSection + ' .banner h3').html('Cylinder Information');
         $(selectedSection + ' .tabletBanner h1').html('Cylinder Information');
 
-        $('#homeSlider').slick('unslick');
       break;
     case 'contactButton':
         selectedSection = '#contactSection';
@@ -182,12 +164,9 @@ $('.navButton').on('click', function(){
         $(selectedSection + ' .banner h3').html('Cylinder Contact');
         $(selectedSection + ' .tabletBanner h1').html('Cylinder Contact');
 
-        $('#homeSlider').slick('unslick');
       break;
   }
 
-
-  // $(selectedSection + ' .navButton').css('color','red');
 
   // Determin if screen is in Mobile or Tablet/Desktop View
   if(!screenSize){
@@ -203,9 +182,6 @@ $('.navButton').on('click', function(){
     $('#container').css('top','0');
     $('#container').css('overflow','hidden');
 
-    // Home Slider Width
-    $('#homeSlider .slick-track').width('100%');
-    $('#homeSlider .slick-slide').width('100%');
 
     // Prep/Animate selected section
     $(selectedSection).css('display','block');
@@ -292,14 +268,13 @@ $('.navButton').on('click', function(){
 // Home Nav Button Is for the slider button navigation
 var homeNavButtons = function(){
 
-  $('.navButton').css('color','black');
+  $('.navButton').css('color','#717171');
   $('.activeNav').removeClass('activeNav');
   $('#libraryButton').addClass('activeNav');
 
   $('#container').css('top','0');
   $('#librarySection .banner h3').html('Cylinder Library');
   $('#librarySection .tabletBanner h1').html('Cylinder Library');
-  $('#homeSlider').slick('unslick');
 
   // Determin if screen is in Mobile or Tablet/Desktop View
   if(!screenSize){
@@ -314,9 +289,6 @@ var homeNavButtons = function(){
     $('#container').css('position','absolute');
     $('#container').css('overflow','hidden');
 
-    // Home Slider Width
-    $('#homeSlider .slick-track').width('100%');
-    $('#homeSlider .slick-slide').width('100%');
 
     // Prep/Animate selected section
     $('#librarySection').css('display','block');
@@ -397,22 +369,6 @@ var homeNavButtons = function(){
 
 
 
-
-
-// ///////////
-// Slick Slider
-// ///////////
-
-$(document).ready(function(){
-  $('#homeSlider').slick({
-    arrows: false,
-    infinite: false,
-    dots: true
-  });
-
-
-});
-
 // ///////////////
 // Expand Cylinder
 // ///////////////
@@ -421,7 +377,9 @@ $(document).on('click','.cylinderSquare',function(){
     // Ready Player
     var cylinderURL = $(this).find('.cylinderURL').html();
 
+    // Change Cylinder Player Meta Info
     $('#cylinderPlayerTitle').html($(this).find('.metaInfo').find('h2').html());
+    $('#cylinderPlayerImg').attr('src', $(this).find('.cylinderImageURL').html())
 
     $(".musicPlayer").jPlayer("clearMedia");
     $(".musicPlayer").jPlayer("setMedia",{
@@ -456,6 +414,7 @@ $(document).on('click','.cylinderSquare',function(){
     $('.activeCylinder').find('.activeMetaInfo').removeClass('activeMetaInfo');//Removes Active Metadata Status
     $('.activeCylinder').find('.subMetaInfo').css('display','none');//Hides Sub Meta info if open
     $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());//Restores width of metadata to regular cylinder width
+    $('.activeCylinder').css('width','10%');
     $('.activeCylinder').addClass('cylinderSquare');//Restores cylinder class (so it can be clicked)
     $('.activeCylinder').removeClass('activeCylinder');//Removes active cylinder class
 

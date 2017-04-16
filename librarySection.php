@@ -15,6 +15,7 @@
 
       <!-- Used to grab URL. Do not display! -->
       <h5 class="cylinderURL" style="display: none;">{{ item.url }}</h5>
+      <h5 class="cylinderImageURL" style="display: none;">{{ item.cylinderImg }}</h5>
 
 
 
@@ -39,7 +40,7 @@
 
   <div id="largeActiveCylinder" class="activeMetaInfo">
     <div class="line">
-      <img id="largeCylinderImg"  alt="Cylinder Image" style="width: 200px; height: 200px; background-color: orange;">
+      <img id="largeCylinderImg"  alt="Cylinder Image" style="width: 200px; height: 200px;">
 
 
       <span>

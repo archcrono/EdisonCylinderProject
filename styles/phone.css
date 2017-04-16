@@ -24,7 +24,8 @@
     background-clip: content-box;
     overflow: hidden;
     position: relative;
-    padding: 0 5px; }
+    padding-right: 5px;
+    margin-bottom: 2px; }
     .activeCylinder img {
       width: 100%;
       opacity: .5; }
@@ -152,7 +153,7 @@
       margin-top: 15px;
       position: absolute;
       cursor: pointer;
-      color: black;
+      color: #717171;
       z-index: 10;
       font-size: 1.2em; }
       .navButtonContainers i:nth-child(1) {
@@ -229,19 +230,18 @@
       font-size: 8em;
       z-index: 10; }
     #librarySection main #libraryContainer {
-      width: 100%;
-      margin-bottom: 50px; }
+      max-width: 100%;
+      margin-bottom: 50px;
+      padding-left: 5px; }
       #librarySection main #libraryContainer .cylinderSquare {
         width: 50%;
         display: inline-block;
         box-sizing: border-box;
         background-clip: content-box;
         overflow: hidden;
-        position: relative; }
-        #librarySection main #libraryContainer .cylinderSquare:nth-child(odd) {
-          padding: 2px 2.5px 0 5px; }
-        #librarySection main #libraryContainer .cylinderSquare:nth-child(even) {
-          padding: 2px 5px 0 2.5px; }
+        position: relative;
+        padding-right: 5px;
+        margin-bottom: 2.5px; }
         #librarySection main #libraryContainer .cylinderSquare img {
           width: 100%;
           height: 100%;
