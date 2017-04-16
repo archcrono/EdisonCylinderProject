@@ -1,89 +1,42 @@
 
 <main>
-
-
   <!-- Place your HTML here -->
-  <div id="homeContainer">
-    
+  <div id="homeContainer">   
 
-    <!-- Main Content -->
-    <!-- <div id="indicators">
-      <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-      <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-    </div> -->
+      <div class="homeBoxes">
+      <img class="alignleft" src="img/cover2.png">
+        <span>
+          <h2>Listen to the Library!</h2>
+          <p>You can search our extensive library of many cylinders.</p>
+          <p>Feel free to search by artist, title, or even year!</p>
 
-    <div id="homeSlider">
+          <button class='btn' onclick="homeNavButtons()">Listen!</button>
+        </span>
 
-      <div class="libraryLink slide">
-        <h2>Search Library</h2>
-        <p>You can search our extensive library of many cylinders.</p>
-        <p>Feel free to search by artist, title, or even year!</p>
+      </div>
+ 
+      <div class="homeBoxes">
+        <img class="alignleft" src="img/cover1.png">
+        <span>
+          <h2>This Month In History!</h2>
+          <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
 
-        <button class='homeLibraryButton' onclick="homeNavButtons()">Go!</button>
-        <div class="backColor">
+          <button class='btn' onclick="homeNavButtons()">Discover!</button>
+        </span>
 
-        </div>
       </div>
 
-      <div class="historyLink slide">
-        <h2>Today In History</h2>
-        <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
+      <div class="homeBoxes">
+      <img class="alignleft" src="img/cover4.png">
+        <span>
+          <h2>Donate!</h2>
+          <p>We would like to continue to make these cylinders available to you. You can help make that possible by donating now.</p>
 
-        <button class='homeHistoryButton' onclick="homeNavButtons()">Go!</button>
-        <div class="backColor">
+          <button class='btn' onclick="homeNavButtons()">Donate!</button>
+        </span>
 
-        </div>
       </div>
+      <span class="pushRight"></span>
 
-      <div class="randomLink slide">
-        <h2>Random</h2>
-        <p>Can't think of something to look for? Try one at random!</p>
-
-        <button class='homeRandomButton' onclick="homeNavButtons()">Go!</button>
-        <div class="backColor">
-
-        </div>
-      </div>
-
-    </div><!-- End of Home Slider -->
-
-    <div id="largeHomeSlider">
-
-      <div class="libraryLink slide">
-        <h2>Search Library</h2>
-        <p>You can search our extensive library of many cylinders.</p>
-        <p>Feel free to search by artist, title, or even year!</p>
-
-        <button class='homeLibraryButton' onclick="homeNavButtons()">Go!</button>
-        <div class="backColor">
-
-        </div>
-      </div>
-
-      <div class="historyLink slide">
-        <h2>Today In History</h2>
-        <p>Find out what people were listening to over 100 years ago on their phonographs!</p>
-
-        <button class='homeHistoryButton' onclick="homeNavButtons()">Go!</button>
-        <div class="backColor">
-
-        </div>
-      </div>
-
-      <div class="randomLink slide">
-        <h2>Random</h2>
-        <p>Can't think of something to look for? Try one at random!</p>
-
-        <button class='homeRandomButton' onclick="homeNavButtons()">Go!</button>
-        <div class="backColor">
-
-        </div>
-      </div>
-
-    </div><!-- End of Large Home Slider -->
-
-
-  </div>
-
-
+  </div><!-- homecontaner -->
 </main>

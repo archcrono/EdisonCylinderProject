@@ -176,66 +176,38 @@
     #homeSection #homeContainer {
       width: 100%;
       margin-bottom: 50px; }
-      #homeSection #homeContainer #homeSlider, #homeSection #homeContainer #largeHomeSlider {
-        width: 100%;
-        position: absolute;
-        font-family: "Rubik", sans-serif;
-        color: white;
-        margin-bottom: 0; }
-        #homeSection #homeContainer #homeSlider div, #homeSection #homeContainer #largeHomeSlider div {
-          width: 100%;
-          background-repeat: no-repeat;
-          background-size: 110%;
-          background-position: bottom; }
-          #homeSection #homeContainer #homeSlider div h2, #homeSection #homeContainer #largeHomeSlider div h2 {
-            font-size: 1.6em;
-            font-family: Helvetica;
-            font-weight: bold;
-            margin: 20px 0 20px 0;
-            padding: 0 10px; }
-          #homeSection #homeContainer #homeSlider div p, #homeSection #homeContainer #largeHomeSlider div p {
-            padding: 0 10px;
-            margin-bottom: 10px; }
-          #homeSection #homeContainer #homeSlider div h2, #homeSection #homeContainer #homeSlider div p, #homeSection #homeContainer #largeHomeSlider div h2, #homeSection #homeContainer #largeHomeSlider div p {
-            position: relative;
-            z-index: 1; }
-          #homeSection #homeContainer #homeSlider div button, #homeSection #homeContainer #largeHomeSlider div button {
-            font-size: 2em;
-            color: white;
-            position: absolute;
-            bottom: 30px;
-            border: none;
-            border-radius: 15px;
-            padding: 5px 10px;
-            margin-left: 25%;
-            z-index: 10; }
-          #homeSection #homeContainer #homeSlider div .backColor, #homeSection #homeContainer #largeHomeSlider div .backColor {
-            max-width: 100%;
-            position: absolute;
-            top: 0; }
-        #homeSection #homeContainer #homeSlider .libraryLink, #homeSection #homeContainer #largeHomeSlider .libraryLink {
-          background-image: url("../img/cover1.png"); }
-          #homeSection #homeContainer #homeSlider .libraryLink button, #homeSection #homeContainer #largeHomeSlider .libraryLink button {
-            background-color: rgba(255, 0, 0, 0.9); }
-          #homeSection #homeContainer #homeSlider .libraryLink .backColor, #homeSection #homeContainer #largeHomeSlider .libraryLink .backColor {
-            background: -webkit-linear-gradient(top, red 0%, rgba(255, 255, 255, 0) 100%); }
-        #homeSection #homeContainer #homeSlider .historyLink, #homeSection #homeContainer #largeHomeSlider .historyLink {
-          background-image: url("../img/cover2.png"); }
-          #homeSection #homeContainer #homeSlider .historyLink button, #homeSection #homeContainer #largeHomeSlider .historyLink button {
-            background-color: rgba(0, 25, 255, 0.9); }
-          #homeSection #homeContainer #homeSlider .historyLink .backColor, #homeSection #homeContainer #largeHomeSlider .historyLink .backColor {
-            background: -webkit-linear-gradient(top, #0019ff 0%, rgba(255, 255, 255, 0) 100%); }
-        #homeSection #homeContainer #homeSlider .randomLink, #homeSection #homeContainer #largeHomeSlider .randomLink {
-          background-image: url("../img/cover3.png"); }
-          #homeSection #homeContainer #homeSlider .randomLink button, #homeSection #homeContainer #largeHomeSlider .randomLink button {
-            background-color: rgba(40, 120, 0, 0.9); }
-          #homeSection #homeContainer #homeSlider .randomLink .backColor, #homeSection #homeContainer #largeHomeSlider .randomLink .backColor {
-            background: -webkit-linear-gradient(top, #287800 0%, rgba(255, 255, 255, 0) 100%); }
-        #homeSection #homeContainer #homeSlider .slick-dots, #homeSection #homeContainer #largeHomeSlider .slick-dots {
-          position: absolute;
-          bottom: 10px; }
-      #homeSection #homeContainer #largeHomeSlider {
-        display: none; }
+      #homeSection #homeContainer .homeBoxes {
+        padding: 5px;
+        padding-top: 20px;
+        margin: 10px;
+        border: solid none;
+        height: 210px; }
+        #homeSection #homeContainer .homeBoxes h2 {
+          margin-bottom: 20px;
+          font-weight: bold;
+          font-size: 200%;
+          color: #275d38; }
+        #homeSection #homeContainer .homeBoxes p {
+          margin: 10px; }
+      #homeSection #homeContainer .alignleft {
+        float: left;
+        margin-right: 2%;
+        width: 100px;
+        padding: 2px; }
+      #homeSection #homeContainer .btn {
+        border: none;
+        -webkit-border-radius: 6;
+        -moz-border-radius: 6;
+        border-radius: 6px;
+        color: #ffffff;
+        font-size: 15px;
+        background: #17b537;
+        padding: 6px 10px 6px 10px;
+        text-decoration: none;
+        float: right; }
+      #homeSection #homeContainer .btn:hover {
+        background: #e39d12;
+        text-decoration: none; }
 
   #librarySection {
     background-color: white; }
