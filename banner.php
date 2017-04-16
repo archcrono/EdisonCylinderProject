@@ -34,4 +34,14 @@
 
 <div id="cylinderPlayer">
 
+  <img src="http://dgm4410.tropht.com/EdisonCylinderProject/img/cylinderTops/cylinderTop.jpg" alt="Cylinder Image">
+
+  <h2>Cylinder Title</h2>
+
+  <!-- <i class="fa fa-play" aria-hidden="true"></i> -->
+  <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
+  <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
+
+  <i id="metaInfoButton" class="fa fa-book" aria-hidden="true"></i>
+
 </div>

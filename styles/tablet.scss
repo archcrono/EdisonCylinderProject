@@ -101,12 +101,27 @@ $standard-font: 'Rubik', sans-serif;
   background-color: white;
   // border-bottom: 5px solid white;
 
-  #cylinderPlayer{
-    position: absolute;
-    width: 40%;
-    height: 100px;
-    top: 0;
-    right: 0;
+}
+
+#cylinderPlayer{
+  position: absolute;
+  width: 40%;
+  height: 90px;
+  top: 0;
+  right: 0;
+  img{
+    width: 90px;
+    height: 90px;
+  }
+  h2{
+    font-size: 1.8em;
+  }
+  i{
+    margin-top: 8px;
+    font-size: 2.4em;
+  }
+  #metaInfoButton{
+    bottom: 5px;
   }
 }
 
