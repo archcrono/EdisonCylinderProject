@@ -408,6 +408,8 @@ $(document).on('click','.cylinderSquare',function(){
     }, 500);
 
     // Restore active cylinder to normal
+    $('.activeCylinder').find('.cylinderTopImage').css('display','none');//Hide cylinder top
+    $('.activeCylinder').find('.cylinderTopImage').css('opacity',0);
     $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
     $('.playButton').css('display','block');//Make play button the first one to appear
     $('.pauseButton').css('display','none');//Hide pause button
@@ -423,6 +425,13 @@ $(document).on('click','.cylinderSquare',function(){
     $(this).removeClass('cylinderSquare');//Remove cylinder class (so it cannot be clicked)
     $(this).find('.metaInfo').addClass('activeMetaInfo');//Make this metadata the active metadata
     $(this).find('.cylinderPlayOptions').css('display','block');//Show Play Button
+
+    // Show Cylinder Top
+    $(this).find('.cylinderTopImage').attr('src',$(this).find('.cylinderImageURL').html());
+    $(this).find('.cylinderTopImage').css('display','block');
+    $(this).find('.cylinderTopImage').animate({
+      opacity: .9
+    }, 500)
 
     if(($(this).index() + 1) % 2 == 0){
       // If in an even position spot, move and animate size

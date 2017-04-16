@@ -33,7 +33,8 @@
 
       </div>
 
-      <img ng-src="{{ item.imageURL }}" alt="">
+      <img class="cylinderTopImage" style="display: none; opacity: 0;" alt="Cylinder Top Image">
+      <img class="cylinderBackImage" ng-src="{{ item.imageURL }}" alt="">
     </div>
 
   </div>
