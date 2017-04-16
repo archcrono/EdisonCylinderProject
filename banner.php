@@ -34,9 +34,9 @@
 
 <div id="cylinderPlayer">
 
-  <img id="cylinderPlayerImg" src="http://dgm4410.tropht.com/EdisonCylinderProject/img/cylinderTops/noImage.jpg" alt="Cylinder Image">
+  <img id="cylinderPlayerImg"  alt="Cylinder Image">
 
-  <h2 id="cylinderPlayerTitle">Cylinder Title</h2>
+  <h2 id="cylinderPlayerTitle"></h2>
 
   <!-- <i class="fa fa-play" aria-hidden="true"></i> -->
 

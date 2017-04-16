@@ -735,9 +735,33 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
       $scope.returnedCylinderData[i].imageURL = randomCylinderImage();
       $scope.returnedCylinderData[i].backColor = randomColor();
 
-    }
+    };
+
+    // Select and set random cylinder
+
+    var randomCylinder = $scope.returnedCylinderData[Math.floor(Math.random() * $scope.returnedCylinderData.length)];
+    $('#cylinderPlayerTitle').html(randomCylinder.title);
+    $('#cylinderPlayerImg').attr('src', randomCylinder.cylinderImg);
+
+    $(".musicPlayer").jPlayer("setMedia",{
+      m4a: randomCylinder.url,
+      oga: randomCylinder.url
+    });
+
+    $(".musicPlayer").jPlayer({
+        ready: function(event) {
+          $(this).jPlayer("setMedia", {
+            m4a: randomCylinder.url,
+            oga: randomCylinder.url,
+            preload: 'metadata'
+          });
+        },
+        supplied: "mp3, oga",
+        useStateClassSkin: true
+    });
 
   });
+
 
 
 
