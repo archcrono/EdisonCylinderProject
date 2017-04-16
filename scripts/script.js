@@ -421,6 +421,8 @@ $(document).on('click','.cylinderSquare',function(){
     // Ready Player
     var cylinderURL = $(this).find('.cylinderURL').html();
 
+    $('#cylinderPlayerTitle').html($(this).find('.metaInfo').find('h2').html());
+
     $(".musicPlayer").jPlayer("clearMedia");
     $(".musicPlayer").jPlayer("setMedia",{
       m4a: cylinderURL,
