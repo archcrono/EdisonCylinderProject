@@ -88,31 +88,14 @@
     100% {
       margin-left: 10px; } }
   #homeSection #homeContainer {
-    margin-bottom: 0; }
-    #homeSection #homeContainer .bannerContainer .cylinderOfTheDay {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 0;
-      height: 150px; }
-    #homeSection #homeContainer #indicators {
-      display: none; }
-    #homeSection #homeContainer #homeSlider {
-      display: none; }
-    #homeSection #homeContainer #largeHomeSlider {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      bottom: 0; }
-      #homeSection #homeContainer #largeHomeSlider .slide {
-        display: inline-block;
-        width: 32%; }
-        #homeSection #homeContainer #largeHomeSlider .slide button {
-          margin-left: 24%; }
-        #homeSection #homeContainer #largeHomeSlider .slide .backColor {
-          width: 32%;
-          height: 300px; }
+    margin-bottom: 0;
+    margin-top: 140px; }
+    #homeSection #homeContainer .alignleft {
+      width: 150px; }
+    #homeSection #homeContainer .homeBoxes {
+      height: 150px;
+      margin-left: 10%;
+      margin-right: 10%; }
 
   #librarySection main #libraryContainer {
     padding-left: 5px;
