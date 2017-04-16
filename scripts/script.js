@@ -292,8 +292,9 @@ $('.navButton').on('click', function(){
 // Home Nav Button Is for the slider button navigation
 var homeNavButtons = function(){
 
-  $('.navButton').css('color','white');
-  $('#libraryButton').css('color','green');
+  $('.navButton').css('color','black');
+  $('.activeNav').removeClass('activeNav');
+  $('#libraryButton').addClass('activeNav');
 
   $('#container').css('top','0');
   $('#librarySection .banner h3').html('Cylinder Library');
@@ -766,6 +767,7 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
   $scope.expandCylinder = function(){
 
+    $('#largeCylinderImg').attr('src',this.item.cylinderImg)
     $('#largeCylinderName').html(this.item.title);
     $('#largeArtistName').html(this.item.artist);
     $('#largeMoldNumber').html(this.item.mold);

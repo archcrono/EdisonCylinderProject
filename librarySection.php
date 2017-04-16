@@ -5,7 +5,7 @@
     <!-- Place your HTML here -->
 
     <!-- Search bar HTML is needed -->
-  
+
 
 
 
@@ -16,11 +16,8 @@
       <!-- Used to grab URL. Do not display! -->
       <h5 class="cylinderURL" style="display: none;">{{ item.url }}</h5>
 
-      <div class="musicPlayer"></div>
-      <div id="jp_container_1" class="cylinderPlayOptions" aria-label="media player">
-        <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
-        <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
-      </div>
+
+
 
 
       <div class="metaInfo">
@@ -42,12 +39,9 @@
 
   <div id="largeActiveCylinder" class="activeMetaInfo">
     <div class="line">
-      <img src="http://localhost/edisoncylinderproject/img/libraryCover/cylinder13.jpg" alt="Cylinder Image" style="width: 200px; height: 200px; background-color: orange;">
+      <img id="largeCylinderImg"  alt="Cylinder Image" style="width: 200px; height: 200px; background-color: orange;">
 
-      <div id="jp_container_1" class="largeCylinderPlayOptions" aria-label="media player">
-        <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
-        <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i><br>
-      </div>
+
       <span>
         <h6 id="largeCylinderName"></h6><br>
         <h4><b>Artist: </b></h4><h5 id="largeArtistName"></h5><br>
