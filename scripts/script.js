@@ -66,6 +66,8 @@ var fitScreen = function(){
 
   // Makes the elements fit appropriate depending upon screensize
   if(screenWidth <= screenSizeChange){
+    // Mobile
+
     $('section').height(screenHeight);
     $('section main').height(screenHeight - 50);
     $('section').width(screenWidth);
@@ -82,6 +84,10 @@ var fitScreen = function(){
 
     $('header ul li i').removeAttr('style');//Restore header icon back to header area
 
+    // Cylinder Player
+    $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Width
+    $('#cylinderPlayer .jp-play').css('padding-left', (screenWidth / 2)  - 75);//Cylinder Player Play/Pause Position
+
 
   }else{
     $('section').height(screenHeight);
@@ -95,10 +101,10 @@ var fitScreen = function(){
     $('.metaInfo').width(cylinderWidth);
     $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
 
-    // Cylinder of the Day / Search resize
-    $('.bannerContainer').width($('.active main').width());
-    $('.active .cylinderOfTheDay').width(($('.active .cylinderOfTheDay').parent().width() - $('.active .tabletBanner').width()) - 5);
-    $('#cylinderPlayer').width((screenWidth - $('.tabletBanner').width()) - 5);
+    // Cylinder Player
+    $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Title Width
+    $('#cylinderPlayer').width((screenWidth - $('.tabletBanner').width()) - 5);//Cylinder Player Width
+    $('#cylinderPlayer .jp-play').css('padding-left', ($('#cylinderPlayer').width() / 2)  - 100);//Cylinder Player Play/Pause Position
 
 
     // Large Active Cylinder
