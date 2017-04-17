@@ -35,9 +35,13 @@
 
       <img class="cylinderTopImage" style="display: none; opacity: 0;" alt="Cylinder Top Image">
       <img class="cylinderBackImage" ng-src="{{ item.imageURL }}" alt="">
-    </div>
 
-  </div>
+
+
+    </div><!-- End of Cylinder Square -->
+
+
+  </div><!-- End of Library Container -->
 
   <div id="largeActiveCylinder" class="activeMetaInfo">
     <div class="line">
@@ -54,5 +58,10 @@
     </div><!-- line -->
   </div>
   <!-- Large Active Cylinder Info -->
+
+  <!-- <div id="cylinderPointer">
+
+  </div> -->
+  <i id="cylinderPointer" class="fa fa-circle" aria-hidden="true"></i>
 
 </main>

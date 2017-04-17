@@ -31,6 +31,19 @@
   <body ng-app="cylinderApp">
 
     <div id="container" ng-controller="cylinderAppCtrl">
+      <!-- All Meta Data -->
+      <div id="allMetadata">
+
+        <i id="closeAllMetadata" class="fa fa-times-circle" aria-hidden="true"></i>
+
+        <img id="allMetaImg" alt="Cylinder Top Image">
+        <h1>Title: <span id="allMetaTitle">Title</span></h1>
+        <h2>Artist: <span id="allMetaArtist">Artist</span></h2>
+        <h2>Take: <span id="allMetaTake">Take</span></h2>
+        <h2>Mold: <span id="allMetaMold">Mold</span></h2>
+        <h2>Comments: <span id="allMetaComments">Comments</span></h2>
+      </div>
+
       <!-- Banner/COD/Player  -->
       <div id="bannerContainer">
         <?php include 'banner.php' ?>

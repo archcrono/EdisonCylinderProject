@@ -7,6 +7,11 @@
     display: none;
     z-index: 1; }
 
+  #allMetadata {
+    padding-top: 50px; }
+    #allMetadata img {
+      width: 400px; }
+
   .banner {
     display: none; }
 
@@ -57,7 +62,7 @@
     #cylinderPlayer i {
       margin-top: 8px;
       font-size: 2.4em; }
-    #cylinderPlayer #metaInfoButton {
+    #cylinderPlayer .metaInfoButton {
       bottom: 5px; }
 
   section {

@@ -61,6 +61,12 @@ $standard-font: 'Rubik', sans-serif;
 // //////
 // All
 // //////
+#allMetadata{
+  padding-top: 50px;
+  img{
+    width: 400px;
+  }
+}
 .banner{
   display: none;
 }
@@ -121,7 +127,7 @@ $standard-font: 'Rubik', sans-serif;
     margin-top: 8px;
     font-size: 2.4em;
   }
-  #metaInfoButton{
+  .metaInfoButton{
     bottom: 5px;
   }
 }

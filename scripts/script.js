@@ -51,6 +51,7 @@ var compareScreenType = function(){
     $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());//Restores width of metadata to regular cylinder width
     $('.activeCylinder').addClass('cylinderSquare');//Restores cylinder class (so it can be clicked)
     $('.activeCylinder').removeClass('activeCylinder');//Removes active cylinder class
+    $('#cylinderPointer').css('display','none');//Hide Cylinder Pointer
 
   }
 }
@@ -475,6 +476,10 @@ $(document).on('click','.cylinderSquare',function(){
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
 
+    $('#cylinderPointer').css('display','block');
+    $('#cylinderPointer').css('top', $(this).position().top + 10);
+    $('#cylinderPointer').css('left', $(this).position().left + 10);
+
     switch (($(this).index() + 1) % 3) {
       case 0:
         $("#largeActiveCylinder").insertAfter($(this));
@@ -502,6 +507,10 @@ $(document).on('click','.cylinderSquare',function(){
     $('#largeActiveCylinder').width(screenWidth - 10);
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
+
+    $('#cylinderPointer').css('display','block');
+    $('#cylinderPointer').css('top', $(this).position().top + 10);
+    $('#cylinderPointer').css('left', $(this).position().left + 10);
 
     switch (($(this).index() + 1) % 5) {
       case 0:
@@ -553,6 +562,15 @@ $(document).on('click','.pauseButton',function(){
   $('.pauseButton').toggle();
 });
 
+// ////////////////
+// Meta Info Button
+// ////////////////
+$('.metaInfoButton').click(function(){
+  $('#allMetadata').toggle();
+});
+$('#closeAllMetadata').click(function(){
+  $('#allMetadata').toggle();
+});
 
 
 // /////////////
@@ -760,6 +778,14 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
         useStateClassSkin: true
     });
 
+    // All Meta Info
+    $('#allMetaImg').attr('src',randomCylinder.cylinderImg);
+    $('#allMetaTitle').html(randomCylinder.title);
+    $('#allMetaArtist').html(randomCylinder.artist);
+    $('#allMetaTake').html(randomCylinder.take);
+    $('#allMetaMold').html(randomCylinder.mold);
+    $('#allMetaComments').html(randomCylinder.comments);
+
   });
 
 
@@ -767,12 +793,21 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
   $scope.expandCylinder = function(){
 
-    $('#largeCylinderImg').attr('src',this.item.cylinderImg)
+    // Large Meta Info
+    $('#largeCylinderImg').attr('src',this.item.cylinderImg);
     $('#largeCylinderName').html(this.item.title);
     $('#largeArtistName').html(this.item.artist);
     $('#largeMoldNumber').html(this.item.mold);
     $('#largeTakeNumber').html(this.item.take);
     $('#largeComments').html(this.item.comments);
+
+    // All Meta Info
+    $('#allMetaImg').attr('src',this.item.cylinderImg);
+    $('#allMetaTitle').html(this.item.title);
+    $('#allMetaArtist').html(this.item.artist);
+    $('#allMetaTake').html(this.item.take);
+    $('#allMetaMold').html(this.item.mold);
+    $('#allMetaComments').html(this.item.comments);
 
   }
 
