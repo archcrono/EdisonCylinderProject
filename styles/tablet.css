@@ -150,6 +150,11 @@
       padding-left: 10px;
       display: inline-block;
       color: #00bfb3; }
+    #librarySection main #largeActiveCylinder .metaInfoButton {
+      font-size: 1.5em;
+      position: absolute;
+      right: 15px;
+      margin-top: 170px; }
 
   #informationSection main #infoContainer {
     margin-top: 160px;

@@ -274,7 +274,14 @@ section{
       display: inline-block;
       color:$pan3262;
       }
-    }
+
+      .metaInfoButton{
+        font-size: 1.5em;
+        position: absolute;
+        right: 15px;
+        margin-top: 170px;
+      }
+    }//End of largeActiveCylinder
 
   }//End of Main
 }//End of Library Section

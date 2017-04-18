@@ -155,6 +155,22 @@ $standard-font: 'Rubik', sans-serif;
   img{
     width: 90%;
   }
+  h1{
+    font-size: 1.4em;
+    color: #00bfb3;
+    margin: 5px 0;
+    span{
+      color: white;
+    }
+  }
+  h2{
+    color: #c5e86c;
+    font-size: 1.15em;
+    margin-bottom: 5px;
+    span{
+      color: white;
+    }
+  }
 }//End of All Metadata
 
 #bannerContainer{
@@ -242,7 +258,7 @@ $standard-font: 'Rubik', sans-serif;
   .metaInfoButton{
     position: absolute;
     font-size: 1.2em;
-    right: 5px;
+    right: 10px;
     bottom: 5px;
   }
 }

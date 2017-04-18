@@ -55,7 +55,11 @@
         <h4><b>Mold: </b></h4><h5 id="largeMoldNumber"></h5><br>
         <h4><b>Comments: </b></h4><h5 id="largeComments"></h5><br>
       </span>
+
+      <i class="fa fa-question metaInfoButton" style="cursor: pointer;" aria-hidden="true"></i>
     </div><!-- line -->
+
+
   </div>
   <!-- Large Active Cylinder Info -->
 
