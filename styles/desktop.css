@@ -5,10 +5,6 @@
   .activeNav span {
     animation: none; }
 
-  #homeSection #homeContainer .homeBoxes {
-    margin-left: 20%;
-    margin-right: 20%; }
-
   #librarySection main .ng-scope {
     width: 150px; }
   #librarySection main .top .banner {
