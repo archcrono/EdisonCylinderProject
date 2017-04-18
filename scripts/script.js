@@ -6,6 +6,9 @@ var screenSize = null; //False indicates mobile, True indicates tablet and large
 var screenType = null;//Determine screen type (phone/tablet/desktop)
 
 
+var cylinderHolder;//Holds the cylinders until they are ready to be loaded
+
+
 // ///////////////
 // Check If Screen Size Has Changed
 // ///////////////
@@ -51,7 +54,6 @@ var compareScreenType = function(){
     $('.activeCylinder').find('.metaInfo').width($('.cylinderSquare').width());//Restores width of metadata to regular cylinder width
     $('.activeCylinder').addClass('cylinderSquare');//Restores cylinder class (so it can be clicked)
     $('.activeCylinder').removeClass('activeCylinder');//Removes active cylinder class
-    $('#cylinderPointer').css('display','none');//Hide Cylinder Pointer
 
   }
 }
@@ -381,30 +383,13 @@ var homeNavButtons = function(){
 // ///////////////
 $(document).on('click','.cylinderSquare',function(){
 
-    // Ready Player
-    var cylinderURL = $(this).find('.cylinderURL').html();
+  // Reset Load Cylinder Button
+  $('.loadCylinderButton').css('display','block');
+  $('.playControls').css('display','none');
 
-    // Change Cylinder Player Meta Info
-    $('#cylinderPlayerTitle').html($(this).find('.metaInfo').find('h2').html());
-    $('#cylinderPlayerImg').attr('src', $(this).find('.cylinderImageURL').html())
+  // Hide Cylinder Pointer
+  $('.cylinderPointer').css('display','none');
 
-    $(".musicPlayer").jPlayer("clearMedia");
-    $(".musicPlayer").jPlayer("setMedia",{
-      m4a: cylinderURL,
-      oga: cylinderURL
-    });
-
-    $(".musicPlayer").jPlayer({
-        ready: function(event) {
-          $(this).jPlayer("setMedia", {
-            m4a: cylinderURL,
-            oga: cylinderURL,
-            preload: 'metadata'
-          });
-        },
-        supplied: "mp3, oga",
-        useStateClassSkin: true
-    });
 
   if(screenWidth < 650){
     // Mobile
@@ -469,6 +454,9 @@ $(document).on('click','.cylinderSquare',function(){
     // Tablet
     //
 
+    // Add Cylinder Pointer
+    $(this).find('.cylinderPointer').css('display','block');
+
     // // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
@@ -476,9 +464,6 @@ $(document).on('click','.cylinderSquare',function(){
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
 
-    $('#cylinderPointer').css('display','block');
-    $('#cylinderPointer').css('top', $(this).position().top + 10);
-    $('#cylinderPointer').css('left', $(this).position().left + 10);
 
     switch (($(this).index() + 1) % 3) {
       case 0:
@@ -501,16 +486,15 @@ $(document).on('click','.cylinderSquare',function(){
     // Desktop
     //
 
-    // // Remove Large Active Cylinder
+    // Add Cylinder Pointer
+    $(this).find('.cylinderPointer').css('display','block');
+
+    // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
     $('#largeActiveCylinder').width(screenWidth - 10);
     $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
     $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
-
-    $('#cylinderPointer').css('display','block');
-    $('#cylinderPointer').css('top', $(this).position().top + 10);
-    $('#cylinderPointer').css('left', $(this).position().left + 10);
 
     switch (($(this).index() + 1) % 5) {
       case 0:
@@ -560,6 +544,39 @@ $(document).on('click','.playButton',function(){
 $(document).on('click','.pauseButton',function(){
   $('.playButton').toggle();
   $('.pauseButton').toggle();
+});
+
+// //////////////
+// Load Cylinder
+// /////////////
+$(document).on('click','.loadCylinderButton',function(){
+
+  // Ready Player
+
+  // Change Cylinder Player Meta Info
+  $('#cylinderPlayerTitle').html(cylinderHolder.title);
+  $('#cylinderPlayerImg').attr('src', cylinderHolder.cylinderImg)
+
+  $(".musicPlayer").jPlayer("clearMedia");
+  $(".musicPlayer").jPlayer("setMedia",{
+    mp3: cylinderHolder.url
+  });
+
+  $(".musicPlayer").jPlayer({
+      ready: function(event) {
+        $(this).jPlayer("setMedia", {
+          mp3: cylinderHolder.url,
+          preload: 'metadata'
+        });
+      },
+      supplied: "mp3",
+      useStateClassSkin: true
+  });
+
+
+  $(this).css('display','none');
+  $(this).parent().find('.playControls').css('display','block');
+
 });
 
 // ////////////////
@@ -643,7 +660,7 @@ for(var i = 0; i < $('.tabletBanner').length; i++){
 // ///////////////////////
 var randomCylinderImage = function(){
   var cylinderImagePath = 'img/libraryCover/cylinder';
-  return cylinderImagePath + (Math.round(Math.random() * 27) + 1) + '.jpg';
+  return cylinderImagePath + (Math.round(Math.random() * 45) + 1) + '.jpg';
 }
 
 // ////////
@@ -788,10 +805,15 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
   });
 
-
+  // ///////////////
+  // Loading Cylinder
+  // ///////////////
 
 
   $scope.expandCylinder = function(){
+
+    cylinderHolder = this.item;
+
 
     // Large Meta Info
     $('#largeCylinderImg').attr('src',this.item.cylinderImg);

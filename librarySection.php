@@ -13,8 +13,10 @@
   <div id="libraryContainer">
     <div class="cylinderSquare" style="background-color: {{ item.backColor }}" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
 
+
+      <i class="fa fa-circle cylinderPointer" aria-hidden="true"></i>
       <!-- Used to grab URL. Do not display! -->
-      <h5 class="cylinderURL" style="display: none;">{{ item.url }}</h5>
+      <!-- <h5 class="cylinderURL" style="display: none;">{{ item.url }}</h5> -->
       <h5 class="cylinderImageURL" style="display: none;">{{ item.cylinderImg }}</h5>
 
 
@@ -30,8 +32,17 @@
           <h4><b>Mold:</b> {{ item.mold }}</h4>
           <h4><b>Comments:</b> {{ item.comments }}</h4>
         </div>
-
       </div>
+
+      <div class="playButtons">
+        <button type="button" class="loadCylinderButton" name="button">Listen</button>
+
+        <div id="jp_container_1" class="playControls">
+          <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
+          <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
+        </div>
+      </div>
+
 
       <img class="cylinderTopImage" style="display: none; opacity: 0;" alt="Cylinder Top Image">
       <img class="cylinderBackImage" ng-src="{{ item.imageURL }}" alt="">
@@ -66,6 +77,6 @@
   <!-- <div id="cylinderPointer">
 
   </div> -->
-  <i id="cylinderPointer" class="fa fa-circle" aria-hidden="true"></i>
+
 
 </main>
