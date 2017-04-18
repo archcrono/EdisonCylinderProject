@@ -341,20 +341,29 @@ section{
 
 .homeBoxes{
   padding:5px;
-  padding-top:20px;
+  padding-bottom:40px;
   margin:10px;
+  margin-bottom: 10px;
   border:solid none;
-  height:210px;
   h2{
     margin-bottom:20px;
     font-weight:bold;
     font-size:200%;
-    color:$pan7483;
-  }
+}
   p{
     margin:10px;
   }
 }
+
+    h2.red{
+      color:red;
+    }
+    h2.blue{
+      color:blue;
+    }
+    h2.yellow{
+      color:yellow;
+    }
 
 .alignleft {
   float: left;

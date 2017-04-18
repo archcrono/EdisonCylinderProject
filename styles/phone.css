@@ -218,17 +218,22 @@
       margin-bottom: 50px; }
       #homeSection #homeContainer .homeBoxes {
         padding: 5px;
-        padding-top: 20px;
+        padding-bottom: 40px;
         margin: 10px;
-        border: solid none;
-        height: 210px; }
+        margin-bottom: 10px;
+        border: solid none; }
         #homeSection #homeContainer .homeBoxes h2 {
           margin-bottom: 20px;
           font-weight: bold;
-          font-size: 200%;
-          color: #275d38; }
+          font-size: 200%; }
         #homeSection #homeContainer .homeBoxes p {
           margin: 10px; }
+      #homeSection #homeContainer h2.red {
+        color: red; }
+      #homeSection #homeContainer h2.blue {
+        color: blue; }
+      #homeSection #homeContainer h2.yellow {
+        color: yellow; }
       #homeSection #homeContainer .alignleft {
         float: left;
         margin-right: 2%;
