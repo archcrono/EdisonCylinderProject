@@ -35,7 +35,7 @@
       </div>
 
       <div class="playButtons">
-        <button type="button" class="loadCylinderButton" name="button">Listen</button>
+        <i class="fa fa-music loadCylinderButton" style="cursor: pointer;"><span>Listen</span></i>
 
         <div id="jp_container_1" class="playControls">
           <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
@@ -66,6 +66,15 @@
         <h4><b>Mold: </b></h4><h5 id="largeMoldNumber"></h5><br>
         <h4><b>Comments: </b></h4><h5 id="largeComments"></h5><br>
       </span>
+
+      <div class="largePlayButtons">
+        <i class="fa fa-music loadCylinderButton" style="cursor: pointer;"><span>Listen</span></i>
+
+        <div id="jp_container_1" class="playControls" >
+          <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
+          <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
+        </div>
+      </div>
 
       <i class="fa fa-question metaInfoButton" style="cursor: pointer;" aria-hidden="true"></i>
     </div><!-- line -->

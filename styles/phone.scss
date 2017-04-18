@@ -107,9 +107,15 @@ $standard-font: 'Rubik', sans-serif;
     z-index: 5;
     top: 50%;
     left: calc(50% - 30px);
-    button{
-      background-color: red;
-      font-size: 1.3em;
+    .loadCylinderButton{
+      color: grey;
+      font-size: 1.8em;
+      margin-left: -30px;
+      margin-top: -10px;
+      span{
+        margin-left: 5px;
+        font-family: $standard-font;
+      }
     }
     .playControls{
       display: none;
@@ -127,7 +133,7 @@ $standard-font: 'Rubik', sans-serif;
   bottom: auto !important;
 
   i{
-    display: block !important;
+    display: block;
   }
   h4{
     padding-top:5px;

@@ -50,9 +50,14 @@
       z-index: 5;
       top: 50%;
       left: calc(50% - 30px); }
-      .activeCylinder .playButtons button {
-        background-color: red;
-        font-size: 1.3em; }
+      .activeCylinder .playButtons .loadCylinderButton {
+        color: grey;
+        font-size: 1.8em;
+        margin-left: -30px;
+        margin-top: -10px; }
+        .activeCylinder .playButtons .loadCylinderButton span {
+          margin-left: 5px;
+          font-family: "Rubik", sans-serif; }
       .activeCylinder .playButtons .playControls {
         display: none;
         font-size: 4em;
@@ -63,7 +68,7 @@
     top: 0;
     bottom: auto !important; }
     .activeMetaInfo i {
-      display: block !important; }
+      display: block; }
     .activeMetaInfo h4 {
       padding-top: 5px;
       padding-left: 10px; }

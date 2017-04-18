@@ -570,7 +570,11 @@ $(document).on('click','.loadCylinderButton',function(){
         });
       },
       supplied: "mp3",
-      useStateClassSkin: true
+      useStateClassSkin: true,
+      cssSelector: {
+        play: ".playButton",
+        pause: ".pauseButton"
+      }
   });
 
 

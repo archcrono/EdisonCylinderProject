@@ -275,6 +275,24 @@ section{
       color:$pan3262;
       }
 
+      .largePlayButtons{
+        position: absolute;
+        left: 75%;
+        .loadCylinderButton{
+          margin-top: 35px;
+          span{
+            margin-left: 15px;
+            font-family: $standard-font;
+          }
+        }
+        .playControls{
+          i{
+            margin: 30px 0 0 -30px;
+            font-size: 5em;
+          }
+        }
+      }//End of Large Play Buttons
+
       .metaInfoButton{
         font-size: 1.5em;
         position: absolute;
