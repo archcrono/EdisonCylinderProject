@@ -45,12 +45,30 @@
         font-size: 1.6em; }
       .activeCylinder .metaInfo .subMetaInfo {
         display: none; }
+    .activeCylinder .playButtons {
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      left: calc(50% - 30px); }
+      .activeCylinder .playButtons .loadCylinderButton {
+        color: grey;
+        font-size: 1.8em;
+        margin-left: -30px;
+        margin-top: -10px; }
+        .activeCylinder .playButtons .loadCylinderButton span {
+          margin-left: 5px;
+          font-family: "Rubik", sans-serif; }
+      .activeCylinder .playButtons .playControls {
+        display: none;
+        font-size: 4em;
+        color: grey;
+        margin-top: -23px; }
 
   .activeMetaInfo {
     top: 0;
     bottom: auto !important; }
     .activeMetaInfo i {
-      display: block !important; }
+      display: block; }
     .activeMetaInfo h4 {
       padding-top: 5px;
       padding-left: 10px; }
@@ -84,6 +102,18 @@
       font-size: 3em; }
     #allMetadata img {
       width: 90%; }
+    #allMetadata h1 {
+      font-size: 1.4em;
+      color: #00bfb3;
+      margin: 5px 0; }
+      #allMetadata h1 span {
+        color: white; }
+    #allMetadata h2 {
+      color: #c5e86c;
+      font-size: 1.15em;
+      margin-bottom: 5px; }
+      #allMetadata h2 span {
+        color: white; }
 
   #bannerContainer {
     height: 165px;
@@ -155,7 +185,7 @@
     #cylinderPlayer .metaInfoButton {
       position: absolute;
       font-size: 1.2em;
-      right: 5px;
+      right: 10px;
       bottom: 5px; }
 
   section {
@@ -293,14 +323,15 @@
             font-size: 1.6em; }
           #librarySection main #libraryContainer .cylinderSquare .metaInfo .subMetaInfo {
             display: none; }
-    #librarySection main #largeActiveCylinder {
-      display: none; }
-    #librarySection main #cylinderPointer {
-      display: none;
-      position: absolute;
-      color: red;
-      z-index: 10;
-      animation: glow 2s infinite; }
+        #librarySection main #libraryContainer .cylinderSquare .playButtons {
+          display: none; }
+        #librarySection main #libraryContainer .cylinderSquare .cylinderPointer {
+          display: none;
+          position: absolute;
+          color: red;
+          margin: 10px 0 0 10px;
+          z-index: 3;
+          animation: glow 2s infinite; }
   @keyframes glow {
     0% {
       opacity: .2; }
@@ -308,6 +339,9 @@
       opacity: 1; }
     100% {
       opacity: .2; } }
+    #librarySection main #largeActiveCylinder {
+      display: none; }
+
   #informationSection {
     font-family: "Rubik", sans-serif;
     font-size: 16px;

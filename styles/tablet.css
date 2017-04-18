@@ -149,6 +149,22 @@
       padding-left: 10px;
       display: inline-block;
       color: #00bfb3; }
+    #librarySection main #largeActiveCylinder .largePlayButtons {
+      position: absolute;
+      left: 75%; }
+      #librarySection main #largeActiveCylinder .largePlayButtons .loadCylinderButton {
+        margin-top: 35px; }
+        #librarySection main #largeActiveCylinder .largePlayButtons .loadCylinderButton span {
+          margin-left: 15px;
+          font-family: "Rubik", sans-serif; }
+      #librarySection main #largeActiveCylinder .largePlayButtons .playControls i {
+        margin: 30px 0 0 -30px;
+        font-size: 5em; }
+    #librarySection main #largeActiveCylinder .metaInfoButton {
+      font-size: 1.5em;
+      position: absolute;
+      right: 15px;
+      margin-top: 170px; }
 
   #informationSection main #infoContainer {
     margin-top: 160px;
