@@ -710,6 +710,7 @@ var randomCylinderImage = function(){
 // information page
 // //////////////////////
 
+
  $('#content_1').click(function(){
   $('#hidden_one').slideToggle();
   var x = $('#content_1').text();
@@ -717,16 +718,6 @@ var randomCylinderImage = function(){
     $('#content_1').text('Close');
   }else{
     $('#content_1').text('Read More');
-  }
-});
-
-$('#content_2').click(function(){
-  $('#hidden_two').slideToggle();
-  var x = $('#content_2').text();
-  if(x == 'Read More'){
-    $('#content_2').text('Close');
-  }else{
-    $('#content_2').text('Read More');
   }
 });
 
@@ -763,11 +754,14 @@ $('.video_btn').click(function(){
 function adjustSize(width, height){
   var width = width;
   var height = height;
-
-  $('.modal_content').css({
-    'width': width,
-    'height': height
-  });
+  if(screenType == 'phone'){
+    $('.video').css('width', '100%');
+  }else{
+    $('.modal_content').css({
+      'width': width,
+      'height': height
+    });
+  }
 }
 
 $(window).click(function(e){
@@ -775,8 +769,15 @@ $(window).click(function(e){
   if(e.target == modal){
     $('.modal').css('display', 'none');
     $('.video').css('display', 'none');
+    $('.video')[0].pause();
+    $('.video')[0].currentTime = 0;
+    $('.video')[1].pause();
+    $('.video')[1].currentTime = 0;
+    $('.video')[2].pause();
+    $('.video')[2].currentTime = 0;
   }
 });
+
 
 // //////////////////////
 // Searchbar
