@@ -170,13 +170,13 @@
     margin-top: 160px;
     margin-bottom: 0px; }
     #informationSection main #infoContainer .hidden_img {
-      width: 30%;
-      height: 30%;
+      width: 20%;
+      height: 20%;
       float: left;
       margin-right: 2em; }
     #informationSection main #infoContainer .hidden_img-right {
-      width: 30%;
-      height: 30%;
+      width: 20%;
+      height: 20%;
       float: right;
       margin-left: 2em; }
 
@@ -194,10 +194,12 @@
         width: 100%; }
 
   #searchFunction {
+    position: absolute;
     top: 0;
     right: 0;
-    height: 150px;
-    width: 0; }
+    padding-top: 90px;
+    width: 100%;
+    height: 0; }
     #searchFunction #Container {
       padding: 4em; } }
 @media only screen and (min-width: 651px) and (max-width: 850px) {

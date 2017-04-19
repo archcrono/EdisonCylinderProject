@@ -440,7 +440,7 @@
               display: none;
               position: fixed;
               z-index: 9999;
-              padding-top: 100px;
+              padding-top: 170px;
               left: 0;
               top: 0;
               width: 100%;
@@ -461,6 +461,9 @@
                 -webkit-animation-duration: 0.6s;
                 animation-name: animatetop;
                 animation-duration: 0.6s; }
+                #informationSection #infoContainer .row .col .content #hidden_one .modal .modal_content .video,
+                #informationSection #infoContainer .row .col .content #hidden_two .modal .modal_content .video {
+                  display: none; }
   @-webkit-keyframes animatetop {
     from {
       top: -300px;
@@ -557,7 +560,7 @@
           /* IE6-9 */ }
 
   #searchFunction {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 0;
     background: white;
