@@ -671,19 +671,77 @@ var randomCylinderImage = function(){
   return cylinderImagePath + (Math.round(Math.random() * 45) + 1) + '.jpg';
 }
 
-// ////////
-// Angular
-// ////////
-var cylinderApp = angular.module('cylinderApp', []);
+// //////////////////////
+// information page
+// //////////////////////
 
-// Services for HTTP Requests
-cylinderApp.service('cylinderData', ['$http', function($http){
-  this.getCylinderData = function(){
-    // return $http.get('php/get.php');
-
-    return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json');
+ $('#content_1').click(function(){
+  $('#hidden_one').slideToggle();
+  var x = $('#content_1').text();
+  if(x == 'Read More'){
+    $('#content_1').text('Close');
+  }else{
+    $('#content_1').text('Read More');
   }
-}]);
+});
+
+$('#content_2').click(function(){
+  $('#hidden_two').slideToggle();
+  var x = $('#content_2').text();
+  if(x == 'Read More'){
+    $('#content_2').text('Close');
+  }else{
+    $('#content_2').text('Read More');
+  }
+});
+
+// modal
+$('.video_btn').click(function(){
+  var width;
+  var height;
+  var target = $(this).val();
+  $('.modal').css('display', 'block');
+  switch(target){
+    case 'video_btn_one':
+      $('#video_one').css('display', 'block');
+      width = $('#video_one').width();
+      height = $('#video_one').height();
+      adjustSize(width, height);
+      break;
+    case 'video_btn_two':
+      $('#video_two').css('display', 'block');
+      width = $('#video_two').width();
+      height = $('#video_two').height();
+      adjustSize(width, height);
+      break;
+    case 'video_btn_three':
+      $('#video_three').css('display', 'block');
+      width = $('#video_three').width();
+      height = $('#video_three').height();
+      adjustSize(width, height);
+      break;
+    default:
+      break;
+  }
+});
+
+function adjustSize(width, height){
+  var width = width;
+  var height = height;
+  
+  $('.modal_content').css({
+    'width': width,
+    'height': height
+  });
+}
+
+$(window).click(function(e){
+  var modal = $('.modal')[0];
+  if(e.target == modal){
+    $('.modal').css('display', 'none');
+    $('.video').css('display', 'none');
+  }
+});
 
 // //////////////////////
 // Searchbar
@@ -716,22 +774,20 @@ if(screenType == 'phone'){
     }
   });
 }
-// else{
-//   $('.navButtonContainers > #searchButton').click(function(){
-//     console.log('clicked');
-//     var width = $('#searchFunction').width();
-//     console.log(width);
-//     if(width == 0){
-//       $('#searchFunction').animate({
-//         width: "60%"
-//       },300);
-//     }else{
-//       $('#searchFunction').animate({
-//         width: 0
-//       },300);
-//     }
-//   });
-// }
+
+// ////////
+// Angular
+// ////////
+var cylinderApp = angular.module('cylinderApp', []);
+
+// Services for HTTP Requests
+cylinderApp.service('cylinderData', ['$http', function($http){
+  this.getCylinderData = function(){
+    // return $http.get('php/get.php');
+
+    return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json');
+  }
+}]);
 
 
 

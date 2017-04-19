@@ -68,14 +68,16 @@
               Gary was determined to create an even better transcribing device. If you’ve ever used an original Edison Amberola to play back cylinders, you know how robust that device is in playing not only out-of-round cylinders, but also its ability to play through skips. So we went back to the original Edison design to creat our 4th modification of cylinder playback. Gary carefully made measurement of the original Amerola 30 device, including the original needle and rocker arm, tied to the diaphragm with a string. We simply replaced the diapraghm with an inverted Stanton 500 cartride, but with no needle since that’s no longer necessary. It’s tied to a new needle that we ground out of a 8 mil saphire rod. Gary then 3-D printed the whole device.  Fully assembled. This is how that device looks now.
             </div>
 
-            <div class="video">
-              <button id="video_btn">Watch Video</button>
-            </div>
+            <button class="video_btn" value="video_btn_one">Watch Video</button>
+            <button class="video_btn" value="video_btn_two">Watch Video</button>
+            <button class="video_btn" value="video_btn_three">Watch Video</button>
 
             <div id="modal">
               <div class="modal">
                 <div class="modal_content">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZG1vrfoe8ns" frameborder="0" allowfullscreen></iframe>
+                  <video id="video_one" class="video" controls></video>
+                  <video id="video_two" class="video" controls></video>
+                  <video id="video_three" class="video" controls></video>
                 </div>
               </div>
             </div>
@@ -85,36 +87,6 @@
           <div class="right">
             <button id="content_1">Read More</button>
           </div>
-
-          <script>
-          // show and hide Readmore contents
-            $('#content_1').click(function(){
-              $('#hidden_one').slideToggle();
-              var x = $('#content_1').text();
-              if(x == 'Read More'){
-                $('#content_1').text('Close');
-              }else{
-                $('#content_1').text('Read More');
-              }
-            });
-
-          // modal
-            $('#video_btn').click(function(){
-              var targetW = $('.modal_content iframe').width();
-              var targetH = $('.modal_content iframe').height();
-              $('.modal').css('display', 'block');
-              $('.modal_content').css({
-                'width': targetW,
-                'height': targetH
-              });
-            });
-            $(window).click(function(e){
-              var modal = $('.modal')[0];
-              if(e.target == modal){
-                $('.modal').css('display', 'none');
-              }
-            });
-          </script>
 
         </div><!-- end content -->
 
@@ -151,18 +123,6 @@
           <div class="right">
             <button id="content_2">Read More</button>
           </div>
-
-          <script>
-            $('#content_2').click(function(){
-              $('#hidden_two').slideToggle();
-              var x = $('#content_2').text();
-              if(x == 'Read More'){
-                $('#content_2').text('Close');
-              }else{
-                $('#content_2').text('Read More');
-              }
-            });
-          </script>
 
         </div>
 
@@ -253,28 +213,28 @@
   <h1>Project Members</h1>
   <div class="members">
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/abe.png" alt="">
+      <p>Abe Raigne</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/blake.png" alt="">
+      <p>Blake Stevens</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/jared.png" alt="">
+      <p>Jared Cooley</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/mengxi.png" alt="">
+      <p>Mengxi Li</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/yuki.png" alt="">
+      <p>Yuki Arai</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/haynes.png" alt="">
+      <p>Jennifer Haynes</p>
     </div>
   </div>
 
