@@ -1,21 +1,17 @@
 @media only screen and (max-width: 999em) {
   ::-webkit-scrollbar {
     display: none; }
-
   .active {
     z-index: -1; }
-
   .inactive {
     top: 100%;
     display: none;
     z-index: 1; }
-
   .lockBar {
     position: fixed !important;
     top: 0px !important;
     z-index: 20 !important;
     background-color: white; }
-
   .activeCylinder {
     width: 49.5%;
     display: inline-block;
@@ -66,7 +62,6 @@
         font-size: 4em;
         color: grey;
         margin-top: -23px; }
-
   .activeMetaInfo {
     top: 0;
     bottom: auto !important; }
@@ -80,11 +75,9 @@
       color: #c5e86c; }
     .activeMetaInfo .subMetaInfo {
       margin-top: 5px; }
-
   #container {
     width: 100%;
     height: 100%; }
-
   #allMetadata {
     display: none;
     position: fixed;
@@ -117,14 +110,12 @@
       margin-bottom: 5px; }
       #allMetadata h2 span {
         color: white; }
-
   #bannerContainer {
     height: 165px;
     position: absolute;
     top: 0;
     z-index: 10;
     width: 100%; }
-
   .banner {
     height: 80px;
     background-position: right;
@@ -159,10 +150,8 @@
       height: 90px;
       width: 400px;
       z-index: -1; }
-
   .tabletBanner {
     display: none; }
-
   #cylinderPlayer {
     width: 100%;
     height: 70px;
@@ -190,7 +179,6 @@
       font-size: 1.2em;
       right: 10px;
       bottom: 5px; }
-
   section {
     width: 100%;
     position: absolute;
@@ -199,7 +187,6 @@
       margin-top: 165px;
       position: absolute;
       width: 100%; }
-
   .navButtonContainers {
     height: 50px;
     width: 100%;
@@ -228,10 +215,8 @@
         left: 85%; }
       .navButtonContainers i span {
         display: none; }
-
   .activeNav {
     color: green !important; }
-
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
@@ -271,7 +256,6 @@
       #homeSection #homeContainer .btn:hover {
         background: #e39d12;
         text-decoration: none; }
-
   #librarySection {
     background-color: white; }
     #librarySection main h2 {
@@ -332,7 +316,6 @@
           display: none; }
     #librarySection main #largeActiveCylinder {
       display: none; }
-
   #informationSection {
     font-family: "Rubik", sans-serif;
     font-size: 16px;
@@ -405,6 +388,16 @@
             #informationSection #infoContainer .row .col .content button:focus {
               outline: none;
               box-shadow: inset 0 0 10px #ddd; }
+            #informationSection #infoContainer .row .col .content button.inline {
+              border: none;
+              padding: inherit;
+              font-family: inherit;
+              font-size: inherit;
+              border-radius: inherit;
+              border-bottom: 2px solid #0095c8;
+              box-shadow: none; }
+              #informationSection #infoContainer .row .col .content button.inline:hover {
+                color: #0095c8; }
           #informationSection #infoContainer .row .col .content #hidden_one,
           #informationSection #infoContainer .row .col .content #hidden_two {
             display: none; }
@@ -438,14 +431,13 @@
               clear: both; }
             #informationSection #infoContainer .row .col .content #hidden_one .video,
             #informationSection #infoContainer .row .col .content #hidden_two .video {
-              padding-top: 1em;
               text-align: center; }
             #informationSection #infoContainer .row .col .content #hidden_one .modal,
             #informationSection #infoContainer .row .col .content #hidden_two .modal {
               display: none;
               position: fixed;
               z-index: 9999;
-              padding-top: 170px;
+              padding-top: 150px;
               left: 0;
               top: 0;
               width: 100%;
@@ -506,7 +498,20 @@
             width: 75%;
             text-align: center;
             margin: 0 auto; }
-
+      #informationSection #infoContainer video::-internal-media-controls-download-button {
+        display: none; }
+      #informationSection #infoContainer video::-webkit-media-controls-enclosure {
+        overflow: hidden; }
+      #informationSection #infoContainer video::-webkit-media-controls-panel {
+        width: calc(100% + 30px);
+        /* Adjust as needed */ }
+      #informationSection #infoContainer audio::-internal-media-controls-download-button {
+        display: none; }
+      #informationSection #infoContainer audio::-webkit-media-controls-enclosure {
+        overflow: hidden; }
+      #informationSection #infoContainer audio::-webkit-media-controls-panel {
+        width: calc(100% + 30px);
+        /* Adjust as needed */ }
   #contactSection {
     background-color: white; }
     #contactSection main #contactHeader {
@@ -563,7 +568,6 @@
           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
           /* IE6-9 */ }
-
   #searchFunction {
     position: fixed;
     bottom: 0;
@@ -586,5 +590,3 @@
         #searchFunction #Container input[type=text]:focus {
           outline: none;
           width: 80%; } }
-
-/*# sourceMappingURL=phone.css.map */
