@@ -213,28 +213,28 @@
   <h1>Project Members</h1>
   <div class="members">
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/abe.png" alt="">
+      <p>Abe Raigne</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/blake.png" alt="">
+      <p>Blake Stevens</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/jared.png" alt="">
+      <p>Jared Cooley</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/mengxi.png" alt="">
+      <p>Mengxi Li</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/yuki.png" alt="">
+      <p>Yuki Arai</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
-      <p>Name of Member</p>
+      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/haynes.png" alt="">
+      <p>Jennifer Haynes</p>
     </div>
   </div>
 
