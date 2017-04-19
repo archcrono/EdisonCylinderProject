@@ -47,7 +47,7 @@
 
     <div id="container" ng-controller="cylinderAppCtrl">
       <!-- All Meta Data -->
-      <div id="allMetadata">
+      <div id="allMetadata" style="opacity: 0;">
 
         <i id="closeAllMetadata" class="fa fa-times-circle" aria-hidden="true"></i>
 

@@ -74,7 +74,7 @@
         </div>
       </div>
 
-      <i class="fa fa-question metaInfoButton" style="cursor: pointer;" aria-hidden="true"></i>
+      <i id="metaInfoLargeActive" class="fa fa-question metaInfoButton" style="cursor: pointer;" aria-hidden="true"></i>
     </div><!-- line -->
 
 

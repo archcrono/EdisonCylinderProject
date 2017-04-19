@@ -80,6 +80,9 @@ $standard-font: 'Rubik', sans-serif;
     width: 100%;
     // opacity: .9;
   }
+  h2{
+    margin-left: 5px;
+  }
   .cylinderBackImage{
     display: none;
   }
@@ -92,6 +95,7 @@ $standard-font: 'Rubik', sans-serif;
     z-index: 10;
     padding: 10px 0;
     i{
+      display: block !important;
       position: absolute;
       right: 20px;
       top: 7px;

@@ -590,11 +590,46 @@ $(document).on('click','.loadCylinderButton',function(){
 // ////////////////
 // Meta Info Button
 // ////////////////
-$('.metaInfoButton').click(function(){
+$('#metaInfoBanner').click(function(){
+
+  // All Meta Info
+  $('#allMetaImg').attr('src',cylinderNowPlaying.cylinderImg);
+  $('#allMetaTitle').html(cylinderNowPlaying.title);
+  $('#allMetaArtist').html(cylinderNowPlaying.artist);
+  $('#allMetaTake').html(cylinderNowPlaying.take);
+  $('#allMetaMold').html(cylinderNowPlaying.mold);
+  $('#allMetaComments').html(cylinderNowPlaying.comments);
+
   $('#allMetadata').toggle();
+  $('#allMetadata').animate({
+    opacity: 1
+  }, 250);
+
 });
-$('#closeAllMetadata').click(function(){
+
+$('#metaInfoLargeActive').click(function(){
+
+  // All Meta Info
+  $('#allMetaImg').attr('src',cylinderHolder.cylinderImg);
+  $('#allMetaTitle').html(cylinderHolder.title);
+  $('#allMetaArtist').html(cylinderHolder.artist);
+  $('#allMetaTake').html(cylinderHolder.take);
+  $('#allMetaMold').html(cylinderHolder.mold);
+  $('#allMetaComments').html(cylinderHolder.comments);
+
   $('#allMetadata').toggle();
+  $('#allMetadata').animate({
+    opacity: 1
+  }, 250);
+});
+
+$('#closeAllMetadata').click(function(){
+  $('#allMetadata').animate({
+    opacity: 0
+  }, 250, function(){
+    $('#allMetadata').toggle();
+  });
+
 });
 
 
@@ -728,7 +763,7 @@ $('.video_btn').click(function(){
 function adjustSize(width, height){
   var width = width;
   var height = height;
-  
+
   $('.modal_content').css({
     'width': width,
     'height': height
@@ -872,13 +907,6 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
         useStateClassSkin: true
     });
 
-    // All Meta Info
-    $('#allMetaImg').attr('src',randomCylinder.cylinderImg);
-    $('#allMetaTitle').html(randomCylinder.title);
-    $('#allMetaArtist').html(randomCylinder.artist);
-    $('#allMetaTake').html(randomCylinder.take);
-    $('#allMetaMold').html(randomCylinder.mold);
-    $('#allMetaComments').html(randomCylinder.comments);
 
   });
 
@@ -900,13 +928,6 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
     $('#largeTakeNumber').html(this.item.take);
     $('#largeComments').html(this.item.comments);
 
-    // All Meta Info
-    $('#allMetaImg').attr('src',this.item.cylinderImg);
-    $('#allMetaTitle').html(this.item.title);
-    $('#allMetaArtist').html(this.item.artist);
-    $('#allMetaTake').html(this.item.take);
-    $('#allMetaMold').html(this.item.mold);
-    $('#allMetaComments').html(this.item.comments);
 
   }
 

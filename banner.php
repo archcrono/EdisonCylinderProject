@@ -47,7 +47,7 @@
     <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
   </div>
 
-  <i class="fa fa-question metaInfoButton" style="cursor: pointer;" aria-hidden="true"></i>
+  <i id="metaInfoBanner" class="fa fa-question metaInfoButton" style="cursor: pointer;" aria-hidden="true"></i>
 
 
 
