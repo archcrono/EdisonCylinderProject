@@ -592,19 +592,6 @@ section{
         line-height: 1.8em;
         padding: 15px 0;
         color: #666;
-        // &:before{
-        //   content: "";
-        //   position: absolute;
-        //   border-bottom: 2px solid #efefef;
-        //   width: 25%;
-        // }
-        // &:after{
-        //   content: "";
-        //   position: absolute;
-        //   border-bottom: 2px solid #efefef;
-        //   width: 25%;
-        //   right: 0;
-        // }
         .paragraph{
           margin-bottom: 15px;
         }
@@ -665,7 +652,7 @@ section{
             display: none;
             position: fixed;
             z-index: 9999;
-            padding-top: 100px;
+            padding-top: 170px;
             left: 0;
             top: 0;
             width: 100%;
@@ -684,7 +671,10 @@ section{
               -webkit-animation-name: animatetop;
               -webkit-animation-duration: 0.6s;
               animation-name: animatetop;
-              animation-duration: 0.6s
+              animation-duration: 0.6s;
+              .video{
+                display: none;
+              }
             }
             @-webkit-keyframes animatetop {
                 from {top:-300px; opacity:0}
