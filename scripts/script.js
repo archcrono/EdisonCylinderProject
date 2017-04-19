@@ -458,7 +458,7 @@ $(document).on('click','.cylinderSquare',function(){
     // Add Meta Info Highlight
     $(this).find('.metaInfo').css('background-color', 'grey');
 
-    // // Remove Large Active Cylinder
+    // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
     $('#largeActiveCylinder').width(screenWidth - 15);
@@ -834,6 +834,12 @@ cylinderApp.filter('searchForCylinder', function(){
 
   return function(arr, searchCylinder){
     fitScreen();
+    // Remove Large Active Cylinder
+    $('#largeActiveCylinder').css('display','none');//Hide active cylinder
+    $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
+    $('#largeActiveCylinder').width(screenWidth - 15);
+    $('#largeActiveCylinder .largeCylinderPlayOptions .playButton').css('display','block');//Ensure that play is displayed
+    $('#largeActiveCylinder .largeCylinderPlayOptions .pauseButton').css('display','none');//Hide pause button when loaded
     if(!searchCylinder){
       return arr;
     }
@@ -936,7 +942,3 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   // })
 
 }]);//End Of controller
-
-$('#searchButton').click(function(){
-  console.log(cylinderNowPlaying);
-})
