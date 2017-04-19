@@ -13,8 +13,6 @@
   <div id="libraryContainer">
     <div class="cylinderSquare" style="background-color: {{ item.backColor }}" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
 
-
-      <i class="fa fa-circle cylinderPointer" aria-hidden="true"></i>
       <!-- Used to grab URL. Do not display! -->
       <!-- <h5 class="cylinderURL" style="display: none;">{{ item.url }}</h5> -->
       <h5 class="cylinderImageURL" style="display: none;">{{ item.cylinderImg }}</h5>
@@ -45,7 +43,7 @@
 
 
       <img class="cylinderTopImage" style="display: none; opacity: 0;" alt="Cylinder Top Image">
-      <img class="cylinderBackImage" ng-src="{{ item.imageURL }}" alt="">
+      <img class="cylinderBackImage lazy" src="img/grey.gif" ng-src="{{ item.imageURL }}" alt="">
 
 
 
@@ -81,11 +79,6 @@
 
 
   </div>
-  <!-- Large Active Cylinder Info -->
-
-  <!-- <div id="cylinderPointer">
-
-  </div> -->
 
 
 </main>

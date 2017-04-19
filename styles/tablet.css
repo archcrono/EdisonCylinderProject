@@ -116,7 +116,7 @@
         padding: 0;
         padding-right: 5px; }
   #librarySection main #largeActiveCylinder {
-    background-color: #696158;
+    background-color: grey;
     margin-bottom: 5px;
     max-width: 100%;
     height: 200px;

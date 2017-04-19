@@ -20,12 +20,22 @@
     <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Rubik|Arsenal" rel="stylesheet" />
     <!-- jQuery -->
-      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+      <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
     <!-- LAZY LOADER -->
       <script src="scripts/jquery.lazyload.js" type="text/javascript"></script>
       <script type="text/javascript" charset="utf-8">
         $(function() {
-          $("img.lazy").lazyload({threshold: 400, effect: "fadeIn" });
+          $("img.lazy").lazyload({
+            threshold: 10,
+            effect: "fadeIn",
+            // container: $("#informationSection main, #librarySection main"),
+            container: $("#librarySection main, #informationSection main"),
+            failure_limit: 10
+           });
           // Threashold so the images load before they reach the fold
           // Fadein to have them fade in when loaded
         });

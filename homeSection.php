@@ -4,7 +4,7 @@
   <div id="homeContainer">
 
       <div class="homeBoxes">
-      <img class="alignleft lazy" src="images/grey.gif" data-original="img/lib.jpg">
+      <img class="alignleft lazy" src="img/grey.gif" data-original="img/lib.jpg">
         <span>
 
           <h2>Listen to the Library!</h2>
@@ -17,7 +17,7 @@
       </div>
 
       <div class="homeBoxes">
-        <img class="alignleft lazy" src="images/grey.gif" data-original="img/month.jpg">
+        <img class="alignleft lazy" src="img/grey.gif" data-original="img/month.jpg">
         <span>
 
           <h2>This Month In History!</h2>
@@ -30,7 +30,7 @@
       </div>
 
       <div class="homeBoxes">
-      <img class="alignleft lazy" src="images/grey.gif" data-original="img/donate.jpg">
+      <img class="alignleft lazy" src="img/grey.gif" data-original="img/donate.jpg">
         <span>
 
           <h2>Donate!</h2>

@@ -387,8 +387,8 @@ $(document).on('click','.cylinderSquare',function(){
   $('.loadCylinderButton').css('display','block');
   $('.playControls').css('display','none');
 
-  // Hide Cylinder Pointer
-  $('.cylinderPointer').css('display','none');
+  // Reset Meta Info Color
+  $('.metaInfo').css('background-color', 'rgba(0, 0, 0, 0.6)');
 
 
   if(screenWidth < 650){
@@ -454,8 +454,8 @@ $(document).on('click','.cylinderSquare',function(){
     // Tablet
     //
 
-    // Add Cylinder Pointer
-    $(this).find('.cylinderPointer').css('display','block');
+    // Add Meta Info Highlight
+    $(this).find('.metaInfo').css('background-color', 'grey');
 
     // // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
@@ -486,8 +486,9 @@ $(document).on('click','.cylinderSquare',function(){
     // Desktop
     //
 
-    // Add Cylinder Pointer
-    $(this).find('.cylinderPointer').css('display','block');
+    // Add Meta Info Highlight
+    $(this).find('.metaInfo').css('background-color', 'grey');
+
 
     // Remove Large Active Cylinder
     $('#largeActiveCylinder').css('display','none');//Hide active cylinder
