@@ -21,10 +21,15 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto|Rubik|Arsenal" rel="stylesheet" />
     <!-- jQuery -->
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <!-- Slick Slider -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <!-- LAZY LOADER -->
+      <script src="scripts/jquery.lazyload.js" type="text/javascript"></script>
+      <script type="text/javascript" charset="utf-8">
+        $(function() {
+          $("img.lazy").lazyload({threshold: 400, effect: "fadeIn" });
+          // Threashold so the images load before they reach the fold
+          // Fadein to have them fade in when loaded
+        });
+      </script>
     <!-- JPlayer -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
   </head>

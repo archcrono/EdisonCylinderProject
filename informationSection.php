@@ -15,7 +15,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img src="img/cylinder1.jpg" alt="">
+          <img class="lazy" src="images/grey.gif" data-original="img/cylinder1.jpg" alt="">
         </div>
 
         <div class="header">
@@ -31,7 +31,7 @@
           <div id="hidden_one">
 
             <div class="hidden_img">
-              <img src="img/devices/original/original.png">
+              <img class="lazy" src="images/grey.gif" data-original="img/devices/original/original.png">
               <span>Figure 1. Original Assesmbly</span>
             </div>
 
@@ -40,7 +40,7 @@
             </div>
 
             <div class="hidden_img-right">
-              <img src="img/devices/comparison.png">
+              <img class="lazy" src="images/grey.gif" data-original="img/devices/comparison.png">
               <span>Figure 2.  Old and New Playback Devices</span>
             </div>
 
@@ -51,7 +51,7 @@
 
 
             <div class="hidden_img">
-              <img src="img/devices/clear.png">
+              <img class="lazy" src="images/grey.gif" data-original="img/devices/clear.png">
               <span>Figure 3. Tonearm Device</span>
             </div>
 
@@ -60,7 +60,7 @@
             </div>
 
             <div class="hidden_img-right">
-              <img src="img/devices/color/colored.png">
+              <img class="lazy" src="images/grey.gif" data-original="img/devices/color/colored.png">
               <span>Figure 4. Back to Edison Style</span>
             </div>
 
@@ -129,7 +129,7 @@
       <div class="col">
 
         <div class="col__img col__img--left">
-          <img src="img/cylinder2.jpg" alt="">
+          <img class="lazy" src="images/grey.gif" data-original="img/cylinder2.jpg" alt="">
         </div>
 
         <div class="header">
@@ -178,7 +178,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img src="img/cylinder3.jpg" alt="">
+          <img class="lazy" src="images/grey.gif" data-original="img/cylinder3.jpg" alt="">
         </div>
 
         <div class="header">
@@ -203,7 +203,7 @@
       <div class="col">
 
         <div class="col__img col__img--left">
-          <img src="img/cylinder4.jpg" alt="">
+          <img class="lazy" src="images/grey.gif" data-original="img/cylinder4.jpg" alt="">
         </div>
 
         <div class="header">
@@ -228,7 +228,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img src="img/cylinder2.jpg" alt="">
+          <img class="lazy" src="images/grey.gif" data-original="img/cylinder2.jpg" alt="">
         </div>
 
         <div class="header">
@@ -253,27 +253,27 @@
   <h1>Project Members</h1>
   <div class="members">
     <div class="member">
-      <img class="img--circle" src="http://lorempixel.com/150/150" alt="">
+      <img class="img--circle lazy" src="images/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
       <p>Name of Member</p>
     </div>
     <div class="member">
-      <img class="img--circle" src="http://lorempixel.com/150/150" alt="">
+      <img class="img--circle lazy" src="images/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
       <p>Name of Member</p>
     </div>
     <div class="member">
-      <img class="img--circle" src="http://lorempixel.com/150/150" alt="">
+      <img class="img--circle lazy" src="images/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
       <p>Name of Member</p>
     </div>
     <div class="member">
-      <img class="img--circle" src="http://lorempixel.com/150/150" alt="">
+      <img class="img--circle lazy" src="images/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
       <p>Name of Member</p>
     </div>
     <div class="member">
-      <img class="img--circle" src="http://lorempixel.com/150/150" alt="">
+      <img class="img--circle lazy" src="images/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
       <p>Name of Member</p>
     </div>
     <div class="member">
-      <img class="img--circle" src="http://lorempixel.com/150/150" alt="">
+      <img class="img--circle lazy" src="images/grey.gif" data-original="http://lorempixel.com/150/150" alt="">
       <p>Name of Member</p>
     </div>
   </div>

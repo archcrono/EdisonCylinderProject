@@ -243,15 +243,10 @@
         #homeSection #homeContainer .homeBoxes h2 {
           margin-bottom: 20px;
           font-weight: bold;
-          font-size: 200%; }
+          font-size: 200%;
+          color: #00843d; }
         #homeSection #homeContainer .homeBoxes p {
           margin: 10px; }
-      #homeSection #homeContainer h2.red {
-        color: red; }
-      #homeSection #homeContainer h2.blue {
-        color: blue; }
-      #homeSection #homeContainer h2.yellow {
-        color: yellow; }
       #homeSection #homeContainer .alignleft {
         float: left;
         margin-right: 2%;
