@@ -247,9 +247,11 @@
           margin-bottom: 20px;
           font-weight: bold;
           font-size: 200%;
-          color: #00843d; }
+          color: #00843d;
+          font-family: "Arsenal", sans-serif; }
         #homeSection #homeContainer .homeBoxes p {
-          margin: 10px; }
+          margin: 10px;
+          font-family: "Rubik", sans-serif; }
       #homeSection #homeContainer .alignleft {
         float: left;
         margin-right: 2%;
