@@ -5,8 +5,9 @@ var screenSizeChange = 650;//The pixel size when the styling changes
 var screenSize = null; //False indicates mobile, True indicates tablet and larger
 var screenType = null;//Determine screen type (phone/tablet/desktop)
 
-
+// Variables for Cylinders
 var cylinderHolder;//Holds the cylinders until they are ready to be loaded
+var cylinderNowPlaying;//The Current Cylinder in the player
 
 
 // ///////////////
@@ -552,6 +553,8 @@ $(document).on('click','.pauseButton',function(){
 // /////////////
 $(document).on('click','.loadCylinderButton',function(){
 
+  cylinderNowPlaying = cylinderHolder;
+
   // Ready Player
 
   // Change Cylinder Player Meta Info
@@ -782,6 +785,7 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
     var randomCylinder = $scope.returnedCylinderData[Math.floor(Math.random() * $scope.returnedCylinderData.length)];
     $('#cylinderPlayerTitle').html(randomCylinder.title);
     $('#cylinderPlayerImg').attr('src', randomCylinder.cylinderImg);
+    cylinderNowPlaying = randomCylinder;
 
     $(".musicPlayer").jPlayer("setMedia",{
       m4a: randomCylinder.url,
@@ -843,3 +847,7 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   // })
 
 }]);//End Of controller
+
+$('#searchButton').click(function(){
+  console.log(cylinderNowPlaying);
+})

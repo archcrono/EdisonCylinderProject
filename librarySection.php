@@ -54,7 +54,7 @@
 
   <div id="largeActiveCylinder" class="activeMetaInfo">
     <div class="line">
-      <img id="largeCylinderImg"  alt="Cylinder Image" style="width: 200px; height: 200px;">
+      <img id="largeCylinderImg"  alt="Cylinder Image" style="width: 200px; height: 200px; opacity: .8;">
 
 
       <span>

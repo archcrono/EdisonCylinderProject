@@ -34,7 +34,7 @@
 
 <div id="cylinderPlayer">
 
-  <img id="cylinderPlayerImg"  alt="Cylinder Image">
+  <img id="cylinderPlayerImg"  alt="Cylinder Image" style="opacity: .8;">
 
   <h2 id="cylinderPlayerTitle"></h2>
 
