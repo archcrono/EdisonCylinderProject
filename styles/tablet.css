@@ -105,7 +105,7 @@
   #librarySection main #libraryContainer {
     padding-left: 5px;
     margin-top: 140px;
-    margin-bottom: 0;
+    padding-bottom: 0;
     box-sizing: border-box; }
     #librarySection main #libraryContainer .cylinderSquare {
       width: 33.1%; }
@@ -168,7 +168,7 @@
 
   #informationSection main #infoContainer {
     margin-top: 160px;
-    margin-bottom: 0px; }
+    padding-bottom: 0px; }
     #informationSection main #infoContainer .hidden_img {
       width: 20%;
       height: 20%;
@@ -182,7 +182,7 @@
 
   #contactSection main #contactContainer {
     margin-top: 145px;
-    margin-bottom: 0px;
+    padding-bottom: 0px;
     width: 100%; }
     #contactSection main #contactContainer #contactHeader {
       width: 80%;

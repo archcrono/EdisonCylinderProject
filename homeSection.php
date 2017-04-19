@@ -35,7 +35,7 @@
 
           <h2>Donate</h2>
 
-          <p>Maecenas eget dignissim lacus, vitae posuere mauris. Donec at elit ligula. Nunc in sapien quis velit varius iaculis. Vestibulum nec massa nec lorem pellentesque laoreet quis quis lacus. Donec sit amet lacinia tellus. Nulla congue accumsan massa sed luctus. Morbi quis enim rutrum, luctus risus sed, condimentum felis. Quisque urna felis, pulvinar in sagittis ac, pharetra ac nulla. Curabitur laoreet erat non sapien aliquet malesuada. Maecenas facilisis felis vel lorem mollis, sed mollis est ullamcorper. Maecenas quis felis consequat, condimentum odio in, luctus dui. Mauris quis mi dapibus, congue ex eget, consequat justo. Donec eget faucibus nibh. Quisque blandit ac tellus quis pretium. </p>
+          <p>We gladly accept donations of cylinders and/or financial donations to keep the UVU Cylinder Project running.  Since we are a 501.c institution, we can even give you vouchers to use as write-offs on your next tax return.  Also, you may Adopt a Cylinder of your choice, which allows us to take a cylinder from our unarchived boxes, transcribe them, gather metadata, clean them up and post them on our site!  Currently, it takes about $60 to see that whole process through, and you get to listen to a new cylinder!  Click here to see what’s in boxes 4-10!</p>
 
           <button class='btn' onclick="homeNavButtons()">Donate!</button>
         </span>

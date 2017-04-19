@@ -649,7 +649,7 @@ $(window).scroll(function(){
 
   if(screenWidth <= screenSizeChange){
     // Mobile
-    if($(this).scrollTop() > 90 ){
+    if($(this).scrollTop() >= 90 ){
       // console.log("Hello");
   		searchBar.addClass("lockBar");
   	}

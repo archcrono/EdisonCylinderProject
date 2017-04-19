@@ -15,7 +15,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img class="lazy" src="img/grey.gif" data-original="img/cylinder1.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder1.jpg" alt="">
         </div>
 
         <div class="header">
@@ -31,7 +31,7 @@
           <div id="hidden_one">
 
             <div class="hidden_img">
-              <img class="lazy" src="img/grey.gif" data-original="img/devices/original/original.png">
+              <img class="lazy" nothing="img/grey.gif" src="img/devices/original/original.png">
               <span>Figure 1. Original Assesmbly</span>
             </div>
 
@@ -40,7 +40,7 @@
             </div>
 
             <div class="hidden_img-right">
-              <img class="lazy" src="img/grey.gif" data-original="img/devices/comparison.png">
+              <img class="lazy" nothing="img/grey.gif" src="img/devices/comparison.png">
               <span>Figure 2.  Old and New Playback Devices</span>
             </div>
 
@@ -51,7 +51,7 @@
 
 
             <div class="hidden_img">
-              <img class="lazy" src="img/grey.gif" data-original="img/devices/clear.png">
+              <img class="lazy" nothing="img/grey.gif" src="img/devices/clear.png">
               <span>Figure 3. Tonearm Device</span>
             </div>
 
@@ -60,7 +60,7 @@
             </div>
 
             <div class="hidden_img-right">
-              <img class="lazy" src="img/grey.gif" data-original="img/devices/color/colored.png">
+              <img class="lazy" nothing="img/grey.gif" src="img/devices/color/colored.png">
               <span>Figure 4. Back to Edison Style</span>
             </div>
 
@@ -101,7 +101,7 @@
       <div class="col">
 
         <div class="col__img col__img--left">
-          <img class="lazy" src="img/grey.gif" data-original="img/cylinder2.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder2.jpg" alt="">
         </div>
 
         <div class="header">
@@ -138,7 +138,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img class="lazy" src="img/grey.gif" data-original="img/cylinder3.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder3.jpg" alt="">
         </div>
 
         <div class="header">
@@ -163,7 +163,7 @@
       <div class="col">
 
         <div class="col__img col__img--left">
-          <img class="lazy" src="img/grey.gif" data-original="img/cylinder4.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder4.jpg" alt="">
         </div>
 
         <div class="header">
@@ -188,7 +188,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img class="lazy" src="img/grey.gif" data-original="img/cylinder2.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder2.jpg" alt="">
         </div>
 
         <div class="header">
@@ -213,27 +213,27 @@
   <h1>Project Members</h1>
   <div class="members">
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/abe.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/abe.png" alt="">
       <p>Abe Raigne</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/blake.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/blake.png" alt="">
       <p>Blake Stevens</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/jared.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/jared.png" alt="">
       <p>Jared Cooley</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/mengxi.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/mengxi.png" alt="">
       <p>Mengxi Li</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/yuki.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/yuki.png" alt="">
       <p>Yuki Arai</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" src="img/grey.gif" data-original="img/members/haynes.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/haynes.png" alt="">
       <p>Jennifer Haynes</p>
     </div>
   </div>

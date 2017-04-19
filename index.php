@@ -33,8 +33,7 @@
             threshold: 10,
             effect: "fadeIn",
             // container: $("#informationSection main, #librarySection main"),
-            container: $("#librarySection main, #informationSection main"),
-            failure_limit: 10
+            container: $("#librarySection main, #informationSection main")
            });
           // Threashold so the images load before they reach the fold
           // Fadein to have them fade in when loaded
