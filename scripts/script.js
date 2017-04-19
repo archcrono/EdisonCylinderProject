@@ -687,9 +687,7 @@ cylinderApp.service('cylinderData', ['$http', function($http){
 
 if(screenType == 'phone'){
   $('.navButtonContainers > #searchButton').click(function(){
-    console.log('clicked');
     var height = $('#searchFunction').height();
-    console.log(height);
     if(height == 0){
       $('#searchFunction').animate({
         height: "100px"
@@ -702,20 +700,34 @@ if(screenType == 'phone'){
   });
 }else{
   $('.navButtonContainers > #searchButton').click(function(){
-    console.log('clicked');
-    var width = $('#searchFunction').width();
-    console.log(width);
-    if(width == 0){
+    var height = $('#searchFunction').height();
+    if(height == 0){
       $('#searchFunction').animate({
-        width: "60%"
+        height: "130px"
       },300);
-    }else{
+    }else if(height > 0){
       $('#searchFunction').animate({
-        width: 0
-      },300);
+        height: 0
+      }, 300);
     }
   });
 }
+// else{
+//   $('.navButtonContainers > #searchButton').click(function(){
+//     console.log('clicked');
+//     var width = $('#searchFunction').width();
+//     console.log(width);
+//     if(width == 0){
+//       $('#searchFunction').animate({
+//         width: "60%"
+//       },300);
+//     }else{
+//       $('#searchFunction').animate({
+//         width: 0
+//       },300);
+//     }
+//   });
+// }
 
 
 
