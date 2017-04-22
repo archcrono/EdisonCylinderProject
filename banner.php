@@ -43,8 +43,19 @@
   <div class="musicPlayer"></div>
 
   <div id="jp_container_1" class="cylinderPlayOptions" aria-label="media player">
-    <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
-    <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
+    <div class="audioControls">
+      <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
+      <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
+    </div>
+
+    <div class="jp-progress">
+      <div class="jp-seek-bar">
+        <div class="jp-play-bar">
+        
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <i id="metaInfoBanner" class="fa fa-question metaInfoButton" style="cursor: pointer;" aria-hidden="true"></i>

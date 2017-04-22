@@ -1,18 +1,21 @@
 <?php
 
+$fileName = $_FILES["file1"]["name"];
+$fileTmpLoc = $_FILES["file1"]["tmp_name"];
+$fileType = $_FILES["file1"]["type"];
+$fileSize = $_FILES["file1"]["size"];
+$fileErrorMsg = $_FILES["file1"]["error"];
 
- $ftp_server = "www.tropht.com";
- $ftp_conn = ftp_connect($ftp_server) or die ("Could not connect to $ftp_server");
- $login = ftp_login($ftp_conn, "trophtco", "Kateishot1!1");
 
- $file = $_POST['audioFile'];
+if(!$fileTmpLoc){
+  echo "ERROR: You have not selected a file to be uploaded.";
+  exit();
+}
+if(move_uploaded_file($fileTmpLoc, "../img/$fileName")){
+  echo "$fileName upload is complete";
+}else{
+  echo "move_uploaded_file function failed";
+}
 
- if(ftp_put($ftp_conn, "testFile.mp3", $file, FTP_ASCII)){
-   echo "success";
- }
- else{
-   echo "error";
- }
 
- ftp_close($ftp_conn);
  ?>

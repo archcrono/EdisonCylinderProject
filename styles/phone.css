@@ -1,17 +1,21 @@
 @media only screen and (max-width: 999em) {
   ::-webkit-scrollbar {
     display: none; }
+
   .active {
     z-index: -1; }
+
   .inactive {
     top: 100%;
     display: none;
     z-index: 1; }
+
   .lockBar {
     position: fixed !important;
     top: 0px !important;
     z-index: 20 !important;
     background-color: white; }
+
   .activeCylinder {
     width: 49.5%;
     display: inline-block;
@@ -62,6 +66,7 @@
         font-size: 4em;
         color: grey;
         margin-top: -23px; }
+
   .activeMetaInfo {
     top: 0;
     bottom: auto !important; }
@@ -75,9 +80,11 @@
       color: #c5e86c; }
     .activeMetaInfo .subMetaInfo {
       margin-top: 5px; }
+
   #container {
     width: 100%;
     height: 100%; }
+
   #allMetadata {
     display: none;
     position: fixed;
@@ -110,12 +117,14 @@
       margin-bottom: 5px; }
       #allMetadata h2 span {
         color: white; }
+
   #bannerContainer {
     height: 165px;
     position: absolute;
     top: 0;
     z-index: 10;
     width: 100%; }
+
   .banner {
     height: 80px;
     background-position: right;
@@ -150,8 +159,10 @@
       height: 90px;
       width: 400px;
       z-index: -1; }
+
   .tabletBanner {
     display: none; }
+
   #cylinderPlayer {
     width: 100%;
     height: 70px;
@@ -168,17 +179,31 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       left: 75px;
-      font-size: 1.5em;
-      padding-top: 5px; }
+      font-size: 1.3em;
+      padding-top: 2px; }
     #cylinderPlayer i {
       float: left;
-      padding-top: 35px;
+      padding-top: 25px;
       font-size: 2em; }
     #cylinderPlayer .metaInfoButton {
       position: absolute;
       font-size: 1.2em;
       right: 10px;
       bottom: 5px; }
+    #cylinderPlayer .jp-progress {
+      padding-top: 57px;
+      margin-left: 75px; }
+      #cylinderPlayer .jp-progress .jp-seek-bar {
+        margin: auto;
+        margin-left: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 5px; }
+        #cylinderPlayer .jp-progress .jp-seek-bar .jp-play-bar {
+          height: 10px;
+          background-color: #595959;
+          border-radius: 5px; }
+
   section {
     width: 100%;
     position: absolute;
@@ -187,6 +212,7 @@
       margin-top: 165px;
       position: absolute;
       width: 100%; }
+
   .navButtonContainers {
     height: 50px;
     width: 100%;
@@ -213,8 +239,10 @@
         left: 85%; }
       .navButtonContainers i span {
         display: none; }
+
   .activeNav {
     color: green !important; }
+
   #homeSection {
     background-color: white; }
     #homeSection #homeContainer {
@@ -254,6 +282,7 @@
       #homeSection #homeContainer .btn:hover {
         background: #e39d12;
         text-decoration: none; }
+
   #librarySection {
     background-color: white; }
     #librarySection main h2 {
@@ -314,6 +343,7 @@
           display: none; }
     #librarySection main #largeActiveCylinder {
       display: none; }
+
   #informationSection {
     font-family: "Rubik", sans-serif;
     font-size: 16px;
@@ -510,6 +540,7 @@
       #informationSection #infoContainer audio::-webkit-media-controls-panel {
         width: calc(100% + 30px);
         /* Adjust as needed */ }
+
   #contactSection {
     background-color: white; }
     #contactSection main #contactHeader {
@@ -565,6 +596,7 @@
           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 );
           /* IE6-9 */ }
+
   #searchFunction {
     position: fixed;
     bottom: 0;
@@ -587,3 +619,5 @@
         #searchFunction #Container input[type=text]:focus {
           outline: none;
           width: 80%; } }
+
+/*# sourceMappingURL=phone.css.map */

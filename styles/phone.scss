@@ -272,12 +272,12 @@ $standard-font: 'Rubik', sans-serif;
     white-space: nowrap;
     text-overflow: ellipsis;
     left: 75px;
-    font-size: 1.5em;
-    padding-top: 5px;
+    font-size: 1.3em;
+    padding-top: 2px;
   }
   i{
     float: left;
-    padding-top: 35px;
+    padding-top: 25px;
     // padding-left: 5px;
     font-size: 2em;
   }
@@ -287,6 +287,26 @@ $standard-font: 'Rubik', sans-serif;
     right: 10px;
     bottom: 5px;
   }
+
+  .jp-progress{
+    padding-top: 57px;
+    margin-left: 75px;
+
+    .jp-seek-bar{
+      margin: auto;
+      margin-left: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 5px;
+
+      .jp-play-bar{
+        height: 10px;
+        background-color: #595959;
+        border-radius: 5px;
+      }//End of jp-play-bar
+    }//End of jp-seek-bar
+  }//End of jp-progress
+
 }
 
 // /////////

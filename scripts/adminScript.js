@@ -64,6 +64,52 @@ $('#deleteCylinder').click(function(){
   })
 })
 
+function uploadFile(){
+  var file = $("#file1")[0].files[0];
+  console.log(file.name + " | " + file.size + " | " + file.type);
+
+  var formdata = new FormData();
+
+  formdata.append("file1", file);
+
+  var ajax = new XMLHttpRequest();
+
+  ajax.upload.addEventListener("progres", progressHandler, false);
+  ajax.addEventListener("load", completeHandler, false);
+  ajax.addEventListener("error", errorHandler, false);
+  ajax.addEventListener("abort", abortHandler, false);
+  ajax.open("POST", "php/test.php");
+  ajax.send(formdata);
+}
+// $('#uploadAudio').click(function(){
+//
+//   // $.ajax({
+//   //   data: data,
+//   //   type: "post",
+//   //   url: "php/test.php",
+//   //   success: function(data){
+//   //     // window.location.reload();
+//   //     alert(data);
+//   //   }
+//   // })
+// })
+
+function progressHandler(event){
+  var percent = (event.loaded / event.total) * 100;
+  $("#progressBar").value = Math.round(percent);
+  $("#status").innerHTML = Math.round(percent) + "% uploaded...please wait.";
+}
+function completeHandler(event){
+  $("#status").innerHTML = event.target.responseText;
+  $("#progressBar").value = 0;
+}
+function errorHandler(event){
+  $("#status").innerHTML = "Uploaded Failed";
+}
+function abortHandler(event){
+  $("#status").innerHTML = "Uploaded Aborted";
+}
+
 // //////
 // Angular
 // //////

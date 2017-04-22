@@ -34,10 +34,13 @@
       </div><!-- /.col-lg-10 -->
     </div><!-- /.row -->
 
-    <form id="fileForm" style="border: 1px solid black;"class="" action="index.html" method="post">
-      <input type="file" name="audioFile" class="pull-right">
+    <form id="upload_form" style="border: 1px solid black;" enctype="multipart/form-data" method="post">
+      <input type="file" name="file1"  id="file1"><br>
 
-      <button type="button" id="uploadAudio" name="button">Upload</button>
+      <input type="button" value="Upload" onclick="uploadFile()">
+      <br>
+      <progress id="progressBar" value="0" max="100" style="width: 300px;"></progress>
+      <h3 id="status"></h3>
     </form>
 
     <div class="data row">

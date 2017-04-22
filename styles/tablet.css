@@ -64,6 +64,9 @@
       font-size: 2.4em; }
     #cylinderPlayer .metaInfoButton {
       bottom: 5px; }
+    #cylinderPlayer .jp-progress {
+      padding-top: 75px;
+      margin-left: 95px; }
 
   section {
     width: 100%; }

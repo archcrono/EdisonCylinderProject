@@ -36,7 +36,7 @@
             </div>
 
             <div class="paragraph">
-              First, to transcribe the cylinders electrically, we remove the original Edison playback assembly (needle and diaphragm), pictued in figure 1, and insert some form of playback device using a modern phonograph needle.  Using a Stanton 500 cartridge, we can use a wide variety of needle sizes to optimize the playback of the cylinders. The first device we had seen on the internet was a brass device that fit perfectly into the Edison mounting hole, but with a phono needle mounted directly beneath. 
+              First, to transcribe the cylinders electrically, we remove the original Edison playback assembly (needle and diaphragm), pictued in figure 1, and insert some form of playback device using a modern phonograph needle.  Using a Stanton 500 cartridge, we can use a wide variety of needle sizes to optimize the playback of the cylinders. The first device we had seen on the internet was a brass device that fit perfectly into the Edison mounting hole, but with a phono needle mounted directly beneath.
               <button class="inline video_btn" value="video_btn_one">Watch Video <i class="fa fa-video-camera" aria-hidden="true"></i></button>
             </div>
 
@@ -57,7 +57,7 @@
             </div>
 
             <div class="paragraph">
-              After studying the devices we had created, Gary Hannah, a mechanical engineer from Kansas City, decided to approach a playback device from a completely new angle. Truly thinking outside of the circle, Gary engineered a playback device that resembles a tonearm that fits into the original Edison hole. The picture presented here in figure 3 shows how this fits into an Amberola. This allows the tonearm to float considerably more, to allow playback of out-of-round cylinders. It is a very effective device to use to try to correct skips using the first method. 
+              After studying the devices we had created, Gary Hannah, a mechanical engineer from Kansas City, decided to approach a playback device from a completely new angle. Truly thinking outside of the circle, Gary engineered a playback device that resembles a tonearm that fits into the original Edison hole. The picture presented here in figure 3 shows how this fits into an Amberola. This allows the tonearm to float considerably more, to allow playback of out-of-round cylinders. It is a very effective device to use to try to correct skips using the first method.
               <button class="inline video_btn" value="video_btn_two">Watch Video <i class="fa fa-video-camera" aria-hidden="true"></i></button>
             </div>
 
@@ -67,21 +67,21 @@
             </div>
 
             <div class="paragraph">
-              Gary was determined to create an even better transcribing device. If you’ve ever used an original Edison Amberola to play back cylinders, you know how robust that device is in playing not only out-of-round cylinders, but also its ability to play through skips. So we went back to the original Edison design to creat our 4th modification of cylinder playback. Gary carefully made measurement of the original Amerola 30 device, including the original needle and rocker arm, tied to the diaphragm with a string. We simply replaced the diapraghm with an inverted Stanton 500 cartride, but with no needle since that’s no longer necessary. It’s tied to a new needle that we ground out of a 8 mil saphire rod. Gary then 3-D printed the whole device.  Fully assembled. This is how that device looks now. 
+              Gary was determined to create an even better transcribing device. If you’ve ever used an original Edison Amberola to play back cylinders, you know how robust that device is in playing not only out-of-round cylinders, but also its ability to play through skips. So we went back to the original Edison design to creat our 4th modification of cylinder playback. Gary carefully made measurement of the original Amerola 30 device, including the original needle and rocker arm, tied to the diaphragm with a string. We simply replaced the diapraghm with an inverted Stanton 500 cartride, but with no needle since that’s no longer necessary. It’s tied to a new needle that we ground out of a 8 mil saphire rod. Gary then 3-D printed the whole device.  Fully assembled. This is how that device looks now.
               <button class="inline video_btn" value="video_btn_three">Watch Video <i class="fa fa-video-camera" aria-hidden="true"></i></button>
             </div>
 
             <div id="modal">
               <div class="modal">
                 <div class="modal_content">
-                  <video id="video_one" class="video" controls width="640px">
+                  <!-- <video id="video_one" class="video" controls width="640px">
                     <source src="video/MikeWislandCylinderIntro.mp4" type="video/mp4">
                   </video>
                   <video id="video_two" class="video" controls width="640px">
                     <source src="video/GaryHannahTonearmDevice.mov">
                   </video>
                   <video id="video_three" class="video" controls width="640px">
-                    <source src="video/GaryHannahVideo3.mp4" type="video/mp4">
+                    <source src="video/GaryHannahVideo3.mp4" type="video/mp4"> -->
                   </video>
                 </div>
               </div>
@@ -121,15 +121,15 @@
 
           <div style="text-align:center;">
             <div style="display: inline-block;">
-              Tipperary Before Restoration 
+              Tipperary Before Restoration
               <audio style="display: block;" controls>
-                <source src="audio/before.mp3" type="">
+                <source src="audio/BeforeTipperary.mp3" type="">
               </audio>
             </div>
             <div style="display: inline-block;">
               Tipperary After Restoration
               <audio style="display: block;" controls>
-                <source src="audio/after.mp3" type="">
+                <source src="audio/AfterTipperary.mp3" type="">
               </audio>
             </div>
           </div>
@@ -246,7 +246,7 @@
       <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/haynes.png" alt="">
       <p>Jennifer Haynes</p>
     </div>
-    
+
     <div class="row">
       <div class="col">
         <div class="content">

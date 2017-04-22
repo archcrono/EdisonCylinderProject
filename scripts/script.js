@@ -91,6 +91,7 @@ var fitScreen = function(){
     // Cylinder Player
     $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Width
     $('#cylinderPlayer .jp-play').css('padding-left', (screenWidth / 2)  - 75);//Cylinder Player Play/Pause Position
+    $('.jp-progress').width($('#cylinderPlayer').width() - 120);//Cylinder Player Scrubber
 
 
   }else{
@@ -109,6 +110,7 @@ var fitScreen = function(){
     $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Title Width
     $('#cylinderPlayer').width((screenWidth - $('.tabletBanner').width()) - 5);//Cylinder Player Width
     $('#cylinderPlayer .jp-play').css('padding-left', ($('#cylinderPlayer').width() / 2)  - 100);//Cylinder Player Play/Pause Position
+    $('.jp-progress').width($('#cylinderPlayer').width() - 135);//Cylinder Player Scrubber
 
 
     // Large Active Cylinder
@@ -394,7 +396,9 @@ $(document).on('click','.cylinderSquare',function(){
 
   if(screenWidth < 650){
     // Mobile
-
+    // console.log("Cylinder Position: " + $(this).position().top);
+    // console.log("Window position: " + $(window).scrollTop());
+    $(window).scrollTop($(this).position().top);
     // Animate active cylinder back to normal
     $('.activeCylinder').animate({
       width: '50%' //This might need to be restore to 49.5%
@@ -577,7 +581,9 @@ $(document).on('click','.loadCylinderButton',function(){
       useStateClassSkin: true,
       cssSelector: {
         play: ".playButton",
-        pause: ".pauseButton"
+        pause: ".pauseButton",
+        seekBar: '.jp-seek-bar',
+        playBar: '.jp-play-bar'
       }
   });
 
@@ -641,9 +647,8 @@ $("#showAdvancedSearch").click(function(){
 });
 
 // //////////////
-// SeachBar Lock
+// Cylinder Player Lock
 // //////////////
-var searchBar = $('#cylinderPlayer');
 
 $(window).scroll(function(){
 
@@ -651,10 +656,10 @@ $(window).scroll(function(){
     // Mobile
     if($(this).scrollTop() >= 90 ){
       // console.log("Hello");
-  		searchBar.addClass("lockBar");
+  		$('#cylinderPlayer').addClass("lockBar");
   	}
   	else{
-  		searchBar.removeClass("lockBar");
+  		$('#cylinderPlayer').removeClass("lockBar");
   	}
   }
 
@@ -898,20 +903,24 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
     cylinderNowPlaying = randomCylinder;
 
     $(".musicPlayer").jPlayer("setMedia",{
-      m4a: randomCylinder.url,
-      oga: randomCylinder.url
+      mp3: randomCylinder.url
     });
 
     $(".musicPlayer").jPlayer({
         ready: function(event) {
           $(this).jPlayer("setMedia", {
-            m4a: randomCylinder.url,
-            oga: randomCylinder.url,
+            mp3: randomCylinder.url,
             preload: 'metadata'
           });
         },
-        supplied: "mp3, oga",
-        useStateClassSkin: true
+        supplied: "mp3",
+        useStateClassSkin: true,
+        cssSelector: {
+          play: ".playButton",
+          pause: ".pauseButton",
+          seekBar: '.jp-seek-bar',
+          playBar: '.jp-play-bar'
+        }
     });
 
 
