@@ -78,58 +78,88 @@
 
         <form enctype="multipart/form-data" id="cylinderUpdateForm">
           <input ng-model="cylinderId" name="id" style="display: none;" readonly>
+
+          <!-- Artist/Title/Record Label/Month Year -->
           <div class="col-sm-12">
+
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
               <div class="col-sm-9">
                 <input ng-model="cylinderArtist" class="form-control" type="text" name="artist" value="">
               </div>
             </div>
+
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Title of Cylinder</label>
               <div class="col-sm-9">
                 <input ng-model="cylinderTitle" class="form-control" type="text" name="title" value="">
               </div>
             </div>
+
             <div class="form-group row">
-              <label class="col-sm-3 col-form-label" for="artist">URL</label>
+              <label class="col-sm-3 col-form-label">Cylinder Record Label</label>
               <div class="col-sm-9">
-                <input ng-model="cylinderURL" class="form-control" type="text" name="url" value="">
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="text-right">
-                <input type="file" name="" class="pull-right">
+                <input ng-model="cylinderRecordLabel" class="form-control" type="text" name="recordLabel" value="">
               </div>
             </div>
 
             <div class="form-group row">
-              <div class="col-sm-3">
-                <label class="col-sm-6 col-form-label" for="condition">Condition</label>
-                <div class="col-sm-6">
-                  <input ng-model="cylinderCondition" class="input-sm form-control" type="number" name="condition" value="">
-                </div>
+              <label class="col-sm-3 col-form-label">Month/Year(MM/YYYY)</label>
+              <div class="col-sm-9">
+                <input ng-model="cylinderMonthYear" class="form-control" type="text" name="monthYear" value="">
               </div>
-              <div class="col-sm-3">
-                <label class="col-sm-6 col-form-label" for="condition">Mold</label>
-                <div class="col-sm-6">
-                  <input ng-model="cylinderMold" class="input-sm form-control" type="number" name="mold" value="">
-                </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">EQ Settings</label>
+              <div class="col-sm-9">
+                <input ng-model="cylinderEQSettings" class="form-control" type="text" name="eqSettings" value="">
               </div>
+            </div>
+
+
+            <!-- Number/Take/Mold/Condition/Box Number -->
+            <div class="form-group row">
+
               <div class="col-sm-3">
                 <label class="col-sm-6 col-form-label" for="condition">Number</label>
                 <div class="col-sm-6">
                   <input ng-model="cylinderNumber" class="input-sm form-control" type="number" name="number" value="">
                 </div>
               </div>
+
               <div class="col-sm-3">
                 <label class="col-sm-6 col-form-label" for="condition">Take</label>
                 <div class="col-sm-6">
                   <input ng-model="cylinderTake" class="input-sm form-control" type="number" name="take" value="">
                 </div>
               </div>
+
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Mold</label>
+                <div class="col-sm-6">
+                  <input ng-model="cylinderMold" class="input-sm form-control" type="number" name="mold" value="">
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label" for="condition">Condition</label>
+                <div class="col-sm-6">
+                  <input ng-model="cylinderCondition" class="input-sm form-control" type="number" name="condition" value="">
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <label class="col-sm-6 col-form-label">Box Number</label>
+                <div class="col-sm-6">
+                  <input ng-model="cylinderMold" class="input-sm form-control" type="number" name="boxNumber" value="">
+                </div>
+              </div>
+
             </div>
 
+
+            <!-- Playable/Unplayable/Flat Edge/ In UCSB -->
             <div class="form-group row">
               <div class="col-sm-2 col-sm-offset-1">
                 <div class="checkbox">
@@ -159,18 +189,14 @@
                   </label>
                 </div>
               </div>
-              <div class="col-sm-2">
-                <div class="checkbox">
-                  <label>
-                    <input ng-model="checkbox.website" type="checkbox" name="website">on Website
-                  </label>
-                </div>
-              </div>
+
             </div>
 
             <div class="form-group">
               <label for="artist">Comments</label>
-              <textarea ng-model="cylinderComments" class="form-control" type="text" name="comments" value="" rows="7"></textarea>
+              <textarea ng-model="cylinderComments" style="resize: none;" class="form-control" type="text" name="comments" value="" rows="7"></textarea>
+              <label for="artist">Comments</label>
+              <textarea ng-model="cylinderOtherComments" style="resize: none;" class="form-control" type="text" name="otherComments" value="" rows="7"></textarea>
             </div>
             <div class="form-inline pull-right">
               <div class="btn btn-default" ng-click="closeEdit()">Cancel</div>

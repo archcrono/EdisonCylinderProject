@@ -149,11 +149,10 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
   cylinderAdminData.getAdminCylinderData().then(function(data){
     $scope.returnedData = data.data;
 
-    console.log($scope.returnedData);
   })
 
   $scope.getItemData = function(){
-    console.log(this.item);
+    // console.log(this.item);
     $('#modal--bg').addClass('dark');
     $('#cylinderFormInfo').addClass('show');
 
@@ -161,11 +160,15 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
     $scope.cylinderTitle = this.item.cylinderTitle;
     $scope.cylinderArtist = this.item.cylinderArtist;
     $scope.cylinderComments = this.item.cylinderComments;
+    $scope.cylinderOtherComments = this.item.cylinderOtherComments;
+    $scope.cylinderRecordLabel = this.item.cylinderRecordLabel;
+    $scope.cylinderMonthYear = this.item.cylinderMonthYear;
+    $scope.cylinderEQSettings = this.item.cylinderEQSettings;
     $scope.cylinderCondition = parseInt(this.item.cylinderCondition);
     $scope.cylinderMold = parseInt(this.item.cylinderMold);
     $scope.cylinderNumber = parseInt(this.item.cylinderNumber);
     $scope.cylinderTake = parseInt(this.item.cylinderTake);
-    $scope.cylinderId = parseInt(this.item.cylinderId);
+    $scope.cylinderId = parseInt(this.item.cylinderID);
 
     $scope.checkbox = {
       unplayable: false,
@@ -198,7 +201,10 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
     $scope.cylinderTitle = null;
     $scope.cylinderArtist = null;
     $scope.cylinderComments = null;
-    $scope.cylinderURL = null;
+    $scope.cylinderOtherComments = null;
+    $scope.cylinderRecordLabel = null;
+    $scope.cylinderMonthYear = null;
+    $scope.cylinderEQSettings = null;
     $scope.cylinderCondition = null;
     $scope.cylinderMold = null;
     $scope.cylinderNumber = null;
