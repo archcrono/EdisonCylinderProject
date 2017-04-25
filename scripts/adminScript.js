@@ -45,17 +45,17 @@ $('#createNewCylinderButton').click(function(){
 
   // Handle Text data
 
-  var data = $('#createForm').serialize();
+  // var data = $('#createForm').serialize();
 
-  $.ajax({
-    data: data,
-    type: "post",
-    url: "php/post.php",
-    success: function(data){
-      // window.location.reload();
-      alert(data);
-    }
-  });
+  // $.ajax({
+  //   data: data,
+  //   type: "post",
+  //   url: "php/post.php",
+  //   success: function(data){
+  //     // window.location.reload();
+  //     alert(data);
+  //   }
+  // });
 
 });
 
@@ -89,38 +89,37 @@ $('#deleteCylinder').click(function(){
 })
 
 
-$("#uploadButton").click(function(){
-  var file = $("#file1")[0].files[0];
-  // console.log(file.name + " | " + file.size + " | " + file.type);
-
-  var formdata = new FormData();
-
-  formdata.append("file1", file);
-
-  var ajax = new XMLHttpRequest();
-
-  ajax.upload.addEventListener("progress", progressHandler, false);
-  ajax.addEventListener("load", completeHandler, false);
-  ajax.addEventListener("error", errorHandler, false);
-  ajax.addEventListener("abort", abortHandler, false);
-  ajax.open("POST", "php/uploadFile.php");
-  ajax.send(formdata);
-})
-
-function progressHandler(event){
+// ///////////////
+// Upload Handlers
+// ///////////////
+var progressHandler = function(event){
   var percent = (event.loaded / event.total) * 100;
-  $("#progressBar").value = Math.round(percent);
+  $("#progressBar").val(Math.round(percent));
   $("#status").innerHTML = Math.round(percent) + "% uploaded...please wait.";
+  console.log(percent);
 }
-function completeHandler(event){
-  $("#status").innerHTML = event.target.responseText;
-  $("#progressBar").value = 0;
+var completeHandler = function(event){
+  alert("Upload Complete");
+  // $("#status").innerHTML = event.target.responseText;
+  // $("#progressBar").value = 0;
+  var data = $('#createForm').serialize();
+  $.ajax({
+    data: data,
+    type: "post",
+    url: "php/post.php",
+    success: function(data){
+      // window.location.reload();
+      alert(data);
+    }
+  });
 }
-function errorHandler(event){
-  $("#status").innerHTML = "Uploaded Failed";
+var errorHandler = function(event){
+  alert("Upload Failed");
+  // $("#status").innerHTML = "Uploaded Failed";
 }
-function abortHandler(event){
-  $("#status").innerHTML = "Uploaded Aborted";
+var abortHandler = function(event){
+  alert("Upload Aborted");
+  // $("#status").innerHTML = "Uploaded Aborted";
 }
 
 // //////

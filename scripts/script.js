@@ -562,18 +562,18 @@ $(document).on('click','.loadCylinderButton',function(){
   // Ready Player
 
   // Change Cylinder Player Meta Info
-  $('#cylinderPlayerTitle').html(cylinderHolder.title);
+  $('#cylinderPlayerTitle').html(cylinderHolder.cylinderTitle);
   $('#cylinderPlayerImg').attr('src', cylinderHolder.cylinderImg)
 
   $(".musicPlayer").jPlayer("clearMedia");
   $(".musicPlayer").jPlayer("setMedia",{
-    mp3: cylinderHolder.url
+    mp3: cylinderHolder.cylinderAudioURL
   });
 
   $(".musicPlayer").jPlayer({
       ready: function(event) {
         $(this).jPlayer("setMedia", {
-          mp3: cylinderHolder.url,
+          mp3: cylinderHolder.cylinderAudioURL,
           preload: 'metadata'
         });
       },
@@ -599,12 +599,12 @@ $(document).on('click','.loadCylinderButton',function(){
 $('#metaInfoBanner').click(function(){
 
   // All Meta Info
-  $('#allMetaImg').attr('src',cylinderNowPlaying.cylinderImg);
-  $('#allMetaTitle').html(cylinderNowPlaying.title);
-  $('#allMetaArtist').html(cylinderNowPlaying.artist);
-  $('#allMetaTake').html(cylinderNowPlaying.take);
-  $('#allMetaMold').html(cylinderNowPlaying.mold);
-  $('#allMetaComments').html(cylinderNowPlaying.comments);
+  $('#allMetaImg').attr('src',cylinderNowPlaying.cylinderTopURL);
+  $('#allMetaTitle').html(cylinderNowPlaying.cylinderTitle);
+  $('#allMetaArtist').html(cylinderNowPlaying.cylinderArtist);
+  $('#allMetaTake').html(cylinderNowPlaying.cylinderTake);
+  $('#allMetaMold').html(cylinderNowPlaying.cylinderMold);
+  $('#allMetaComments').html(cylinderNowPlaying.cylinderComments);
 
   $('#allMetadata').toggle();
   $('#allMetadata').animate({
@@ -616,12 +616,12 @@ $('#metaInfoBanner').click(function(){
 $('#metaInfoLargeActive').click(function(){
 
   // All Meta Info
-  $('#allMetaImg').attr('src',cylinderHolder.cylinderImg);
-  $('#allMetaTitle').html(cylinderHolder.title);
-  $('#allMetaArtist').html(cylinderHolder.artist);
-  $('#allMetaTake').html(cylinderHolder.take);
-  $('#allMetaMold').html(cylinderHolder.mold);
-  $('#allMetaComments').html(cylinderHolder.comments);
+  $('#allMetaImg').attr('src',cylinderHolder.cylinderTopURL);
+  $('#allMetaTitle').html(cylinderHolder.cylinderTitle);
+  $('#allMetaArtist').html(cylinderHolder.cylinderArtist);
+  $('#allMetaTake').html(cylinderHolder.cylinderTake);
+  $('#allMetaMold').html(cylinderHolder.cylinderMold);
+  $('#allMetaComments').html(cylinderHolder.cylinderComments);
 
   $('#allMetadata').toggle();
   $('#allMetadata').animate({
@@ -824,9 +824,9 @@ var cylinderApp = angular.module('cylinderApp', []);
 // Services for HTTP Requests
 cylinderApp.service('cylinderData', ['$http', function($http){
   this.getCylinderData = function(){
-    // return $http.get('php/get.php');
+    return $http.get('php/get.php');
 
-    return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json');
+    // return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json');
   }
 }]);
 
@@ -886,6 +886,7 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   cylinderData.getCylinderData().then(function(data){
     $scope.returnedCylinderData = data.data;
 
+    console.log($scope.returnedCylinderData);
 
 
     for(var i = 0; i < $scope.returnedCylinderData.length; i++){
@@ -898,18 +899,19 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
     // Select and set random cylinder
 
     var randomCylinder = $scope.returnedCylinderData[Math.floor(Math.random() * $scope.returnedCylinderData.length)];
-    $('#cylinderPlayerTitle').html(randomCylinder.title);
-    $('#cylinderPlayerImg').attr('src', randomCylinder.cylinderImg);
+    console.log(randomCylinder);
+    $('#cylinderPlayerTitle').html(randomCylinder.cylinderTitle);
+    $('#cylinderPlayerImg').attr('src', randomCylinder.cylinderTopURL);
     cylinderNowPlaying = randomCylinder;
 
     $(".musicPlayer").jPlayer("setMedia",{
-      mp3: randomCylinder.url
+      mp3: randomCylinder.cylinderAudioURL
     });
 
     $(".musicPlayer").jPlayer({
         ready: function(event) {
           $(this).jPlayer("setMedia", {
-            mp3: randomCylinder.url,
+            mp3: randomCylinder.cylinderAudioURL,
             preload: 'metadata'
           });
         },
@@ -937,12 +939,12 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
 
 
     // Large Meta Info
-    $('#largeCylinderImg').attr('src',this.item.cylinderImg);
-    $('#largeCylinderName').html(this.item.title);
-    $('#largeArtistName').html(this.item.artist);
-    $('#largeMoldNumber').html(this.item.mold);
-    $('#largeTakeNumber').html(this.item.take);
-    $('#largeComments').html(this.item.comments);
+    $('#largeCylinderImg').attr('src',this.item.cylinderTopURL);
+    $('#largeCylinderName').html(this.item.cylinderTitle);
+    $('#largeArtistName').html(this.item.cylinderArtist);
+    $('#largeMoldNumber').html(this.item.cylinderMold);
+    $('#largeTakeNumber').html(this.item.cylinderTake);
+    $('#largeComments').html(this.item.cylinderComments);
 
 
   }

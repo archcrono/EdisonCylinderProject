@@ -22,13 +22,13 @@
 
 
       <div class="metaInfo">
-        <h2>{{ item.title }}</h2>
+        <h2>{{ item.cylinderTitle }}</h2>
         <i class="fa fa-sort-desc" style="display: none;" aria-hidden="true"></i>
         <div class="subMetaInfo">
-          <h4><b>Artist:</b> {{ item.artist }}</h4>
-          <h4><b>Take:</b> {{ item.take }}</h4>
-          <h4><b>Mold:</b> {{ item.mold }}</h4>
-          <h4><b>Comments:</b> {{ item.comments }}</h4>
+          <h4><b>Artist:</b> {{ item.cylinderArtist }}</h4>
+          <h4><b>Take:</b> {{ item.cylinderTake }}</h4>
+          <h4><b>Mold:</b> {{ item.cylinderMold }}</h4>
+          <h4><b>Comments:</b> {{ item.cylinderComments }}</h4>
         </div>
       </div>
 

@@ -218,6 +218,8 @@
           <label>Cylinder Audio</label>
           <input type="file" name="cylinderAudio" id="cylinderAudio">
 
+          <progress id="progressBar" max="100" style="width: 300px; height: 10px;"></progress>
+
           <input type="text" style="display: none;" id="randomCylinderId" name="id" readonly>
 
           <div class="col-sm-12">

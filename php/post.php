@@ -47,6 +47,8 @@ if(isset($_REQUEST)){
       $inUCSBdb = false;
   }
   $cylinderOtherComments = $_POST['otherComments'];
+  $imgPath = "img\/cylinderTops\/";
+  $audioPath = "audio\/cylinderAudio\/";
   $cylinderTopURL = "cylinderTop.jpg";
   $cylinderAudioURL = "cylinderAudio.mp3";
 
@@ -69,13 +71,13 @@ if(isset($_REQUEST)){
     VALUES ('$cylinderID', '$cylinderNumber', '$cylinderTake', '$cylinderMold',
       '$cylinderTitle', '$cylinderArtist', '$cylinderMonthYear', '$cylinderRecordLabel','$cylinderComments',
       '$cylinderEQSettings', '$cylinderBoxNumber', '$cylinderCondition', '$flatEdge', '$crackedPlayable',
-      '$crackedUnplayable', '$inUCSBdb', '$cylinderOtherComments','$cylinderTopURL','$cylinderAudioURL')";
+      '$crackedUnplayable', '$inUCSBdb', '$cylinderOtherComments','$imgPath$cylinderID$cylinderTopURL','$audioPath$cylinderID$cylinderAudioURL')";
 
   $result = mysql_query($sql);
   if($result){
-    echo "Save Successful!";
+    echo "Save Metadata To Database Successfully!";
   }else{
-    echo "Unable to save";
+    echo "Unable to save to the database";
 
   }
 
