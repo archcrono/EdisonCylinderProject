@@ -5,45 +5,53 @@ if(isset($_REQUEST)){
   $con = mysql_connect("tropht.com:3306","trophtco_Brake","StrongPassword1") or die('Cannot connect to DB' . mysql_error());
   $db = mysql_select_db('trophtco_cylinderProject') or die('Cannot select DB');
 
-  $artist = $_POST['artist'];
-  $id = $_POST['id'];
-  $title = $_POST['title'];
-  $url= $_POST['url'];
-  $condition = $_POST['condition'];
-  $mold = $_POST['mold'];
-  $number = $_POST['number'];
-  $take = $_POST['take'];
-  $comments = $_POST['comments'];
-  // Playable Checkbox
-  $playable = $_POST['playable'];
-  if ($playable) {
-      $playable = true;
+// Variables
+  $cylinderID = $_POST['id'];
+  $cylinderNumber = $_POST['number'];
+  $cylinderTake = $_POST['take'];
+  $cylinderMold = $_POST['mold'];
+  $cylinderTitle = $_POST['title'];
+  $cylinderArtist = $_POST['artist'];
+  $cylinderMonthYear = $_POST['monthYear'];
+  $cylinderRecordLabel = $_POST['recordLabel'];
+  $cylinderComments = $_POST['comments'];
+  $cylinderEQSettings = $_POST['eqSettings'];
+  $cylinderBoxNumber = $_POST['boxNumber'];
+  $cylinderCondition = $_POST['condition'];
+  // Flat Edge Checkbox
+  $flatEdge = $_POST['edge'];
+  if ($flatEdge) {
+      $flatEdge = true;
   }else{
-      $playable = false;
+      $flatEdge = false;
+  }
+  // Playable Checkbox
+  $crackedPlayable = $_POST['playable'];
+  if ($crackedPlayable) {
+      $crackedPlayable = true;
+  }else{
+      $crackedPlayable = false;
   }
   // Unplayed Checkbox
-  $unplayable = $_POST['unplayable'];
-  if ($unplayable) {
-      $unplayable = true;
+  $crackedUnplayable = $_POST['unplayable'];
+  if ($crackedUnplayable) {
+      $crackedUnplayable = true;
   }else{
-      $unplayable = false;
+      $crackedUnplayable = false;
   }
-
-  // Flat Edge Checkbox
-  $edge = $_POST['edge'];
-  if ($edge) {
-      $edge = true;
-  }else{
-      $edge = false;
-  }
-
   // In UCSB Checkbox
-  $ucsb = $_POST['ucsb'];
-  if ($ucsb) {
-      $ucsb = true;
+  $inUCSBdb = $_POST['ucsb'];
+  if ($inUCSBdb) {
+      $inUCSBdb = true;
   }else{
-      $ucsb = false;
+      $inUCSBdb = false;
   }
+  $cylinderOtherComments = $_POST['otherComments'];
+  $cylinderTopURL = "cylinderTop.jpg";
+  $cylinderAudioURL = "cylinderAudio.mp3";
+
+
+
 
   // On Website
   $website = $_POST['website'];
@@ -54,14 +62,21 @@ if(isset($_REQUEST)){
   }
 
 
-  $sql = "INSERT INTO cylinderMetaData (id, cylinderNumber, take, mold, title, artist, comments, onWebsite, cylinderCondition, flatEdge, crackedPlayable, crackedUnplayable, inUCSBdb, url)
-    VALUES ('$id', '$number', '$take', '$mold', '$title', '$artist', '$comments', '$website', '$condition', '$edge', '$playable', '$unplayable', '$ucsb', '$url')";
+  $sql = "INSERT INTO cylinderMetaData (cylinderId, cylinderNumber, cylinderTake, cylinderMold,
+    cylinderTitle, cylinderArtist, cylinderMonthYear, cylinderRecordLabel, cylinderComments,
+    cylinderEQSettings, cylinderBoxNumber, cylinderCondition, flatEdge, crackedPlayable,
+    crackedUnplayable, inUCSBdb, cylinderOtherComments, cylinderTopURL, cylinderAudioURL)
+    VALUES ('$cylinderID', '$cylinderNumber', '$cylinderTake', '$cylinderMold',
+      '$cylinderTitle', '$cylinderArtist', '$cylinderMonthYear', '$cylinderRecordLabel','$cylinderComments',
+      '$cylinderEQSettings', '$cylinderBoxNumber', '$cylinderCondition', '$flatEdge', '$crackedPlayable',
+      '$crackedUnplayable', '$inUCSBdb', '$cylinderOtherComments','$cylinderTopURL','$cylinderAudioURL')";
 
   $result = mysql_query($sql);
   if($result){
     echo "Save Successful!";
   }else{
     echo "Unable to save";
+
   }
 
 

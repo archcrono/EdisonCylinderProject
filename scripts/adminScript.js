@@ -42,20 +42,20 @@ $('#createNewCylinderButton').click(function(){
   ajax.addEventListener("abort", abortHandler, false);
   ajax.open("POST", "php/uploadFile.php");
   ajax.send(formdata);
-  //
-  // // Handle Text data
-  //
-  // var data = $('#createForm').serialize();
-  //
-  // $.ajax({
-  //   data: data,
-  //   type: "post",
-  //   url: "php/post.php",
-  //   success: function(data){
-  //     // window.location.reload();
-  //     alert(data);
-  //   }
-  // })
+
+  // Handle Text data
+
+  var data = $('#createForm').serialize();
+
+  $.ajax({
+    data: data,
+    type: "post",
+    url: "php/post.php",
+    success: function(data){
+      // window.location.reload();
+      alert(data);
+    }
+  });
 
 });
 
@@ -144,10 +144,12 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
   // Variable
   $scope.returnedData;
 
+
   // Get Data
   cylinderAdminData.getAdminCylinderData().then(function(data){
     $scope.returnedData = data.data;
 
+    console.log($scope.returnedData);
   })
 
   $scope.getItemData = function(){
@@ -156,22 +158,20 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
     $('#cylinderFormInfo').addClass('show');
 
 
-    $scope.cylinderTitle = this.item.title;
-    $scope.cylinderArtist = this.item.artist;
-    $scope.cylinderComments = this.item.comments;
-    $scope.cylinderURL = this.item.url;
+    $scope.cylinderTitle = this.item.cylinderTitle;
+    $scope.cylinderArtist = this.item.cylinderArtist;
+    $scope.cylinderComments = this.item.cylinderComments;
     $scope.cylinderCondition = parseInt(this.item.cylinderCondition);
-    $scope.cylinderMold = parseInt(this.item.mold);
+    $scope.cylinderMold = parseInt(this.item.cylinderMold);
     $scope.cylinderNumber = parseInt(this.item.cylinderNumber);
-    $scope.cylinderTake = parseInt(this.item.take);
-    $scope.cylinderId = parseInt(this.item.id);
+    $scope.cylinderTake = parseInt(this.item.cylinderTake);
+    $scope.cylinderId = parseInt(this.item.cylinderId);
 
     $scope.checkbox = {
       unplayable: false,
       playable: false,
       flatEdge: false,
-      ucsb: false,
-      website: false
+      ucsb: false
     }
 
     var changeToBoolean = function(itemData){
@@ -186,7 +186,6 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
     $scope.checkbox.unplayable = changeToBoolean(this.item.cracedUnplayable);
     $scope.checkbox.flatEdge = changeToBoolean(this.item.flatEdge);
     $scope.checkbox.ucsb = changeToBoolean(this.item.inUCSBdb);
-    $scope.checkbox.website = changeToBoolean(this.item.onWebsite);
 
 
   }
