@@ -21,17 +21,41 @@ $('#uploadAudio').click(function(){
 $('#createNewCylinderButton').click(function(){
   $('#randomCylinderId').val(Date.now());
 
-  var data = $('#createForm').serialize();
 
-  $.ajax({
-    data: data,
-    type: "post",
-    url: "php/post.php",
-    success: function(data){
-      // window.location.reload();
-      alert(data);
-    }
-  })
+  // Handle Files
+  var pictureFile = $("#cylinderTop")[0].files[0];
+  var audioFile = $("#cylinderAudio")[0].files[0];
+
+  // console.log(pictureFile.name + " | " + pictureFile.size + " | " + pictureFile.type);
+
+  var formdata = new FormData();
+  formdata.append("cylinderTop", pictureFile);
+  formdata.append("cylinderAudio", audioFile);
+  formdata.append("id", $('#randomCylinderId').val());
+
+
+  var ajax = new XMLHttpRequest();
+
+  ajax.upload.addEventListener("progress", progressHandler, false);
+  ajax.addEventListener("load", completeHandler, false);
+  ajax.addEventListener("error", errorHandler, false);
+  ajax.addEventListener("abort", abortHandler, false);
+  ajax.open("POST", "php/uploadFile.php");
+  ajax.send(formdata);
+  //
+  // // Handle Text data
+  //
+  // var data = $('#createForm').serialize();
+  //
+  // $.ajax({
+  //   data: data,
+  //   type: "post",
+  //   url: "php/post.php",
+  //   success: function(data){
+  //     // window.location.reload();
+  //     alert(data);
+  //   }
+  // })
 
 });
 
@@ -64,9 +88,10 @@ $('#deleteCylinder').click(function(){
   })
 })
 
-function uploadFile(){
+
+$("#uploadButton").click(function(){
   var file = $("#file1")[0].files[0];
-  console.log(file.name + " | " + file.size + " | " + file.type);
+  // console.log(file.name + " | " + file.size + " | " + file.type);
 
   var formdata = new FormData();
 
@@ -74,25 +99,13 @@ function uploadFile(){
 
   var ajax = new XMLHttpRequest();
 
-  ajax.upload.addEventListener("progres", progressHandler, false);
+  ajax.upload.addEventListener("progress", progressHandler, false);
   ajax.addEventListener("load", completeHandler, false);
   ajax.addEventListener("error", errorHandler, false);
   ajax.addEventListener("abort", abortHandler, false);
-  ajax.open("POST", "php/test.php");
+  ajax.open("POST", "php/uploadFile.php");
   ajax.send(formdata);
-}
-// $('#uploadAudio').click(function(){
-//
-//   // $.ajax({
-//   //   data: data,
-//   //   type: "post",
-//   //   url: "php/test.php",
-//   //   success: function(data){
-//   //     // window.location.reload();
-//   //     alert(data);
-//   //   }
-//   // })
-// })
+})
 
 function progressHandler(event){
   var percent = (event.loaded / event.total) * 100;

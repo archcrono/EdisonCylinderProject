@@ -34,14 +34,28 @@
       </div><!-- /.col-lg-10 -->
     </div><!-- /.row -->
 
+
+
+
+
+
+
     <form id="upload_form" style="border: 1px solid black;" enctype="multipart/form-data" method="post">
       <input type="file" name="file1"  id="file1"><br>
 
-      <input type="button" value="Upload" onclick="uploadFile()">
+      <input type="button" value="Upload" id="uploadButton">
       <br>
       <progress id="progressBar" value="0" max="100" style="width: 300px;"></progress>
       <h3 id="status"></h3>
     </form>
+
+
+
+
+
+
+
+
 
     <div class="data row">
       <div class="col-sm-10 col-sm-offset-1">
@@ -169,7 +183,15 @@
       <div id="createNewCylinderForm" class="modal__container panel panel-default">
         <h3 class="text-center">Add New Cylinder</h3>
         <form enctype="multipart/form-data" id="createForm" method="POST">
-          <input type="text" style="" id="randomCylinderId" name="id" value="" readonly>
+
+          <!-- File Upload -->
+          <label>Cylinder Picture(500x500)</label>
+          <input type="file" name="cylinderTop" id="cylinderTop">
+          <label>Cylinder Audio</label>
+          <input type="file" name="cylinderAudio" id="cylinderAudio">
+          <!-- <input type="file" name="cylinderAudio"> -->
+
+          <input type="text" style="" id="randomCylinderId" name="id" readonly>
           <div class="col-sm-12">
             <div class="form-group row">
               <label class="col-sm-3 col-form-label" for="artist">Name of Artist</label>
