@@ -15,7 +15,7 @@
 
       <!-- Used to grab URL. Do not display! -->
       <!-- <h5 class="cylinderURL" style="display: none;">{{ item.url }}</h5> -->
-      <h5 class="cylinderImageURL" style="display: none;">{{ item.cylinderImg }}</h5>
+      <h5 class="cylinderImageURL" style="display: none;">{{ item.cylinderTopURL }}</h5>
 
 
 

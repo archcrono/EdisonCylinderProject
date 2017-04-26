@@ -90,7 +90,7 @@ var fitScreen = function(){
 
     // Cylinder Player
     $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Width
-    $('#rewind').css('padding-left', (screenWidth / 2)  - 115);//Cylinder Player Play/Pause Position
+    $('#rewind').css('padding-left', (screenWidth / 2)  - 105);//Cylinder Player Play/Pause Position
     // $('#cylinderPlayer .jp-play').css('padding-left', (screenWidth / 2)  - 75);//Cylinder Player Play/Pause Position
     $('.jp-progress').width($('#cylinderPlayer').width() - 120);//Cylinder Player Scrubber
 
