@@ -816,6 +816,19 @@ if(screenType == 'phone'){
     }
   });
 }
+$(window).click(function(e){
+  if($('#searchFunction').height() > 0){
+    var target = e.target;
+    var searchbar = $('#Container')[0];
+    var searchinput = $('#Container > *')[0]
+    if(e.target != searchbar && e.target != searchinput){
+      $('#searchFunction').animate({
+        height: 0
+      }, 300);
+    }
+  }
+});
+
 
 // ////////
 // Angular
