@@ -67,8 +67,9 @@ $('#updateCylinder').click(function(){
     type: "post",
     url: "php/update.php",
     success: function(data){
-      // window.location.reload();
+
       alert(data);
+      window.location.reload();
     }
   })
 
@@ -82,8 +83,9 @@ $('#deleteCylinder').click(function(){
     type: "post",
     url: "php/delete.php",
     success: function(data){
-      // window.location.reload();
+
       alert(data);
+      window.location.reload();
     }
   })
 })
@@ -108,8 +110,9 @@ var completeHandler = function(event){
     type: "post",
     url: "php/post.php",
     success: function(data){
-      // window.location.reload();
+
       alert(data);
+      window.location.reload();
     }
   });
 }

@@ -90,7 +90,8 @@ var fitScreen = function(){
 
     // Cylinder Player
     $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Width
-    $('#cylinderPlayer .jp-play').css('padding-left', (screenWidth / 2)  - 75);//Cylinder Player Play/Pause Position
+    $('#rewind').css('padding-left', (screenWidth / 2)  - 115);//Cylinder Player Play/Pause Position
+    // $('#cylinderPlayer .jp-play').css('padding-left', (screenWidth / 2)  - 75);//Cylinder Player Play/Pause Position
     $('.jp-progress').width($('#cylinderPlayer').width() - 120);//Cylinder Player Scrubber
 
 
@@ -109,7 +110,7 @@ var fitScreen = function(){
     // Cylinder Player
     $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Title Width
     $('#cylinderPlayer').width((screenWidth - $('.tabletBanner').width()) - 5);//Cylinder Player Width
-    $('#cylinderPlayer .jp-play').css('padding-left', ($('#cylinderPlayer').width() / 2)  - 100);//Cylinder Player Play/Pause Position
+    $('#rewind').css('padding-left', ($('#cylinderPlayer').width() / 2)  - 120);//Cylinder Player Play/Pause Position
     $('.jp-progress').width($('#cylinderPlayer').width() - 135);//Cylinder Player Scrubber
 
 
@@ -563,7 +564,7 @@ $(document).on('click','.loadCylinderButton',function(){
 
   // Change Cylinder Player Meta Info
   $('#cylinderPlayerTitle').html(cylinderHolder.cylinderTitle);
-  $('#cylinderPlayerImg').attr('src', cylinderHolder.cylinderImg)
+  $('#cylinderPlayerImg').attr('src', cylinderHolder.cylinderImg);
 
   $(".musicPlayer").jPlayer("clearMedia");
   $(".musicPlayer").jPlayer("setMedia",{

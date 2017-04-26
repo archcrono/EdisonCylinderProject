@@ -44,14 +44,16 @@
 
   <div id="jp_container_1" class="cylinderPlayOptions" aria-label="media player">
     <div class="audioControls">
-      <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
-      <i style="display: none;" class="fa fa-pause-circle-o jp-play pauseButton" style="cursor: pointer;" aria-hidden="true"></i>
+      <i id="rewind" class="fa fa-backward backward" aria-hidden="true"></i>
+      <i class="fa fa-play jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
+      <i class="fa fa-pause jp-play pauseButton" style="cursor: pointer; display: none;" aria-hidden="true"></i>
+      <i class="fa fa-forward forward" aria-hidden="true"></i>
     </div>
 
     <div class="jp-progress">
       <div class="jp-seek-bar">
         <div class="jp-play-bar">
-        
+
         </div>
       </div>
     </div>

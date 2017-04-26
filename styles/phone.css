@@ -184,7 +184,8 @@
     #cylinderPlayer i {
       float: left;
       padding-top: 25px;
-      font-size: 2em; }
+      padding-left: 25px;
+      font-size: 1.5em; }
     #cylinderPlayer .metaInfoButton {
       position: absolute;
       font-size: 1.2em;
