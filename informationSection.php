@@ -74,14 +74,14 @@
             <div id="modal">
               <div class="modal">
                 <div class="modal_content">
-                  <!-- <video id="video_one" class="video" controls width="640px">
-                    <source src="video/MikeWislandCylinderIntro.mp4" type="video/mp4">
+                  <video id="video_one" class="video" preload="none" controls width="640px">
+                    <source src="http://dgm4410.tropht.com/videos/MikeWislandCylinderIntro.mp4" type="video/mp4">
                   </video>
-                  <video id="video_two" class="video" controls width="640px">
-                    <source src="video/GaryHannahTonearmDevice.mov">
+                  <video id="video_two" class="video" preload="none" controls width="640px">
+                    <source src="http://dgm4410.tropht.com/videos/GaryHannahTonearmDevice.mov">
                   </video>
-                  <video id="video_three" class="video" controls width="640px">
-                    <source src="video/GaryHannahVideo3.mp4" type="video/mp4"> -->
+                  <video id="video_three" class="video" preload="none" controls width="640px">
+                    <source src="http://dgm4410.tropht.com/videos/GaryHannahVideo3.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -122,13 +122,13 @@
           <div style="text-align:center;">
             <div style="display: inline-block;">
               Tipperary Before Restoration
-              <audio style="display: block;" controls>
+              <audio style="display: block;" preload="none" controls>
                 <source src="audio/BeforeTipperary.mp3" type="">
               </audio>
             </div>
             <div style="display: inline-block;">
               Tipperary After Restoration
-              <audio style="display: block;" controls>
+              <audio style="display: block;" preload="none" controls>
                 <source src="audio/AfterTipperary.mp3" type="">
               </audio>
             </div>

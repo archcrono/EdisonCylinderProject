@@ -857,7 +857,7 @@ cylinderApp.filter('searchForCylinder', function(){
 
     angular.forEach(arr, function(item){
 
-      if(item.title.toLowerCase().indexOf(searchCylinder) !== -1 || item.artist.toLowerCase().indexOf(searchCylinder) !== -1){
+      if(item.cylinderTitle.toLowerCase().indexOf(searchCylinder) !== -1 || item.cylinderArtist.toLowerCase().indexOf(searchCylinder) !== -1){
         result.push(item);
       }
     });
