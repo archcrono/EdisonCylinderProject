@@ -159,10 +159,17 @@
         margin-top: 35px; }
         #librarySection main #largeActiveCylinder .largePlayButtons .loadCylinderButton span {
           margin-left: 15px;
-          font-family: "Rubik", sans-serif; }
+          font-family: "Rubik", sans-serif;
+          font-size: .7em;
+          white-space: nowrap; }
       #librarySection main #largeActiveCylinder .largePlayButtons .playControls i {
         margin: 30px 0 0 -30px;
         font-size: 5em; }
+      #librarySection main #largeActiveCylinder .largePlayButtons .playControls h2 {
+        position: absolute;
+        white-space: nowrap;
+        margin-top: 170px;
+        margin-left: -140px; }
     #librarySection main #largeActiveCylinder .metaInfoButton {
       font-size: 1.5em;
       position: absolute;

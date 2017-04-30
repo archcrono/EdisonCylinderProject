@@ -287,12 +287,20 @@ section{
           span{
             margin-left: 15px;
             font-family: $standard-font;
+            font-size: .7em;
+            white-space: nowrap;
           }
         }
         .playControls{
           i{
             margin: 30px 0 0 -30px;
             font-size: 5em;
+          }
+          h2{
+            position: absolute;
+            white-space: nowrap;
+            margin-top: 170px;
+            margin-left: -140px;
           }
         }
       }//End of Large Play Buttons

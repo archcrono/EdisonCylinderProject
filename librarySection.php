@@ -66,11 +66,12 @@
       </span>
 
       <div class="largePlayButtons">
-        <i class="fa fa-music loadCylinderButton" style="cursor: pointer;"><span>Listen</span></i>
+        <i class="fa fa-music loadCylinderButton" style="cursor: pointer;"><span>Load Cylinder</span></i>
 
         <div id="jp_container_1" class="playControls" >
           <i class="fa fa-play-circle-o jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
           <i style="display: none; cursor: pointer;" class="fa fa-pause-circle-o jp-play pauseButton" aria-hidden="true"></i>
+          <h2>This cylinder is now ready in the player!</h2>
         </div>
       </div>
 

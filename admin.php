@@ -195,7 +195,7 @@
             <div class="form-group">
               <label for="artist">Comments</label>
               <textarea ng-model="cylinderComments" style="resize: none;" class="form-control" type="text" name="comments" value="" rows="7"></textarea>
-              <label for="artist">Comments</label>
+              <label for="artist">Other Comments</label>
               <textarea ng-model="cylinderOtherComments" style="resize: none;" class="form-control" type="text" name="otherComments" value="" rows="7"></textarea>
             </div>
             <div class="form-inline pull-right">

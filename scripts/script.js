@@ -91,6 +91,7 @@ var fitScreen = function(){
     // Cylinder Player
     $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Width
     $('#rewind').css('padding-left', (screenWidth / 2)  - 105);//Cylinder Player Play/Pause Position
+    $('#cylinderPlayer').css('width','100%');
     // $('#cylinderPlayer .jp-play').css('padding-left', (screenWidth / 2)  - 75);//Cylinder Player Play/Pause Position
     $('.jp-progress').width($('#cylinderPlayer').width() - 120);//Cylinder Player Scrubber
 
@@ -667,6 +668,17 @@ $(window).scroll(function(){
 
 });
 
+// /////////////////////
+// Cylinder Player Controls
+// /////////////////////
+$('.forward').click(function(){
+  $('.jp-play-bar').width($('.jp-play-bar').width() + 20);
+  $(".musicPlayer").jPlayer.currentTime = "00:10";
+});
+$('.backward').click(function(){
+  $('.jp-play-bar').width($('.jp-play-bar').width() - 20);
+});
+
 // //////////////
 // Select banner
 // //////////////
@@ -900,8 +912,6 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
   cylinderData.getCylinderData().then(function(data){
     $scope.returnedCylinderData = data.data;
 
-    console.log($scope.returnedCylinderData);
-
 
     for(var i = 0; i < $scope.returnedCylinderData.length; i++){
 
@@ -913,7 +923,7 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
     // Select and set random cylinder
 
     var randomCylinder = $scope.returnedCylinderData[Math.floor(Math.random() * $scope.returnedCylinderData.length)];
-    console.log(randomCylinder);
+
     $('#cylinderPlayerTitle').html(randomCylinder.cylinderTitle);
     $('#cylinderPlayerImg').attr('src', randomCylinder.cylinderTopURL);
     cylinderNowPlaying = randomCylinder;
