@@ -252,7 +252,7 @@
         <div class="content">
           <div class="paragraph">
             Audio Restoration students along with Professor Mike Wisland transcribe Mr. Wisland’s cylinder collection. <br>
-            <small>We would also like to thank previous members of the UVU Cylinder Project: Brian Olson, Brett Carroll, Roberto Lerma, and Stephen Kuykendall.</small>
+            <small>We would also like to thank previous members of the UVU Cylinder Project: Brian Olson, Brett Carroll, Roberto Lerma, and Stephen Kuykendall, Duane Rosenbaum, and Kellie Johnson.</small>
           </div>
         </div>
       </div>
