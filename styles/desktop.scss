@@ -68,7 +68,11 @@
 // Information Section
 // /////////////
 #informationSection{
-
+  #infoContainer{
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 	.about{
 		.row{
 			background: none !important;

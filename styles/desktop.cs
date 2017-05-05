@@ -1,0 +1,37 @@
+@media only screen and (min-width: 1000px) {
+  .navButtonContainers i span {
+    display: initial !important; }
+  .activeNav span {
+    animation: none; }
+  #librarySection main .ng-scope {
+    width: 150px; }
+  #librarySection main .top .banner {
+    width: 35%; }
+  #librarySection main .top .search {
+    width: 30%; }
+    #librarySection main .top .search p {
+      font-size: 2em; }
+  #librarySection main #libraryContainer .cylinderSquare {
+    width: 20%; }
+  #informationSection {
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto; }
+    #informationSection .about .row {
+      background: none !important; }
+    #informationSection .row {
+      display: flex; }
+      #informationSection .row:nth-child(even) .header {
+        text-align: right; }
+        #informationSection .row:nth-child(even) .header__num {
+          right: 0; }
+      #informationSection .row .col__img {
+        display: inherit !important; }
+        #informationSection .row .col__img--right {
+          float: right; }
+        #informationSection .row .col__img--left {
+          float: left; }
+    #informationSection .members .member {
+      width: 30%; }
+  #contactSection #contactContainer fieldset {
+    width: 35%; } }

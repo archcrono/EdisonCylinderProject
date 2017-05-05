@@ -25,7 +25,7 @@
 
         <div class="content">
           <div class="paragraph">
-            The cylinders needed to be transcribed. Over the past 7 years, with the input of Professor Mike Wisland and mechanical engineer Gary Hannah, the method of transcription has evolved over the years to the point that we now have a unique way of transcribing cylinders that is not found anywhere else. Read more information on our transcribing process activities here.
+            The cylinders needed to be transcribed. Over the past 7 years, with the input of Professor Mike Wisland and mechanical engineer Gary Hannah, the method of transcription has evolved over the years to the point that we now have a unique way of transcribing cylinders that is not found anywhere else. Read more information on our transcribing process activities here. <button id="content_1">Read All About it and Watch the Videos</button>
           </div>
 
           <div id="hidden_one">
@@ -90,7 +90,7 @@
           </div><!-- end hidden -->
 
           <div class="right">
-            <button id="content_1">Read More</button>
+            <button id="content_1">Read All About it and Watch the Videos</button>
           </div>
 
         </div><!-- end content -->

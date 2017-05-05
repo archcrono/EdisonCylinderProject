@@ -1,10 +1,8 @@
 @media only screen and (min-width: 1000px) {
   .navButtonContainers i span {
     display: initial !important; }
-
   .activeNav span {
     animation: none; }
-
   #librarySection main .ng-scope {
     width: 150px; }
   #librarySection main .top .banner {
@@ -15,7 +13,10 @@
       font-size: 2em; }
   #librarySection main #libraryContainer .cylinderSquare {
     width: 20%; }
-
+  #informationSection #infoContainer {
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto; }
   #informationSection .about .row {
     background: none !important; }
   #informationSection .row {
@@ -32,8 +33,5 @@
         float: left; }
   #informationSection .members .member {
     width: 30%; }
-
   #contactSection #contactContainer fieldset {
     width: 35%; } }
-
-/*# sourceMappingURL=desktop.css.map */
