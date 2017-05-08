@@ -19,12 +19,22 @@ $('#uploadAudio').click(function(){
 // ajax
 // ////////
 $('#createNewCylinderButton').click(function(){
-  $('#randomCylinderId').val(Date.now());
+
+  $('#randomCylinderId').val(Date.now());//Create unique ID
 
 
   // Handle Files
   var pictureFile = $("#cylinderTop")[0].files[0];
   var audioFile = $("#cylinderAudio")[0].files[0];
+
+  if(pictureFile.type != "image/jpeg"){
+    alert("You must use a .jpg filetype for your image!");
+    return;
+  }
+  if(audioFile.type != "audio/mp3"){
+    alert("You must use a .mp3 filetype for your audio!");
+    return;
+  }
 
   // console.log(pictureFile.name + " | " + pictureFile.size + " | " + pictureFile.type);
 
@@ -43,19 +53,7 @@ $('#createNewCylinderButton').click(function(){
   ajax.open("POST", "php/uploadFile.php");
   ajax.send(formdata);
 
-  // Handle Text data
-
-  // var data = $('#createForm').serialize();
-
-  // $.ajax({
-  //   data: data,
-  //   type: "post",
-  //   url: "php/post.php",
-  //   success: function(data){
-  //     // window.location.reload();
-  //     alert(data);
-  //   }
-  // });
+  // Handle Text data (This is handled through the completeHandler function)
 
 });
 
@@ -76,6 +74,8 @@ $('#updateCylinder').click(function(){
 })
 
 $('#deleteCylinder').click(function(){
+
+
   var data = $('#cylinderUpdateForm').serialize();
 
   $.ajax({
@@ -98,7 +98,7 @@ var progressHandler = function(event){
   var percent = (event.loaded / event.total) * 100;
   $("#progressBar").val(Math.round(percent));
   $("#status").innerHTML = Math.round(percent) + "% uploaded...please wait.";
-  console.log(percent);
+  // console.log(percent);
 }
 var completeHandler = function(event){
   alert("Upload Complete");

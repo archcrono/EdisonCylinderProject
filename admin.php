@@ -36,27 +36,6 @@
 
 
 
-
-
-
-
-    <!-- <form id="upload_form" style="border: 1px solid black;" enctype="multipart/form-data" method="post">
-      <input type="file" name="file1"  id="file1"><br>
-
-      <input type="button" value="Upload" id="uploadButton">
-      <br>
-      <progress id="progressBar" value="0" max="100" style="width: 300px;"></progress>
-      <h3 id="status"></h3>
-    </form> -->
-
-
-
-
-
-
-
-
-
     <div class="data row">
       <div class="col-sm-10 col-sm-offset-1">
         <div class="col-sm-4" ng-repeat="item in returnedData | filter:search">
@@ -212,13 +191,7 @@
         <h3 class="text-center">Add New Cylinder</h3>
         <form enctype="multipart/form-data" id="createForm" method="POST">
 
-          <!-- File Upload -->
-          <label>Cylinder Picture(500x500)</label>
-          <input type="file" name="cylinderTop" id="cylinderTop">
-          <label>Cylinder Audio</label>
-          <input type="file" name="cylinderAudio" id="cylinderAudio">
 
-          <progress id="progressBar" max="100" style="width: 300px; height: 10px;"></progress>
 
           <input type="text" style="display: none;" id="randomCylinderId" name="id" readonly>
 
@@ -337,6 +310,15 @@
               <label for="artist">Other Comments</label>
               <textarea class="form-control" style="resize: none;" type="text" name="otherComments" value="" rows="7"></textarea>
             </div>
+
+            <!-- File Upload -->
+            <label>Cylinder Picture(500x500)</label>
+            <input type="file" name="cylinderTop" id="cylinderTop">
+            <label>Cylinder Audio</label>
+            <input type="file" name="cylinderAudio" id="cylinderAudio">
+
+            <progress id="progressBar" max="100" style="width: 300px; height: 10px;"></progress>
+
             <div class="form-inline pull-right">
               <div class="btn btn-default" ng-click="closeNewForm()">Cancel</div>
               <button type="submit" name="btn_update" id="createNewCylinderButton" class="btn btn-primary">Submit</button>
