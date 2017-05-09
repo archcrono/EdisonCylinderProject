@@ -1,6 +1,11 @@
 <?php
   if($_POST){
-    $conn = mysqli_connect("tropht.com:3306","trophtco_Brake","StrongPassword1", "trophtco_cylinderProject") or die("Cannot connect to DB" . mysql_error());
+    $conn = mysqli_connect("66.147.244.129","trophtco_Brake","StrongPassword1", "trophtco_cylinderProject");
+    // if($conn){
+    //   echo 'Connection Successful';
+    // }else{
+    //   echo 'Could not connect: ' . mysqli_connect_error();
+    // }
     // $db = mysql_select_db('trophtco_cylinderProject') or die('Cannot select DB');
 
     $username = $_POST['username'];
