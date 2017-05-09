@@ -35,7 +35,7 @@
       <br>
       <label>Password</label>
       <br>
-      <input type="text" name="password">
+      <input type="password" name="password">
       <br>
       <button type="submit" name="button">Submit</button>
     </form>
