@@ -732,10 +732,10 @@ var randomCylinderImage = function(){
  $('#content_1').click(function(){
   $('#hidden_one').slideToggle();
   var x = $('#content_1').text();
-  if(x == 'Read More'){
+  if(x == 'Read All About it and Watch the Videos'){
     $('#content_1').text('Close');
   }else{
-    $('#content_1').text('Read More');
+    $('#content_1').text('Read All About it and Watch the Videos');
   }
 });
 
