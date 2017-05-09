@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(!$_SESSION['auth']){
+    header('location:login.php');
+  }
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,6 +21,8 @@
   <body ng-app="cylinderAdminApp" ng-controller="cylinderAdminCtrl">
       <div class="jumbotron">
         <h1 class="text-center">UVU Cylinder Admin</h1>
+
+        <a href="logout.php">Logout</a>
       </div>
 
       <!-- Search Bar -->
