@@ -67,7 +67,7 @@
             </div>
 
             <div class="paragraph">
-              Gary was determined to create an even better transcribing device. If you’ve ever used an original Edison Amberola to play back cylinders, you know how robust that device is in playing not only out-of-round cylinders, but also its ability to play through skips. So we went back to the original Edison design to creat our 4th modification of cylinder playback. Gary carefully made measurement of the original Amerola 30 device, including the original needle and rocker arm, tied to the diaphragm with a string. We simply replaced the diapraghm with an inverted Stanton 500 cartride, but with no needle since that’s no longer necessary. It’s tied to a new needle that we ground out of a 8 mil saphire rod. Gary then 3-D printed the whole device.  Fully assembled. This is how that device looks now.
+              Gary was determined to create an even better transcribing device. If you’ve ever used an original Edison Amberola to play back cylinders, you know how robust that device is in playing not only out-of-round cylinders, but also its ability to play through skips. So we went back to the original Edison design to creat our 4th modification of cylinder playback. Gary carefully made measurement of the original Amerola 30 device, including the original needle and rocker arm, tied to the diaphragm with a string. We simply replaced the diapraghm with an inverted Stanton 500 cartride, but with no needle since that’s no longer necessary. It’s tied to a new needle that we ground out of a 8 mil saphire rod. Gary then 3-D printed the whole device. Fully assembled, this is how that device looks now.
               <button class="inline video_btn" value="video_btn_three">Watch Video <i class="fa fa-video-camera" aria-hidden="true"></i></button>
             </div>
 
@@ -88,10 +88,6 @@
             </div>
 
           </div><!-- end hidden -->
-
-          <div class="right">
-            <button id="content_1">Read All About it and Watch the Videos</button>
-          </div>
 
         </div><!-- end content -->
 
@@ -118,18 +114,34 @@
           <div class="paragraph">
             First the students must transcribe the cylinders in one of the four ways described above. Depending on the condition of the cylinders, some methods play back better than others. Also, needles can be changed at this point to test playback quality. After a satisfactory transcription, the Audio Restoration students first remove the clicks from the cylinders, then denoise them (hiss, groove noise, thumping) before posting them to the website. We use a variety of software to do this, and that is an ever-evolving process. We have found that CEDAR Declick is and Sony (now MAGIX) denoise gives superior results, but we re-evaluate this part of the process annually. Here are some examples of our restoration, before and after:
           </div>
-
-          <div style="text-align:center;">
-            <div style="display: inline-block;">
+          <div class="hidden_img-right">
+              <img class="lazy" nothing="img/grey.gif" src="img/JenniferMountingaCylindercropped.png">
+          </div>
+          <div style="text-align:right;">
+            <div style="text-align:center; display: inline-block;">
               Tipperary Before Restoration
               <audio style="display: block;" preload="none" controls>
                 <source src="audio/BeforeTipperary.mp3" type="">
               </audio>
             </div>
-            <div style="display: inline-block;">
+            <div style="text-align:center; display: inline-block;">
               Tipperary After Restoration
               <audio style="display: block;" preload="none" controls>
                 <source src="audio/AfterTipperary.mp3" type="">
+              </audio>
+            </div>
+          </div>
+          <div style="text-align:right;">
+            <div style="text-align:center; display: inline-block;">
+              Label them Musical Wizard Before
+              <audio style="display: block;" preload="none" controls>
+                <source src="audio/BeforeMusicalWizardAndTheBellBoy-Spencer&Cambell-Takeblank-Mold4-RIAA-V3(ToneArm)_01R.mp3" type="">
+              </audio>
+            </div>
+            <div style="text-align:center; display: inline-block;">
+              Musical Wizard After
+              <audio style="display: block;" preload="none" controls>
+                <source src="audio/AfterMusicalWizardAndTheBellBoy-Spencer&Cambell-Takeblank-Mold4-RIAA-V3(ToneArm)-01-DC-DN.mp3" type="">
               </audio>
             </div>
           </div>
