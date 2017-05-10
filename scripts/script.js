@@ -147,6 +147,20 @@ $(window).resize(function(){
 // ///////////////
 $('.navButton').on('click', function(){
 
+  // Check to make sure we're not already on same section
+  if($(this).attr('id') == 'libraryButton' && $('.active')[0].id == 'librarySection'){
+    return;
+  }
+  if($(this).attr('id') == 'homeButton' && $('.active')[0].id == 'homeSection'){
+    return;
+  }
+  if($(this).attr('id') == 'informationButton' && $('.active')[0].id == 'informationSection'){
+    return;
+  }
+  if($(this).attr('id') == 'contactButton' && $('.active')[0].id == 'contactSection'){
+    return;
+  }
+
   $('.navButton').css('color','#717171');
   $('.activeNav').removeClass('activeNav');
   $(this).addClass('activeNav');
@@ -283,6 +297,11 @@ $('.navButton').on('click', function(){
 
 // Home Nav Button Is for the slider button navigation
 var homeNavButtons = function(){
+
+  // Check to make sure we're not already on the library section
+  if($('.active')[0].id == 'librarySection'){
+    return;
+  }
 
   $('.navButton').css('color','#717171');
   $('.activeNav').removeClass('activeNav');
