@@ -90,7 +90,8 @@ var fitScreen = function(){
 
     // Cylinder Player
     $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Width
-    $('#rewind').css('padding-left', (screenWidth / 2)  - 105);//Cylinder Player Play/Pause Position
+    $('#cylinderPlayer .playButton').css('padding-left', (screenWidth / 2)  - 85);//Cylinder Player Play/Pause Position
+    $('#cylinderPlayer .pauseButton').css('padding-left', (screenWidth / 2)  - 85);//Cylinder Player Play/Pause Position
     $('#cylinderPlayer').css('width','100%');
     // $('#cylinderPlayer .jp-play').css('padding-left', (screenWidth / 2)  - 75);//Cylinder Player Play/Pause Position
     $('.jp-progress').width($('#cylinderPlayer').width() - 120);//Cylinder Player Scrubber
@@ -111,7 +112,8 @@ var fitScreen = function(){
     // Cylinder Player
     $('#cylinderPlayerTitle').width($('#cylinderPlayer').width() - 75);//Cylinder Player Title Width
     $('#cylinderPlayer').width((screenWidth - $('.tabletBanner').width()) - 5);//Cylinder Player Width
-    $('#rewind').css('padding-left', ($('#cylinderPlayer').width() / 2)  - 120);//Cylinder Player Play/Pause Position
+    $('#cylinderPlayer .playButton').css('padding-left', ($('#cylinderPlayer').width() / 2)  - 90);//Cylinder Player Play/Pause Position
+    $('#cylinderPlayer .pauseButton').css('padding-left', ($('#cylinderPlayer').width() / 2)  - 90);//Cylinder Player Play/Pause Position
     $('.jp-progress').width($('#cylinderPlayer').width() - 135);//Cylinder Player Scrubber
 
 
@@ -944,6 +946,7 @@ cylinderApp.controller('cylinderAppCtrl', ['$scope','cylinderData', function($sc
         cssSelector: {
           play: ".playButton",
           pause: ".pauseButton",
+          stop: ".stop",
           seekBar: '.jp-seek-bar',
           playBar: '.jp-play-bar'
         }
