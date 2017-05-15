@@ -104,6 +104,20 @@
     #homeSection #homeContainer .homeBoxes {
       margin-left: 5%;
       margin-right: 5%; }
+      #homeSection #homeContainer .homeBoxes i {
+        font-size: 8em; }
+      #homeSection #homeContainer .homeBoxes .left {
+        width: 48%;
+        float: left;
+        margin-bottom: 10px; }
+      #homeSection #homeContainer .homeBoxes .right {
+        width: 48%;
+        float: right;
+        margin-bottom: 10px; }
+      #homeSection #homeContainer .homeBoxes .full {
+        clear: both;
+        width: 100%;
+        margin-bottom: 10px; }
 
   #librarySection main #libraryContainer {
     padding-left: 5px;

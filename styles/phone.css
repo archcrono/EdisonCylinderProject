@@ -75,7 +75,7 @@
     .activeMetaInfo h4 {
       padding-top: 5px;
       padding-left: 10px; }
-    .activeMetaInfo b {
+    .activeMetaInfo strong {
       font-weight: bold;
       color: #c5e86c; }
     .activeMetaInfo .subMetaInfo {
@@ -255,6 +255,10 @@
         margin: 10px;
         margin-bottom: 10px;
         border: solid none; }
+        #homeSection #homeContainer .homeBoxes i {
+          font-size: 6em;
+          color: #00843d;
+          text-align: center; }
         #homeSection #homeContainer .homeBoxes h2 {
           margin-bottom: 20px;
           font-weight: bold;
@@ -264,6 +268,12 @@
         #homeSection #homeContainer .homeBoxes p {
           margin: 10px;
           font-family: "Rubik", sans-serif; }
+        #homeSection #homeContainer .homeBoxes .left, #homeSection #homeContainer .homeBoxes .right, #homeSection #homeContainer .homeBoxes .full {
+          width: 100%; }
+          #homeSection #homeContainer .homeBoxes .left img, #homeSection #homeContainer .homeBoxes .right img, #homeSection #homeContainer .homeBoxes .full img {
+            max-width: 100%;
+            border: 4px solid #00843d;
+            border-radius: 5px; }
       #homeSection #homeContainer .alignleft {
         float: left;
         margin-right: 2%;

@@ -25,10 +25,10 @@
         <h2>{{ item.cylinderTitle }}</h2>
         <i class="fa fa-sort-desc" style="display: none;" aria-hidden="true"></i>
         <div class="subMetaInfo">
-          <h4><b>Artist:</b> {{ item.cylinderArtist }}</h4>
-          <h4><b>Take:</b> {{ item.cylinderTake }}</h4>
-          <h4><b>Mold:</b> {{ item.cylinderMold }}</h4>
-          <h4><b>Comments:</b> {{ item.cylinderComments }}</h4>
+          <h4><strong>Artist:</strong> {{ item.cylinderArtist }}</h4>
+          <h4><strong>Take:</strong> {{ item.cylinderTake }}</h4>
+          <h4><strong>Mold:</strong> {{ item.cylinderMold }}</h4>
+          <h4><strong>Comments:</strong> {{ item.cylinderComments }}</h4>
         </div>
       </div>
 
@@ -42,8 +42,8 @@
       </div>
 
 
-      <img class="cylinderTopImage" style="display: none; opacity: 0;" alt="Cylinder Top Image">
-      <img class="cylinderBackImage lazy" src="img/grey.gif" ng-src="{{ item.imageURL }}" alt="">
+      <img class="cylinderTopImage" style="display: none; opacity: 0;" alt="Cylinder Cover Image">
+      <img class="cylinderBackImage lazy" src="img/grey.gif" ng-src="{{ item.imageURL }}" alt="Blank Grey Image">
 
 
 
@@ -54,15 +54,15 @@
 
   <div id="largeActiveCylinder" class="activeMetaInfo">
     <div class="line">
-      <img id="largeCylinderImg"  alt="Cylinder Image" style="width: 200px; height: 200px; opacity: .8;">
+      <img id="largeCylinderImg"  alt="Cylinder Cover Image" style="width: 200px; height: 200px; opacity: .8;">
 
 
       <span>
         <h6 id="largeCylinderName"></h6><br>
-        <h4><b>Artist: </b></h4><h5 id="largeArtistName"></h5><br>
-        <h4><b>Take: </b></h4><h5 id="largeTakeNumber"></h5><br>
-        <h4><b>Mold: </b></h4><h5 id="largeMoldNumber"></h5><br>
-        <h4><b>Comments: </b></h4><h5 id="largeComments"></h5><br>
+        <h4><strong>Artist: </strong></h4><h5 id="largeArtistName"></h5><br>
+        <h4><strong>Take: </strong></h4><h5 id="largeTakeNumber"></h5><br>
+        <h4><strong>Mold: </strong></h4><h5 id="largeMoldNumber"></h5><br>
+        <h4><strong>Comments: </strong></h4><h5 id="largeComments"></h5><br>
       </span>
 
       <div class="largePlayButtons">

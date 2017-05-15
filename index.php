@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
     <meta charset="utf-8">
     <title>Cylinder Project</title>
@@ -50,7 +50,7 @@
 
         <i id="closeAllMetadata" class="fa fa-times-circle" aria-hidden="true"></i>
 
-        <img id="allMetaImg" alt="Cylinder Top Image">
+        <img id="allMetaImg" alt="Cylinder Player Image Cover">
         <h1>Title: <span id="allMetaTitle">Title</span></h1>
         <h2>Artist: <span id="allMetaArtist">Artist</span></h2>
         <h2>Take: <span id="allMetaTake">Take</span></h2>

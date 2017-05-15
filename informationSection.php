@@ -15,7 +15,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img class="lazy" nothing="img/grey.gif" src="img/cylinder1.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder1.jpg" alt="Image of cylinder">
         </div>
 
         <div class="header">
@@ -31,7 +31,7 @@
           <div id="hidden_one">
 
             <div class="hidden_img">
-              <img class="lazy" nothing="img/grey.gif" src="img/devices/original/original.png">
+              <img class="lazy" nothing="img/grey.gif" src="img/devices/original/original.png" alt="Picture of original recording device">
               <span>Figure 1. Original Assesmbly</span>
             </div>
 
@@ -52,7 +52,7 @@
 
 
             <div class="hidden_img">
-              <img class="lazy" nothing="img/grey.gif" src="img/devices/clear.png">
+              <img class="lazy" nothing="img/grey.gif" src="img/devices/clear.png" alt="Picture of clear prototype recording device">
               <span>Figure 3. Tonearm Device</span>
             </div>
 
@@ -62,7 +62,7 @@
             </div>
 
             <div class="hidden_img-right">
-              <img class="lazy" nothing="img/grey.gif" src="img/devices/color/colored.png">
+              <img class="lazy" nothing="img/grey.gif" src="img/devices/color/colored.png" alt="Picture of completed colored prototype recording device">
               <span>Figure 4. Back to Edison Style</span>
             </div>
 
@@ -102,7 +102,7 @@
       <div class="col">
 
         <div class="col__img col__img--left">
-          <img class="lazy" nothing="img/grey.gif" src="img/cylinder2.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder2.jpg" alt="Blank Grey Image">
         </div>
 
         <div class="header">
@@ -115,7 +115,7 @@
             First the students must transcribe the cylinders in one of the four ways described above. Depending on the condition of the cylinders, some methods play back better than others. Also, needles can be changed at this point to test playback quality. After a satisfactory transcription, the Audio Restoration students first remove the clicks from the cylinders, then denoise them (hiss, groove noise, thumping) before posting them to the website. We use a variety of software to do this, and that is an ever-evolving process. We have found that CEDAR Declick is and Sony (now MAGIX) denoise gives superior results, but we re-evaluate this part of the process annually. Here are some examples of our restoration, before and after:
           </div>
           <div class="hidden_img-right">
-              <img class="lazy" nothing="img/grey.gif" src="img/JenniferMountingaCylindercropped.png">
+              <img class="lazy" nothing="img/grey.gif" src="img/JenniferMountingaCylindercropped.png" alt="Picture of person mounting a cylinder">
           </div>
           <div style="text-align:right;">
             <div style="text-align:center; display: inline-block;">
@@ -160,7 +160,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img class="lazy" nothing="img/grey.gif" src="img/cylinder3.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder3.jpg" alt="Picture of cylinder">
         </div>
 
         <div class="header">
@@ -185,7 +185,7 @@
       <div class="col">
 
         <div class="col__img col__img--left">
-          <img class="lazy" nothing="img/grey.gif" src="img/cylinder4.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder4.jpg" alt="Image of cylinder">
         </div>
 
         <div class="header">
@@ -210,7 +210,7 @@
       <div class="col">
 
         <div class="col__img col__img--right">
-          <img class="lazy" nothing="img/grey.gif" src="img/cylinder2.jpg" alt="">
+          <img class="lazy" nothing="img/grey.gif" src="img/cylinder2.jpg" alt="Image of cylinder">
         </div>
 
         <div class="header">
@@ -235,27 +235,27 @@
   <h1>Project Members</h1>
   <div class="members">
     <div class="member">
-      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/abe.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/abe.png" alt="Picture of project member">
       <p>Abe Raigne</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/blake.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/blake.png" alt="Picture of project member">
       <p>Blake Stevens</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/jared.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/jared.png" alt="Picture of project member">
       <p>Jared Cooley</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/mengxi.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/mengxi.png" alt="Picture of project member">
       <p>Mengxi Li</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/yuki.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/yuki.png" alt="Picture of project member">
       <p>Yuki Arai</p>
     </div>
     <div class="member">
-      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/haynes.png" alt="">
+      <img class="img--circle lazy" nothing="img/grey.gif" src="img/members/haynes.png" alt="Picture of project member">
       <p>Jennifer Haynes</p>
     </div>
 

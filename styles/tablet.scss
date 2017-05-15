@@ -200,7 +200,26 @@ section{
 
       margin-left:5%;
       margin-right:5%;
-    }
+      i{
+        font-size: 8em;
+      }
+
+      .left{
+        width: 48%;
+        float: left;
+        margin-bottom: 10px;
+      }
+      .right{
+        width: 48%;
+        float: right;
+        margin-bottom: 10px;
+      }
+      .full{
+        clear: both;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }//End of homeBoxes
 
   }//End of Home Container
 }//End Of Home Section
