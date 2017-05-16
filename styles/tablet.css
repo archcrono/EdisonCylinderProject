@@ -102,10 +102,22 @@
     #homeSection #homeContainer .alignleft {
       width: 150px; }
     #homeSection #homeContainer .homeBoxes {
+      float: left;
       margin-left: 5%;
       margin-right: 5%; }
+      #homeSection #homeContainer .homeBoxes span {
+        float: left;
+        max-width: 79%;
+        display: inline;
+        margin-left: 7%; }
       #homeSection #homeContainer .homeBoxes i {
-        font-size: 8em; }
+        font-size: 8em;
+        max-width: 10%;
+        float: left;
+        display: inline; }
+      #homeSection #homeContainer .homeBoxes .btn {
+        float: left;
+        margin-left: 10px; }
       #homeSection #homeContainer .homeBoxes .left {
         width: 48%;
         float: left;
@@ -223,7 +235,8 @@
     right: 0;
     padding-top: 90px;
     width: 100%;
-    height: 0; }
+    height: 0;
+    z-index: 1; }
     #searchFunction #Container {
       padding: 4em; } }
 @media only screen and (min-width: 651px) and (max-width: 850px) {

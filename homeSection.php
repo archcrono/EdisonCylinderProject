@@ -3,7 +3,7 @@
   <!-- Place your HTML here -->
   <div id="homeContainer">
 
-      <div class="homeBoxes">
+      <!-- <div class="homeBoxes">
         <span>
 
           <h2>Welcome to the UVU's Cylinder Library!</h2>
@@ -11,8 +11,8 @@
           <p>Feel free to look around. In the top right you will find a the player, on the Library page you may select the cylinder you wish to listen to. For information about us and the library please visit the Information page.</p>
 
         </span>
-        
-      </div>
+
+      </div> -->
 
       <div class="homeBoxes">
       <!-- <img class="alignleft lazy" nothing="img/grey.gif" src="img/lib.jpg"> -->

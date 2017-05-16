@@ -23,7 +23,20 @@
     }
 }//End of Active Nav
 
+// /////////////
+// Home Section
+// /////////////
+#homeSection{
 
+  #homeContainer{
+    .homeBoxes{
+      span{
+        margin-left: 25px;
+        max-width: 82%;
+      }
+    }
+  }//End of Home Container
+}//End Of Home Section
 
 // /////////////
 // Library Section

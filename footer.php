@@ -2,7 +2,7 @@
 
 <div id="searchFunction">
   <div id="Container">
-    <input type="text" name="" ng-model="searchCylinder" placeholder="Search cylinder by song name, artist, year, etc.">
+    <input type="text" name="" ng-model="searchCylinder" placeholder="Search cylinder by song name, artist, year, etc...">
     <i class="fa fa-search" aria-hidden="true"></i>
   </div>
 </div>

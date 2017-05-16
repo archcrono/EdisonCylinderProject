@@ -272,8 +272,8 @@
           width: 100%; }
           #homeSection #homeContainer .homeBoxes .left img, #homeSection #homeContainer .homeBoxes .right img, #homeSection #homeContainer .homeBoxes .full img {
             max-width: 100%;
-            border: 4px solid #00843d;
-            border-radius: 5px; }
+            border: 2px solid #e2e2e2;
+            border-radius: 15px; }
       #homeSection #homeContainer .alignleft {
         float: left;
         margin-right: 2%;
