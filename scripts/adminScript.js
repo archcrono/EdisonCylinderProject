@@ -90,6 +90,27 @@ $('#deleteCylinder').click(function(){
   })
 })
 
+$('#addUserButton').click(function(){
+  $('#newUserId').val(Date.now());
+
+  var data = $('#newUserForm').serialize();
+
+  $.ajax({
+    data: data,
+    type: "post",
+    url: "php/addUser.php",
+    success: function(data){
+
+      alert(data);
+      window.location.reload();
+    }
+  })
+})
+
+$('#deleteUserButton').click(function(){
+  // var data = 
+})
+
 
 // ///////////////
 // Upload Handlers
@@ -138,20 +159,34 @@ cylinderAdminApp.service('cylinderAdminData', ['$http', function($http){
     return $http.get('php/get.php');
 
     // return $http.get('https://edisoncylindertestdb.firebaseio.com/cylinders.json');
-  }
+  };
 }]);
 
-cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData', function($scope, cylinderAdminData){
+cylinderAdminApp.service('cylinderAdminUsers', ['$http', function($http){
+  this.getAdmins = function(){
+    return $http.get('php/getUsers.php');
+  };
+
+}]);
+
+cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData', 'cylinderAdminUsers', function($scope, cylinderAdminData, cylinderAdminUsers){
 
   // Variable
   $scope.returnedData;
+  $scope.usersData;
 
 
   // Get Data
   cylinderAdminData.getAdminCylinderData().then(function(data){
     $scope.returnedData = data.data;
 
+  });
+
+  cylinderAdminUsers.getAdmins().then(function(data){
+    $scope.usersData = data.data;
   })
+
+
 
   $scope.getItemData = function(){
     // console.log(this.item);
@@ -220,7 +255,7 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
   }
 
-
+  // New Form
   $scope.openNewForm = function(){
     $('#modal--bg').addClass('dark');
     $('#createNewCylinderForm').addClass('show');
@@ -228,6 +263,26 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
   $scope.closeNewForm = function(){
     $('#modal--bg').removeClass('dark');
     $('#createNewCylinderForm').removeClass('show');
+  }
+
+  // New User Form
+  $scope.openNewUserForm = function(){
+    $('#modal--bg').addClass('dark');
+    $('#newUserDiv').addClass('show');
+  }
+  $scope.closeNewUserForm = function(){
+    $('#modal--bg').removeClass('dark');
+    $('#newUserDiv').removeClass('show');
+  }
+
+  // User List
+  $scope.openUserList = function(){
+    $('#modal--bg').addClass('dark');
+    $('#userListDiv').addClass('show');
+  }
+  $scope.closeUserList = function(){
+    $('#modal--bg').removeClass('dark');
+    $('#userListDiv').removeClass('show');
   }
 
 

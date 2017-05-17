@@ -19,6 +19,8 @@
       font-size: 2em; }
   #librarySection main #libraryContainer .cylinderSquare {
     width: 20%; }
+  #librarySection main #largeActiveCylinder em {
+    max-width: 50%; }
 
   #informationSection #infoContainer {
     max-width: 1300px;

@@ -1,6 +1,6 @@
 <div class="banner">
   <img src="img/uvuLogo.png" alt="UVU Logo">
-  <h3>Cylinder Library</h3>
+  <h1>Cylinder Library</h1>
   <svg height="90" width="250">
     <polygon points="0,0 200,0 150,90 0,90" style="fill:green;"/>
   </svg>
@@ -36,7 +36,7 @@
 
   <img id="cylinderPlayerImg"  alt="Banner Background" style="opacity: .8;">
 
-  <h2 id="cylinderPlayerTitle"></h2>
+  <h1 id="cylinderPlayerTitle"></h1>
 
   <!-- <i class="fa fa-play" aria-hidden="true"></i> -->
 

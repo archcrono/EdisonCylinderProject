@@ -56,7 +56,7 @@
     #cylinderPlayer img {
       width: 90px;
       height: 90px; }
-    #cylinderPlayer h2 {
+    #cylinderPlayer h1 {
       font-size: 1.8em;
       left: 95px; }
     #cylinderPlayer i {
@@ -160,18 +160,19 @@
       position: absolute;
       margin-top: 70px;
       margin-left: -115px; }
-    #librarySection main #largeActiveCylinder h4 {
+    #librarySection main #largeActiveCylinder h2 {
       font-size: 1em;
       padding-left: 20px;
       display: inline-block;
       color: #d45d00; }
-    #librarySection main #largeActiveCylinder h5 {
+    #librarySection main #largeActiveCylinder em {
       font-family: "Arsenal", sans-serif;
       font-size: .8em;
       padding-top: 2px;
       padding-left: 10px;
-      display: inline-block; }
-    #librarySection main #largeActiveCylinder h6 {
+      display: inline-grid;
+      max-width: 30%; }
+    #librarySection main #largeActiveCylinder h1 {
       font-family: "Arsenal", sans-serif;
       font-size: 1.5em;
       padding-top: 2px;

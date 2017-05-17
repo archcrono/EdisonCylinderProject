@@ -8,7 +8,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>UVU Cylinder Admin</title>
 
     <!-- Bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,23 +22,32 @@
       <div class="jumbotron">
         <h1 class="text-center">UVU Cylinder Admin</h1>
 
-        <a href="logout.php">Logout</a>
+
       </div>
+
+      <nav>
+        <ul>
+          <li ng-click="openNewForm()">Add Cylinder</li>
+          <li ng-click="openNewUserForm()">Add User</li>
+          <li ng-click="openUserList()">View Users</li>
+          <li><a href="logout.php">Logout</a></li>
+        </ul>
+      </nav>
 
       <!-- Search Bar -->
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <div class="form-group">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for..." ng-model="search">
+            <input type="text" class="form-control" placeholder="Search for cylinder by name, artist, year..." ng-model="search">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button">Go!</button>
             </span>
           </div><!-- /input-group -->
         </div><!-- /form-group -->
-        <div class="form-group">
+        <!-- <div class="form-group">
           <button type="submit" id="add" class="btn btn-default pull-right" ng-click="openNewForm()">Add</button>
-        </div>
+        </div> -->
       </div><!-- /.col-lg-10 -->
     </div><!-- /.row -->
 
@@ -333,6 +342,40 @@
             </div>
           </div>
         </form>
+      </div>
+
+      <div id="newUserDiv" class="modal__container panel panel-default">
+        <h3 class="text-center">Add New User</h3>
+        <form id="newUserForm">
+          <input id="newUserId" type="text" name="userid" style="display: none;" readonly>
+
+          <label>Username</label>
+          <input type="text" name="username">
+
+          <label>Password</label>
+          <input type="text" name="password">
+
+          <ul>
+            <li>
+              <button type="button" class="btn btn-default" ng-click="closeNewUserForm()">Close</button>
+            </li>
+            <li>
+              <button id="addUserButton" type="button" class="btn btn-primary">Submit</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+
+      <div id="userListDiv" class="modal__container panel panel-default">
+        <h3 class="text-center">User List</h3>
+
+        <form class="userContainer" ng-repeat="user in usersData">
+          <input style="display: none;" name="userID" val="{{ user.userID }}" readonly>
+          <label>{{ user.username }}</label>
+          <button type="button" name="button" class="btn btn-danger">Delete</button>
+        </form>
+
+        <button id="closeUserListButton" type="button" name="button" class="btn btn-default" ng-click="closeUserList()">Close</button>
       </div>
 
 

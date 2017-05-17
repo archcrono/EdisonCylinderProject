@@ -100,3 +100,87 @@ body{
 	}
 
 }
+
+// /////
+// All
+// /////
+.jumbotron{
+	margin-bottom: 0;
+}
+
+// ///////////
+// Navigation
+// ///////////
+
+nav{
+	width: 100%;
+	padding: 10px 50px;
+	margin-bottom: 15px;
+	border-top: 2px solid #ddd;
+	border-bottom: 2px solid #ddd;
+	ul{
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		li{
+			text-decoration: none;
+			display: inline;
+			font-size: 1.3em;
+			color: #337ab7;
+			&:hover{
+				cursor: pointer;
+				text-decoration: underline;
+				color: #23527c;
+			}
+		}
+	}
+}
+
+// //////////////
+// New User Form
+// //////////////
+#newUserDiv{
+	form{
+		label{
+			width: 30%;
+			display: inline-block;
+		}
+		input{
+			width: 95%;
+			margin: auto;
+			display: inline-block;
+			height: 30px;
+			border-radius: 5px;
+			border: 2px solid #ddd;
+			box-shadow: none;
+		}
+		ul{
+			position: absolute;
+			bottom: 0;
+			right: 20px;
+			li{
+				display: inline;
+
+			}
+		}
+	}
+}//End New User div
+
+// /////////
+// User List
+// /////////
+#userListDiv{
+	.userContainer{
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 30px;
+		border-bottom: 2px solid grey;
+		margin-bottom: 15px;
+	}
+	#closeUserListButton{
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+	}
+}

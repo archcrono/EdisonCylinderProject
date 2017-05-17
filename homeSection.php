@@ -6,7 +6,7 @@
       <!-- <div class="homeBoxes">
         <span>
 
-          <h2>Welcome to the UVU's Cylinder Library!</h2>
+          <h1>Welcome to the UVU's Cylinder Library!</h1>
 
           <p>Feel free to look around. In the top right you will find a the player, on the Library page you may select the cylinder you wish to listen to. For information about us and the library please visit the Information page.</p>
 
@@ -19,7 +19,7 @@
       <i class="fa fa-headphones alignleft" aria-hidden="true"></i>
         <span>
 
-          <h2>Listen to the Library</h2>
+          <h1>Listen to the Library</h1>
 
           <p>
             Check out our extenstive library of cylinders. If you click the "Listen" button, you will be taken to our library page.
@@ -36,7 +36,7 @@
         <i class="fa fa-book alignleft" aria-hidden="true"></i>
         <span>
 
-          <h2>This Month In History</h2>
+          <h1>This Month In History</h1>
 
           <p>
             This feature allows you to view the cylinders that were published this month over a century ago.
@@ -56,7 +56,7 @@
       <i class="fa fa-money alignleft" aria-hidden="true"></i>
         <span>
 
-          <h2>Donate</h2>
+          <h1>Donate</h1>
 
           <p>
             We gladly accept donations of cylinders and/or financial donations to keep the UVU Cylinder Project running.  Since we are a 501.c institution, we can even give you vouchers to use as write-offs on your next tax return.
@@ -71,9 +71,9 @@
       </div>
 
       <div class="homeBoxes">
-        <h2>
+        <h1>
           How to use the Site
-        </h2>
+        </h1>
 
         <div class="left">
           <p>

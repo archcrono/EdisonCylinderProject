@@ -14,21 +14,20 @@
     <div class="cylinderSquare" style="background-color: {{ item.backColor }}" ng-click="expandCylinder()" ng-model="cylinderSquare" ng-repeat="item in returnedCylinderData | searchForCylinder:searchCylinder">
 
       <!-- Used to grab URL. Do not display! -->
-      <!-- <h5 class="cylinderURL" style="display: none;">{{ item.url }}</h5> -->
-      <h5 class="cylinderImageURL" style="display: none;">{{ item.cylinderTopURL }}</h5>
+      <em class="cylinderImageURL" style="display: none;">{{ item.cylinderTopURL }}</em>
 
 
 
 
 
       <div class="metaInfo">
-        <h2>{{ item.cylinderTitle }}</h2>
+        <h1>{{ item.cylinderTitle }}</h1>
         <i class="fa fa-sort-desc" style="display: none;" aria-hidden="true"></i>
         <div class="subMetaInfo">
-          <h4><strong>Artist:</strong> {{ item.cylinderArtist }}</h4>
-          <h4><strong>Take:</strong> {{ item.cylinderTake }}</h4>
-          <h4><strong>Mold:</strong> {{ item.cylinderMold }}</h4>
-          <h4><strong>Comments:</strong> {{ item.cylinderComments }}</h4>
+          <h2><strong>Artist:</strong> {{ item.cylinderArtist }}</h2>
+          <h2><strong>Take:</strong> {{ item.cylinderTake }}</h2>
+          <h2><strong>Mold:</strong> {{ item.cylinderMold }}</h2>
+          <h2><strong>Comments:</strong> {{ item.cylinderComments }}</h2>
         </div>
       </div>
 
@@ -58,11 +57,11 @@
 
 
       <span>
-        <h6 id="largeCylinderName"></h6><br>
-        <h4><strong>Artist: </strong></h4><h5 id="largeArtistName"></h5><br>
-        <h4><strong>Take: </strong></h4><h5 id="largeTakeNumber"></h5><br>
-        <h4><strong>Mold: </strong></h4><h5 id="largeMoldNumber"></h5><br>
-        <h4><strong>Comments: </strong></h4><h5 id="largeComments"></h5><br>
+        <h1 id="largeCylinderName"></h1><br>
+        <h2><strong>Artist: </strong></h2><em id="largeArtistName"></em><br>
+        <h2><strong>Take: </strong></h2><em id="largeTakeNumber"></em><br>
+        <h2><strong>Mold: </strong></h2><em id="largeMoldNumber"></em><br>
+        <h2><strong>Comments: </strong></h2><em id="largeComments"></em><br>
       </span>
 
       <div class="largePlayButtons">

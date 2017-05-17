@@ -70,9 +70,15 @@
         .cylinderSquare{
         width: 20%;
 
-
       }//End of cylinderSquare
     }//End of Library Container
+
+
+    #largeActiveCylinder{
+      em{
+        max-width: 50%;
+      }
+    }
 
   }//End of Main
 }//End of Library Section
