@@ -45,6 +45,8 @@ var compareScreenType = function(){
     $('#largeActiveCylinder').insertAfter('#libraryContainer');//Must be moved first to keep index in order
     $('.activeCylinder').find('.cylinderPlayOptions').css('display','none');//Remove Play Button
 
+    $('.activeCylinder .cylinderTopImage').css('display','none');//Hide active cylinder image
+
 
     $('.activeCylinder').removeAttr('style');
     $('.activeCylinder').css('background-color', activeBackgroundColor);
@@ -105,6 +107,7 @@ var fitScreen = function(){
     screenSize = true;
 
     // Cylinder Metadata
+    $('.cylinderSquare').css('width','');//Remove Width from selected cylinders in Mobile view
     var cylinderWidth = $('.cylinderSquare').width();//Grab Cylinder Width
     $('.metaInfo').width(cylinderWidth);
     $('.activeCylinder .metaInfo').width($('.activeCylinder').width());
