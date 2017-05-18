@@ -75,6 +75,11 @@ $('#updateCylinder').click(function(){
 
 $('#deleteCylinder').click(function(){
 
+  var confirm = window.confirm("Click 'OK' to delete cylinder");
+
+  if(confirm == !true){
+    return;
+  }
 
   var data = $('#cylinderUpdateForm').serialize();
 
@@ -189,6 +194,8 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
   $scope.getItemData = function(){
     // console.log(this.item);
+
+    $('#cylinderFormInfo').scrollTop(0);
     $('#modal--bg').addClass('dark');
     $('#cylinderFormInfo').addClass('show');
 
@@ -231,6 +238,7 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
   $scope.closeEdit = function(){
 
+
     $('#cylinderFormInfo').removeClass('show');
     $('#modal--bg').removeClass('dark');
 
@@ -256,6 +264,7 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
   // New Form
   $scope.openNewForm = function(){
+    $('#createNewCylinderForm').scrollTop(0);
     $('#modal--bg').addClass('dark');
     $('#createNewCylinderForm').addClass('show');
   }
@@ -276,6 +285,7 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
   // User List
   $scope.openUserList = function(){
+    $('#userListDiv').scrollTop(0);
     $('#modal--bg').addClass('dark');
     $('#userListDiv').addClass('show');
   }
@@ -286,6 +296,12 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
 
   // Delete User
   $scope.deleteUser = function(){
+
+    var confirm = window.confirm("Click 'OK' to delete user");
+
+    if(confirm == !true){
+      return;
+    }
 
     if($scope.usersData.length == 1){
       alert("Cannot delete. If deleted, there will be no users.");

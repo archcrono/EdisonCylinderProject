@@ -119,12 +119,12 @@ nav {
   right: 10px; }
 
 #loginBody {
-  width: 100%; }
+  width: 100%;
+  font-family: arial; }
   #loginBody #loginFormContainer {
     width: 80%;
     padding-top: 50px;
-    margin: auto;
-    font-family: arial; }
+    margin: auto; }
     #loginBody #loginFormContainer h1 {
       text-align: center;
       color: #337ab7; }

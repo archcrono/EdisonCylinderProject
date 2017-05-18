@@ -28,6 +28,11 @@
     <!-- LAZY LOADER -->
       <script src="scripts/jquery.lazyload.js" type="text/javascript"></script>
       <script type="text/javascript" charset="utf-8">
+
+
+      if (window.location.pathname.toLowerCase() == "/login") {
+        window.location = "/login.php";
+      }
         $(function() {
           $("img.lazy").lazyload({
             threshold: 10,
