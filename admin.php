@@ -369,11 +369,15 @@
       <div id="userListDiv" class="modal__container panel panel-default">
         <h3 class="text-center">User List</h3>
 
-        <form class="userContainer" ng-repeat="user in usersData">
-          <input style="display: none;" name="userID" val="{{ user.userID }}" readonly>
+        <div class="userContainer" ng-repeat="user in usersData">
+          <!-- <input style="display: none;" val="{{ user.userID }}" readonly> -->
           <label>{{ user.username }}</label>
-          <button type="button" name="button" class="btn btn-danger">Delete</button>
+          <button type="button" name="button" ng-click="deleteUser()" class="btn btn-danger deleteUserButton">Delete</button>
+        </div>
+        <form id="deleteForm" style="display: none;">
+          <input id="userID" type="text" name="userID" readonly>
         </form>
+
 
         <button id="closeUserListButton" type="button" name="button" class="btn btn-default" ng-click="closeUserList()">Close</button>
       </div>

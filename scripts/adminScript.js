@@ -107,9 +107,8 @@ $('#addUserButton').click(function(){
   })
 })
 
-$('#deleteUserButton').click(function(){
-  // var data = 
-})
+// Delete User at bottom of Angular section (ng-repeat forbids jquery click events)
+
 
 
 // ///////////////
@@ -283,6 +282,24 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
   $scope.closeUserList = function(){
     $('#modal--bg').removeClass('dark');
     $('#userListDiv').removeClass('show');
+  }
+
+  // Delete User
+  $scope.deleteUser = function(){
+
+    $('#userID').val(this.user.userID);
+
+    var data = $('#deleteForm').serialize();
+    $.ajax({
+      data: data,
+      type: "post",
+      url: "php/deleteUser.php",
+      success: function(data){
+
+        alert(data);
+        window.location.reload();
+      }
+    });
   }
 
 
