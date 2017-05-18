@@ -118,4 +118,44 @@ nav {
   bottom: 10px;
   right: 10px; }
 
+#loginBody {
+  width: 100%; }
+  #loginBody #loginFormContainer {
+    width: 80%;
+    padding-top: 50px;
+    margin: auto;
+    font-family: arial; }
+    #loginBody #loginFormContainer h1 {
+      text-align: center;
+      color: #337ab7; }
+    #loginBody #loginFormContainer form {
+      position: relative;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 10px 15px;
+      padding-bottom: 40px; }
+      #loginBody #loginFormContainer form label {
+        color: #337ab7; }
+      #loginBody #loginFormContainer form input {
+        width: 95%;
+        margin: 15px auto;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        font-size: 1.2em;
+        padding-left: 10px; }
+        #loginBody #loginFormContainer form input:focus {
+          outline: none; }
+      #loginBody #loginFormContainer form button {
+        position: absolute;
+        font-size: 1.15em;
+        right: 50px;
+        background-color: #337ab7;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        padding: 5px; }
+        #loginBody #loginFormContainer form button:hover {
+          background-color: grey;
+          cursor: pointer; }
+
 /*# sourceMappingURL=admin.css.map */

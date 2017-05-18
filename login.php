@@ -23,20 +23,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>UVU Cylinder Admin Login</title>
+    <!-- CSS -->
+    <link href="styles/admin.css" rel="stylesheet" type="text/css" >
   </head>
-  <body>
-    <h1>Login page!</h1>
-    <form method="POST">
-      <label>Username</label>
-      <br>
-      <input type="text" name="username">
-      <br>
-      <label>Password</label>
-      <br>
-      <input type="password" name="password">
-      <br>
-      <button type="submit" name="button">Submit</button>
-    </form>
+  <body id="loginBody">
+    <div id="loginFormContainer">
+      <h1>UVU Cylinder Admin Login</h1>
+      <form method="POST">
+        <label>Username</label>
+        <br>
+        <input type="text" name="username">
+        <br>
+        <label>Password</label>
+        <br>
+        <input type="password" name="password">
+        <br>
+        <button type="submit" name="button">Submit</button>
+      </form>
+    </div>
+
   </body>
 </html>

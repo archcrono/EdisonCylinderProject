@@ -287,6 +287,11 @@ cylinderAdminApp.controller('cylinderAdminCtrl', ['$scope', 'cylinderAdminData',
   // Delete User
   $scope.deleteUser = function(){
 
+    if($scope.usersData.length == 1){
+      alert("Cannot delete. If deleted, there will be no users.");
+      return;
+    }
+
     $('#userID').val(this.user.userID);
 
     var data = $('#deleteForm').serialize();

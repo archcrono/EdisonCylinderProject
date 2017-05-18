@@ -184,3 +184,56 @@ nav{
 		right: 10px;
 	}
 }
+
+// ///////////
+// Login Page
+// ///////////
+#loginBody{
+	width: 100%;
+
+	#loginFormContainer{
+		width: 80%;
+		padding-top: 50px;
+		margin: auto;
+		font-family: arial;
+		h1{
+			text-align: center;
+			color: #337ab7;
+		}
+		form{
+			position: relative;
+			border: 2px solid #ddd;
+			border-radius: 10px;
+			padding: 10px 15px;
+			padding-bottom: 40px;
+			label{
+				color: #337ab7;
+			}
+			input{
+				width: 95%;
+				margin: 15px auto;
+				border-radius: 10px;
+				border: 1px solid #ddd;
+				font-size: 1.2em;
+				padding-left: 10px;
+				&:focus{
+					outline: none;
+				}
+			}
+			button{
+				position: absolute;
+				font-size: 1.15em;
+				right: 50px;
+				background-color: #337ab7;
+				border: none;
+				border-radius: 10px;
+				color: white;
+				padding: 5px;
+				&:hover{
+					background-color: grey;
+					cursor: pointer;
+				}
+			}
+		}
+	}//End of loginFormContainer
+}//End of loginBody
