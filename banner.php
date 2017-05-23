@@ -47,7 +47,7 @@
       <!-- <i id="rewind" class="fa fa-backward backward" aria-hidden="true"></i> -->
       <i class="fa fa-play jp-play playButton" style="cursor: pointer;" aria-hidden="true"></i>
       <i class="fa fa-pause jp-play pauseButton" style="cursor: pointer; display: none;" aria-hidden="true"></i>
-      <i class="fa fa-stop stop" aria-hidden="true"></i>
+      <i class="fa fa-stop stop" style="cursor: pointer;" aria-hidden="true"></i>
     </div>
 
     <div class="jp-progress">

@@ -12,7 +12,7 @@
     <form action="FormToEmail.php">
       <fieldset>
         <h3>Name</h3>
-        <input type="text" name="name" placeholder="full name" pattern="[a-zA-Z -._]{4,99}" required autofocus title="Name Invalid">
+        <input type="text" name="name" placeholder="Full Name" pattern="[a-zA-Z -._]{4,99}" required title="Name Invalid">
         <h3>Email</h3>
         <input type="email" name="email" placeholder="example@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required title="Email Invalid" autocomplete="on">
         <h3>Comments</h3>
@@ -22,7 +22,7 @@
     </form>
   </div>
 
-   
+
 
 
 

@@ -589,7 +589,7 @@ $(document).on('click','.loadCylinderButton',function(){
 
   // Change Cylinder Player Meta Info
   $('#cylinderPlayerTitle').html(cylinderHolder.cylinderTitle);
-  $('#cylinderPlayerImg').attr('src', cylinderHolder.cylinderImg);
+  $('#cylinderPlayerImg').attr('src', cylinderHolder.cylinderTopURL);
 
   $(".musicPlayer").jPlayer("clearMedia");
   $(".musicPlayer").jPlayer("setMedia",{

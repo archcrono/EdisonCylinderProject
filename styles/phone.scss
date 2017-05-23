@@ -177,6 +177,7 @@ $standard-font: 'Rubik', sans-serif;
     right: 10px;
     top: 10px;
     font-size: 3em;
+    cursor: pointer;
   }
   img{
     width: 90%;
@@ -433,6 +434,7 @@ section{
   padding: 6px 10px 6px 10px;
   text-decoration: none;
   float:right;
+  cursor: pointer;
 }
 
 .btn:hover {

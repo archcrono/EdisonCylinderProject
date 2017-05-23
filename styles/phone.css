@@ -102,7 +102,8 @@
       position: absolute;
       right: 10px;
       top: 10px;
-      font-size: 3em; }
+      font-size: 3em;
+      cursor: pointer; }
     #allMetadata img {
       width: 90%; }
     #allMetadata h1 {
@@ -289,7 +290,8 @@
         background: #17b537;
         padding: 6px 10px 6px 10px;
         text-decoration: none;
-        float: right; }
+        float: right;
+        cursor: pointer; }
       #homeSection #homeContainer .btn:hover {
         background: #e39d12;
         text-decoration: none; }
