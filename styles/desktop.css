@@ -44,6 +44,6 @@
     width: 30%; }
 
   #contactSection #contactContainer fieldset {
-    width: 35%; } }
-
-/*# sourceMappingURL=desktop.css.map */
+    width: 35%; }
+  #contactSection #contactContainer input.fifty {
+    width: 40%; } }

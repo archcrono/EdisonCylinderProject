@@ -7,6 +7,8 @@
 // ///////
 // All
 // ///////
+
+        
 .navButtonContainers{
 
   i{
@@ -138,9 +140,13 @@
     fieldset{
       width: 35%;
     }
+
+    input.fifty{
+          width: 40%;
+        }
+
   }//End of Contact container
 }
-
 
 // End of desktop
 }
